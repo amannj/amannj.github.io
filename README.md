@@ -5,7 +5,7 @@ Overview
 
 
 [This site](http://amannj.github.io) is built with Jekyll and hosted on GitHub Pages. Site source at
-[amannj/amannj.github.io](http://github.com/amannj/amannj.github.io.
+[amannj/amannj.github.io](http://github.com/amannj/amannj.github.io).
 
 Please report [errors or feedback here](https://github.com/amannj/amannj.github.io/issues). 
 
@@ -15,7 +15,7 @@ Please report [errors or feedback here](https://github.com/amannj/amannj.github.
 Websites inspired by
 =======================
 
-* Carl Boettiger [cboettig/cboettig.github.io](http://github.com/cboettig/cboettig.github.io)
+* Carl Boettiger [http://cboettig.github.io](http://cboettig.github.io)
 * Jonathan McGlone [http://jmcglone.com/](http://jmcglone.com/)
 * Victor Caldas [http://victorcaldas.com/](http://victorcaldas.com/)
 
