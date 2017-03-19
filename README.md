@@ -12,7 +12,7 @@ Please report [errors or feedback here](https://github.com/amannj/amannj.github.
 -----------------------------------------------------------------------------------------------------------
 
 
-Websites inspired by
+Website inspired by
 =======================
 
 * Carl Boettiger [http://cboettig.github.io](http://cboettig.github.io)
