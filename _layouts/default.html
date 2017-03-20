@@ -2,30 +2,47 @@
 <html>
 	<head>
 		<title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
+		<!-- link to jquery, bootstrap and main stylesheet css -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
 		<nav>
     		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-			<li><a href="/publications">Publications</a></li>
-            <li><a href="/software">Software</a></li>
-        		<li><a href="/blog">Blog</a></li>
+					<div class="btn-group">
+					<a href="/" class="btn btn-default">Home</a>
+					<a href="/cv" class="btn btn-primary">CV</a>
+					<a href="/publications" class="btn btn-primary">Publications</a>
+					<div class="btn-group">
+						<a href="/resources" class="btn btn-primary">Resources</a>
+							<a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false"><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Code</a></li>
+								<li><a href="#">etc.</a></li>
+								<li class="divider"></li>
+								<li><a href="#">etc.</a></li>
+							</ul>
+						</div>
+					<a href="/blog" class="btn btn-success">Blog</a>
+				</div>
 	    </ul>
 			</nav>
 			<div class="container">
-			
+
 			{{ content }}
-			
+
 			</div><!-- /.container -->
 			<footer>
 	    		<ul>
-        		<li><a href="mailto:NA@gmail.com">email</a></li>
-        		<li><a href="https://github.com/...">github.com/...</a></li>
+        		&#169; 2017, Juergen Amann
+						[ <a href="/about">about this site</a>  |
+        			<a href="/blog/atom.xml">RSS</a> ]
+
+
 			</ul>
 		</footer>
+		<script
+
 	</body>
 </html>
