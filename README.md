@@ -1,33 +1,17 @@
-
-
-
-Overview
+About this site
 ========
 
 
-[This site](http://amannj.github.io) is built with Jekyll and hosted on GitHub Pages. Site source at
-[amannj/amannj.github.io](http://github.com/amannj/amannj.github.io).
+The website [amannj.github.io](amannj.github.io) is
 
-Please report [errors or feedback here](https://github.com/amannj/amannj.github.io/issues). 
-
------------------------------------------------------------------------------------------------------------
-
-
-Website inspired by
-=======================
-
-* Carl Boettiger [http://cboettig.github.io](http://cboettig.github.io)
-* Jonathan McGlone [http://jmcglone.com/](http://jmcglone.com/)
-* Victor Caldas [http://victorcaldas.com/](http://victorcaldas.com/)
-
------------------------------------------------------------------------------------------------------------
+- Built with [Bootstrap 3.0](http://getbootstrap.com/) using the [Bootstrap](http://bootswatch.com/) template [Flatly](http://bootswatch.com/flatly/).
+- Inspired by [http://cboettig.github.io](http://cboettig.github.io), [http://jmcglone.com](http://jmcglone.com) and [http://victorcaldas.com](http://victorcaldas.com).
+- Hosted on [GitHub](http://github.com/amannj/amannj.github.io).
+- Marked up with [W3C validated HTML5](http://validator.w3.org/check?uri=http%3A%2F%2Fjmcglone.com%2F).
+- Powered by [Jekyll](http://jekyllrb.com/).
+- [WCAG 2.0](http://www.w3.org/TR/WCAG20/) compliant.
+- Work in progress - please report errors or feedback [here](http://github.com/amannj/amannj.github.io/issues).
 
 
-Copyrights & License
-====================
-
-to be added later 
-
-
-
-Copyright (c) 2000-2006, Juergen Amann.
+----------------------------------------------------------------
+&#169; 2017, Juergen Amann
