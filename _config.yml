@@ -2,3 +2,6 @@ name: Juergen Amann, personal academic website
 markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
+
+# Google services
+google_analytics: UA-94003057-1
