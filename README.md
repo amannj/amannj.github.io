@@ -2,7 +2,7 @@ About this site
 ========
 
 
-The website [amannj.github.io](amannj.github.io) is
+The website [amannj.github.io](https://amannj.github.io/) is
 
 - Built with [Bootstrap 3.0](http://getbootstrap.com/) using the [Bootstrap](http://bootswatch.com/) template [Flatly](http://bootswatch.com/flatly/).
 - Inspired by [http://cboettig.github.io](http://cboettig.github.io), [http://jmcglone.com](http://jmcglone.com) and [http://victorcaldas.com](http://victorcaldas.com).
