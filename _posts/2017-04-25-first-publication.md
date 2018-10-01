@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My 1st academic publication!"
+title: "First academic publication"
 date: 2017-04-25
 ---
 
