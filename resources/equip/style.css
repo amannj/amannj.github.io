@@ -14,13 +14,11 @@ pre code {
 }
 .rmdcomment {
   padding: 1.5em 1.5em 1.5em 1.5em;
-  margin-bottom: 10px;
   background: #65ADC2;
   position:relative;
 }
 .rmdquestion {
   padding: 1.5em 1.5em 1.5em 1.5em;
-  margin-bottom: 10px;
   background: #E84646;
   position:relative;
 }
