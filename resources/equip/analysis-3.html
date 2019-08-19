@@ -121,8 +121,8 @@
 <li class="chapter" data-level="6" data-path="analysis-3.html"><a href="analysis-3.html"><i class="fa fa-check"></i><b>6</b> Analysis 3</a><ul>
 <li class="chapter" data-level="6.1" data-path="analysis-3.html"><a href="analysis-3.html#chrunners"><i class="fa fa-check"></i><b>6.1</b> Productivity</a><ul>
 <li class="chapter" data-level="6.1.1" data-path="analysis-3.html"><a href="analysis-3.html#runner-industries"><i class="fa fa-check"></i><b>6.1.1</b> Runner industries</a></li>
-<li class="chapter" data-level="6.1.2" data-path="analysis-3.html"><a href="analysis-3.html#runner-exposure"><i class="fa fa-check"></i><b>6.1.2</b> Runner exposure</a></li>
-<li class="chapter" data-level="6.1.3" data-path="analysis-3.html"><a href="analysis-3.html#runner-industries-industry-profiling"><i class="fa fa-check"></i><b>6.1.3</b> Runner industries: Industry profiling</a></li>
+<li class="chapter" data-level="6.1.2" data-path="analysis-3.html"><a href="analysis-3.html#advanced-manufacturing-industry-profiling"><i class="fa fa-check"></i><b>6.1.2</b> Advanced manufacturing industry profiling</a></li>
+<li class="chapter" data-level="6.1.3" data-path="analysis-3.html"><a href="analysis-3.html#runner-industry-exposure-1"><i class="fa fa-check"></i><b>6.1.3</b> Runner industry exposure</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -133,6 +133,7 @@
 <li class="chapter" data-level="E" data-path="rujust.html"><a href="rujust.html"><i class="fa fa-check"></i><b>E</b> Justification of runner exposure analysis</a></li>
 <li class="chapter" data-level="F" data-path="intraindustry.html"><a href="intraindustry.html"><i class="fa fa-check"></i><b>F</b> Intra-industry structural change</a></li>
 <li class="chapter" data-level="G" data-path="BEC.html"><a href="BEC.html"><i class="fa fa-check"></i><b>G</b> UN Comtrade classification by Broad Economic Categories (Rev.4)</a></li>
+<li class="chapter" data-level="H" data-path="runnertimes.html"><a href="runnertimes.html"><i class="fa fa-check"></i><b>H</b> Understanding the results obtained through the runner industry analysis</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://www.unido.org" target="blank">UNIDO</a></li>
@@ -176,7 +177,7 @@ Figure 6.1: Structur of Productivity analysis.
 <ul>
 <li>Obtain value added and employment data from INDSTAT.</li>
 <li>Obtain population data from an alternative data source such as the World Development Indicators.</li>
-<li>Calculate value added per capita as well as the employment-population ratio.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a>
+<li>Calculate value added per capita as well as the employment-population ratio.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>
 <ul>
 <li>For the value added series it is further necessary to eliminate any potential price effects in the series (see Appendix <a href="deflation.html#deflation">C</a> for more details).</li>
 </ul></li>
@@ -189,9 +190,12 @@ Figure 6.1: Structur of Productivity analysis.
     Productivity = Value~added~per~capita / Employent~population~ratio
 \]</span></p>
 <ul>
-<li>Create cross-country/industry average to obtain aggregates of interest.</li>
+<li>Create cross-country/industry average to obtain aggregates of interest.
+<ul>
+<li>In our case we are interested in the global runners (taking averages of the growth rates across all countries), the income group runners (averages across all countries belonging to the same income group as Viet Nam, i.e. lower-middle income) as well as the runners for Viet Nam exclusively.</li>
+</ul></li>
 </ul>
-<p>The indicators obtained through this procedure form the basis of the subsequent analysis. Table <a href="analysis-3.html#tab:runners-full">6.1</a> summarises the results for the full data sample and across all countries available through INDSTAT.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> As can be seen, the food and beverages, rubber and plastic as well as fabricated metals, electrical machinery and motor vehicles industries are identified to have a positive employment and productivity growth trend over the full data sample from 1963 to 2017.</p>
+<p>The indicators obtained through this procedure form the basis of the subsequent analysis. Table <a href="analysis-3.html#tab:runners-full">6.1</a> summarises the results for the full data sample and across all countries available through INDSTAT.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> As can be seen, the food and beverages, rubber and plastic as well as fabricated metals, electrical machinery and motor vehicles industries are identified to have a positive employment and productivity growth trend over the full data sample from 1963 to 2017.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:runners-full">Table 6.1: </span>Runner industries: all countries over the full sample period.
@@ -858,155 +862,475 @@ Yes
 </tr>
 </tfoot>
 </table>
-<p>The above analysis can also be conducted for other sub-samples. Table <a href="#runner-summary"><strong>??</strong></a> provides a list of other potentially relevant sub-samples. This tables shows that there are a great number of runner industries for lower income countries in the post-2000s where positive employment and productivity growth has been achieved despite the most recent technological developments. At the same time, high income countries which naturally are at a different stage in industrial development than emerging countries, are the ones with the smallest number of runner industries identified. Lastly, Table <a href="#runner-summary"><strong>??</strong></a> also shows that runner industries are typically identified to be on average part of the medium- and high-technology group. However, it is important that this is not the result of some fixed classification (as that of technology groups for example), but purely the result of the growth dynamics of value added and employment: If an industry follows these favourable growth dynamics, then it will also qualify as a runner industry. This can be seen for the food end beverages industry which, despite being considered a low-technology industry, also belongs to the set of runner industries in most of the cases. The latter is an important insight regarding future development as well: It could be possible, that new technologies will allow an industry that is currently low-technology, to become more technologically sophisticated in the future. If this goes hand in hand with an expansion of the industry (through value added and employment growth), we will also be able to identify it as a runner industry. In this sense, the runner industry classification is capable of also this kind of dynamism which we refer to as intra-industry upgrading; see <a href="intraindustry.html#intraindustry">F</a> for more information.</p>
+<p>We are of course also interested in the runner performance of or reference country, Viet Nam. <a href="analysis-3.html#tab:runners-vietnam">6.3</a> illustrates that Viet Nam has a very dynamic manufacturing industry configuration with a considerable number of well-performing industries.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:runner-summary">Table 6.3: </span>Summary of runner industries classification by aggregate
+<span id="tab:runners-vietnam">Table 6.3: </span>Runner industries: Viet Nam
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
-Full sample
+Manufacturing Industries
+</th>
+<th style="text-align:right;">
+Productivity CAGR
+</th>
+<th style="text-align:right;">
+VA CAGR
+</th>
+<th style="text-align:right;">
+Employment CAGR
 </th>
 <th style="text-align:left;">
-Post-200
-</th>
-<th style="text-align:left;">
-High income, full sample
-</th>
-<th style="text-align:left;">
-Lower income, full sample
-</th>
-<th style="text-align:left;">
-Lower income, post-2000
+Runner Industry
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-15
+15: Food and beverages
+</td>
+<td style="text-align:right;">
+1.92
+</td>
+<td style="text-align:right;">
+3.71
+</td>
+<td style="text-align:right;">
+1.76
 </td>
 <td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-24
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-24
-</td>
-<td style="text-align:left;">
-24
+Yes
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-25
+16: Tobacco
 </td>
-<td style="text-align:left;">
-25
+<td style="text-align:right;">
+-3.86
 </td>
-<td style="text-align:left;">
-25
+<td style="text-align:right;">
+-5.87
 </td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-28
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-28
-</td>
-<td style="text-align:left;">
-28
-</td>
-<td style="text-align:left;">
-28
-</td>
-<td style="text-align:left;">
-28
+<td style="text-align:right;">
+-2.09
 </td>
 <td style="text-align:left;">
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-31A
+17: Textiles
 </td>
-<td style="text-align:left;">
-31A
+<td style="text-align:right;">
+-2.80
 </td>
-<td style="text-align:left;">
+<td style="text-align:right;">
+0.17
 </td>
-<td style="text-align:left;">
-31A
-</td>
-<td style="text-align:left;">
-31A
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-33
-</td>
-<td style="text-align:left;">
-33
-</td>
-<td style="text-align:left;">
+<td style="text-align:right;">
+3.05
 </td>
 <td style="text-align:left;">
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-34A
+18A: Wearing apparel
+</td>
+<td style="text-align:right;">
+2.57
+</td>
+<td style="text-align:right;">
+9.99
+</td>
+<td style="text-align:right;">
+7.24
 </td>
 <td style="text-align:left;">
-34A
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21: Paper
+</td>
+<td style="text-align:right;">
+3.58
+</td>
+<td style="text-align:right;">
+7.42
+</td>
+<td style="text-align:right;">
+3.71
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24: Chemicals
+</td>
+<td style="text-align:right;">
+-0.48
+</td>
+<td style="text-align:right;">
+5.27
+</td>
+<td style="text-align:right;">
+5.77
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+25: Rubber and plastic
+</td>
+<td style="text-align:right;">
+-1.08
+</td>
+<td style="text-align:right;">
+6.62
+</td>
+<td style="text-align:right;">
+7.78
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+26: Minerals
+</td>
+<td style="text-align:right;">
+-0.67
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.74
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+27: Basic metals
+</td>
+<td style="text-align:right;">
+8.61
+</td>
+<td style="text-align:right;">
+15.08
+</td>
+<td style="text-align:right;">
+5.96
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+28: Fabricated metals
+</td>
+<td style="text-align:right;">
+-5.24
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+6.04
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+34A: Motor vehicles
+</td>
+<td style="text-align:right;">
+4.50
+</td>
+<td style="text-align:right;">
+9.50
+</td>
+<td style="text-align:right;">
+4.78
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+36: Furniture, n.e.c
+</td>
+<td style="text-align:right;">
+-5.59
+</td>
+<td style="text-align:right;">
+-0.64
+</td>
+<td style="text-align:right;">
+5.24
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> INDSTAT 2 rev.3.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>This is true when comparing Viet Nam’s manufacturing industry profile with the global runners as well as the income group runners: Table <a href="analysis-3.html#tab:runner-summary">6.4</a> provides a list of other potentially relevant sub-samples. This tables shows that there are a great number of runner industries for lower income countries in the post-2000s where positive employment and productivity growth has been achieved despite the most recent technological developments. Table <a href="analysis-3.html#tab:runner-summary">6.4</a> also shows that runner industries are typically identified to be on average part of the medium- and high-technology group. However, it is important that this is not the result of some fixed classification (as that of technology groups for example), but purely the result of the growth dynamics of value added and employment: If an industry follows these favourable growth dynamics, then it will also qualify as a runner industry. This can be seen for the food end beverages industry which, despite being considered a low-technology industry, also belongs to the set of runner industries in most of the cases. The latter is an important insight regarding future development as well: It could be possible, that new technologies will allow an industry that is currently low-technology, to become more technologically sophisticated in the future. If this goes hand in hand with an expansion of the industry (through value added and employment growth), we will also be able to identify it as a runner industry. In this sense, the runner industry classification is capable of also this kind of dynamism which we refer to as intra-industry upgrading; see <a href="intraindustry.html#intraindustry">F</a> for more information.</p>
+<p>Looking at Table <a href="analysis-3.html#tab:runner-summary">6.4</a> it also makes sense to link the results back to the earlier discussion on new digital technology and high technology industries:</p>
+<ul>
+<li><p>The first observation is that runner industries seem to be dominated by medium/high-technology industries: Following <span class="citation">OECD (<a href="#ref-oecd2011">2011</a>)</span> the medium-/high-technology industries, chemicals, electrical machinery, precision instruments and motor vehicles very robustly appear across the different aggregates.</p></li>
+<li><p>What is more, the high-risk industries industries <span class="citation">(Mayer <a href="#ref-mayer2018robots">2018</a>)</span> which we have identified earlier as being electrical machinery, motor vehicles as well as chemicals and rubber and plastic also find their way into this representation.</p></li>
+</ul>
+<p>This overlap is both striking as it probably not too much of a surprise: The industries that extensively undertake R&amp;D are the ones that by and large are at the forefront of the current digital revolution in manufacturing. This might rightfully concern policy makers to ask to what degree jobs in these industries are at risk of being replaced by new and smart robots. At the same time these R&amp;D-intensive industries have also been leading in the previous automation efforts in the past. Was this at the expense of jobs? As our runner analysis illustrates, it is precisely these industries that can be characterised by a positive growth of productivity, value added <em>and</em> employment. In essence, it is this set of industries that have had a shaping effect on the fact of manufacturing: job destruction and job creation are central elements of the modernisation process of manufacturing industries.</p>
+<p>Lastly Table <a href="analysis-3.html#tab:runner-summary">6.4</a> also reveals that the runner profile for Viet Nam is quite different to that of its lower middle income peers. We will look at this observation in great detail in a moment but at first sight it appears as if Viet Nam seems to report more runner industries for the low(er)-skilled manufacturing industries while the high(er)-skilled industries do not seem to qualify as runners. We will try to understand why that is in a the next step.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:runner-summary">Table 6.4: </span>Summary of runner industries classification by aggregate
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Manufacturing Industries
+</th>
+<th style="text-align:left;">
+Global runners, full sample
+</th>
+<th style="text-align:left;">
+Global runners, post-200
+</th>
+<th style="text-align:left;">
+Viet Nam runners
+</th>
+<th style="text-align:left;">
+Income group runners, full sample
+</th>
+<th style="text-align:left;">
+Income group runners, post-2000
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+15: Food and beverages
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
 </td>
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
-34A
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+18A: Wearing apparel
 </td>
 <td style="text-align:left;">
-34A
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21: Paper
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24: Chemicals
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+25: Rubber and plastic
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+27: Basic metals
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+28: Fabricated metals
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+31A: Electrical machinery
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+33: Precision instruments
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+34A: Motor vehicles
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+36: Furniture, n.e.c
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 </td>
-<td style="text-align:left;">
-36
-</td>
-<td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-36
-</td>
-<td style="text-align:left;">
-36
-</td>
-</tr>
-<tr>
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
@@ -1033,475 +1357,23 @@ Lower income, post-2000
 </tfoot>
 </table>
 </div>
-<div id="runner-exposure" class="section level3">
-<h3><span class="header-section-number">6.1.2</span> Runner exposure</h3>
-<p>In the previous step we discussed ways to measure the performance of manufacturing industries along the delineating lines of productivity, value added and employment. We saw how this kind of analysis is sensible to the choice of country comparators and time dimensions. It also highlighted the importance of assessing an industry performance in the context of the variation across countries. While this may serve as an important step to learn about the dynamics of a particular (set of) industry(ies) of a country, it says very little about the characteristics of the manufacturing industry of a particular country as a whole. Consequently, and in order to assess the degree to which a country’s manufacturing sector is comprised of industries with inclusive and tenable growth dynamics (runner industries), a simple ratio of runner industries in total manufacturing is proposed.</p>
-<p>In this way we can obtain two simple indicators that allow us to assess the share of manufacturing industries in an economy that have experienced inclusive and sustained growth in the past. If, for example, the share of runner industries in total manufacturing of a country is very low, this indicates higher risk of jobless growth in the wake of technological adoptions which would deserve attention from the policy makers especially in terms of measures for employment protection. We have also seen in previous sections that in the long term a higher and prolonged exposure towards sectors which on average are not the best performers in terms of jobs creation may be associated to lower income levels.
-What is more, the concept of runner exposure may be useful not only in order to summarize the performance of one particular country, it can also be used to produce country rankings based on either the runner share in total manufacturing value added or employment, respectively:</p>
-<p>Table <a href="analysis-3.html#tab:runner-post">6.4</a> ranks the countries with regards to their exposure to post-2000 runner industries for the year 2016 by runner value added and employment share in descending order. What becomes apparent is that out of the top-10 countries eight belong the group of high-income countries while Viet Nam ranks 42nd out of 57 in terms of value added runner shares. In other words, 54 percent of value added contribution (33 percent of employment contribution) to total manufacturing value added (employment) in 2016 has come from industries that have reported positive value added and employment growth rate in the post-2000 period. This puts Viet Nam into the 18 percentile of ranked countries in terms of value added generation (2nd percentile for employment).<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:runner-post">Table 6.4: </span>Exposure to runner industry ranking, year 2016, post-2000 runners, sorted by runner value added and employment share in descending order.
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-Ranking
-</th>
-<th style="text-align:left;">
-Country
-</th>
-<th style="text-align:right;">
-Runner value added share
-</th>
-<th style="text-align:right;">
-Runner employment share
-</th>
-<th style="text-align:left;">
-Income group
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-Switzerland
-</td>
-<td style="text-align:right;">
-0.89
-</td>
-<td style="text-align:right;">
-0.82
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-Luxembourg
-</td>
-<td style="text-align:right;">
-0.87
-</td>
-<td style="text-align:right;">
-0.90
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-Germany
-</td>
-<td style="text-align:right;">
-0.80
-</td>
-<td style="text-align:right;">
-0.79
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-France
-</td>
-<td style="text-align:right;">
-0.79
-</td>
-<td style="text-align:right;">
-0.79
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:left;">
-Philippines
-</td>
-<td style="text-align:right;">
-0.78
-</td>
-<td style="text-align:right;">
-0.66
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:left;">
-Hungary
-</td>
-<td style="text-align:right;">
-0.77
-</td>
-<td style="text-align:right;">
-0.74
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:left;">
-Netherlands
-</td>
-<td style="text-align:right;">
-0.76
-</td>
-<td style="text-align:right;">
-0.77
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:left;">
-Colombia
-</td>
-<td style="text-align:right;">
-0.74
-</td>
-<td style="text-align:right;">
-0.63
-</td>
-<td style="text-align:left;">
-Upper middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:left;">
-Croatia
-</td>
-<td style="text-align:right;">
-0.74
-</td>
-<td style="text-align:right;">
-0.65
-</td>
-<td style="text-align:left;">
-High income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-35
-</td>
-<td style="text-align:left;">
-Bulgaria
-</td>
-<td style="text-align:right;">
-0.62
-</td>
-<td style="text-align:right;">
-0.57
-</td>
-<td style="text-align:left;">
-Upper middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-42
-</td>
-<td style="text-align:left;">
-Viet Nam
-</td>
-<td style="text-align:right;">
-0.54
-</td>
-<td style="text-align:right;">
-0.33
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-44
-</td>
-<td style="text-align:left;">
-Mongolia
-</td>
-<td style="text-align:right;">
-0.51
-</td>
-<td style="text-align:right;">
-0.42
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> INDSTAT 2 rev.3, 2000-2017, runner exposure shares shown for year 2016.
-</td>
-</tr>
-</tfoot>
-</table>
-<p>When narrowing down the analysis of runner exposure to the set of lower middle income countries, <a href="analysis-3.html#tab:runner-postsmall">6.5</a> indicates that Viet Nam ranks 6th out of 10 for all lower middle income countries for the runner value added shares. At the same time, Viet Nam’s runner employment share is the second lowest for the set of lower middle-income countries. It is particularly this observation that merits further discussion: This is because so far we have benchmarked Viet Nam against a group of countries that share the same income group. This, however, does not necessarily imply that they also automatically follow the same industrial strategy and/or industry composition. We will discuss these point in the next section.</p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:runner-postsmall">Table 6.5: </span>Exposure to runner industry ranking for lower middle-income countries, year 2016, post-2000 runners, sorted by runner value added and employment share in descending order.
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-Ranking
-</th>
-<th style="text-align:left;">
-Country
-</th>
-<th style="text-align:right;">
-Runner value added share
-</th>
-<th style="text-align:right;">
-Runner employment share
-</th>
-<th style="text-align:left;">
-Income group
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:left;">
-Philippines
-</td>
-<td style="text-align:right;">
-0.78
-</td>
-<td style="text-align:right;">
-0.66
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-20
-</td>
-<td style="text-align:left;">
-Egypt
-</td>
-<td style="text-align:right;">
-0.69
-</td>
-<td style="text-align:right;">
-0.53
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-21
-</td>
-<td style="text-align:left;">
-Indonesia
-</td>
-<td style="text-align:right;">
-0.69
-</td>
-<td style="text-align:right;">
-0.48
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:left;">
-Ukraine
-</td>
-<td style="text-align:right;">
-0.64
-</td>
-<td style="text-align:right;">
-0.62
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:left;">
-Republic of Moldova
-</td>
-<td style="text-align:right;">
-0.58
-</td>
-<td style="text-align:right;">
-0.57
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-42
-</td>
-<td style="text-align:left;">
-Viet Nam
-</td>
-<td style="text-align:right;">
-0.54
-</td>
-<td style="text-align:right;">
-0.33
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-44
-</td>
-<td style="text-align:left;">
-Mongolia
-</td>
-<td style="text-align:right;">
-0.51
-</td>
-<td style="text-align:right;">
-0.42
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-46
-</td>
-<td style="text-align:left;">
-Sri Lanka
-</td>
-<td style="text-align:right;">
-0.50
-</td>
-<td style="text-align:right;">
-0.36
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-47
-</td>
-<td style="text-align:left;">
-India
-</td>
-<td style="text-align:right;">
-0.47
-</td>
-<td style="text-align:right;">
-0.50
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-57
-</td>
-<td style="text-align:left;">
-Kyrgyzstan
-</td>
-<td style="text-align:right;">
-0.17
-</td>
-<td style="text-align:right;">
-0.50
-</td>
-<td style="text-align:left;">
-Lower middle income
-</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> INDSTAT 2 rev.3, 2000-2017, runner exposure shares shown for year 2016.
-</td>
-</tr>
-</tfoot>
-</table>
-</div>
-<div id="runner-industries-industry-profiling" class="section level3">
-<h3><span class="header-section-number">6.1.3</span> Runner industries: Industry profiling</h3>
+<div id="advanced-manufacturing-industry-profiling" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Advanced manufacturing industry profiling</h3>
 <p>It is important to note that the idea of runner industries is not a static concept. It fundamentally depends on the set of countries and time periods looked at. In other words, even though one industry follows a declining growth trend on the global average, this does not imply that this will have negative value added and employment growth dynamics for all countries and regions. In the same vein, the observation that another industry has shown inclusive and tenable growth characteristics on the global scale does not imply that this industry must be equally successful across all countries considered.</p>
 <p>One last observation with regards to the dimension of the runner industry analysis is that its identification is not only sensitive to the choice of time dimension but also depends on the choice of the country sample. In this regard it may not be a sensible strategy for a developing country to identify and/or advocate for the development of runner industries as identified either on the global stage or, more specifically, with regards to a sub-set of advanced economies. We have seen this point before when talking about the runner share exposure of Viet Nam vis-a-vis other lower middle income countries.</p>
 <div id="variation-across-countries" class="section level4">
-<h4><span class="header-section-number">6.1.3.1</span> Variation across countries</h4>
-<p>Having identified a successful runner industry in the aggregate does not imply that this industry will be equally successful across all countries. For example, when applying the runner analysis concept to the full sample of available economies, out of the 18 industries, 5 follow an inclusive and sustained value added and employment growth while another 7 display jobless growth characteristics on the global stage (see Table <a href="analysis-3.html#tab:runners-full">6.1</a>). On the other hand, when we focus the analysis on Viet Nam in particular and contrast this with the development of lower middle income economies, we can obtain a much more narrow and precise industry performance profile of the Vietnamese manufacturing sector (see Table <a href="analysis-3.html#tab:xs-var">6.6</a>). Exemplarily, whereas the wearing apparel industry has been following a declining growth trajectory (where positive productivity growth is a consequence of an even stronger decrease in employment growth than value added growth) on the global scale, it has been of a jobless growth nature for the case of lower middle income countries.</p>
+<h4><span class="header-section-number">6.1.2.1</span> Variation across countries</h4>
+<p>Having identified a successful runner industry in the aggregate does not imply that this industry will be equally successful across all countries. For example, when applying the runner analysis concept to the full sample of available economies, out of the 18 industries, 5 follow an inclusive and sustained value added and employment growth while another 7 display jobless growth characteristics on the global stage (see Table <a href="analysis-3.html#tab:runners-full">6.1</a>). On the other hand, when we focus the analysis on Viet Nam in particular and contrast this with the development of lower middle income economies, we can obtain a much more narrow and precise industry performance profile of the Vietnamese manufacturing sector (see Table <a href="analysis-3.html#tab:xs-var">6.5</a>). Exemplarily, whereas the wearing apparel industry has been following a declining growth trajectory (where positive productivity growth is a consequence of an even stronger decrease in employment growth than value added growth) on the global scale, it has been of a jobless growth nature for the case of lower middle income countries.</p>
 <p>At the same time, the Vietnamese wearing apparel industry has both enjoyed a robust growth in productivity and employment. This analysis indicates that the Vietnamese wearing apparel industry has followed a very different trend to that of the global average and/or that of its lower middle-income counterparts. In other cases, such as for example the motor vehicles industry, Viet Nam has enjoyed inclusive and tenable growth dynamics similar to those of its lower middle-income counterparts, and the global economy alike.</p>
+<p>Table <a href="analysis-3.html#tab:xs-var">6.5</a> also allows us to investigate why the medium-/high-technology industries 31A: electrical machinery and 33: precision instruments are identified as runner industries for Viet Nam while they are identified for the income group runners: There is now data available for these industries for the case of Viet Nam. While this is certainly encouraging it does not mean that we have to stop with the analysis there: Upon inspection of the Vietnamese raw data we learn that there is no index of industrial production data available, a variable the we require to calculate the real value added series.</p>
+<div class="rmdquestion">
+<p>
+Do we want to make the recommendation that they can use a different IIP? If so, which one? Manufacturing? Or shall we recommend not to do anything?
+</p>
+</div>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:xs-var">Table 6.6: </span>Viet Nam vs. lower middle-income countries, full sample period
+<span id="tab:xs-var">Table 6.5: </span>Viet Nam vs. lower middle-income countries, full sample period
 </caption>
 <thead>
 <tr>
@@ -1965,16 +1837,16 @@ Figure 6.2: CAGR distribution food and beverages.
 </p>
 </div>
 <p>The red vertical lines identify the average growth rates for each of the three variables. Additionally, the three CAGRs for Viet Nam are highlighted in dark blue. This illustration serves two main purposes:
-First of all, it allows one to examine if the average growth rates are driven by some extreme (either very high or very low) growth rate or if they are representative of sector dynamics.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> In the case presented here we see that the histogram seems to be somewhat positively skewed. This means that the right tail of the distribution (the right side of the histogram) is longer (has more higher values) than the left.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> In other words, there are a few countries reporting considerably higher growth rates for productivity, value added and employment. At the same time, the highest number of countries report productivity (value added) growth rates of roughly +2 (+1) percent and -0.5 percent for employment as illustrated by the peak of the histogram count.
-Secondly, by comparing the histogram and average with the recorded growth rates for Viet Nam (dark blue bar in Figure <a href="analysis-3.html#fig:dist-va">6.2</a>), one can easily and quickly compare Viet Nam’s growth performance relative to that of other countries: Whereas Viet Nam’s productivity growth rate appears to be in line with that of the majority of economies compared here, its value added and employment growth rates belong to the highest in the sample. This result again illustrates the importance of considering the productivity dynamics alongside that of its composing factors as a similar productivity growth rate could have also been achieved by a lower value added and potentially negative employment growth rate as the case of the lower middle income countries in Table <a href="analysis-3.html#tab:xs-var">6.6</a> has illustrated.</p>
+First of all, it allows one to examine if the average growth rates are driven by some extreme (either very high or very low) growth rate or if they are representative of sector dynamics.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> In the case presented here we see that the histogram seems to be somewhat positively skewed. This means that the right tail of the distribution (the right side of the histogram) is longer (has more higher values) than the left.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> In other words, there are a few countries reporting considerably higher growth rates for productivity, value added and employment. At the same time, the highest number of countries report productivity (value added) growth rates of roughly +2 (+1) percent and -0.5 percent for employment as illustrated by the peak of the histogram count.
+Secondly, by comparing the histogram and average with the recorded growth rates for Viet Nam (dark blue bar in Figure <a href="analysis-3.html#fig:dist-va">6.2</a>), one can easily and quickly compare Viet Nam’s growth performance relative to that of other countries: Whereas Viet Nam’s productivity growth rate appears to be in line with that of the majority of economies compared here, its value added and employment growth rates belong to the highest in the sample. This result again illustrates the importance of considering the productivity dynamics alongside that of its composing factors as a similar productivity growth rate could have also been achieved by a lower value added and potentially negative employment growth rate as the case of the lower middle income countries in Table <a href="analysis-3.html#tab:xs-var">6.5</a> has illustrated.</p>
 </div>
 <div id="temporal-variation." class="section level4">
-<h4><span class="header-section-number">6.1.3.2</span> Temporal variation.</h4>
+<h4><span class="header-section-number">6.1.2.2</span> Temporal variation.</h4>
 <p>Te point on temporal variation is illustrated by considering the analysis for the post-2000 period which corresponds to most recent period of fast-paced industry 4.0 adoption across the globe only. Looking at Table 16 which compares Viet Nam in the post-2000 era a few points can be made: First of all, the results for Viet Nam in Table 16 are identical to those in Table 15. This is because of the fact that the real value added series for any industry does not start before 2000. This is an important insight when defining the sample for the analysis which might change depending on the policy question to be answered: If one wants to analyse the most recent trends across a set of neighbouring economies, a different data sample would be selected as if one was interested in the global performance of a particular industry since the financial crisis in 2007/2008. Again, in other cases, for example if one wants to analyse the performance of the food and beverage industry between 1970 and 1985, data limitations might render this an infeasible exercise; as is the case for Viet Nam here.</p>
 <p>At the same time, Table 16 indicates that the food and beverage industry can, on average, be characterized as a runner industry in the post-2000 era for the set of lower middle income countries. The result is brought about by the average employment growth rate to switch sign from negative to positive (see Table 19 and Table 20). As part of an exploratory data analysis one may be inclined to try to identify where the differences in average growth rates may come from. Are these the results of some extreme observations (outliers) or do they reflect a gradual change in the economies of the food and beverage industry of lower middle-income countries?</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-21">Table 6.7: </span>Viet Nam vs. lower middle-income countries, full sample period
+<span id="tab:unnamed-chunk-19">Table 6.6: </span>Viet Nam vs. lower middle-income countries, full sample period
 </caption>
 <thead>
 <tr>
@@ -2437,25 +2309,495 @@ NA
 Figure 6.3: CAGR distribution food and beverages.
 </p>
 </div>
+</div>
+</div>
+<div id="runner-industry-exposure-1" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Runner industry exposure</h3>
+<p>In the previous step we discussed ways to measure the performance of manufacturing industries along the delineating lines of productivity, value added and employment. We saw how this kind of analysis is sensible to the choice of country comparators and time dimensions. It also highlighted the importance of assessing an industry performance in the context of the variation across countries. While this may serve as an important step to learn about the dynamics of a particular (set of) industry(ies) of a country, it says very little about the characteristics of the manufacturing industry of a particular country as a whole. Consequently, and in order to assess the degree to which a country’s manufacturing sector is comprised of industries with inclusive and tenable growth dynamics (runner industries), a simple ratio of runner industries in total manufacturing is proposed.</p>
+<p>In this way we can obtain two simple indicators that allow us to assess the share of manufacturing industries in an economy that have experienced inclusive and sustained growth in the past. If, for example, the share of runner industries in total manufacturing of a country is very low, this indicates higher risk of jobless growth in the wake of technological adoptions which would deserve attention from the policy makers especially in terms of measures for employment protection. We have also seen in previous sections that in the long term a higher and prolonged exposure towards sectors which on average are not the best performers in terms of jobs creation may be associated to lower income levels.
+What is more, the concept of runner exposure may be useful not only in order to summarize the performance of one particular country, it can also be used to produce country rankings based on either the runner share in total manufacturing value added or employment, respectively:</p>
+<p>Table <a href="analysis-3.html#tab:runner-post">6.7</a> ranks the countries with regards to their exposure to post-2000 runner industries for the year 2016 by runner value added and employment share in descending order. What becomes apparent is that out of the top-10 countries eight belong the group of high-income countries while Viet Nam ranks 42nd out of 57 in terms of value added runner shares. In other words, 54 percent of value added contribution (33 percent of employment contribution) to total manufacturing value added (employment) in 2016 has come from industries that have reported positive value added and employment growth rate in the post-2000 period. This puts Viet Nam into the 18 percentile of ranked countries in terms of value added generation (2nd percentile for employment).<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:runner-post">Table 6.7: </span>Exposure to runner industry ranking, year 2016, post-2000 runners, sorted by runner value added and employment share in descending order.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Ranking
+</th>
+<th style="text-align:left;">
+Country
+</th>
+<th style="text-align:right;">
+Runner value added share
+</th>
+<th style="text-align:right;">
+Runner employment share
+</th>
+<th style="text-align:left;">
+Income group
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Switzerland
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.82
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Luxembourg
+</td>
+<td style="text-align:right;">
+0.87
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Germany
+</td>
+<td style="text-align:right;">
+0.80
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+France
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Philippines
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+<td style="text-align:right;">
+0.66
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Hungary
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+0.74
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Netherlands
+</td>
+<td style="text-align:right;">
+0.76
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+Colombia
+</td>
+<td style="text-align:right;">
+0.74
+</td>
+<td style="text-align:right;">
+0.63
+</td>
+<td style="text-align:left;">
+Upper middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+Croatia
+</td>
+<td style="text-align:right;">
+0.74
+</td>
+<td style="text-align:right;">
+0.65
+</td>
+<td style="text-align:left;">
+High income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+Bulgaria
+</td>
+<td style="text-align:right;">
+0.62
+</td>
+<td style="text-align:right;">
+0.57
+</td>
+<td style="text-align:left;">
+Upper middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:left;">
+Viet Nam
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.33
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:left;">
+Mongolia
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> INDSTAT 2 rev.3, 2000-2017, runner exposure shares shown for year 2016.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>When narrowing down the analysis of runner exposure to the set of lower middle income countries, <a href="analysis-3.html#tab:runner-postsmall">6.8</a> indicates that Viet Nam ranks 6th out of 10 for all lower middle income countries for the runner value added shares. At the same time, Viet Nam’s runner employment share is the second lowest for the set of lower middle-income countries. It is particularly this observation that merits further discussion: This is because so far we have benchmarked Viet Nam against a group of countries that share the same income group. This, however, does not necessarily imply that they also automatically follow the same industrial strategy and/or industry composition. We will discuss these point in the next section.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:runner-postsmall">Table 6.8: </span>Exposure to runner industry ranking for lower middle-income countries, year 2016, post-2000 runners, sorted by runner value added and employment share in descending order.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Ranking
+</th>
+<th style="text-align:left;">
+Country
+</th>
+<th style="text-align:right;">
+Runner value added share
+</th>
+<th style="text-align:right;">
+Runner employment share
+</th>
+<th style="text-align:left;">
+Income group
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Philippines
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+<td style="text-align:right;">
+0.66
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Egypt
+</td>
+<td style="text-align:right;">
+0.69
+</td>
+<td style="text-align:right;">
+0.53
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+Indonesia
+</td>
+<td style="text-align:right;">
+0.69
+</td>
+<td style="text-align:right;">
+0.48
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+Ukraine
+</td>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:right;">
+0.62
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:left;">
+Republic of Moldova
+</td>
+<td style="text-align:right;">
+0.58
+</td>
+<td style="text-align:right;">
+0.57
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:left;">
+Viet Nam
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.33
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:left;">
+Mongolia
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:left;">
+Sri Lanka
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.36
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:left;">
+India
+</td>
+<td style="text-align:right;">
+0.47
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+57
+</td>
+<td style="text-align:left;">
+Kyrgyzstan
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:left;">
+Lower middle income
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> INDSTAT 2 rev.3, 2000-2017, runner exposure shares shown for year 2016.
+</td>
+</tr>
+</tfoot>
+</table>
+<p><br><br></p>
+<hr />
+<p><strong>SUMMARY</strong></p>
 <p>To conclude, in this section we have applied the concept of runner industries to identify growth dynamics. We follow the example of the Vietnamese manufacturing industries and related them to more general dynamics observed amongst the set of lower middle-income countries. The analysis has further highlighted the fact that the concept of runner industries is a relative concept and therefore sensitive to the choice of data sample. Whereas this certainly makes the concept of runner industries a challenging tool to apply, it also constitutes its biggest advantage over more static classification tools: Following the notion that there is no ‘one-size-fits-all’ approach to manufacturing policy in general and technology adoption in particular, the tool of runner industries allows for a flexible identification of growth enhancing (in the context of value added and employment creation) identification and classification of industries which can be tailored and streamlined to follow the particular assessment needs of policy makers. At the same time, this tool has also highlighted that even within a narrowly defined window of analysis, differences in the respective growth rates are reflective of country-specific effects and should therefore be given close consideration during the interpretation stage of the runner industry assessment.
 For a careful consideration of the runner industry classification in the case of Viet Nam it is important to contextualize the differences identified vis-à-vis the group of lower-middle income countries as well as the world trend. By and large Viet Nam can be characterized by reporting a disproportionally high contribution of employment-led industries (where positive employment growth outpaces value added growth thereby leading to a negative productivity growth rate). Vietnamese policy makers should be aware of these dynamics as they may bring about important ramifications particularly in the context of the adoption of new technologies. We will highlight this connection in the subsequent paragraphs.</p>
 
 </div>
 </div>
 </div>
+
+
+
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-mayer2018robots">
+<p>Mayer, Joerg. 2018. “Robots and Industrialization: What Policies for Inclusive Growth.” Working Paper, Friedrich Ebert Stiftung, New York.</p>
 </div>
-
-
-
+<div id="ref-oecd2011">
+<p>OECD. 2011. “ISIC Rev. 3 Technology Intensity Definition.” OECD. <a href="www.oecd.org/sti/ind/48350231.pdf">www.oecd.org/sti/ind/48350231.pdf</a>.</p>
+</div>
+</div>
 <div class="footnotes">
 <hr />
-<ol start="20">
-<li id="fn20"><p>Value added per capita and the employment-population ratio can be calculated as (Value added per capita = Value added/population) and (Employment − population ratio = Employment/population), respectively.<a href="analysis-3.html#fnref20" class="footnote-back">↩</a></p></li>
-<li id="fn21"><p>Throughout this chapter, we refer to the ‘full’ sample as the complete INDSTAT data set containing all countries and years for the time span 1963 to 2017.<a href="analysis-3.html#fnref21" class="footnote-back">↩</a></p></li>
-<li id="fn22"><p>Percentiles calculated in terms of rankings: <span class="math inline">\(1- 41/57 \approx 26\%\)</span> and <span class="math inline">\(1- 56/57 \approx 2\%\)</span> for value added and employment, respectively.<a href="analysis-3.html#fnref22" class="footnote-back">↩</a></p></li>
-<li id="fn23"><p>This is an important fact to consider as the mean (average) of a sequence of numbers is sensitive to outliers, in other
-words it can increase (decrease) considerably if one of the values is very big (small) relative to the other ones.<a href="analysis-3.html#fnref23" class="footnote-back">↩</a></p></li>
-<li id="fn24"><p>Conversely, a negatively skewed distribution (histogram) has a longer left tail (has more lower values).<a href="analysis-3.html#fnref24" class="footnote-back">↩</a></p></li>
+<ol start="22">
+<li id="fn22"><p>Value added per capita and the employment-population ratio can be calculated as (Value added per capita = Value added/population) and (Employment − population ratio = Employment/population), respectively.<a href="analysis-3.html#fnref22" class="footnote-back">↩</a></p></li>
+<li id="fn23"><p>Throughout this chapter, we refer to the ‘full’ sample as the complete INDSTAT data set containing all countries and years for the time span 1963 to 2017.<a href="analysis-3.html#fnref23" class="footnote-back">↩</a></p></li>
+<li id="fn24"><p>This is an important fact to consider as the mean (average) of a sequence of numbers is sensitive to outliers, in other
+words it can increase (decrease) considerably if one of the values is very big (small) relative to the other ones.<a href="analysis-3.html#fnref24" class="footnote-back">↩</a></p></li>
+<li id="fn25"><p>Conversely, a negatively skewed distribution (histogram) has a longer left tail (has more lower values).<a href="analysis-3.html#fnref25" class="footnote-back">↩</a></p></li>
+<li id="fn26"><p>Percentiles calculated in terms of rankings: <span class="math inline">\(1- 41/57 \approx 26\%\)</span> and <span class="math inline">\(1- 56/57 \approx 2\%\)</span> for value added and employment, respectively.<a href="analysis-3.html#fnref26" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
