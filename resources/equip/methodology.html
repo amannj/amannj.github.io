@@ -158,12 +158,12 @@
             <section class="normal" id="section-">
 <div id="methodology" class="section level1">
 <h1><span class="header-section-number">Section 3</span> Methodology</h1>
-<p>This section introduces a number of indicators that will be used in the next chapters to analyse the following strategic questions:</p>
+<p>This section introduces a number of indicators that will be used in the next sections to analyse the following strategic questions:</p>
 <ul>
 <li>How successful is a country in the adoption of new technology - in general and in industry 4.0 in particular - in absolute and relative terms?</li>
 <li>If a country has fallen behind in terms of adoption rate, what could constitute a sensible target for the country to catch up to?</li>
 <li>How does a country’s industrial automation capacity respond to the newly emerging technologies?</li>
-<li>How can we asses if a country’s industrial automation capacity has improved?</li>
+<li>How can one asses if a country’s industrial automation capacity has improved?</li>
 <li>To what extent are manufacturing jobs in the country at risk of robot-based automation?</li>
 <li>What are the productivity growth dynamics of a particular industry and what do they depend on?</li>
 <li>Are positive productivity growth rates always good?</li>
@@ -171,28 +171,28 @@
 <li>What is the exposure of a country to industries that have experienced positive employment, value added and productivity growth in the past?</li>
 <li>How does the share of these industries evolve over time?</li>
 </ul>
-<p>The main data sources are <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> for data on imports and exports of goods, UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> for data on employment and value added on the sectoral level, the World Bank World Development Indicators <span class="citation">(WDI <a href="#ref-WDI">2019</a>)</span> for a country’s total employment, population and nominal gross domestic product and the International Federation of Robotics <span class="citation">(IFR <a href="#ref-IFR">2019</a>)</span> for the stock of industrial robots. For manufacturing employment and total employment, the reader can alternatively use data from the International Labour Organisation <span class="citation">(ILO <a href="#ref-ILO">2019</a>)</span>. This alternative is discussed in the appendix.</p>
+<p>The main data sources are <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> for data on imports and exports of goods, UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> for data on employment and value added on the industry level, the World Bank World Development Indicators <span class="citation">(WDI <a href="#ref-WDI">2019</a>)</span> for a country’s total employment, population and nominal gross domestic product and the International Federation of Robotics <span class="citation">(IFR <a href="#ref-IFR">2019</a>)</span> for the stock of industrial robots. For total manufacturing employment, data from the the International Labour Organisation <span class="citation">(ILO <a href="#ref-ILO">2019</a>)</span> is used. Alternatively, the reader could aggregate industry employment by UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span>. This alternative is further discussed in the appendix.</p>
 <p>In this section the index <span class="math inline">\(i\)</span> refers to a country, <span class="math inline">\(j\)</span> refers to an industry, <span class="math inline">\(k\)</span> denotes a product or product group, while <span class="math inline">\(t\)</span> denotes a time period (usually a year).</p>
 <div id="ch:meth_adop" class="section level2">
 <h2><span class="header-section-number">3.1</span> Adoption of new technologies</h2>
-<p>As technology is one main driver of economic development by increasing productivity, we are interested at what stage of adoption a country currently is. If it is, for example, a leader in technology we would expect it to also be an exporter of the respective goods related to that technology. This is one way of determining if a country successfully adopted some technology, when it reached a point where it is even an exporter of it.</p>
+<p>As technology is one main driver of economic development by increasing productivity, it is interesting to see at what stage of adoption a country currently is. If it is, for example, a leader in technology one would expect it to also be an exporter of the respective goods related to that technology. This is one way of determining if a country successfully adopted some technology, when it reached a point where it is even an exporter of it.</p>
 <p>To become a technology leader, most countries first start by importing technology to adopt it and absorb it.
-We begin by looking at import and export shares of the broadest category of relevant goods, capital goods and subsequently, we analyse goods related to industry 4.0. That is, we start with goods related to all vintages of technology and then focus on goods related to the latest wave of innovation.</p>
-<p>We then combine information on imports and exports to determine the stage of technology adoption of a particular country.</p>
+This section begins by looking at import and export shares of the broadest category of relevant goods, capital goods and subsequently, analyses goods related to industry 4.0. That is, first goods related to all vintages of technology and then goods related to the latest wave of innovation.</p>
+<p>Information on imports and exports is combined to determine the stage of technology adoption of a particular country.</p>
 <div id="import-share-of-capital-goods" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Import share of capital goods</h3>
-<p>Starting with capital goods, we are interested in how much capital goods are imported compared to a country’s total imports. This should be a first indication on the ability of a country to use these goods and the technology related to them.</p>
+<p>Starting with capital goods, how much capital goods are imported compared to a country’s total imports? This should be a first indication on the ability of a country to use these goods and the technology related to them.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Of all the goods imported by a country, how much are capital goods?</li>
 </ul>
-<p>For a given country <span class="math inline">\(i\)</span> and period <span class="math inline">\(t\)</span>, we calculate the indicator</p>
+<p>For a given country <span class="math inline">\(i\)</span>, product group <span class="math inline">\(k\)</span> (capital goods) and period <span class="math inline">\(t\)</span>,</p>
 <p><span class="math display">\[
 Share~of~capital~goods~imports~in~total~imports_{it} = \frac{Imports_{ikt}}{Total~imports_{it}}
 \]</span>
-which tells us how much of all goods imported are capital goods.</p>
+which indicates how much of all goods imported are capital goods.</p>
 <p><strong>Data sources</strong></p>
-<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:importcap-share">3.1</a>. Imports are taken from <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span>, whereas the database offers different classification of goods. We chose ‘BEC’ as it is a classification that defines broad economic categories, such as capital goods we are interested in <span class="citation">(United Nations Trade Statistics <a href="#ref-UNBEC2003">2003</a>)</span>. For a more detailed description of the ‘BEC’ classification, see <a href="BEC.html#BEC">H</a> in the appendix.</p>
+<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:importcap-share">3.1</a>. Imports are taken from <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span>, whereas the database offers different classification of goods. ‘BEC’ is chosen as it is a classification that defines broad economic categories, such as capital goods <span class="citation">(United Nations Trade Statistics <a href="#ref-UNBEC2003">2003</a>)</span>. For a more detailed description of the ‘BEC’ classification, see <a href="BEC.html#BEC">H</a> in the appendix.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:importcap-share">Table 3.1: </span>Adoption of technologies embodied in capital goods
@@ -240,13 +240,13 @@ Total imports of a country
 <ul>
 <li>Of all the goods exported by a country, how much are capital goods?</li>
 </ul>
-<p>For a given country <span class="math inline">\(i\)</span> and period <span class="math inline">\(t\)</span>, we calculate the indicator</p>
+<p>For a given country <span class="math inline">\(i\)</span>, product group <span class="math inline">\(k\)</span> (capital goods) and period <span class="math inline">\(t\)</span>,</p>
 <p><span class="math display">\[
 Share~of~capital~goods~exports~in~total~exports_{it} = \frac{Exports_{ikt}}{Total~exports_{it}}
 \]</span>
-which tells us how much of all goods exported are capital goods.</p>
+which indicates how much of all goods exported are capital goods.</p>
 <p><strong>Data sources</strong></p>
-<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:exportcap-share">3.2</a>. Exports are taken from <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> where we again chose the ‘BEC’ classification.</p>
+<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:exportcap-share">3.2</a>. Exports are again taken from <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> with ‘BEC’ classification.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:exportcap-share">Table 3.2: </span>Export of capital goods
@@ -289,7 +289,7 @@ Total exports of a country
 </div>
 <div id="revealed-comparative-advantage-of-imports-and-exports-of-capital-goods" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Revealed comparative advantage of imports and exports of capital goods</h3>
-<p>As the simple share is a first very broad indicator of potential technology adoption by importing, we have to go further in order to establish if a country is adopting through imports or if it is already producing goods themselves. For this we first want to see if a country is importing more or less than the world average. We relate the import share from above to the import share of capital goods in worldwide imports. This indicator is called ‘revealed comparative advantage (of imports)’ RCA. If this indicator is above one, the country imports relatively more capital goods than the average country.</p>
+<p>As the simple share is a first very broad indicator of potential technology adoption by importing, one has to go further in order to establish if a country is adopting through imports or if it is already producing goods themselves. For this the question is if a country is importing more or less than the world average. The import share from above is related to the import share of capital goods in worldwide imports. This indicator is called ‘revealed comparative advantage (of imports)’ RCA. If this indicator is above one, the country imports relatively more capital goods than the average country.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Is a country importing more or less capital goods compared to the worldwide average?</li>
@@ -357,7 +357,7 @@ Total imports from the world
 </div>
 <div id="revealed-comparative-advantage-of-exports-of-capital-goods" class="section level3">
 <h3><span class="header-section-number">3.1.4</span> Revealed comparative advantage of exports of capital goods</h3>
-<p>Once we know if a country imports more or less than the world average, we can combine this information with the export side. If we, for example, find that a country imports less than the world average, but export more than the world average, the difference must be produced domestically. This would highlight that this country has adopted technology well enough to be able to export it.</p>
+<p>Once is is clear if a country imports more or less than the world average, this information can be combined with the export side. If, for example, it can be shown that a country imports less than the world average, but export more than the world average, the difference must be produced domestically. This would highlight that this country has adopted technology well enough to be able to export it.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Is a country exporting more or less capital goods compared to the worldwide average?</li>
@@ -422,21 +422,21 @@ Total export to the world
 </tr>
 </tbody>
 </table>
-<p>There is, however, an additional interpretation that we must not forget. A country can be a below-average exporter of capital goods. This does not mean that this country has not yet successfully adopted the related technology. It might mean that it uses the imported capital goods to produce other goods and it might even export them. Not every successful technology adopter becomes an exporter of capital goods. In simple terms: not all machines (and the technology embedded in them) are used to produce other machines. We will, however, see in the analysis part of the module that different income groups of countries show distinct patterns respectively.</p>
+<p>There is, however, an additional interpretation that must be pointed out. A country can be a below-average exporter of capital goods. This does not mean that this country has not yet successfully adopted the related technology. It might mean that it uses the imported capital goods to produce other goods and it might even export them. Not every successful technology adopter becomes an exporter of capital goods. In simple terms: not all machines (and the technology embedded in them) are used to produce other machines. However, it will be shown in the analysis part of the module that different income groups of countries show distinct patterns respectively.</p>
 </div>
 <div id="import-share-of-4.0-goods" class="section level3">
 <h3><span class="header-section-number">3.1.5</span> Import share of 4.0 goods</h3>
-<p>The previous indicators introduced a way of analysing imports and exports of capital goods, goods that represent every form and wave of technology. Now, we want to be more specific and look at goods that are related to industry 4.0. We start with imports and then calculate RCAs for imports and exports.</p>
+<p>The previous indicators introduced a way of analysing imports and exports of capital goods, goods that represent every form and wave of technology. Now the focus shifts on goods that are related to industry 4.0. The proposed indicators are equivalent to the ones presented above.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Of all the goods imported by a country, how much are 4.0 goods?</li>
 </ul>
-<p>For a given country <span class="math inline">\(i\)</span> and period <span class="math inline">\(t\)</span>, we calculate the indicator</p>
+<p>For a given country <span class="math inline">\(i\)</span>, product group <span class="math inline">\(k\)</span> (4.0 goods) and period <span class="math inline">\(t\)</span>,</p>
 <p><span class="math display">\[
 Share~of~industry~4.0~goods~imports~in~total~imports_{it} = \frac{Imports_{ikt}}{Total~imports_{it}}
 \]</span></p>
 <p><strong>Data sources</strong></p>
-<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:import-share">3.5</a>. This time we use the <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> with the HS 2002 classification as we are now interest in particular products. The specific list of products is based on <span class="citation">Lavopa (<a href="#ref-Lavopa2019">2019</a>)</span> and can be found in Table <a href="i40goods.html#tab:list40">F.1</a>.</p>
+<p>The data sources for this indicator are provided in Table <a href="methodology.html#tab:import-share">3.5</a>. This time <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> with the HS 2002 classification is used as the interest now is on particular products. The specific list of products is based on <span class="citation">UNIDO (<a href="#ref-IDR2020">2020</a>)</span> and can be found in Table <a href="i40goods.html#tab:list40">F.1</a>.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:import-share">Table 3.5: </span>Adoption of industry 4.0 technologies
@@ -479,12 +479,11 @@ Total imports of a country
 </div>
 <div id="export-share-of-4.0-goods" class="section level3">
 <h3><span class="header-section-number">3.1.6</span> Export share of 4.0 goods</h3>
-<p>Equivalently to above, we also calculate the exports of 4.0 goods as share of total exports.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Of all the goods exported by a country, how much are 4.0 goods?</li>
 </ul>
-<p>For a given country <span class="math inline">\(i\)</span> and period <span class="math inline">\(t\)</span>, we calculate the indicator</p>
+<p>For a given country <span class="math inline">\(i\)</span>, product group <span class="math inline">\(k\)</span> (4.0 goods) and period <span class="math inline">\(t\)</span>,</p>
 <p><span class="math display">\[
 Share~of~industry~4.0~goods~exports~in~total~exports_{it} = \frac{Exports_{ikt}}{Total~exports_{it}}
 \]</span></p>
@@ -532,7 +531,6 @@ Total imports of a country
 </div>
 <div id="revealed-comparative-advantage-of-imports-of-4.0-goods" class="section level3">
 <h3><span class="header-section-number">3.1.7</span> Revealed comparative advantage of imports of 4.0 goods</h3>
-<p>Such as before, we are interested in the revealed comparative advantage (RCA) of imports. This time, we look at 4.0 goods.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Is a country importing more or less 4.0 goods compared to the worldwide average?</li>
@@ -601,7 +599,6 @@ Total imports from the world
 </div>
 <div id="revealed-comparative-advantage-of-exports-of-4.0-goods" class="section level3">
 <h3><span class="header-section-number">3.1.8</span> Revealed comparative advantage of exports of 4.0 goods</h3>
-<p>As with capital goods, we also look at exports in order to determine if a country is a leader in 4.0 related technology.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>Is a country exporting more or less 4.0 goods compared to the worldwide average?</li>
@@ -610,7 +607,7 @@ Total imports from the world
 RCA~export~of~a~country_{ikt} = \frac{Exports_{ikt}}{Total~exports_{it}} / \frac{Exports_{wkt}}{Total~exports_{wt}}
 \]</span></p>
 <p><strong>Data sources</strong></p>
-<p>Data source is again <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> in the HS 2002 classification as we are interested in specific goods (Table <a href="i40goods.html#tab:list40">F.1</a>).</p>
+<p>Data source is again <span class="citation">UN Comtrade (<a href="#ref-comtrade2010united">2019</a>)</span> in the HS 2002 classification as the interest is on specific goods (Table <a href="i40goods.html#tab:list40">F.1</a>).</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:RCA-export">Table 3.8: </span>RCA export of industry 4.0 goods
@@ -666,29 +663,8 @@ Total export to the world
 </tr>
 </tbody>
 </table>
-<p>Once we have calculated RCAs for imports and exports, we can use them to classify countries according to their technology adoption. Please keep in mind, that this is one way of reaching such a conclusion. It is, however, a good way as trade flows ‘reveal’ the behaviour of firms from which we want to make the conclusion.
-We will classify countries according to their trade patterns, e.g. whether they are above or below average importers or exporters.</p>
-<!-- ### Import share of different 4.0 goods -->
-<!-- To find out if countries specialise in very particular technologies or goods, or if it is not present in a specific type of good, we distinguish three different 4.0 goods and again calculate import shares. This disaggregation could reveal specialisation patterns within industry 4.0. -->
-<!-- **Main question** -->
-<!-- - Of all the goods imported by a country, how much are the three broad categories of 4.0 goods and are they different from one another? -->
-<!-- $$ -->
-<!-- Share~of~specific~industry~4.0~good~imports~in~total~imports_{it} = \frac{Imports_{ikt}}{Total~imports_{it}} -->
-<!-- $$ -->
-<!-- **Data sources** -->
-<!-- The data source is the same, @comtrade2010united HS 2002, but now we look for very specific groups of 4.0 goods as compared to before, where we looked at the sum of all 4.0 goods identified by @Lavopa2019. -->
-<!-- ```{r import40-share, echo=FALSE, tidy=FALSE} -->
-<!-- imp40_share <- data.frame(Indicator = c('Share of specific industry 4.0 good imports in total imports'), -->
-<!--                          Variable = c('Imports of specific 4.0 good of a country',  -->
-<!--                                       'Total imports of a country'), -->
-<!--                          Source = c('@comtrade2010united HS 2002', -->
-<!--                                     '@comtrade2010united HS 2002')) -->
-<!-- kableExtra::kable( -->
-<!--   imp40_share, caption = 'Adoption dynamics within 4.0 goods', -->
-<!--   booktabs = TRUE -->
-<!-- ) %>% collapse_rows(columns = 1, valign = "middle") %>% -->
-<!--   kable_styling() -->
-<!-- ``` -->
+<p>Once RCAs for imports and exports are calculated, they can be used to classify countries according to their technology adoption. Please keep in mind, that this is one way of reaching such a conclusion. It is, however, a good way as trade flows ‘reveal’ the behaviour of firms.</p>
+<p>Countries will be classified according to their trade patterns, e.g. whether they are above or below average importers or exporters.</p>
 <div class="rmdcomment">
 <p>
 <strong>Box 3.1: Alternative identification and disaggregation</strong>
@@ -718,7 +694,7 @@ Further, it should be clear that the indicators above can be applied to more dis
 </div>
 <div id="robots-and-job-loss-in-manufacturing-1" class="section level2">
 <h2><span class="header-section-number">3.2</span> Robots and job loss in manufacturing</h2>
-<p>An important discussion with every new technological revolution is the question of whether it will substitute labour. One of the main public discussion is about job loss due to robot-based automation. Before we can make statements about potential risks of the newest technology, we need indicators that capture the use of robots, as well as how many people are potentially at risk of being replaced. To this end, we will combine the indicators described below.</p>
+<p>An important discussion with every new technological revolution is the question of whether it will substitute labour. One of the main public discussion is about job loss due to robot-based automation. Before an assessment can be made about potential risks of the newest technology, indicators that capture the use of robots, as well as how many people are potentially at risk of being replaced need to be introduced. To this end, the indicators described below have to be combined.</p>
 <div class="rmdcomment">
 <p>
 <strong>Box 3.2: Recommendation on aggregated employment measure</strong>
@@ -729,7 +705,7 @@ This section uses manufacturing employment at the aggregated sector level (for m
 </div>
 <div id="robot-intensity" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Robot intensity</h3>
-<p>Robots are used as complements or substitutes for human labour. Instead of using absolute stocks, we define robot intensity as the stock of robots per manufacturing employment. If this number is increasing, more robots are used for the same amount of human labour (or the same number of robots with less humans). In order to distinguish the two possible interpretations we well later also look at the development of employment.</p>
+<p>Robots are used as complements or substitutes for human labour. Instead of using absolute stocks, robot intensity is defined as the stock of robots per manufacturing employment. If this number is increasing, more robots are used for the same amount of human labour (or the same number of robots with less humans). In order to distinguish the two possible interpretations, the development of employment will be taken into account later.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>How many industrial robots are used compared to manufacturing employees?</li>
@@ -781,7 +757,7 @@ Manufacturing employment
 </div>
 <div id="rob-intens-gr" class="section level3">
 <h3><span class="header-section-number">3.2.2</span> Growth rate of robot intensity</h3>
-<p>In order to be able to see, if the robot intensity increases or decreases over time, it can help to calculate annual growth rates.This number shows by how much robot intensity increases or decreases from one year to the next. We will use it in the empirical analysis below to see that some countries show signs of maturity or saturation. That is, low annual growth rates indicating that the number of robots per worker does not increase significantly anymore. This has to be taken into account in order to assess the risk of automation.</p>
+<p>In order to be able to see, if the robot intensity increases or decreases over time, it can help to calculate annual growth rates.This number shows by how much robot intensity increases or decreases from one year to the next. It will be used it in the empirical analysis below to see that some countries show signs of maturity or saturation. That is, low annual growth rates indicating that the number of robots per worker does not increase significantly any more. This has to be taken into account in order to assess the risk of automation.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>By how much did the robot intensity grow or shrink per year?</li>
@@ -792,7 +768,7 @@ Annual~growth~rate~of~robot~intensity_{it} =  \frac{End~value_{it} - Initial~val
 </div>
 <div id="robot-intensity-by-industry" class="section level3">
 <h3><span class="header-section-number">3.2.3</span> Robot intensity by industry</h3>
-<p>Robots are used in different industries to varying degrees. Some sectors use more, some very few robots compared to employees. In order to see, how countries use robots in different industries over time, we calculate robot intensity by industry.</p>
+<p>Robots are used in different industries to varying degrees. Some sectors use more, some very few robots compared to employees. In order to see, how countries use robots in different industries over time, robot intensity is calculated by industry.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>How many industrial robots are used compared to manufacturing employees in different industries?</li>
@@ -844,8 +820,7 @@ UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span>
 </div>
 <div id="share-of-employees-in-risk-industries" class="section level3">
 <h3><span class="header-section-number">3.2.4</span> Share of employees in risk industries</h3>
-<p>Now that we have indicators for the use of robots per employee, we can start to answer the question if and by how much workers are at risk of losing their job due to robot-based automation. Arguably, not every type of work is at the same risk of being replaced by a machine. <span class="citation">Mayer (<a href="#ref-mayer2018robots">2018</a>)</span> has identified four manufacturing sectors, in which this risk is particularly high. We call them ‘risk sectors’ and they are Chemicals, Rubber and Plastic, Electronics as well as the automotive industry. Please look to Section <a href="analysis-2.html#ch:risk">5.1.2</a> for a detailed discussion.</p>
-<p>We will first see what share of employees works in ‘risk industries’</p>
+<p>Now that indicators for the use of robots per employee are introduced, one can start to answer the question if and by how much workers are at risk of losing their job due to robot-based automation. Arguably, not every type of work is at the same risk of being replaced by a machine. <span class="citation">Mayer (<a href="#ref-mayer2018robots">2018</a>)</span> has identified four manufacturing industries, in which this risk is particularly high. They are labelled ‘risk industries’ and they are Chemicals, Rubber and Plastic, Electronics as well as the automotive industry. Please look to Section <a href="analysis-2.html#ch:risk">5.1.2</a> for a detailed discussion.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>What is the share of workers in risk industries in total manufacturing employment?</li>
@@ -854,7 +829,7 @@ UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span>
 Share~of~employment~at~risk~in~total~manufac._{it} = \frac{Manufac.~employment~in~risk~industries_{ijt}}{Total~manufacturing~employment_{it}} 
 \]</span></p>
 <p><strong>Data sources</strong></p>
-<p>Data sources (Table <a href="methodology.html#tab:risk1">3.11</a>) is UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> for sectoral employment.</p>
+<p>Data sources (Table <a href="methodology.html#tab:risk1">3.11</a>) is UN <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> for sectoral employment and <span class="citation">ILO (<a href="#ref-ILO">2019</a>)</span> for total manufacturing employment.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:risk1">Table 3.11: </span>Share of employment in risk sectors
@@ -897,7 +872,7 @@ Total manufacturing employment
 </div>
 <div id="share-of-manufacturing-employment-in-total-employment" class="section level3">
 <h3><span class="header-section-number">3.2.5</span> Share of manufacturing employment in total employment</h3>
-<p>Next, we calculate the share of workers in the manufacturing industries in total employment. This indicates one dimension of importance of the manufacturing sector for an economy. If the manufacturing sector as a whole is small, then automation might affect fewer people.</p>
+<p>Next, the share of workers in the manufacturing industries in total employment is calculated. This indicates one dimension of importance of the manufacturing sector for an economy. If the manufacturing sector as a whole is small, then automation might affect fewer people.</p>
 <p><strong>Main question</strong></p>
 <ul>
 <li>What is the share of workers working in the manufacturing industry compared to total employment in a country?</li>
@@ -953,9 +928,9 @@ Total employment
 <p>The analysis of productivity related dynamics is built on two consecutive steps.</p>
 <ul>
 <li><p>In <strong>Step 1</strong> the three central variables of the analysis (productivity, employment, value added) are used to analyse industry-level growth dynamics and follow an inclusive and tenable growth trajectory (a positive growth rate of value added, employment and productivity). Throughout the analysis we refer to these industries as ‘runners’ (or runner industries).</p></li>
-<li><p>In <strong>Step 2</strong>, we assess the share of runner industries relative to the manufacturing sector of a country. This way we can quantify the proportion of a country’s manufacturing industry characterized by positive productivity, value added and employment dynamics.</p></li>
+<li><p>In <strong>Step 2</strong>, the share of runner industries relative to the manufacturing sector of a country is assessed. This way the proportion of a country’s manufacturing industry characterized by positive productivity, value added and employment dynamics can be quantified.</p></li>
 </ul>
-<p>See Table <a href="methodology.html#tab:runners-def">3.13</a> for a list of relevant variables. Throughout this section we will only resort to <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> data.</p>
+<p>See Table <a href="methodology.html#tab:runners-def">3.13</a> for a list of relevant variables. Calculations in this section only resort to <span class="citation">INDSTAT (<a href="#ref-INDSTAT">2019</a>)</span> data.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:runners-def">Table 3.13: </span>Structure of analysis
@@ -1072,10 +1047,10 @@ Sub-sector productivity growth rate (CAGR)
 <p><span class="math display">\[
 CAGR = \frac{End~value}{Initial~value}^{1/no.~of~years} -1
 \]</span></p>
-<p>The CAGR corresponds to a smoothed annual average over the time horizon considered. It serves as a measure to illustrate how much a particular variable has grown over time. In the case of this tool, we are interested in learning about the growth rates of employment, value added as well as productivity:
+<p>The CAGR corresponds to a smoothed annual average over the time horizon considered. It serves as a measure to illustrate how much a particular variable has grown over time. In the case of this tool, it is interesting to learn about the growth rates of employment, value added as well as productivity:
 Productivity is defined as the ratio of value added creation over the employment head count. In other words, it measures how much value added (in monetary terms) is produced by each employee of a respective industry in one year. Whereas this measure is interesting, the focus of this module is to assess the dynamics of productivity changes over time. This allows one to better assess the speed and direction of changes in the sectoral composition of the manufacturing industries of a country.</p>
-<p>Please note that it is preferable to calculate productivity and value added growth rates based on real value added series. This is because nominal value added growth is a composition of the growth rates of real value added <strong>and</strong> that of prices, i.e. inflation. Calculating nominal value added growth rates could therefore result in unrealistically high (nominal) growth rates which are simply the result of high inflation. Obviously, this is not desirable. In Appendix <a href="deflation.html#deflation">E</a> we propose a simple and straightforward measure to calculate real value added series for manufacturing industries.</p>
-<p>Based on this formula one can calculate CAGRs for productivity, value added and employment. As discussed in Section <a href="introduction.html#advocProd">2.2.4</a>, some combinations of growth rates of these three variables are more desirable than others. In Chapter <a href="analysis-3.html#chrunners">6.1</a> we will focus on the analysis of industries that follow a positive value added as well as productivity growth, i.e. can be classified as <strong>runner industries</strong>.</p>
+<p>Please note that it is preferable to calculate productivity and value added growth rates based on real value added series. This is because nominal value added growth is a composition of the growth rates of real value added <strong>and</strong> that of prices, i.e. inflation. Calculating nominal value added growth rates could therefore result in unrealistically high (nominal) growth rates which are simply the result of high inflation. Obviously, this is not desirable. In Appendix <a href="deflation.html#deflation">E</a> a simple and straightforward measure to calculate real value added series for manufacturing industries is proposed.</p>
+<p>Based on this formula one can calculate CAGRs for productivity, value added and employment. As discussed in Section <a href="introduction.html#advocProd">2.2.4</a>, some combinations of growth rates of these three variables are more desirable than others. Section <a href="analysis-3.html#chrunners">6.1</a> will focus on the analysis of industries that follow a positive value added as well as productivity growth, i.e. can be classified as <strong>runner industries</strong>.</p>
 </div>
 <div id="runner-industry-exposure" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Runner industry exposure</h3>
@@ -1166,14 +1141,14 @@ Runner~employment~share_{it} = \frac{employment~runner~industry_{it}}{Total~manu
 <div id="ref-INDSTAT">
 <p>INDSTAT. 2019. “United Nations Industrial Development Organization: INDSTAT 2 2019, Isic Revision 3.” <a href="https://stat.unido.org">https://stat.unido.org</a>.</p>
 </div>
-<div id="ref-Lavopa2019">
-<p>Lavopa, Alejandro. 2019. “Industrial Development Report 2020.” United Nations Industrial Development Organization.</p>
-</div>
 <div id="ref-mayer2018robots">
 <p>Mayer, Joerg. 2018. “Robots and Industrialization: What Policies for Inclusive Growth.” Working Paper, Friedrich Ebert Stiftung, New York.</p>
 </div>
 <div id="ref-comtrade2010united">
 <p>UN Comtrade. 2019. “United Nations Commodity Trade Statistics Database.” <a href="http://comtrade.un.org">http://comtrade.un.org</a>.</p>
+</div>
+<div id="ref-IDR2020">
+<p>UNIDO. 2020. “The Future of Industrialization.” <em>Industrial Development Report</em>.</p>
 </div>
 <div id="ref-UNBEC2003">
 <p>United Nations Trade Statistics. 2003. “Classification by Broad Economic Categories (Bec) Rev.4.” <a href="https://unstats.un.org">https://unstats.un.org</a>.</p>
