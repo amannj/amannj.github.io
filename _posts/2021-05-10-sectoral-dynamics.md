@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New book chapter: *New Perspectives on Structural Change: Causes and Consequences of Structural Change in the Global Economy*"
+title: "New book chapter: 'New Perspectives on Structural Change: Causes and Consequences of Structural Change in the Global Economy'"
 date: 2021-05-10
 ---
 

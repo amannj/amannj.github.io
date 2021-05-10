@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Contribution to new book: *Designing Integrated Industrial Policies Volume I & II.*"
+title: "Contribution to new book: 'Designing Integrated Industrial Policies Volume I & II.'"
 date: 2020-05-01
 ---
 
