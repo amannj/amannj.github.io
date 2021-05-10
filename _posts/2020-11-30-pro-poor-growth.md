@@ -5,7 +5,7 @@ date: 2020-05-01
 ---
 
 I am pleased to announce the publication of the book series *'Designing Integrated Industrial Policies Volume I & II. For Inclusive Development in Asia'* (edited by Shigeru Thomas Otsubo, and Christian Samen Otchia)
-to which Nobuya Haraguchi and I have contributed chapter 3:*'Importance of Manufacturing Development and Structural Change for Pro-Poor Growth'*.
+to which Nobuya Haraguchi and I have contributed chapter 3: *'Importance of Manufacturing Development and Structural Change for Pro-Poor Growth'*.
 
 Please follow the respective links to learn more about
 <a href="https://www.routledge.com/Designing-Integrated-Industrial-Policies-Volume-I-For-Inclusive-Development/Otsubo-Otchia/p/book/9780367896355" target="_blank">Volume I</a>
