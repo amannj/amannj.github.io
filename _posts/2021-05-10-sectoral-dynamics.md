@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "New book chapter: 'Sectoral Dynamics'"
+title: "New book chapter: *New Perspectives on Structural Change: Causes and Consequences of Structural Change in the Global Economy*"
 date: 2021-05-10
 ---
 
-I am pleased to announce the publication of the book *'New Perspectives on Structural Change: Causes and Consequences of Structural Change in the Global Economy'.* (edited by Neil Foster-McGregor, Ludovico Alcorta, Adam Szirmai, and Bart Verspagen)
-to which Nobuya Haraguchi and I have contributed chapter *'12. Sectoral dynamics'*.
+I am pleased to announce the publication of the book *'New Perspectives on Structural Change: Causes and Consequences of Structural Change in the Global Economy'* (edited by Neil Foster-McGregor, Ludovico Alcorta, Adam Szirmai, and Bart Verspagen)
+to which Nobuya Haraguchi and I have contributed chapter 12: *'Sectoral Dynamics'*.
 
 Please follow the respective links to learn more about
 <a href="https://global.oup.com/academic/product/new-perspectives-on-structural-change-9780198850113?cc=at&lang=en&#" target="_blank">the book.</a>
