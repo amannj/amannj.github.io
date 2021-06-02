@@ -40,11 +40,17 @@
 
 
 <meta property="og:title" content="Comtrade Data Availability — Comtrade_DA" />
-<meta property="og:description" content="Data availability varies by country and classification, and new trade data
-is released/revised very frequently on Comtrade.
-comtradeRggregator uses trade information corresponding to
-official Comtrade data availability which it
-updates once a day and stores locally on your machine:" />
+<meta property="og:description" content="Comtrade data availability varies by country and nomenclature, and new trade data
+is released/revised very frequently.
+comtradeRggregator uses data availability information corresponding to the most recent
+official Comtrade data source which it
+updates once a day and stores locally in
+&amp;lt;your local package location&amp;gt;/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.rds.
+This locally stored data file is used as part of every download_Comtrade()
+data query. In other words, if new data becomes available and is documented in
+the official Comtrade data availability file,
+comtradeRggregator will use this information no later than 24 hours after its publication.
+This data availability file can also be accessed locally by typing Comtrade_DA in R (see example)." />
 
 
 
@@ -102,7 +108,7 @@ updates once a day and stores locally on your machine:" />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -133,11 +139,17 @@ updates once a day and stores locally on your machine:" />
     </div>
 
     <div class="ref-description">
-    <p>Data availability varies by country and classification, and new trade data
-is released/revised very frequently on <a href='https://comtrade.un.org/'>Comtrade</a>.
-<code>comtradeRggregator</code> uses trade information corresponding to
-<a href='https://comtrade.un.org/data/da'>official Comtrade data availability</a> which it
-updates once a day and stores locally on your machine:</p>
+    <p><a href='https://comtrade.un.org'>Comtrade</a> data availability varies by country and nomenclature, and new trade data
+is released/revised very frequently.
+<code>comtradeRggregator</code> uses data availability information corresponding to the most recent
+<a href='https://comtrade.un.org/data/da'>official Comtrade data source</a> which it
+updates once a day and stores locally in
+<code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.rds</code>.
+This locally stored data file is used as part of every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>
+data query. In other words, if new data becomes available and is documented in
+the <a href='https://comtrade.un.org/data/da'>official Comtrade data availability file</a>,
+<code>comtradeRggregator</code> will use this information no later than 24 hours after its publication.
+This data availability file can also be accessed locally by typing <code>Comtrade_DA</code> in R (see example).</p>
     </div>
 
     <pre class="usage"><span class='va'>Comtrade_DA</span></pre>
@@ -162,15 +174,24 @@ updates once a day and stores locally on your machine:</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p><a href='https://comtrade.un.org/data/da'>https://comtrade.un.org/data/da</a></p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p><code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.csv.gz</code></p>
-<p>The locally stored Comtrade Data Availability file is used in every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>
-data query. In other words, if new data becomes available and is documented in
-the <a href='https://comtrade.un.org/data/da'>official Comtrade data availability file</a>,
-<code>comtradeRggregator</code> will use this information no later than 24 hours after its publication.
-The Comtrade Data Availability file can be accessed locally (file name <code>Comtrade_DA</code>).</p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>Comtrade_DA</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 65,502 x 10</span>
+#&gt;    type        freq   px        r rDesc       ps TotalRecords isOriginal
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>010        <span style='text-decoration: underline;'>46</span>551          1
+#&gt; <span style='color: #BCBCBC;'> 2</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>011        <span style='text-decoration: underline;'>47</span>120          1
+#&gt; <span style='color: #BCBCBC;'> 3</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>012        <span style='text-decoration: underline;'>46</span>287          1
+#&gt; <span style='color: #BCBCBC;'> 4</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>013        <span style='text-decoration: underline;'>46</span>201          1
+#&gt; <span style='color: #BCBCBC;'> 5</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>014        <span style='text-decoration: underline;'>44</span>662          1
+#&gt; <span style='color: #BCBCBC;'> 6</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>015        <span style='text-decoration: underline;'>44</span>457          1
+#&gt; <span style='color: #BCBCBC;'> 7</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>016        <span style='text-decoration: underline;'>47</span>468          1
+#&gt; <span style='color: #BCBCBC;'> 8</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>017        <span style='text-decoration: underline;'>47</span>259          1
+#&gt; <span style='color: #BCBCBC;'> 9</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>018        <span style='text-decoration: underline;'>46</span>576          1
+#&gt; <span style='color: #BCBCBC;'>10</span> COMMODITIES ANNUAL H3      340 Honduras  <span style='text-decoration: underline;'>2</span>007        <span style='text-decoration: underline;'>69</span>883          1
+#&gt; <span style='color: #949494;'># ... with 65,492 more rows, and 2 more variables: publicationDate &lt;dttm&gt;,</span>
+#&gt; <span style='color: #949494;'>#   isPartnerDetail &lt;dbl&gt;</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

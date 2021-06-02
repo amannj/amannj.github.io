@@ -40,8 +40,8 @@
 
 
 <meta property="og:title" content="Convert Comtrade Trade Data — add_lzs" />
-<meta property="og:description" content="Adds leading zeros to variable var of data
-frame such that nchar(var) = length." />
+<meta property="og:description" content="Adds leading zeros to specified variable  of data
+frame." />
 
 
 
@@ -99,7 +99,7 @@ frame such that nchar(var) = length." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -130,8 +130,8 @@ frame such that nchar(var) = length." />
     </div>
 
     <div class="ref-description">
-    <p>Adds leading zeros to variable <code>var</code> of data
-frame such that <code>nchar(var) = length</code>.</p>
+    <p>Adds leading zeros to specified variable  of data
+frame.</p>
     </div>
 
     <pre class="usage"><span class='fu'>add_lzs</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>variable</span>, <span class='va'>variable.length</span><span class='op'>)</span></pre>
@@ -150,7 +150,7 @@ frame such that <code>nchar(var) = length</code>.</p>
     <tr>
       <th>variable.length</th>
       <td><p>The desired length of variable
-<code>variable</code>; i.e. <code><a href='https://rdrr.io/r/base/nchar.html'>nchar(length.variable)</a></code>.</p></td>
+<code>variable</code>, i.e. <code><a href='https://rdrr.io/r/base/nchar.html'>nchar(length.variable)</a></code>.</p></td>
     </tr>
     </table>
 
@@ -163,7 +163,13 @@ frame such that <code>nchar(var) = length</code>.</p>
 #&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
 #&gt; <span style='color: #BCBCBC;'>1</span> 001  
 #&gt; <span style='color: #BCBCBC;'>2</span> 011  
-#&gt; <span style='color: #BCBCBC;'>3</span> 111  </div></pre>
+#&gt; <span style='color: #BCBCBC;'>3</span> 111  </div><div class='input'><span class='fu'>add_lzs</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>df</span>, variable <span class='op'>=</span> <span class='st'>"var"</span>, variable.length <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 1</span>
+#&gt;   var  
+#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
+#&gt; <span style='color: #BCBCBC;'>1</span> 0001 
+#&gt; <span style='color: #BCBCBC;'>2</span> 0011 
+#&gt; <span style='color: #BCBCBC;'>3</span> 0111 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

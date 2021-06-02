@@ -40,13 +40,10 @@
 
 
 <meta property="og:title" content="Build Comtrade Data from Temporary Files — build_Comtrade" />
-<meta property="og:description" content="Builds final Comtrade data set from temporary files downloaded by download_Comtrade().
-where argument rm.temporaryFiles had been set to FALSE.
-Sometimes you might want to rebuild a data set using the temporary data files you downloaded from Comtrade.
-For example, you can use function build_Comtrade() whenever you have a very large data query which you would like to
-run over multiple days (and turn off your computer in the meantime) before building the finale Comtrade data base.
-In such a case you would set rm.temporaryFiles = FALSE when running download_Comtrade() and then, after you have run
-all your queries, you would then point build_Comtrade() to the location of all your temporary data files." />
+<meta property="og:description" content="Builds final Comtrade data set from temporary files
+downloaded using download_Comtrade(..., rm.temporaryFiles = FALSE).
+Options rm.temporaryFiles = FALSE in download_Comtrade() are necessary as temporary files will be deleted as part of
+data download by default. See documentation of download_Comtrade() for more information." />
 
 
 
@@ -104,7 +101,7 @@ all your queries, you would then point build_Comtrade() to the location of all y
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -135,13 +132,10 @@ all your queries, you would then point build_Comtrade() to the location of all y
     </div>
 
     <div class="ref-description">
-    <p>Builds final Comtrade data set from temporary files downloaded by <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.
-where argument <code>rm.temporaryFiles</code> had been set to <code>FALSE</code>.</p>
-<p>Sometimes you might want to rebuild a data set using the temporary data files you downloaded from Comtrade.
-For example, you can use function <code>build_Comtrade()</code> whenever you have a very large data query which you would like to
-run over multiple days (and turn off your computer in the meantime) before building the finale Comtrade data base.
-In such a case you would set <code>rm.temporaryFiles = FALSE</code> when running <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> and then, after you have run
-all your queries, you would then point <code>build_Comtrade()</code> to the location of all your temporary data files.</p>
+    <p>Builds final Comtrade data set from temporary files
+downloaded using <code><a href='download_Comtrade.html'>download_Comtrade(..., rm.temporaryFiles = FALSE)</a></code>.</p>
+<p>Options <code>rm.temporaryFiles = FALSE</code> in <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> are necessary as temporary files will be deleted as part of
+data download by default. See documentation of <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> for more information.</p>
     </div>
 
     <pre class="usage"><span class='fu'>build_Comtrade</span><span class='op'>(</span>
@@ -157,26 +151,29 @@ all your queries, you would then point <code>build_Comtrade()</code> to the loca
     <tr>
       <th>directory</th>
       <td><p>Location of temporary file downloads; default is</p>
-<p><code>&lt;your package directory&gt;\data\tmp\&lt;date-and-time-stamp&gt;</code>;</p>
-<p>alternatively specify the temporary download directory.</p></td>
+<p><code>&lt;your package directory&gt;\data\tmp\&lt;date-and-time-stamp&gt;</code>.</p></td>
     </tr>
     <tr>
       <th>rm.temporaryFiles</th>
-      <td><p>Remove temporary download files stored at location provided in argument <code>location.temporaryFiles</code>; default is <code>TRUE</code>.</p></td>
+      <td><p>Remove temporary download files stored at location provided in argument <code>location.temporaryFiles</code> when building Comtrade trade data set; default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>is.mirrorData</th>
-      <td><p>Extract mirror trade data? default is <code>FALSE</code>.</p><ul>
-<li><p>Set to <code>TRUE</code> to extract mirror trade data from country/countries specified in argument <code>partners</code>.
-For example, if <code>is.mirrorData = TRUE</code> export data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> is measured as import data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> as reported by countries specified in argument <code>partners</code>.</p></li>
-</ul></td>
+      <td><p>Is data set that is to be build mirror data? default is <code>FALSE</code>, i.e. non-mirror data.</p></td>
     </tr>
     <tr>
       <th>partner</th>
-      <td><p>List of partner countries. Needs to be provided if <code>is.mirrorData = TRUE</code>; default is <code>NULL</code>, no mirror data download.</p></td>
+      <td><p>List of partner countries. Needs to be provided if <code>is.mirrorData = TRUE</code>; default is <code>NULL</code>, i.e. no mirror data download.</p><ul>
+<li><p>If <code>is.mirrorData = TRUE</code>, export (import) data from  countries specified in
+argument <code>partner</code> is measured as import (export) of countries specified in argument <code>partner</code> as reported by countries
+specified in argument <code>partner</code>.</p></li>
+</ul></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='download_Comtrade.html'>download_Comtrade()</a></code>, <code><a href='https://rdrr.io/r/utils/browseVignettes.html'>browseVignettes("comtradeRggregator")</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

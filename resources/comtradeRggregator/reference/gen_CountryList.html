@@ -41,10 +41,10 @@
 
 <meta property="og:title" content="Check Available Countries for Comtrade Query — gen_CountryList" />
 <meta property="og:description" content="Extract or validate list of exporters for which in a given period (year or year-month) and trade classification data is available.
-Data availability varies by country and classification, and new trade data is released/revised very frequently on Comtrade.
+Data availability varies by country and classification, and new trade data is released/revised very frequently.
 comtradeRggregator uses trade information corresponding to
 official Comtrade data availability which it updates once a day and stores locally on your machine:
-&amp;lt;your local package location&amp;gt;/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.csv.gz
+&amp;lt;your local package location&amp;gt;/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.rds
 The locally stored Comtrade Data Availability file is used in every download_Comtrade() data query.
 In other words, if new data becomes available and is documented in the official Comtrade data availability file,
 comtradeRggregator will use this information no later than 24 hours after its publication." />
@@ -105,7 +105,7 @@ comtradeRggregator will use this information no later than 24 hours after its pu
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -137,10 +137,10 @@ comtradeRggregator will use this information no later than 24 hours after its pu
 
     <div class="ref-description">
     <p>Extract or validate list of exporters for which in a given period (year or year-month) and trade classification data is available.
-Data availability varies by country and classification, and new trade data is released/revised very frequently on <a href='https://comtrade.un.org/'>Comtrade</a>.
+Data availability varies by country and classification, and new trade data is released/revised very frequently.
 <code>comtradeRggregator</code> uses trade information corresponding to
 <a href='https://comtrade.un.org/data/da'>official Comtrade data availability</a> which it updates once a day and stores locally on your machine:
-<code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.csv.gz</code>
+<code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.rds</code>
 The locally stored Comtrade Data Availability file is used in every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> data query.
 In other words, if new data becomes available and is documented in the <a href='https://comtrade.un.org/data/da'>official Comtrade data availability file</a>,
 <code>comtradeRggregator</code> will use this information no later than 24 hours after its publication.</p>
@@ -152,7 +152,7 @@ In other words, if new data becomes available and is documented in the <a href='
   type <span class='op'>=</span> <span class='st'>"commodities"</span>,
   frequency <span class='op'>=</span> <span class='va'>frequency</span>,
   time <span class='op'>=</span> <span class='va'>time</span>,
-  px <span class='op'>=</span> <span class='va'>.px</span>,
+  .px <span class='op'>=</span> <span class='va'>.px</span>,
   t <span class='op'>=</span> <span class='va'>t</span>
 <span class='op'>)</span></pre>
 
@@ -180,12 +180,12 @@ In other words, if new data becomes available and is documented in the <a href='
       <td><p>Generic time id for internal processing; either a particular year or particular month of a particular year</p></td>
     </tr>
     <tr>
-      <th>px</th>
-      <td><p>Trade classification abbreviation <code>.px</code> for further processing of Comtrade download</p></td>
-    </tr>
-    <tr>
       <th>t</th>
       <td><p>Generic time index for internatl processing.</p></td>
+    </tr>
+    <tr>
+      <th>px</th>
+      <td><p>Trade classification abbreviation <code>.px</code> for further processing of Comtrade download</p></td>
     </tr>
     </table>
 

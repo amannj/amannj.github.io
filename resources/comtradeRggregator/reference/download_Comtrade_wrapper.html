@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Core function of download_Comtrade() — download_Comtrade_wrapper" />
-<meta property="og:description" content="Interacts with comtradr::ct_search() and Comtrade's API to extract Comtrade trade data." />
+<meta property="og:description" content="Core function for download_Comtrade()." />
 
 
 
@@ -98,7 +98,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Interacts with <code><a href='https://docs.ropensci.org/comtradr/reference/ct_search.html'>comtradr::ct_search()</a></code> and Comtrade's API to extract Comtrade trade data.</p>
+    <p>Core function for <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>download_Comtrade_wrapper</span><span class='op'>(</span>
@@ -149,7 +149,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>rep</th>
-      <td><p>Country/countries to be extracted; default is <code>all</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>date</th>
@@ -157,31 +157,31 @@
     </tr>
     <tr>
       <th>dir</th>
-      <td><p>Direction of trade flow reported; either <code>imports</code>, <code>exports</code>, <code>re_-_imports</code>, <code>re_-_exports</code> or <code>all</code>; default is <code>all</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>is.mirrorData</th>
-      <td><p>Extract mirror trade data? default is <code>FALSE</code>; Set to <code>TRUE</code> to extract mirror trade data from country/countries specified in argument <code>partners</code>. For example, if <code>is.mirrorData = TRUE</code> export data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> is measured as import data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> as reported by countries specified in argument <code>partners</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>aggregation_level</th>
-      <td><p>Level of aggregation of trade data; varies by trade data set.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>select.stats</th>
-      <td><p>Trade statistics to be reported; either <code>trade_value_usd</code>, <code>qty_unit_code</code>, <code>qty_unit</code>, <code>alt_qty_unit_code</code>, <code>alt_qty_unit</code>, <code>qty, alt_qty</code>, <code>netweight_kg</code>, <code>gross_weight_kg</code> or <code>all</code>; default is <code>all</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>frequency</th>
-      <td><p>Frequency of data extract; either <code>annual</code> or <code>monthly</code>; default is <code>annual</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>partners</th>
-      <td><p>Specify partner country/countries or <code>World</code> (as provided by Comtrade) for global, aggregated trade; default is <code>World</code>.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
       <th>sleep</th>
-      <td><p>Number of seconds to wait before the next Comtrade API query is started; default is 20.</p></td>
+      <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     </table>
 

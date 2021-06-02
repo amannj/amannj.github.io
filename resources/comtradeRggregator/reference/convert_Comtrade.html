@@ -40,14 +40,13 @@
 
 
 <meta property="og:title" content="Convert Comtrade Trade Data — convert_Comtrade" />
-<meta property="og:description" content="This function offers conversion tables for Comtrade trade data following official tables from the
+<meta property="og:description" content="Offers conversion tables for Comtrade trade data following official tables from the
 UN Statistics Division (UNSD) and the
-World Integrated Trade Solution (WITS) as provided below:
-Tableto
-beadded.
-
-
-" />
+World Integrated Trade Solution (WITS).
+For a complete list of concordance tables please see
+comtradeRggregator's Concordance Table.
+Please see here
+for a list of all nomenclatures supported by comtradeRggregator." />
 
 
 
@@ -105,7 +104,7 @@ beadded.
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -136,14 +135,13 @@ beadded.
     </div>
 
     <div class="ref-description">
-    <p>This function offers conversion tables for Comtrade trade data following official tables from the
+    <p>Offers conversion tables for Comtrade trade data following official tables from the
 <a href='https://unstats.un.org/unsd/classifications/Econ#corresp-hs'>UN Statistics Division (UNSD)</a> and the
-<a href='https://wits.worldbank.org/product_concordance.html'>World Integrated Trade Solution (WITS)</a> as provided below:</p><table class='table'>
-<tr><td>Table</td><td>to</td></tr>
-<tr><td>be</td><td>added.</td></tr>
-</table>
-
-
+<a href='https://wits.worldbank.org/product_concordance.html'>World Integrated Trade Solution (WITS)</a>.
+For a complete list of concordance tables please see
+<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table'><code>comtradeRggregator</code>'s Concordance Table</a>.
+Please see <a href='https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>here</a>
+for a list of all nomenclatures supported by <code>comtradeRggregator</code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>convert_Comtrade</span><span class='op'>(</span>
@@ -158,11 +156,13 @@ beadded.
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>data</th>
-      <td><p>A data frame.</p></td>
+      <td><p>A data frame or vector containing (a variable listing) commodity codes following one of the supported
+nomenclatures; see <a href='https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>here</a>.</p></td>
     </tr>
     <tr>
       <th>classification.from</th>
-      <td><p>Abbreviation of origin classification based on the <em>Concordance Table</em> above.</p></td>
+      <td><p>Abbreviation of origin classification supported by
+<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table'><code>comtradeRggregator</code>'s Concordance Table</a>.</p></td>
     </tr>
     <tr>
       <th>commodity.code</th>
@@ -170,10 +170,18 @@ beadded.
     </tr>
     <tr>
       <th>classification.to</th>
-      <td><p>Abbreviation of target classification based on the <em>Concordance Table</em> above.</p></td>
+      <td><p>Abbreviation of target classification based on
+<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table'><code>comtradeRggregator</code>'s Concordance Table</a>.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://unstats.un.org/unsd/classifications/Econ#corresp-hs'>https://unstats.un.org/unsd/classifications/Econ#corresp-hs</a>
+<a href='https://wits.worldbank.org/product_concordance.html'>https://wits.worldbank.org/product_concordance.html</a>
+<a href='https://unstats.un.org/unsd/classifications/Econ#corresp-hs'>https://unstats.un.org/unsd/classifications/Econ#corresp-hs</a>
+<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications</a>
+<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table'>https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span><span class='st'>"H3 commodity code"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"010110"</span>, <span class='st'>"071040"</span><span class='op'>)</span><span class='op'>)</span>
@@ -200,7 +208,7 @@ beadded.
   direction <span class='op'>=</span> <span class='st'>"all"</span>
 <span class='op'>)</span>
 
-<span class='co'># Convert HS2007 trade data to ISIC Rev. 3</span>
+<span class='co'># Convert HS2007/H3 trade data to ISIC Rev. 3</span>
 <span class='va'>AT_World</span> <span class='op'>%&gt;%</span>
   <span class='fu'>convert_Comtrade</span><span class='op'>(</span>
     classification.from <span class='op'>=</span> <span class='st'>"H3"</span>,
@@ -208,7 +216,6 @@ beadded.
     classification.to <span class='op'>=</span> <span class='st'>"I3"</span>
   <span class='op'>)</span>
 <span class='op'>}</span>
-
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

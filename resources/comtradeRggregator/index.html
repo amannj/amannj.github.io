@@ -65,7 +65,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/comtrade-api.html">Working with Comtrade's API</a>
+      <a href="articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
 </li>
@@ -89,6 +89,7 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="comtraderggregator-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#comtraderggregator-" class="anchor"></a>comtradeRggregator <img src="reference/figures/logo1.png" align="right" height="139">
@@ -97,12 +98,14 @@
 
 <p>The goal of the <code>comtradeRggregator</code> package is to provide a simple tool to download and reclassify large chunks of <a href="https://comtrade.un.org">Comtrade trade data</a>.</p>
 <p>The package offers functionality to download and aggregate <a href="https://comtrade.un.org">Comtrade trade data</a> using <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API</a> by building on the <a href="https://github.com/ropensci/comtradr">comtradr</a> package. Furthermore, it offers tools for easy reclassification of trade data using official concordance tables from the <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">United Nations Statistical Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>.</p>
-<div id="why-this-package" class="section level2">
+<hr>
+</div>
+<div id="why-this-package" class="section level1">
+<h1 class="hasAnchor">
+<a href="#why-this-package" class="anchor"></a>Why this package?</h1>
+<div id="at-a-glance" class="section level2">
 <h2 class="hasAnchor">
-<a href="#why-this-package" class="anchor"></a>Why this package?</h2>
-<div id="at-a-glance" class="section level3">
-<h3 class="hasAnchor">
-<a href="#at-a-glance" class="anchor"></a>At a glance</h3>
+<a href="#at-a-glance" class="anchor"></a>At a glance</h2>
 <p><code>comtradeRggregator</code> attempts to bring together a set of convenient features for bulk <a href="https://comtrade.un.org">Comtrade trade data</a> download and reclassification that are absent from either the <a href="https://comtrade.un.org">Comtrade</a> or <a href="https://wits.worldbank.org/">WITS</a> web interfaces:</p>
 <table class="table">
 <colgroup>
@@ -157,17 +160,17 @@
 </tbody>
 </table>
 </div>
-<div id="features" class="section level3">
-<h3 class="hasAnchor">
-<a href="#features" class="anchor"></a>Features</h3>
+<div id="features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#features" class="anchor"></a>Features</h2>
 <ul>
 <li><p>Downloads and aggregates <a href="https://comtrade.un.org/data">Comtrade data</a> using <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API</a> building on the <a href="https://github.com/ropensci/comtradr">comtradr</a> package by offering more functionality for bulk and mirror data downloads.</p></li>
 <li><p>Supports extraction of trade data for individual countries (<em>‘from country A to country B’</em>) as well as bulk downloads of multiple countries (<em>‘from group of countries C to group of countries D’</em>) as well as aggregated global trade data (<em>‘from country (a group of countries) E to the World’</em>).</p></li>
 <li><p>Supports many key features of <a href="https://github.com/ropensci/comtradr">comtradr</a> such as the option to download trade data following different trade classifications offered by <a href="https://comtrade.un.org/data">Comtrade</a>; see <a href="https://comtrade.un.org/data/doc/api/#DataAvailabilityRequests">Comtrade API Data Availability Request</a> for more information. The full list of possible trade classifications and their corresponding input arguments used in the <code>comtradeRggregator</code> package are provided in table <a href="https://github.com/amannj/comtradeRggregator#trade-classifications">Trade Classifications</a>:</p></li>
 </ul>
-<div id="trade-classifications" class="section level4">
-<h4 class="hasAnchor">
-<a href="#trade-classifications" class="anchor"></a>Trade Classifications</h4>
+<div id="trade-classifications" class="section level3">
+<h3 class="hasAnchor">
+<a href="#trade-classifications" class="anchor"></a>Trade Classifications</h3>
 <table class="table">
 <colgroup>
 <col width="37%">
@@ -308,9 +311,9 @@
 <li><p>Provides function for easy reclassification of trade data using official concordance tables from the <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">United Nations Statistical Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>; see <a href="https://github.com/amannj/comtradeRggregator#concordance-table">Concordance Table</a> below. To access respective concordance tables in R, type <code>&lt;tradecode from&gt;_&lt;tradecode to&gt;</code>. For example, the concordance table for reclassifying <code>H3</code> trade data according to the <code>H0</code> nomenclature is stored as object <code>H3_H0</code> and its R help file can be accessed by typing <code><a href="reference/H3_H0.html">?H3_H0</a></code>.</p></li>
 </ul>
 </div>
-<div id="concordance-table" class="section level4">
-<h4 class="hasAnchor">
-<a href="#concordance-table" class="anchor"></a>Concordance Table</h4>
+<div id="concordance-table" class="section level3">
+<h3 class="hasAnchor">
+<a href="#concordance-table" class="anchor"></a>Concordance Table</h3>
 <table class="table table">
 <thead>
 <tr>
@@ -1364,32 +1367,32 @@ U
 <p><br></p>
 </div>
 </div>
-<div id="further-notes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#further-notes" class="anchor"></a>Further notes</h3>
-<div id="using-up-to-date-trade-information" class="section level4">
-<h4 class="hasAnchor">
-<a href="#using-up-to-date-trade-information" class="anchor"></a>Using up-to-date trade information</h4>
+</div>
+<div id="further-notes" class="section level1">
+<h1 class="hasAnchor">
+<a href="#further-notes" class="anchor"></a>Further notes</h1>
+<div id="using-up-to-date-trade-information" class="section level2">
+<h2 class="hasAnchor">
+<a href="#using-up-to-date-trade-information" class="anchor"></a>Using up-to-date trade information</h2>
 <p>Data availability varies by country and classification, and new trade data is released/revised very frequently on <a href="https://comtrade.un.org/">Comtrade</a>. <code>comtradeRggregator</code> uses trade information corresponding to <a href="https://comtrade.un.org/data/da">official Comtrade data availability</a> which it updates once a day and stores locally on your machine:</p>
 <p><code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.csv.gz</code></p>
-<p>The locally stored Comtrade Data Availability file is used in every <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> data query. In other words, if new data becomes available and is documented in the <a href="https://comtrade.un.org/data/da">official Comtrade data availability file</a>, <code>comtradeRggregator</code> will use this information no later than 24 hours after its publication. The Comtrade Data Availability file can be accessed internally (by typing <code>Comtrade_DA</code>), and the help page can be accessed type <code><a href="reference/Comtrade_DA.html">?Comtrade_DA</a></code>.</p>
+<p>The locally stored Comtrade Data Availability file is used in every <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> data query. In other words, if new data becomes available and is documented in the <a href="https://comtrade.un.org/data/da">official Comtrade data availability file</a>, <code>comtradeRggregator</code> will use this information no later than 24 hours after its publication. The Comtrade Data Availability file can be accessed in R by typing <code>Comtrade_DA</code>, and the corresponding help page can be accessed by typing <code><a href="reference/Comtrade_DA.html">?Comtrade_DA</a></code>.</p>
 </div>
-<div id="extraction-of-monthly-trade-data" class="section level4">
-<h4 class="hasAnchor">
-<a href="#extraction-of-monthly-trade-data" class="anchor"></a>Extraction of monthly trade data</h4>
+<div id="extraction-of-monthly-trade-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#extraction-of-monthly-trade-data" class="anchor"></a>Extraction of monthly trade data</h2>
 <p>Monthly trade data is only reported as <em>HS Combined</em> (<code>HS</code>) which combines all revisions of the Harmonised System nomenclature. As a country reports its tariff scheduled for a given year in only one revision, that is <em>HS1988/1992</em> (<code>H0</code>), <em>HS1996</em> (<code>H1</code>) or <em>HS2002</em> (<code>H2</code>) etc., combining these different revisions enables users to choose products without having to know in which nomenclature a particular country reports in a particular year; see <a href="https://wits.worldbank.org/WITS/wits/WITSHELP/Content/Annex/Annex1.About_WITS_HS_Combined.htm">here</a> for more information on the <em>HS Combined</em> nomenclature.</p>
 </div>
-<div id="reclassification-of-trade-data-to-other-standards" class="section level4">
-<h4 class="hasAnchor">
-<a href="#reclassification-of-trade-data-to-other-standards" class="anchor"></a>Reclassification of trade data to other standards</h4>
+<div id="reclassification-of-trade-data-to-other-standards" class="section level2">
+<h2 class="hasAnchor">
+<a href="#reclassification-of-trade-data-to-other-standards" class="anchor"></a>Reclassification of trade data to other standards</h2>
 <p>Reclassification of <a href="https://comtrade.un.org">Comtrade trade data</a> is possible using the information in the <a href="https://github.com/amannj/comtradeRggregator#concordance-table">Concordance Table</a> by employing the function <code><a href="reference/convert_Comtrade.html">convert_Comtrade()</a></code>. The function requires trade data at most granular levels for the <em>Harmonised System (HS)</em>, which is the aggregation level <code>AG6</code>, and for the <em>International Standard Industrial Classification (ISIC)</em> standard (<code>AG4</code>); see <a href="https://github.com/amannj/comtradeRggregator#trade-classifications">Trade Classifications</a> for more information. For the <em>Standard International Trade Classification (SITC)</em> standard, <code>AG4</code> as well as <code>AG5</code> is required.</p>
 <hr>
 </div>
 </div>
-</div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<div id="installation" class="section level1">
+<h1 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h1>
 <p>To install the latest development version of <code>comtradeRggregator</code> directly from <a href="https://github.com/amannj/comtradeRggregator">GitHub</a>, use:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Download `comtradeRggregator`; private repository, requires `auth_token`.</span>
@@ -1407,17 +1410,17 @@ U
 <span class="op">)</span></code></pre></div>
 <hr>
 </div>
-<div id="get-started" class="section level2">
-<h2 class="hasAnchor">
-<a href="#get-started" class="anchor"></a>Get started</h2>
+<div id="get-started" class="section level1">
+<h1 class="hasAnchor">
+<a href="#get-started" class="anchor"></a>Get started</h1>
 <p>First, load the package.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/comtradeRggregator">comtradeRggregator</a></span><span class="op">)</span></code></pre></div>
 <p>The main functions of the <code>comtradeRggregator</code> package are described below.</p>
-<div id="download_comtrade" class="section level3">
-<h3 class="hasAnchor">
+<div id="download_comtrade" class="section level2">
+<h2 class="hasAnchor">
 <a href="#download_comtrade" class="anchor"></a><code>download_Comtrade()</code>
-</h3>
+</h2>
 <p>Function <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> downloads and aggregates <a href="https://comtrade.un.org">Comtrade</a> trade data using <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API</a> and builds on the <a href="https://github.com/ropensci/comtradr">comtradr</a> package. For the full documentation, type <code><a href="reference/download_Comtrade.html">?download_Comtrade</a></code> in R or visit the reference section of <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code>.</p>
 <div id="example-1" class="section level4">
 <h4 class="hasAnchor">
@@ -1451,9 +1454,9 @@ U
 <span class="co">#&gt; 10 H3               2018 Import     Austria  World   010391         Live swine ~</span>
 <span class="co">#&gt; # ... with 9,422 more rows, and 1 more variable: trade_value_usd &lt;dbl&gt;</span></code></pre></div>
 </div>
-<div id="example-2" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-2" class="anchor"></a>Example 2</h4>
+<div id="example-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-2" class="anchor"></a>Example 2</h3>
 <p>Sometimes you might want to extract very specific information on particular trade flows between two countries.</p>
 <p>For example, in order to extract <code>commodity</code> <code>re-exports</code> reported by <code>Austria</code> at <code>AG6</code> level following hte <code>HS2007</code> nomenclature for trade with <code>Germany</code> in <code>2018</code>, run the command below. As you can see, this returns an empty data frame. This means that there is no trade data recorded on <a href="https://comtrade.un.org">Comtrade</a> that meets the specific criteria.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -1470,9 +1473,9 @@ U
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 0 x 0</span></code></pre></div>
 </div>
-<div id="example-3" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-3" class="anchor"></a>Example 3</h4>
+<div id="example-3" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-3" class="anchor"></a>Example 3</h3>
 <p>Sometimes trade data between countries does not “add up”: For example, in 2020 country A reported USD <em>X</em> millions exports to country B while B was reporting USD <em>Y</em> millions, where <em>X</em> ≠ <em>Y</em>. In such cases it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. The function <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option to accomplish this. The relation of the queries used for the extraction of trade data and mirrored trade data is illustrated in the example below:</p>
 <p>Reported imports by Germany from Austria and reported mirrored exports by Austria to Germany are identical by definition.<sup><a href="#fn1">1</a></sup> Note that in the query below we can use either <code>tradecode</code> names or abbreviations as input arguments for <code>tradecode</code> as provided in table <a href="#trade-classifications">Trade Classifications</a>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -1508,9 +1511,9 @@ U
     <span class="fu">pull</span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; [1] 1</span></code></pre></div>
 </div>
-<div id="example-4" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-4" class="anchor"></a>Example 4</h4>
+<div id="example-4" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-4" class="anchor"></a>Example 4</h3>
 <p>Note that in <em>Example 3</em> above, we have instructed <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> to keep the temporary download files (by invoking <code>rm.temporaryFiles = FALSE</code>) for query <code>mirrX_AT_DE</code> while also using this temporary data to build the completed Comtrade data from the query and load it into R. The second step happens automatically as the argument controlling this behaviour, <code>build.Comtrade</code> is set to <code>TRUE</code> by default. However, there might be cases where you only want <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> to download the temporary trade data files from Comtrade, and build the trade data in R at a later stage using <code>build_comtrade()</code>; more on <code>build_comtrade()</code> <a href="#build_comtrade">below</a>.</p>
 <p>Below, we instruct <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> to run the same query as for <code>mirrX_AT_DE</code> in <em>Example 3</em>; however, by setting <code>build.Comtrade = FALSE</code> and <code>rm.temporaryFiles = FALSE</code> we ensure that the trade data downloaded from Comtrade will only be stored locally but not build and loaded into R.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -1535,15 +1538,15 @@ U
 <hr>
 </div>
 </div>
-<div id="isavailable_comtrade" class="section level3">
-<h3 class="hasAnchor">
+<div id="isavailable_comtrade" class="section level2">
+<h2 class="hasAnchor">
 <a href="#isavailable_comtrade" class="anchor"></a><code>is.available_Comtrade()</code>
-</h3>
+</h2>
 <p>Sometimes you might want to check if data for a particular trade classification, frequency and/or country is available via <a href="https://comtrade.un.org">Comtrade</a> before running a query. For this you can use function <code><a href="reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>. Similar to <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> this function uses the <a href="https://comtrade.un.org/data/da">Comtrade Data Availability file</a> which it updates once a day.<sup><a href="#fn2">2</a></sup> For the full documentation, type <code><a href="reference/is.available_Comtrade.html">?is.available_Comtrade</a></code> in R or visit the reference section of <code><a href="reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>.</p>
-<div id="example-1-1" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-1-1" class="anchor"></a>Example 1</h4>
-<p>To get a list of all countries for which <code>annual</code>, <code>HS2007</code> trade data is available for the year <code>2008</code>, run:</p>
+<div id="example-1-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-1-1" class="anchor"></a>Example 1</h3>
+<p>To get a tibble listing all countries for which <code>annual</code>, <code>HS2007</code> trade data is available for the year <code>2008</code>, run:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
@@ -1551,12 +1554,20 @@ U
   year <span class="op">=</span> <span class="st">'2008'</span>
 <span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">da1</span><span class="op">)</span>
-<span class="co">#&gt; [1] "Algeria"   "Andorra"   "Argentina" "Armenia"   "Australia" "Austria"</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 6 x 2</span>
+<span class="co">#&gt;   country               year</span>
+<span class="co">#&gt;   &lt;chr&gt;                &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 China, Hong Kong SAR  2008</span>
+<span class="co">#&gt; 2 Hungary               2008</span>
+<span class="co">#&gt; 3 Iceland               2008</span>
+<span class="co">#&gt; 4 Ireland               2008</span>
+<span class="co">#&gt; 5 Israel                2008</span>
+<span class="co">#&gt; 6 Italy                 2008</span></code></pre></div>
 </div>
-<div id="example-2-1" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-2-1" class="anchor"></a>Example 2</h4>
-<p>Similarly, you might want to know if a particular country (set of countries) is available in a particular trade data set. To check if either <code>Austria</code> or <code>Germany</code> have <code>annual</code> trade data reported following the <code>HS200</code> nomenclature for the year <code>2012</code>, run:</p>
+<div id="example-2-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-2-1" class="anchor"></a>Example 2</h3>
+<p>Similarly, you might want to know if a particular country (set of countries) is available in a particular trade data set. To check if either <code>Austria</code> or <code>Germany</code> have <code>annual</code> trade data reported following the <code>HS2002</code> nomenclature for the year <code>2012</code>, run:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Austria"</span>, <span class="st">"Germany"</span><span class="op">)</span>,
@@ -1565,8 +1576,11 @@ U
   year <span class="op">=</span> <span class="st">'2012'</span>
 <span class="op">)</span>
 <span class="va">da2</span>
-<span class="co">#&gt; Austria Germany </span>
-<span class="co">#&gt;    TRUE    TRUE</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 2 x 2</span>
+<span class="co">#&gt;   country  year</span>
+<span class="co">#&gt;   &lt;chr&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 Austria  2012</span>
+<span class="co">#&gt; 2 Germany  2012</span></code></pre></div>
 <p>The same can also be done for monthly data. As seen below, only for <code>Germany</code>, <code>monthly</code> trade data for January 2020 following the <code>HS2007</code> is available.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da3</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
@@ -1577,12 +1591,14 @@ U
   year <span class="op">=</span> <span class="st">'2020'</span>
 <span class="op">)</span>
 <span class="va">da3</span>
-<span class="co">#&gt; Austria Germany </span>
-<span class="co">#&gt;   FALSE    TRUE</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 1 x 2</span>
+<span class="co">#&gt;   country year   </span>
+<span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;  </span>
+<span class="co">#&gt; 1 Germany 2020-01</span></code></pre></div>
 </div>
-<div id="example-3-1" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-3-1" class="anchor"></a>Example 3</h4>
+<div id="example-3-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-3-1" class="anchor"></a>Example 3</h3>
 <p>If <code>is.fuzzy = TRUE</code>, function <code><a href="reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> supports fuzzy country name look-ups. As you can see below, there are two countries that contain a character sequence <code>ustr</code>, i.e. ‘Australia’ and ‘Austria’ for <code>annual</code> Comtrade data following the <code>H3</code>/<code>HS2017</code> nomenclature and the year <code>2019</code>. Monthly data is, however, only available for ‘Australia’.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
@@ -1592,7 +1608,11 @@ U
   tradecode <span class="op">=</span> <span class="st">"HS2017"</span>,
   year <span class="op">=</span> <span class="st">'2019'</span>
 <span class="op">)</span>
-<span class="co">#&gt; [1] "Australia" "Austria"</span>
+<span class="co">#&gt; # A tibble: 2 x 2</span>
+<span class="co">#&gt;   country    year</span>
+<span class="co">#&gt;   &lt;chr&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 Australia  2019</span>
+<span class="co">#&gt; 2 Austria    2019</span>
 
 <span class="fu"><a href="reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="st">"ustr"</span>,
@@ -1602,18 +1622,21 @@ U
   year <span class="op">=</span> <span class="st">'2019'</span>,
   month <span class="op">=</span> <span class="st">'05'</span>
 <span class="op">)</span>
-<span class="co">#&gt; [1] "Australia"</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 1 x 2</span>
+<span class="co">#&gt;   country   year   </span>
+<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;  </span>
+<span class="co">#&gt; 1 Australia 2019-05</span></code></pre></div>
 <hr>
 </div>
 </div>
-<div id="convert_comtrade" class="section level3">
-<h3 class="hasAnchor">
+<div id="convert_comtrade" class="section level2">
+<h2 class="hasAnchor">
 <a href="#convert_comtrade" class="anchor"></a><code>convert_Comtrade()</code>
-</h3>
+</h2>
 <p>Sometimes you might want to reclassify trade data to a different nomenclature. Function <code><a href="reference/convert_Comtrade.html">convert_Comtrade()</a></code> offers a simple way for such conversions by providing official concordance tables from <a href="https://unstats.un.org/unsd/classifications/Econ#corresp-hs">UN Statistics Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>. For the full documentation, type <code><a href="reference/convert_Comtrade.html">?convert_Comtrade</a></code> in R or visit the reference section of <code><a href="reference/convert_Comtrade.html">convert_Comtrade()</a></code>.</p>
-<div id="example-1-2" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-1-2" class="anchor"></a>Example 1</h4>
+<div id="example-1-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-1-2" class="anchor"></a>Example 1</h3>
 <p>Say, you want to convert the trade data you downloaded before using <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> from <code>H3</code> to the <em>Revision 3 standard</em> of the <em>International Standard Industrial Classification (ISIC)</em> nomenclature, i.e. <code>I3</code>, you can use the abbreviations and information from the <a href="#concordance-table">Concordance Table</a> to do so by running the command below. You can obtain more information on the concordance between <code>H3</code> and <code>I3</code> by running <code><a href="reference/H3_I3.html">?H3_I3</a></code> in R. Furthermore, please note that for any non-matched category, a warning message is returned.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">I3</span> <span class="op">&lt;-</span> <span class="va">AT_World</span> <span class="op">%&gt;%</span>
@@ -1642,9 +1665,9 @@ U
 <span class="co">#&gt; 10 H3             010391         0122                          </span>
 <span class="co">#&gt; # ... with 9,422 more rows</span></code></pre></div>
 </div>
-<div id="example-2-2" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-2-2" class="anchor"></a>Example 2</h4>
+<div id="example-2-2" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-2-2" class="anchor"></a>Example 2</h3>
 <p>Note that the different building blocks of <code>comtradeRggregator</code> can be chained together very conveniently using the pipe, <code>%&gt;%</code>, operator. In the example below we want to download <code>HS2017</code> trade data for the year 2018 and convert it to the ISIC Rev. 3, <code>I3</code>, standard. Such operations are typically rather cumbersome with either <a href="https://comtrade.un.org">Comtrade</a> or <a href="https://wits.worldbank.org/">WITS</a> but can be achieved in a couple of lines of code with <code>comtradeRggregator</code> as illustrated below.</p>
 <p>As before, we exploit the information provided in the <a href="#concordance-table">Concordance Table</a> to first download <code>HS2017</code> data, then convert it to <code>HS3</code>, and then again from <code>HS3</code> to <code>I3</code>. Note that the input arguments for <code>tradecode</code> and <code>classification.from</code> and <code>classification.to</code> accept both names and abbreviations for the respective <code>tradecode</code> standards as provided in table <a href="#trade-classifications">Trade Classification</a>.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
@@ -1694,14 +1717,14 @@ U
 <hr>
 </div>
 </div>
-<div id="build_comtrade" class="section level3">
-<h3 class="hasAnchor">
+<div id="build_comtrade" class="section level2">
+<h2 class="hasAnchor">
 <a href="#build_comtrade" class="anchor"></a><code>build_Comtrade()</code>
-</h3>
+</h2>
 <p>Sometimes you might want to rebuild a data set using the temporary data files you downloaded from Comtrade. For example, you can use function <code><a href="reference/build_Comtrade.html">build_Comtrade()</a></code> whenever you have a very large data query which you would like to run over multiple days (and turn off your computer in the meantime) before building the finale Comtrade data base. In such a case you would set <code>rm.temporaryFiles = FALSE</code> when running <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> and then, after you have run all your queries, you would then point <code><a href="reference/build_Comtrade.html">build_Comtrade()</a></code> to the location of all your temporary data files. A more practical example is provided in the next paragraph. For the full documentation, type <code><a href="reference/build_Comtrade.html">?build_Comtrade</a></code> in R or visit the reference section of <code><a href="reference/build_Comtrade.html">build_Comtrade()</a></code>.</p>
-<div id="example-1-3" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-1-3" class="anchor"></a>Example 1</h4>
+<div id="example-1-3" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-1-3" class="anchor"></a>Example 1</h3>
 <p>Recall that when downloading the data frame <code>mirrX_AT_DE</code> we triggered the option <code>rm.temporaryFiles = FALSE</code> and R told us that the temporary file will be stored in:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.file</span>(<span class="st">"data/tmp"</span>, <span class="at">package =</span> <span class="st">"comtradeRggregator"</span>)</span></code></pre></div>
 <p>We now use function <code><a href="reference/build_Comtrade.html">build_Comtrade()</a></code> in such cases where argument <code>directory</code> takes the location of a specific, temporary data folder as input argument. The remaining arguments correspond to the arguments in <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> and have to be adjusted accordingly in case you want to divert from the defaults. For example, in case you want to delete the temporary files when using <code><a href="reference/build_Comtrade.html">build_Comtrade()</a></code>, set <code>rm.temporaryFiles = TRUE</code>.</p>
@@ -1725,10 +1748,10 @@ U
 <hr>
 </div>
 </div>
-<div id="add_lzs" class="section level3">
-<h3 class="hasAnchor">
+<div id="add_lzs" class="section level2">
+<h2 class="hasAnchor">
 <a href="#add_lzs" class="anchor"></a><code>add_lzs()</code>
-</h3>
+</h2>
 <p>Adds leading zeros to variable <code>var</code> of data frame such that <code>nchar(var) = length</code>. For the full documentation, type <code><a href="reference/add_lzs.html">?add_lzs</a></code> in R or visit the reference section of <code><a href="reference/add_lzs.html">add_lzs()</a></code>.</p>
 <div id="example-1-4" class="section level4">
 <h4 class="hasAnchor">
@@ -1746,22 +1769,22 @@ U
 <hr>
 </div>
 </div>
-<div id="rm_temporaryfiles" class="section level3">
-<h3 class="hasAnchor">
+<div id="rm_temporaryfiles" class="section level2">
+<h2 class="hasAnchor">
 <a href="#rm_temporaryfiles" class="anchor"></a><code>rm_temporaryFiles()</code>
-</h3>
+</h2>
 <p>Remove all temporary files and folders For the full documentation, type <code><a href="reference/rm_temporaryFiles.html">?rm_temporaryFiles</a></code> in R or visit the reference section of <code><a href="reference/rm_temporaryFiles.html">rm_temporaryFiles()</a></code>.</p>
-<div id="example-1-5" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-1-5" class="anchor"></a>Example 1</h4>
+<div id="example-1-5" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-1-5" class="anchor"></a>Example 1</h3>
 <p>If there exist temporary files to be deleted, function <code><a href="reference/rm_temporaryFiles.html">rm_temporaryFiles()</a></code> returns:</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/rm_temporaryFiles.html">rm_temporaryFiles</a></span><span class="op">(</span>location.temporaryFiles <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 <span class="co">#&gt; Temporary files deleted.</span></code></pre></div>
 </div>
-<div id="example-2-3" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-2-3" class="anchor"></a>Example 2</h4>
+<div id="example-2-3" class="section level3">
+<h3 class="hasAnchor">
+<a href="#example-2-3" class="anchor"></a>Example 2</h3>
 <p>If there are no temporary files to be deleted, function <code><a href="reference/rm_temporaryFiles.html">rm_temporaryFiles()</a></code> returns:</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/rm_temporaryFiles.html">rm_temporaryFiles</a></span><span class="op">(</span>location.temporaryFiles <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
@@ -1770,9 +1793,9 @@ U
 </div>
 </div>
 </div>
-<div id="credits-and-related-projects" class="section level2">
-<h2 class="hasAnchor">
-<a href="#credits-and-related-projects" class="anchor"></a>Credits and related projects</h2>
+<div id="credits-and-related-projects" class="section level1">
+<h1 class="hasAnchor">
+<a href="#credits-and-related-projects" class="anchor"></a>Credits and related projects</h1>
 <ul>
 <li>The hex sticker was generated by myself using the <a href="https://github.com/GuangchuangYu/hexSticker">hexSticker</a> package.</li>
 <li>
@@ -1781,13 +1804,13 @@ U
 </ul>
 <hr>
 </div>
-<div id="footnotes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#footnotes" class="anchor"></a>Footnotes</h2>
+<div id="footnotes" class="section level1">
+<h1 class="hasAnchor">
+<a href="#footnotes" class="anchor"></a>Footnotes</h1>
 <p><a name="fn1">1</a>: Note that we set <code>rm.temporaryFiles = FALSE</code> in the second query to demonstrate (i) how to <a href="https://github.com/amannj/comtradeRggregator#build_comtrade">rebuild trade data set using temporary data files using <code>build_Comtrade()</code></a> , and (ii) the <a href="https://github.com/amannj/comtradeRggregator#rm_temporaryfiles">different return messages for <code>rm_temporaryFiles()</code></a>.</p>
 <p><a name="fn2">2</a>: The same is true for <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code>. In other words, both <code><a href="reference/download_Comtrade.html">download_Comtrade()</a></code> and <code><a href="reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> will check the time stamp of the internally stored Comtrade Data Availability file and update it once a day using the official <a href="https://comtrade.un.org/data/da">Comtrade Data Availability</a> file. For further reference, the locally stored Comtrade Data Availability file can be accessed by typing <code>Comtrade_DA</code>, and the help page can be accessed by typing <code><a href="reference/Comtrade_DA.html">?Comtrade_DA</a></code>.</p>
 </div>
-</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
