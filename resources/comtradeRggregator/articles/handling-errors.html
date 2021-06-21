@@ -57,6 +57,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../articles/articles/chaining-concordance-tables.html">Chaining Concordance Tables</a>
+    </li>
+    <li>
       <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
@@ -125,11 +128,16 @@
 <div id="other-error-messages" class="section level1">
 <h1 class="hasAnchor">
 <a href="#other-error-messages" class="anchor"></a>Other error messages</h1>
+<div id="error-in-curlcurl_fetch_memory" class="section level3">
+<h3 class="hasAnchor">
+<a href="#error-in-curlcurl_fetch_memory" class="anchor"></a>Error in <code>curl::curl_fetch_memory()</code>
+</h3>
 <p>Sometimes, especially when downloading large(r) chunks of data, you might run into the following error message.</p>
 <pre><code>Error in curl::curl_fetch_memory(url, handle = handle) : 
   Operation was aborted by an application callback</code></pre>
-<p>From experience, and in context of this package, the error message does not relate to the memory of the app, but rather the file you are trying to download with <code>curl</code>. In other words, there are limits on the respective file sizes and download times per file, and <code>curl</code> might hit one of those limits.</p>
-<p>In such a case, try re-running your <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> query by reducing the value for <code>ext_cnt</code> which sets the number of countries extracted with each query (default and maximum is 5). The lower the number for <code>ext_cnt</code>, the fewer countries are downloaded simultaneously, hence the smaller the file size and the shorter the download time.</p>
+<p>From experience, and in context of this package, the error message relates to file you are trying to download with <code>curl</code>. In other words, there are limits on the respective file sizes and download times per file, and one of your <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> queries might hit one of those <code>curl</code> limits.</p>
+<p>In such a case, try re-running your <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> query by reducing the value for <code>ext_cnt</code> which sets the number of countries extracted with each query (default and maximum is 5). The lower the number for <code>ext_cnt</code>, the fewer countries are downloaded simultaneously, hence the smaller the file size and the shorter the download time. Alternatively, the same error message also gets triggered when your device gets disconnected from the internet, so also double-check to make sure you are still online.</p>
+</div>
 </div>
   </div>
 
