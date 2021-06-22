@@ -1181,10 +1181,10 @@ particular desired classification to another one.</p>
 <h4 class="hasAnchor">
 <a href="#step-1--download-comtrade-data-using-download_comtrade" class="anchor"></a>Step 1. Download Comtrade data using <code>download_Comtrade()</code>
 </h4>
-<p>Let’s again assume we want to download <code>annual</code> global, i.e. <code>World</code>, <code>commodity</code> trade data in <code>USD</code> following the <code>HS2012</code> nomenclature for <code>exports</code> at <code>AG6</code> level reported by <code>Austria</code> in <code>2019</code>:</p>
+<p>Let’s again assume we want to download <code>annual</code> global, i.e. <code>World</code>, <code>commodity</code> trade data in <code>USD</code> following the <code>HS2012</code> nomenclature for <code>exports</code> at <code>AG6</code> level reported by <code>Austria</code> in <code>2018</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">AT_World_H4</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
-  year <span class="op">=</span> <span class="st">"2019"</span>,
+  year <span class="op">=</span> <span class="st">"2018"</span>,
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
   countries <span class="op">=</span> <span class="st">"Austria"</span>,
   partners <span class="op">=</span> <span class="st">"World"</span>,
@@ -1216,7 +1216,7 @@ particular desired classification to another one.</p>
 <span class="co">#&gt; # A tibble: 1 x 4</span>
 <span class="co">#&gt;   commodity_code commodity                   `HS 2007 Product C~ trade_value_usd</span>
 <span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;                       &lt;chr&gt;                         &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 999999         Commodities not specified ~ &lt;NA&gt;                     8563640375</span></code></pre></div>
+<span class="co">#&gt; 1 999999         Commodities not specified ~ &lt;NA&gt;                     9378867200</span></code></pre></div>
 <p>This “catch-all” category is lost during the conversion step, and you should always double-check to make sure you do not ‘lose too many’ commodity groups when converting between standards.</p>
 </div>
 <div id="step-3--use-convert_comtrade-again-to-convert-from-h3-to-mtn" class="section level4">
@@ -1231,33 +1231,33 @@ particular desired classification to another one.</p>
   <span class="op">)</span>
 <span class="co">#&gt; Warning in convert_Comtrade(., classification.from = "H3", classification.to =</span>
 <span class="co">#&gt; "MTN"): The following commodity codes of column 'commodity_code' could not be</span>
-<span class="co">#&gt; matched: 010121, 010129, 010221, 010229, 010613, 010649, 020741, 020742, 020743,</span>
-<span class="co">#&gt; 020744, 020745, 020751, 020752, 020753, 020754, 020755, 020760, 020910, 020990,</span>
-<span class="co">#&gt; 030111, 030213, 030214, 030224, 030241, 030242, 030243, 030244, 030245, 030246,</span>
-<span class="co">#&gt; 030247, 030251, 030254, 030271, 030272, 030273, 030279, 030283, 030284, 030285,</span>
-<span class="co">#&gt; 030289, 030290, 030312, 030313, 030314, 030323, 030324, 030325, 030334, 030353,</span>
-<span class="co">#&gt; 030354, 030363, 030367, 030369, 030381, 030384, 030389, 030390, 030431, 030432,</span>
-<span class="co">#&gt; 030433, 030439, 030441, 030442, 030443, 030444, 030445, 030449, 030451, 030459,</span>
-<span class="co">#&gt; 030461, 030462, 030463, 030469, 030471, 030473, 030474, 030475, 030479, 030481,</span>
-<span class="co">#&gt; 030482, 030483, 030487, 030489, 030493, 030495, 030531, 030532, 030539, 030543,</span>
-<span class="co">#&gt; 030544, 030564, 030572, 030579, 030615, 030616, 030617, 030625, 030626, 030627,</span>
-<span class="co">#&gt; 030711, 030719, 030771, 030779, 030821, 030890, 040140, 040150, 040711, 040719,</span>
-<span class="co">#&gt; 040721, 040729, 040790, 060315, 060420, 060490, 070991, 070992, 070993, 070999,</span>
-<span class="co">#&gt; 071334, 071360, 071430, 071440, 080112, 080241, 080242, 080251, 080252, 080261,</span>
-<span class="co">#&gt; 080262, 080270, 080310, 080390, 080830, 080840, 080921, 080929, 081030, 081070,</span>
-<span class="co">#&gt; 090421, 090422, 090510, 090520, 090710, 090720, 090811, 090812, 090821, 090822,</span>
-<span class="co">#&gt; 090831, 090832, 090921, 090922, 090931, 090932, 090961, 090962, 091011, 091012,</span>
-<span class="co">#&gt; 100111, 100119, 100191, 100199, 100210, 100290, 100310, 100390, 100410, 100490,</span>
-<span class="co">#&gt; 100710, 100790, 100821, 100829, 100850, 100860, 120110, 120190, 120230, 120241,</span>
-<span class="co">#&gt; 120242, 120760, 120770, 121221, 121229, 121292, 121294, 130219, 150110, 150120,</span>
-<span class="co">#&gt; 150190, 150210, 150290, 160417, 160431, 160432, 160521, 160529, 160551, 160552,</span>
-<span class="co">#&gt; 160553, 160554, 160555, 160556, 160558, 160559, 160561, 160569, 170113, 170114,</span>
-<span class="co">#&gt; 200893, 200897, 200981, 200989, 240311, 240319, 252800, 271012, 271020, 285210,</span>
-<span class="co">#&gt; 285290, 290371, 290377, 290379, 290381, 290382, 290389, 290391, 290392, 290399,</span>
-<span class="co">#&gt; 291616, 293110, 293120, 293190, 293220, 370296, 370297, 370298, 382600, 440131,</span>
-<span class="co">#&gt; 440139, 480840, 580127, 580137, 630690, 640690, 650500, 731940, 741810, 761510,</span>
-<span class="co">#&gt; 847979, 850750, 850760, 852341, 852349, 871410, 900710, 900850, 910910, 930520,</span>
-<span class="co">#&gt; 950450, 960830, 961900, 999999.</span></code></pre></div>
+<span class="co">#&gt; matched: 010121, 010129, 010221, 010229, 010649, 020741, 020742, 020743, 020744,</span>
+<span class="co">#&gt; 020745, 020751, 020752, 020753, 020754, 020755, 020760, 020910, 020990, 030111,</span>
+<span class="co">#&gt; 030213, 030214, 030224, 030241, 030242, 030243, 030244, 030245, 030246, 030247,</span>
+<span class="co">#&gt; 030251, 030252, 030254, 030259, 030271, 030272, 030273, 030274, 030279, 030281,</span>
+<span class="co">#&gt; 030284, 030285, 030289, 030290, 030312, 030313, 030314, 030323, 030324, 030325,</span>
+<span class="co">#&gt; 030334, 030353, 030354, 030356, 030363, 030367, 030381, 030384, 030389, 030390,</span>
+<span class="co">#&gt; 030431, 030432, 030433, 030439, 030441, 030442, 030443, 030444, 030445, 030449,</span>
+<span class="co">#&gt; 030451, 030459, 030461, 030462, 030463, 030469, 030471, 030473, 030474, 030475,</span>
+<span class="co">#&gt; 030479, 030481, 030482, 030483, 030486, 030487, 030489, 030493, 030495, 030531,</span>
+<span class="co">#&gt; 030532, 030539, 030543, 030544, 030572, 030579, 030615, 030616, 030617, 030625,</span>
+<span class="co">#&gt; 030626, 030627, 030711, 030719, 030771, 030779, 030781, 030821, 030890, 040140,</span>
+<span class="co">#&gt; 040150, 040711, 040721, 040729, 040790, 060315, 060420, 060490, 070991, 070992,</span>
+<span class="co">#&gt; 070993, 070999, 071334, 071430, 071440, 080112, 080241, 080242, 080251, 080252,</span>
+<span class="co">#&gt; 080261, 080262, 080270, 080310, 080390, 080830, 080840, 080921, 080929, 081030,</span>
+<span class="co">#&gt; 081070, 090421, 090422, 090510, 090520, 090710, 090720, 090811, 090812, 090821,</span>
+<span class="co">#&gt; 090822, 090831, 090832, 090921, 090922, 090931, 090932, 090961, 090962, 091011,</span>
+<span class="co">#&gt; 091012, 100111, 100119, 100191, 100199, 100210, 100290, 100310, 100390, 100410,</span>
+<span class="co">#&gt; 100490, 100710, 100790, 100821, 100829, 100850, 100860, 120110, 120190, 120230,</span>
+<span class="co">#&gt; 120241, 120242, 120760, 120770, 121221, 121229, 121292, 121294, 130219, 150110,</span>
+<span class="co">#&gt; 150120, 150190, 150210, 150290, 160417, 160431, 160432, 160521, 160529, 160551,</span>
+<span class="co">#&gt; 160552, 160553, 160554, 160555, 160556, 160558, 160559, 160561, 160569, 170113,</span>
+<span class="co">#&gt; 170114, 200893, 200897, 200981, 200989, 240311, 240319, 252800, 271012, 271020,</span>
+<span class="co">#&gt; 285210, 285290, 290377, 290379, 290382, 290389, 290391, 290392, 290399, 293110,</span>
+<span class="co">#&gt; 293190, 293220, 370296, 370297, 370298, 382600, 440131, 440139, 480840, 580127,</span>
+<span class="co">#&gt; 580137, 630690, 640690, 650500, 731940, 741810, 761510, 847979, 850750, 850760,</span>
+<span class="co">#&gt; 852341, 852349, 871410, 900710, 900850, 910910, 930110, 930520, 950450, 960830,</span>
+<span class="co">#&gt; 961900, 999999.</span></code></pre></div>
 <p>Here you can see that in the last step <code><a href="../../reference/convert_Comtrade.html">convert_Comtrade()</a></code> has more difficulties matching the respective commodity codes to <code>MTN</code> aggregates.</p>
 <p>Is this problem the result of chaining concordance tables? This is explored in the next section.</p>
 </div>
@@ -1273,7 +1273,7 @@ particular desired classification to another one.</p>
 <p>As we want to compare the quality of the results when using chained concordance tables (and not the quality of the official concordance table between <code>H3</code> and <code>MTN</code>), we also download <code>H3</code> trade data directly and convert it to <code>MTN</code> using official concordance tables only (i.e. no chaining of concordance tables).</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">AT_World_H3_MTN</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
-  year <span class="op">=</span> <span class="st">"2019"</span>,
+  year <span class="op">=</span> <span class="st">"2018"</span>,
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
   countries <span class="op">=</span> <span class="st">"Austria"</span>,
   partners <span class="op">=</span> <span class="st">"World"</span>,
@@ -1287,7 +1287,7 @@ particular desired classification to another one.</p>
     classification.from <span class="op">=</span> <span class="st">"H3"</span>,
     classification.to <span class="op">=</span> <span class="st">"MTN"</span>
   <span class="op">)</span></code></pre></div>
-<p>As Table 2 below illustrates, the conversion from <code>H4</code> to <code>H3</code> results in a loss of roughly 5 percentage points of trade data. The difference in the sums is exclusively due to <code>999999 - Commodities not specified according to kind</code> as established before. Chaining concordance tables results in a total loss of 7 percentage points which is indeed notable. However, as <code>AT_World_H3_MTN</code> indicates, this loss is mostly due to the unmapped category <code>999999 - Commodities not specified according to kind</code>, and not the result of chaining concordance tables.</p>
+<p>As Table 2 below illustrates, the conversion from <code>H4</code> to <code>H3</code> results in a loss of roughly 5 percentage points of trade data. The difference in the sums is exclusively due to <code>999999 - Commodities not specified according to kind</code> as established before. Chaining concordance tables results in a total loss of 8 percentage points which is indeed notable. However, as <code>AT_World_H3_MTN</code> indicates, this loss is mostly due to the unmapped category <code>999999 - Commodities not specified according to kind</code>, and not the result of chaining concordance tables.</p>
 <p>In other words, chaining concordance tables to transform <code>H4</code> trade data to the <code>MTN</code> classification does seem to produce sensible results on the basis of the explored example.</p>
 <table class="table table">
 <caption>
@@ -1315,16 +1315,16 @@ Table 2: Comparison concordance results
 Trade value USD
 </td>
 <td style="text-align:right;">
-171532052582
+1.76992e+11
 </td>
 <td style="text-align:right;">
-162968412207
+167613101053
 </td>
 <td style="text-align:right;">
-159209971149
+163376410965
 </td>
 <td style="text-align:right;">
-162954491838
+167601566255
 </td>
 </tr>
 <tr>
@@ -1332,16 +1332,16 @@ Trade value USD
 Absolute difference to <code>AT_World_H4</code>
 </td>
 <td style="text-align:right;">
-0
+0.00000e+00
 </td>
 <td style="text-align:right;">
-8563640375
+9378867200
 </td>
 <td style="text-align:right;">
-12322081433
+13615557288
 </td>
 <td style="text-align:right;">
-8577560744
+9390401998
 </td>
 </tr>
 <tr>
@@ -1349,13 +1349,13 @@ Absolute difference to <code>AT_World_H4</code>
 Share in <code>AT_World_H4</code> (in %)
 </td>
 <td style="text-align:right;">
-100
+1.00000e+02
 </td>
 <td style="text-align:right;">
 95
 </td>
 <td style="text-align:right;">
-93
+92
 </td>
 <td style="text-align:right;">
 95

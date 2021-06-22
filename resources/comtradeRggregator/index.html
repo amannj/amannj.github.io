@@ -1446,15 +1446,15 @@ U
 <span class="co">#&gt;    classification period trade_flow reporter partner commodity_code commodity   </span>
 <span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;       </span>
 <span class="co">#&gt;  1 H3               2018 Export     Austria  World   010110         Live horses~</span>
-<span class="co">#&gt;  2 H3               2018 Import     Austria  World   010190         Live horses~</span>
-<span class="co">#&gt;  3 H3               2018 Export     Austria  World   010190         Live horses~</span>
-<span class="co">#&gt;  4 H3               2018 Import     Austria  World   010210         Live bovine~</span>
-<span class="co">#&gt;  5 H3               2018 Export     Austria  World   010210         Live bovine~</span>
-<span class="co">#&gt;  6 H3               2018 Import     Austria  World   010290         Live bovine~</span>
-<span class="co">#&gt;  7 H3               2018 Export     Austria  World   010290         Live bovine~</span>
-<span class="co">#&gt;  8 H3               2018 Import     Austria  World   010310         Live swine:~</span>
-<span class="co">#&gt;  9 H3               2018 Export     Austria  World   010310         Live swine:~</span>
-<span class="co">#&gt; 10 H3               2018 Import     Austria  World   010391         Live swine ~</span>
+<span class="co">#&gt;  2 H3               2018 Export     Austria  World   010190         Live horses~</span>
+<span class="co">#&gt;  3 H3               2018 Export     Austria  World   010210         Live bovine~</span>
+<span class="co">#&gt;  4 H3               2018 Export     Austria  World   010290         Live bovine~</span>
+<span class="co">#&gt;  5 H3               2018 Export     Austria  World   010310         Live swine:~</span>
+<span class="co">#&gt;  6 H3               2018 Export     Austria  World   010391         Live swine ~</span>
+<span class="co">#&gt;  7 H3               2018 Export     Austria  World   010392         Live swine ~</span>
+<span class="co">#&gt;  8 H3               2018 Export     Austria  World   010410         Live sheep  </span>
+<span class="co">#&gt;  9 H3               2018 Export     Austria  World   010420         Live goats  </span>
+<span class="co">#&gt; 10 H3               2018 Export     Austria  World   010511         Live fowls ~</span>
 <span class="co">#&gt; # ... with 9,422 more rows, and 1 more variable: trade_value_usd &lt;dbl&gt;</span></code></pre></div>
 </div>
 <div id="example-2" class="section level3">
@@ -1474,7 +1474,7 @@ U
   select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
   direction <span class="op">=</span> <span class="st">"re_exports"</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 0 x 0</span></code></pre></div>
+<span class="co">#&gt; NULL</span></code></pre></div>
 </div>
 <div id="example-3" class="section level3">
 <h3 class="hasAnchor">
@@ -1558,14 +1558,14 @@ U
 <span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">da1</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 2</span>
-<span class="co">#&gt;   country               year</span>
-<span class="co">#&gt;   &lt;chr&gt;                &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 China, Hong Kong SAR  2008</span>
-<span class="co">#&gt; 2 Hungary               2008</span>
-<span class="co">#&gt; 3 Iceland               2008</span>
-<span class="co">#&gt; 4 Ireland               2008</span>
-<span class="co">#&gt; 5 Israel                2008</span>
-<span class="co">#&gt; 6 Italy                 2008</span></code></pre></div>
+<span class="co">#&gt;   country    year</span>
+<span class="co">#&gt;   &lt;chr&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 Algeria    2008</span>
+<span class="co">#&gt; 2 Andorra    2008</span>
+<span class="co">#&gt; 3 Argentina  2008</span>
+<span class="co">#&gt; 4 Armenia    2008</span>
+<span class="co">#&gt; 5 Australia  2008</span>
+<span class="co">#&gt; 6 Austria    2008</span></code></pre></div>
 </div>
 <div id="example-2-1" class="section level3">
 <h3 class="hasAnchor">
@@ -1658,14 +1658,14 @@ U
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;                         </span>
 <span class="co">#&gt;  1 H3             010110         0121                          </span>
 <span class="co">#&gt;  2 H3             010190         0121                          </span>
-<span class="co">#&gt;  3 H3             010190         0121                          </span>
-<span class="co">#&gt;  4 H3             010210         0121                          </span>
-<span class="co">#&gt;  5 H3             010210         0121                          </span>
-<span class="co">#&gt;  6 H3             010290         0121                          </span>
-<span class="co">#&gt;  7 H3             010290         0121                          </span>
-<span class="co">#&gt;  8 H3             010310         0122                          </span>
-<span class="co">#&gt;  9 H3             010310         0122                          </span>
-<span class="co">#&gt; 10 H3             010391         0122                          </span>
+<span class="co">#&gt;  3 H3             010210         0121                          </span>
+<span class="co">#&gt;  4 H3             010290         0121                          </span>
+<span class="co">#&gt;  5 H3             010310         0122                          </span>
+<span class="co">#&gt;  6 H3             010391         0122                          </span>
+<span class="co">#&gt;  7 H3             010392         0122                          </span>
+<span class="co">#&gt;  8 H3             010410         0121                          </span>
+<span class="co">#&gt;  9 H3             010420         0121                          </span>
+<span class="co">#&gt; 10 H3             010511         0122                          </span>
 <span class="co">#&gt; # ... with 9,422 more rows</span></code></pre></div>
 </div>
 <div id="example-2-2" class="section level3">
@@ -1717,6 +1717,7 @@ U
 <span class="co">#&gt;  9 H5                  010420             010420            0121                </span>
 <span class="co">#&gt; 10 H5                  010511             010511            0122                </span>
 <span class="co">#&gt; # ... with 4,866 more rows</span></code></pre></div>
+<p>Please note that the chaining of concordance tables may be very intriguing; however, it’s not free of any downsides as is discussed in the article on <span class="math display"><em>c</em><em>h</em><em>a</em><em>i</em><em>n</em><em>i</em><em>n</em><em>g</em><em>c</em><em>o</em><em>n</em><em>c</em><em>o</em><em>r</em><em>d</em><em>a</em><em>n</em><em>c</em><em>e</em><em>t</em><em>a</em><em>b</em><em>l</em><em>e</em><em>s</em></span>)(<a href="https://amannj.github.io/resources/comtradeRggregator/articles/chaining-concordance-tables.html" class="uri">https://amannj.github.io/resources/comtradeRggregator/articles/chaining-concordance-tables.html</a>).</p>
 <hr>
 </div>
 </div>
