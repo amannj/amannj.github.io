@@ -42,8 +42,10 @@
 <meta property="og:title" content="Build Comtrade Data from Temporary Files — build_Comtrade" />
 <meta property="og:description" content="Builds final Comtrade data set from temporary files
 downloaded using download_Comtrade(..., rm.temporaryFiles = FALSE).
-Options rm.temporaryFiles = FALSE in download_Comtrade() are necessary as temporary files will be deleted as part of
-data download by default. See documentation of download_Comtrade() for more information." />
+Options rm.temporaryFiles = FALSE in download_Comtrade() are necessary
+as temporary files will be deleted as part of
+data download by default. See documentation of download_Comtrade()
+for more information." />
 
 
 
@@ -137,12 +139,14 @@ data download by default. See documentation of download_Comtrade() for more info
     <div class="ref-description">
     <p>Builds final Comtrade data set from temporary files
 downloaded using <code><a href='download_Comtrade.html'>download_Comtrade(..., rm.temporaryFiles = FALSE)</a></code>.</p>
-<p>Options <code>rm.temporaryFiles = FALSE</code> in <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> are necessary as temporary files will be deleted as part of
-data download by default. See documentation of <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> for more information.</p>
+<p>Options <code>rm.temporaryFiles = FALSE</code> in <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> are necessary
+as temporary files will be deleted as part of
+data download by default. See documentation of <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>
+for more information.</p>
     </div>
 
     <pre class="usage"><span class='fu'>build_Comtrade</span><span class='op'>(</span>
-  directory <span class='op'>=</span> <span class='va'>loc_folder</span>,
+  directory <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"data"</span>, package <span class='op'>=</span> <span class='st'>"comtradeRggregator"</span><span class='op'>)</span>,
   rm.temporaryFiles <span class='op'>=</span> <span class='cn'>FALSE</span>,
   is.mirrorData <span class='op'>=</span> <span class='cn'>FALSE</span>,
   partner <span class='op'>=</span> <span class='cn'>NULL</span>
@@ -154,21 +158,27 @@ data download by default. See documentation of <code><a href='download_Comtrade.
     <tr>
       <th>directory</th>
       <td><p>Location of temporary file downloads; default is</p>
-<p><code>&lt;your package directory&gt;\data\tmp\&lt;date-and-time-stamp&gt;</code>.</p></td>
+<p><code>&lt;your local package directory&gt;\data\tmp\&lt;date-and-time-stamp&gt;</code>.</p></td>
     </tr>
     <tr>
       <th>rm.temporaryFiles</th>
-      <td><p>Remove temporary download files stored at location provided in argument <code>location.temporaryFiles</code> when building Comtrade trade data set; default is <code>TRUE</code>.</p></td>
+      <td><p>Remove temporary download files stored at
+location provided in argument <code>location.temporaryFiles</code> when building
+Comtrade trade data set; default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>is.mirrorData</th>
-      <td><p>Is data set that is to be build mirror data? default is <code>FALSE</code>, i.e. non-mirror data.</p></td>
+      <td><p>Is data set that is to be build mirror data? default
+is <code>FALSE</code>, i.e. non-mirror data.</p></td>
     </tr>
     <tr>
       <th>partner</th>
-      <td><p>List of partner countries. Needs to be provided if <code>is.mirrorData = TRUE</code>; default is <code>NULL</code>, i.e. no mirror data download.</p><ul>
-<li><p>If <code>is.mirrorData = TRUE</code>, export (import) data from  countries specified in
-argument <code>partner</code> is measured as import (export) of countries specified in argument <code>partner</code> as reported by countries
+      <td><p>List of partner countries. Needs to be provided
+if <code>is.mirrorData = TRUE</code>; default is <code>NULL</code>, i.e. no mirror data download.</p><ul>
+<li><p>If <code>is.mirrorData = TRUE</code>, export (import) data from  countries
+specified in
+argument <code>partner</code> is measured as import (export) of countries
+specified in argument <code>partner</code> as reported by countries
 specified in argument <code>partner</code>.</p></li>
 </ul></td>
     </tr>
@@ -176,7 +186,8 @@ specified in argument <code>partner</code>.</p></li>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='download_Comtrade.html'>download_Comtrade()</a></code>, <code><a href='https://rdrr.io/r/utils/browseVignettes.html'>browseVignettes("comtradeRggregator")</a></code></p></div>
+    <div class='dont-index'><p><code><a href='download_Comtrade.html'>download_Comtrade()</a></code>,
+<code><a href='https://rdrr.io/r/utils/browseVignettes.html'>browseVignettes("comtradeRggregator")</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

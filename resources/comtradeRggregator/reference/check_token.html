@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Concordance Table: H2 to SITC Rev. 1 — H2_S1 • comtradeRggregator</title>
+<title>Check Comtrade token — check_token • comtradeRggregator</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,27 @@
 
 
 
-<meta property="og:title" content="Concordance Table: H2 to SITC Rev. 1 — H2_S1" />
-<meta property="og:description" content="Concordance table from HS 2002 (H2) to SITC Rev. 1" />
+<meta property="og:title" content="Check Comtrade token — check_token" />
+<meta property="og:description" content="Checks validity of supplied Comtrade token as described
+in Comtrade's
+API documentation.
+The validity of the token can be checked using the official
+Access Rights Information
+mask, or directly via the official API service (
+link).
+In order to add a valid token to your comtradeRggregator query:
+Follow the instruction on Comtrade's API page to
+Comtrade's API help page
+to get access to an authentication code (token).
+You can check the validity of your token
+here.
+Use the token as input parameter token in function
+download_Comtrade() to get unlimited (authenticated) usage of
+10,000 requests per hour. You can check the validity of the token obtained
+in steps (1) to (2) without running a comtradeRggreagator query by using
+the function check_token(token = &quot;&amp;lt;your token&amp;gt;&quot;.
+
+" />
 
 
 
@@ -126,48 +145,53 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Concordance Table: H2 to SITC Rev. 1</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amannj/comtradeRggregator/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>H2_S1.Rd</code></div>
+    <h1>Check Comtrade token</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amannj/comtradeRggregator/blob/master/R/com_API.R'><code>R/com_API.R</code></a></small>
+    <div class="hidden name"><code>check_token.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Concordance table from <code>HS 2002</code> (<code>H2</code>) to <code>SITC Rev. 1</code></p>
+    <p>Checks validity of supplied Comtrade token as described
+in Comtrade's
+<a href='https://comtrade.un.org/data/doc/api/#APIKey'>API documentation</a>.</p>
+<p>The validity of the token can be checked using the official
+<a href='https://comtrade.un.org/ws/CheckRights.aspx'>Access Rights Information</a>
+mask, or directly via the official API service (
+<a href='https://comtrade.un.org/api/swagger/ui/index#!/Auth/Auth_Authorize'>link</a>).</p>
+<p>In order to add a valid token to your <code>comtradeRggregator</code> query:</p><ol>
+<li><p>Follow the instruction on Comtrade's API page to
+<a href='https://comtrade.un.org/data/doc/api/'>Comtrade's API help page</a>
+to get access to an authentication code (token).</p></li>
+<li><p>You can check the validity of your token
+<a href='https://comtrade.un.org/ws/CheckRights.aspx'>here</a>.</p></li>
+<li><p>Use the token as input parameter <code>token</code> in function
+<code><a href='download_Comtrade.html'>download_Comtrade()</a></code> to get unlimited (authenticated) usage of
+10,000 requests per hour. You can check the validity of the token obtained
+in steps (1) to (2) without running a <code>comtradeRggreagator</code> query by using
+the function <code>check_token(token = "&lt;your token&gt;"</code>.</p></li>
+</ol>
+
     </div>
 
-    <pre class="usage"><span class='va'>H2_S1</span></pre>
+    <pre class="usage"><span class='fu'>check_token</span><span class='op'>(</span>token <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>token</th>
+      <td><p>Comtrade token; default is NULL.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 5,217 rows and 4 variables:</p><dl>
-<dt>HS 2002 Product Code</dt><dd><p>Harmonised System <code>HS 2002</code> (<code>H2</code>) Product code.</p></dd>
-<dt>HS 2002 Product Description</dt><dd><p>Harmonised System <code>HS 2002</code> (<code>H2</code>) Product description.</p></dd>
-<dt>SITC Revision 1 Product Code</dt><dd><p>Standard International Trade Classification <code>SITC</code> Revision 1 Product code.</p></dd>
-<dt>SITC Revision 1 Product Description</dt><dd><p>Standard International Trade Classification <code>SITC</code> Revision 1 Product description.</p></dd>
-
-</dl>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://wits.worldbank.org/product_concordance.html'>https://wits.worldbank.org/product_concordance.html</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>H2_S1</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5,217 x 4</span>
-#&gt;    `HS 2002 Product~ `HS 2002 Product De~ `SITC Revision 1 ~ `SITC Revision 1 P~
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              
-#&gt; <span style='color: #BCBCBC;'> 1</span> 010110            Purebred breeding a~ 0015               Horses, asses, mul~
-#&gt; <span style='color: #BCBCBC;'> 2</span> 010190            Other                0015               Horses, asses, mul~
-#&gt; <span style='color: #BCBCBC;'> 3</span> 010210            Purebred breeding a~ 0011               Bovine cattle incl~
-#&gt; <span style='color: #BCBCBC;'> 4</span> 010290            Other                0011               Bovine cattle incl~
-#&gt; <span style='color: #BCBCBC;'> 5</span> 010310            Purebred breeding a~ 0013               Swine              
-#&gt; <span style='color: #BCBCBC;'> 6</span> 010391            Weighing less than ~ 0013               Swine              
-#&gt; <span style='color: #BCBCBC;'> 7</span> 010392            Weighing 50 kg or m~ 0013               Swine              
-#&gt; <span style='color: #BCBCBC;'> 8</span> 010410            Sheep                0012               Sheep, lambs and g~
-#&gt; <span style='color: #BCBCBC;'> 9</span> 010420            Goats                0012               Sheep, lambs and g~
-#&gt; <span style='color: #BCBCBC;'>10</span> 010511            Fowls of the specie~ 0014               Poultry ,live      
-#&gt; <span style='color: #949494;'># ... with 5,207 more rows</span></div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>check_token</span><span class='op'>(</span><span class='op'>)</span> <span class='co'># by default, no token provided.</span>
+</div><div class='output co'>#&gt; <span class='message'>No Comtrade token specified; download restricted to 100 queries per hour.</span></div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>check_token</span><span class='op'>(</span>token <span class='op'>=</span> <span class='st'>"your token"</span><span class='op'>)</span> <span class='co'># add your access token</span>
+<span class='op'>}</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

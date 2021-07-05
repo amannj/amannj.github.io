@@ -40,7 +40,10 @@
 
 
 <meta property="og:title" content="Extract Comtrade Data — download_Comtrade" />
-<meta property="og:description" content="Main function to generate trade data querie that is processed in download_Comtrade_core()  to interact with comtradr::ct_search() and Comtrade's API to extract Comtrade trade data." />
+<meta property="og:description" content="Main function to generate trade data querie that is processed
+in download_Comtrade_core()  to interact with comtradr::ct_search()
+and Comtrade's API to
+extract Comtrade trade data." />
 
 
 
@@ -132,7 +135,10 @@
     </div>
 
     <div class="ref-description">
-    <p>Main function to generate trade data querie that is processed in <code>download_Comtrade_core()</code>  to interact with <code><a href='https://docs.ropensci.org/comtradr/reference/ct_search.html'>comtradr::ct_search()</a></code> and <a href='https://comtrade.un.org/data/doc/api/'>Comtrade's API</a> to extract Comtrade trade data.</p>
+    <p>Main function to generate trade data querie that is processed
+in <code>download_Comtrade_core()</code>  to interact with <code><a href='https://docs.ropensci.org/comtradr/reference/ct_search.html'>comtradr::ct_search()</a></code>
+and <a href='https://comtrade.un.org/data/doc/api/'>Comtrade's API</a> to
+extract Comtrade trade data.</p>
     </div>
 
     <pre class="usage"><span class='fu'>download_Comtrade</span><span class='op'>(</span>
@@ -164,11 +170,14 @@
     </tr>
     <tr>
       <th>frequency</th>
-      <td><p>Frequency of data extract; either <code>annual</code> or <code>monthly</code>; default is <code>annual</code>.</p></td>
+      <td><p>Frequency of data extract;
+either <code>annual</code> or <code>monthly</code>; default is <code>annual</code>.</p></td>
     </tr>
     <tr>
       <th>month</th>
-      <td><p>Optional parameter for <code>monthly</code> extract; ignored for <code>annual</code> extracts; default is all 12 months if <code>frequency = 'monthly'</code> while argument <code>monty</code> remains unspecified.</p></td>
+      <td><p>Optional parameter for <code>monthly</code> extract; ignored for
+<code>annual</code> extracts; default is all 12 months if
+<code>frequency = 'monthly'</code> while argument <code>monty</code> remains unspecified.</p></td>
     </tr>
     <tr>
       <th>countries</th>
@@ -176,59 +185,102 @@
     </tr>
     <tr>
       <th>partners</th>
-      <td><p>Specify partner country/countries or <code>World</code> (as provided by Comtrade); use option <code>all</code> if you want to download trade data from all
+      <td><p>Specify partner country/countries or <code>World</code>
+(as provided by Comtrade); use option <code>all</code> if you want to
+download trade data from all
 available countries but not Comtrade's <code>World</code> aggregate; default is <code>World</code>.</p><ul>
-<li><p>If <code>is.mirrorData = FALSE</code> and <code>partners = 'World'</code>, <code>download_Comtrade()</code> will download aggregated <em>"World"</em> trade as provided by <a href='https://comtrade.un.org'>Comtrade</a>.</p></li>
-<li><p>If <code>is.mirrorData = TRUE</code> and <code>partners = 'World'</code>, no <em>"World"</em> aggregate is available via <a href='https://comtrade.un.org'>Comtrade</a>. In this case, <code>download_Comtrade()</code> will download mirror trade data for <a href='https://comtrade.un.org/data/da'>all available countries</a>, and creates and returns an artificial 'World' aggregate by summing up over all available countries.</p></li>
+<li><p>If <code>is.mirrorData = FALSE</code> and <code>partners = 'World'</code>,
+<code>download_Comtrade()</code> will download aggregated <em>"World"</em> trade as
+provided by <a href='https://comtrade.un.org'>Comtrade</a>.</p></li>
+<li><p>If <code>is.mirrorData = TRUE</code> and <code>partners = 'World'</code>, no <em>"World"</em>
+aggregate is available via <a href='https://comtrade.un.org'>Comtrade</a>.
+In this case, <code>download_Comtrade()</code> will download mirror trade data
+for <a href='https://comtrade.un.org/data/da'>all available countries</a>, and
+creates and returns an artificial 'World' aggregate by summing up over
+all available countries.</p></li>
 </ul></td>
     </tr>
     <tr>
       <th>tradecode</th>
-      <td><p>Select trade database and classification to be extracted; default is <code>HS2007</code>/<code>H3</code>; monthly trade data only available following <code>HS</code> classification; the full list of possible trade classifications and corresponding input arguments used in the <code>comtradeRggregator</code> package are provided in table <a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>Trade Classification</a>; argument accepts long classification names, e.g. <code>HS2007</code>, as well as abbreviation, e.g. <code>HS3</code>, as inputs.</p></td>
+      <td><p>Select trade database and classification to be extracted;
+default is <code>HS2007</code>/<code>H3</code>; monthly trade data only available following <code>HS</code>
+classification; the full list of possible trade classifications and
+corresponding input arguments used in the <code>comtradeRggregator</code> package are
+provided in table Trade Classification (
+<a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>);
+argument accepts long classification names, e.g. <code>HS2007</code>, as well as
+abbreviation, e.g. <code>HS3</code>, as inputs.</p></td>
     </tr>
     <tr>
       <th>ag</th>
-      <td><p>Level of aggregation of trade data; varies by trade data set; see  table <a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>Trade Classification</a> for more information.</p></td>
+      <td><p>Level of aggregation of trade data; varies by trade data set; see
+Trade Classification (
+<a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>)
+for more information.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p>Type of trade data to be extracted (either <code>services</code> or <code>commodities</code>); currently only <code>type = commodities</code> implemented.</p></td>
+      <td><p>Type of trade data to be extracted
+(either <code>services</code> or <code>commodities</code>); currently only
+<code>type = commodities</code> implemented.</p></td>
     </tr>
     <tr>
       <th>select.stats</th>
-      <td><p>Trade statistics to be reported; either <code>trade_value_usd</code>, <code>qty_unit_code</code>, <code>qty_unit</code>, <code>alt_qty_unit_code</code>, <code>alt_qty_unit</code>, <code>qty, alt_qty</code>, <code>netweight_kg</code>, <code>gross_weight_kg</code> or <code>all</code>; default is <code>all</code>.</p></td>
+      <td><p>Trade statistics to be reported;
+either <code>trade_value_usd</code>, <code>qty_unit_code</code>, <code>qty_unit</code>, <code>alt_qty_unit_code</code>,
+<code>alt_qty_unit</code>, <code>qty, alt_qty</code>, <code>netweight_kg</code>, <code>gross_weight_kg</code>
+or <code>all</code>; default is <code>all</code>.</p></td>
     </tr>
     <tr>
       <th>direction</th>
-      <td><p>Direction of trade flow reported; either <code>imports</code>, <code>exports</code>, <code>re-imports</code>, <code>re-exports</code> or <code>all</code>; default is <code>all</code>.</p></td>
+      <td><p>Direction of trade flow reported; either <code>imports</code>,
+<code>exports</code>, <code>re-imports</code>, <code>re-exports</code> or <code>all</code>; default is <code>all</code>.</p></td>
     </tr>
     <tr>
       <th>token</th>
-      <td><p>Set Comtrade token to increase hourly queries from <a href='https://comtrade.un.org/Data/Doc/API'>Comtrade API</a>; increases the speed of large data extraction as it increases the number of queries that can be run per hour.</p></td>
+      <td><p>Set Comtrade token to increase hourly queries from
+<a href='https://comtrade.un.org/Data/Doc/API'>Comtrade API</a>; increases the speed
+of large data extraction as it increases the number of queries that can be
+run per hour.</p></td>
     </tr>
     <tr>
       <th>ext_cnt</th>
-      <td><p>Number of countries extracted with each query; default is 5 which is also the maximum in <a href='https://github.com/ropensci/comtradr'>comtradr</a>.</p></td>
+      <td><p>Number of countries extracted with each query; default is
+5 which is also the maximum in
+<a href='https://github.com/ropensci/comtradr'>comtradr</a>.</p></td>
     </tr>
     <tr>
       <th>is.mirrorData</th>
-      <td><p>Extract mirror trade data? default is <code>FALSE</code>; Set to <code>TRUE</code> to extract mirror trade data from country/countries specified in argument <code>partners</code>. For example, if <code>is.mirrorData = TRUE</code> export data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> is measured as import data from countries specified in argument <code>countries</code> to countries specified in argument <code>partners</code> as reported by countries specified in argument <code>partners</code>.</p></td>
+      <td><p>Extract mirror trade data? default is <code>FALSE</code>;
+set to <code>TRUE</code> to extract mirror trade data from country/countries specified
+in argument <code>partners</code>. For example, if <code>is.mirrorData = TRUE</code> export data
+from countries specified in argument <code>countries</code> to countries specified in
+argument <code>partners</code> is measured as import data from countries specified in
+argument <code>countries</code> to countries specified in argument <code>partners</code> as
+reported by countries specified in argument <code>partners</code>.</p></td>
     </tr>
     <tr>
       <th>rm.temporaryFiles</th>
-      <td><p>Remove temporary download files stored at location provided in argument <code>location.temporaryFiles</code>; default is <code>TRUE</code>.</p></td>
+      <td><p>Remove temporary download files stored at location
+provided in argument <code>location.temporaryFiles</code>; default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>location.temporaryFiles</th>
-      <td><p>Location of temporary file downloads; default is <code>&lt;your package directory&gt;\data\tmp\&lt;date-and-time-stamp&gt;</code>; if you decide to use a different location, an alternative temporary folder needs to be created first.</p></td>
+      <td><p>Location of temporary file downloads;
+default is <code>your local package directory\data\tmp\&lt;date-and-time-stamp&gt;</code>;
+if you decide to use a different location, an alternative temporary
+folder needs to be created first.</p></td>
     </tr>
     <tr>
       <th>build.Comtrade</th>
-      <td><p>After having downloaded the separate temporary files (which will be saved to <code>location.temporaryFiles</code>), should function <code>download_Comtrade()</code> return a complete data object? Default is <code>TRUE</code>.</p></td>
+      <td><p>After having downloaded the separate temporary
+files (which will be saved to <code>location.temporaryFiles</code>), should function
+<code>download_Comtrade()</code> return a complete data object? Default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>sleep</th>
-      <td><p>Number of seconds to wait before the next Comtrade API query is started; default is 5.</p></td>
+      <td><p>Number of seconds to wait before the next Comtrade API
+query is started; default is 5.</p></td>
     </tr>
     </table>
 
@@ -239,18 +291,19 @@ available countries but not Comtrade's <code>World</code> aggregate; default is 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='va'>AT_World</span> <span class='op'>&lt;-</span> <span class='fu'>download_Comtrade</span><span class='op'>(</span>
-year <span class='op'>=</span> <span class='st'>"2018"</span>,
-frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
-countries <span class='op'>=</span> <span class='st'>"Austria"</span>,
-partners <span class='op'>=</span> <span class='st'>"World"</span>,
-tradecode <span class='op'>=</span> <span class='st'>"HS2007"</span>,
-ag <span class='op'>=</span> <span class='st'>"AG6"</span>,
-type <span class='op'>=</span> <span class='st'>"commodities"</span>,
-select.stats <span class='op'>=</span> <span class='st'>"trade_value_usd"</span>,
-direction <span class='op'>=</span> <span class='st'>"all"</span>
+  year <span class='op'>=</span> <span class='st'>"2018"</span>,
+  frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
+  countries <span class='op'>=</span> <span class='st'>"Austria"</span>,
+  partners <span class='op'>=</span> <span class='st'>"World"</span>,
+  tradecode <span class='op'>=</span> <span class='st'>"HS2007"</span>,
+  ag <span class='op'>=</span> <span class='st'>"AG6"</span>,
+  type <span class='op'>=</span> <span class='st'>"commodities"</span>,
+  select.stats <span class='op'>=</span> <span class='st'>"trade_value_usd"</span>,
+  direction <span class='op'>=</span> <span class='st'>"all"</span>
 <span class='op'>)</span>
 <span class='va'>AT_World</span>
 <span class='op'>}</span>
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

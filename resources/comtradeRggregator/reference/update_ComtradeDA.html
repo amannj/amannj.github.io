@@ -49,11 +49,11 @@ Comtrade.
 comtradeRggregator uses trade information corresponding to
 official Comtrade data availability
 which it updates once a day and stores locally on your machine:
-&amp;lt;your local package location&amp;gt;/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.csv.gz
+your local package directory/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.rds
 The locally stored Comtrade Data Availability file is used in
-every download_Comtrade() data query.
-In other words, if new data becomes available and is documented in the
-official Comtrade data availability file,
+every download_Comtrade() data query. In other words, if new data
+becomes available and is documented in the official Comtrade
+data availability file,
 comtradeRggregator will use this information no later than 24
 hours after its publication." />
 
@@ -156,11 +156,11 @@ trade data is released/revised very frequently on
 <code>comtradeRggregator</code> uses trade information corresponding to
 <a href='https://comtrade.un.org/data/da'>official Comtrade data availability</a>
 which it updates once a day and stores locally on your machine:
-<code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.csv.gz</code>
+<code>your local package directory/data/Comtrade_DataAvailability-&lt;date stamp&gt;.rds</code>
 The locally stored Comtrade Data Availability file is used in
-every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> data query.
-In other words, if new data becomes available and is documented in the
-<a href='https://comtrade.un.org/data/da'>official Comtrade data availability file</a>,
+every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> data query. In other words, if new data
+becomes available and is documented in the official Comtrade
+<a href='https://comtrade.un.org/data/da'>data availability file</a>,
 <code>comtradeRggregator</code> will use this information no later than 24
 hours after its publication.</p>
     </div>
@@ -180,12 +180,36 @@ hours after its publication.</p>
     </tr>
     <tr>
       <th>file</th>
-      <td><p>Name of file containing information on Comtrade's data availability;
-default is <code>Comtrade_DataAvailability-&lt;date stamp&gt;</code>.</p></td>
+      <td><p>Name of file containing information on Comtrade's data
+availability; default is <code>Comtrade_DataAvailability-&lt;date stamp&gt;</code>.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
+    <p><a href='https://comtrade.un.org/data/da'>https://comtrade.un.org/data/da</a></p>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A data frame with 65k rows and 10 variables:</p><dl>
+<dt>type</dt><dd><p>Type of trade data to be extracted (either <code>services</code> or <code>commodities</code>).</p></dd>
+<dt>freq</dt><dd><p>Frequency of data extract; either <code>annual</code> or <code>monthly</code>.</p></dd>
+<dt>px</dt><dd><p>Abbreviation of target trade classification.</p></dd>
+<dt>r</dt><dd><p>Country code.</p></dd>
+<dt>rDesc</dt><dd><p>Country name description.</p></dd>
+<dt>ps</dt><dd><p>Year.</p></dd>
+<dt>TotalRecords</dt><dd><p>Number of records.</p></dd>
+<dt>isOriginal</dt><dd><p>Is original data.</p></dd>
+<dt>publicationDate</dt><dd><p>Publication date.</p></dd>
+<dt>isPartnerDetail</dt><dd><p>Partner detail.</p></dd>
+
+</dl>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>update_ComtradeDA</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

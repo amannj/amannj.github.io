@@ -40,14 +40,20 @@
 
 
 <meta property="og:title" content="Check Available Countries for Comtrade Query — gen_CountryList" />
-<meta property="og:description" content="Extract or validate list of exporters for which in a given period (year or year-month) and trade classification data is available.
-Data availability varies by country and classification, and new trade data is released/revised very frequently.
+<meta property="og:description" content="Extract or validate list of exporters for which in a given
+period (year or year-month) and trade classification data is available.
+Data availability varies by country and classification, and new trade data
+is released/revised very frequently.
 comtradeRggregator uses trade information corresponding to
-official Comtrade data availability which it updates once a day and stores locally on your machine:
-&amp;lt;your local package location&amp;gt;/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.rds
-The locally stored Comtrade Data Availability file is used in every download_Comtrade() data query.
-In other words, if new data becomes available and is documented in the official Comtrade data availability file,
-comtradeRggregator will use this information no later than 24 hours after its publication." />
+official Comtrade data availability
+which it updates once a day and stores locally on your machine:
+your local package directory/data/Comtrade_DataAvailability-&amp;lt;date stamp&amp;gt;.rds
+The locally stored Comtrade Data Availability file is used in every
+download_Comtrade() data query. In other words, if new data becomes
+available and is documented in the official Comtrade
+data availability file,
+comtradeRggregator will use this information no later than 24 hours after
+its publication." />
 
 
 
@@ -139,24 +145,30 @@ comtradeRggregator will use this information no later than 24 hours after its pu
     </div>
 
     <div class="ref-description">
-    <p>Extract or validate list of exporters for which in a given period (year or year-month) and trade classification data is available.
-Data availability varies by country and classification, and new trade data is released/revised very frequently.
+    <p>Extract or validate list of exporters for which in a given
+period (year or year-month) and trade classification data is available.
+Data availability varies by country and classification, and new trade data
+is released/revised very frequently.
 <code>comtradeRggregator</code> uses trade information corresponding to
-<a href='https://comtrade.un.org/data/da'>official Comtrade data availability</a> which it updates once a day and stores locally on your machine:
-<code>&lt;your local package location&gt;/data/Comtrade_DataAvailability-&lt;date stamp&gt;.rds</code>
-The locally stored Comtrade Data Availability file is used in every <code><a href='download_Comtrade.html'>download_Comtrade()</a></code> data query.
-In other words, if new data becomes available and is documented in the <a href='https://comtrade.un.org/data/da'>official Comtrade data availability file</a>,
-<code>comtradeRggregator</code> will use this information no later than 24 hours after its publication.</p>
+<a href='https://comtrade.un.org/data/da'>official Comtrade data availability</a>
+which it updates once a day and stores locally on your machine:
+<code>your local package directory/data/Comtrade_DataAvailability-&lt;date stamp&gt;.rds</code>
+The locally stored Comtrade Data Availability file is used in every
+<code><a href='download_Comtrade.html'>download_Comtrade()</a></code> data query. In other words, if new data becomes
+available and is documented in the official Comtrade
+<a href='https://comtrade.un.org/data/da'>data availability file</a>,
+<code>comtradeRggregator</code> will use this information no later than 24 hours after
+its publication.</p>
     </div>
 
     <pre class="usage"><span class='fu'>gen_CountryList</span><span class='op'>(</span>
   directory <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"data"</span>, package <span class='op'>=</span> <span class='st'>"comtradeRggregator"</span><span class='op'>)</span>,
   file <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"Comtrade_DataAvailability-"</span>, <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
   type <span class='op'>=</span> <span class='st'>"commodities"</span>,
-  frequency <span class='op'>=</span> <span class='va'>frequency</span>,
-  time <span class='op'>=</span> <span class='va'>time</span>,
-  .px <span class='op'>=</span> <span class='va'>.px</span>,
-  t <span class='op'>=</span> <span class='va'>t</span>
+  frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
+  time <span class='op'>=</span> <span class='fl'>2010</span>,
+  .px <span class='op'>=</span> <span class='st'>"ag6"</span>,
+  t <span class='op'>=</span> <span class='fl'>1</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -164,31 +176,37 @@ In other words, if new data becomes available and is documented in the <a href='
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>directory</th>
-      <td><p>Location of Comtrade Data Availability file; default is <code>data/</code></p></td>
+      <td><p>Location of Comtrade Data Availability file;
+default is <code>data/</code></p></td>
     </tr>
     <tr>
       <th>file</th>
-      <td><p>Name of file containing information on Comtrade's data availability; default is <code>Comtrade_DataAvailability-&lt;date stamp&gt;</code>.</p></td>
+      <td><p>Name of file containing information on Comtrade's data
+availability; default is <code>Comtrade_DataAvailability-&lt;date stamp&gt;</code>.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p>Type of trade data to be extracted (either <code>services</code> or <code>commodities</code>); currently only <code>type = commodities</code> implemented.</p></td>
+      <td><p>Type of trade data to be extracted (either <code>services</code> or
+<code>commodities</code>); currently only <code>type = commodities</code> implemented.</p></td>
     </tr>
     <tr>
       <th>frequency</th>
-      <td><p>Frequency of data extract; either <code>annual</code> or <code>monthly</code>; default is <code>annual</code>.</p></td>
+      <td><p>Frequency of data extract; either <code>annual</code> or
+<code>monthly</code>; default is <code>annual</code>.</p></td>
     </tr>
     <tr>
       <th>time</th>
-      <td><p>Generic time id for internal processing; either a particular year or particular month of a particular year</p></td>
+      <td><p>Generic time id for internal processing; either a particular year
+or particular month of a particular year</p></td>
+    </tr>
+    <tr>
+      <th>.px</th>
+      <td><p>Trade classification abbreviation <code>.px</code> for further processing of
+Comtrade download</p></td>
     </tr>
     <tr>
       <th>t</th>
       <td><p>Generic time index for internatl processing.</p></td>
-    </tr>
-    <tr>
-      <th>px</th>
-      <td><p>Trade classification abbreviation <code>.px</code> for further processing of Comtrade download</p></td>
     </tr>
     </table>
 
