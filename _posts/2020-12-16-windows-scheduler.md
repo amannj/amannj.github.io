@@ -8,15 +8,16 @@ In this tutorial I will go over the steps necessary to schedule a Python script 
 
 For the purpose of this tutorial I will further assume that you have Python set up and running on your machine. For everything else, please follow the step-by-step guide below:
 
+<br>
 
-#### Step 1: Create your Python script.
+### Step 1: Create your Python script.
 
 This should be self-explanatory. Let's assume we want to run the following script called `my.py` which does nothing but print today's date:
 
 ```
-###################
+####################
 # Content of my.py #
-###################
+####################
 
 import datetime
 
@@ -36,7 +37,9 @@ C:\Users\<Your Name>\Desktop
 
 where `<Your Name>` should be replaced with your Windows username.
 
-#### Step 2: Create Batch File to Run the Python Script
+<br>
+
+### Step 2: Create Batch File to Run the Python Script
 
 First, open *Notepad* and generate the following generic structure:
 
@@ -52,6 +55,8 @@ In our example, the batch file will read as follows:
 pause
 ```
 
+> **Note:** In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in [this](https://amannj.github.io/blog/2020/07/09/bat-git-push) blog post.
+
 Next, save file with the 'bat' file extension; we'll call our file `run_mypy.bat` for now.
 
 Finally, go ahead and check if the batch file triggers your Python script correctly. For this you simply have to double-click `run_mypy.bat`. If everything has worked out correctly, a command prompt should open now containing the following pieces of information (including the date and daytime which in this case is 2020-12-16 12:12:12):
@@ -63,8 +68,9 @@ C:\Users\<Your Name>\Desktop>"C:\Users\<Your Name>\AppData\Local\Programs\Python
 C:\Users\<Your Name>\Desktop>pause
 Press any key to continue . . .
 ```
+<br>
 
-#### Step 3: Schedule Python Script using *Windows Scheduler*
+### Step 3: Schedule Python Script using *Windows Scheduler*
 
 - Open `Control Panel` and search for `Administrative Tools`.
 
