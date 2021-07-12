@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How To Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub"
-date: 2020-07-09
+date: 2021-07-09
 ---
 
 Let's say you want to use a Windows bat file to automatically run Git to add, commit and push to GitHub. 

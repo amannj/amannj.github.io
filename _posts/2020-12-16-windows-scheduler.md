@@ -54,8 +54,11 @@ In our example, the batch file will read as follows:
 "C:\Users\<Your Name>\AppData\Local\Programs\Python\Python38\python.exe" "C:\Users\<Your Name>\Desktop\my.py"
 pause
 ```
+<br>
 
 > **Note:** In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in [this](https://amannj.github.io/blog/2020/07/09/bat-git-push) blog post.
+
+<br>
 
 Next, save file with the 'bat' file extension; we'll call our file `run_mypy.bat` for now.
 
