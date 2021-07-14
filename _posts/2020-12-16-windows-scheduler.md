@@ -56,7 +56,7 @@ pause
 ```
 <br>
 
-> **Note:** In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in [this](https://amannj.github.io/blog/2020/07/09/bat-git-push) blog post.
+> **Note:** In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in [this](https://amannj.github.io/blog/2021/07/09/bat-git-push) blog post.
 
 <br>
 
