@@ -104,6 +104,9 @@ extract Comtrade trade data." />
       <a href="../articles/articles/chaining-concordance-tables.html">Chaining concordance tables</a>
     </li>
     <li>
+      <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
+    </li>
+    <li>
       <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
@@ -147,8 +150,8 @@ extract Comtrade trade data.</p>
   month <span class='op'>=</span> <span class='cn'>NULL</span>,
   countries <span class='op'>=</span> <span class='st'>"all"</span>,
   partners <span class='op'>=</span> <span class='st'>"World"</span>,
-  tradecode <span class='op'>=</span> <span class='st'>"HS2007"</span>,
-  ag <span class='op'>=</span> <span class='st'>"AG6"</span>,
+  nomenclature <span class='op'>=</span> <span class='st'>"HS2007"</span>,
+  commodity <span class='op'>=</span> <span class='st'>"AG6"</span>,
   type <span class='op'>=</span> <span class='st'>"commodities"</span>,
   select.stats <span class='op'>=</span> <span class='st'>"all"</span>,
   direction <span class='op'>=</span> <span class='st'>"all"</span>,
@@ -201,19 +204,20 @@ all available countries.</p></li>
 </ul></td>
     </tr>
     <tr>
-      <th>tradecode</th>
-      <td><p>Select trade database and classification to be extracted;
-default is <code>HS2007</code>/<code>H3</code>; monthly trade data only available following <code>HS</code>
-classification; the full list of possible trade classifications and
-corresponding input arguments used in the <code>comtradeRggregator</code> package are
+      <th>nomenclature</th>
+      <td><p>Select nomenclature and corresponding trade database for
+data extraction;  default is <code>HS2007</code>/<code>H3</code>; monthly trade data only available
+for <code>HS</code>. The full list of possible trade classifications and
+corresponding input arguments are
 provided in table Trade Classification (
 <a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>);
 argument accepts long classification names, e.g. <code>HS2007</code>, as well as
 abbreviation, e.g. <code>HS3</code>, as inputs.</p></td>
     </tr>
     <tr>
-      <th>ag</th>
-      <td><p>Level of aggregation of trade data; varies by trade data set; see
+      <th>commodity</th>
+      <td><p>Specify commodity code or trade data aggregate for download.
+Both vary by trade data set; see
 Trade Classification (
 <a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>)
 for more information.</p></td>
@@ -295,8 +299,8 @@ query is started; default is 5.</p></td>
   frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
   countries <span class='op'>=</span> <span class='st'>"Austria"</span>,
   partners <span class='op'>=</span> <span class='st'>"World"</span>,
-  tradecode <span class='op'>=</span> <span class='st'>"HS2007"</span>,
-  ag <span class='op'>=</span> <span class='st'>"AG6"</span>,
+  nomenclature <span class='op'>=</span> <span class='st'>"HS2007"</span>,
+  commodity <span class='op'>=</span> <span class='st'>"AG6"</span>,
   type <span class='op'>=</span> <span class='st'>"commodities"</span>,
   select.stats <span class='op'>=</span> <span class='st'>"trade_value_usd"</span>,
   direction <span class='op'>=</span> <span class='st'>"all"</span>

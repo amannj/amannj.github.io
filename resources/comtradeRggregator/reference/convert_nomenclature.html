@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Concordance Table: H3 to GTAP — H3_GP • comtradeRggregator</title>
+<title>Convert nomenclature arguments — convert_nomenclature • comtradeRggregator</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Concordance Table: H3 to GTAP — H3_GP" />
-<meta property="og:description" content="Concordance table from HS 2007 (H3) to GTAP" />
+<meta property="og:title" content="Convert nomenclature arguments — convert_nomenclature" />
+<meta property="og:description" content="Converts and harmonises nomenclature inputs for further
+processing." />
 
 
 
@@ -129,48 +130,48 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Concordance Table: H3 to GTAP</h1>
-    <small class="dont-index">Source: <a href='https://github.com/amannj/comtradeRggregator/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>H3_GP.Rd</code></div>
+    <h1>Convert nomenclature arguments</h1>
+    <small class="dont-index">Source: <a href='https://github.com/amannj/comtradeRggregator/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
+    <div class="hidden name"><code>convert_nomenclature.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Concordance table from <code>HS 2007</code> (<code>H3</code>) to <code>GTAP</code></p>
+    <p>Converts and harmonises nomenclature inputs for further
+processing.</p>
     </div>
 
-    <pre class="usage"><span class='va'>H3_GP</span></pre>
+    <pre class="usage"><span class='fu'>convert_nomenclature</span><span class='op'>(</span>nomenclature <span class='op'>=</span> <span class='va'>nomenclature</span>, return <span class='op'>=</span> <span class='st'>"Name"</span>, eval <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
-
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 5,052 rows and 4 variables:</p><dl>
-<dt>HS 2007 Product Code</dt><dd><p>Harmonised System <code>HS 2007</code> (<code>H3</code>) Product code.</p></dd>
-<dt>HS 2007 Product Description</dt><dd><p>Harmonised System <code>HS 2007</code> (<code>H3</code>) Product description.</p></dd>
-<dt>GTAP Product Code</dt><dd><p>Global Trade Analysis Project <code>GTAP</code> Product code.</p></dd>
-<dt>GTAP Product Description</dt><dd><p>Global Trade Analysis Project <code>GTAP</code> Product description.</p></dd>
-
-</dl>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>nomenclature</th>
+      <td><p>Specifies selected nomenclature;
+see
+<a href='amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>here</a>
+for more information.</p></td>
+    </tr>
+    <tr>
+      <th>return</th>
+      <td><p>Return either <code>Name</code> or <code>Abbr</code> (abbreviation) of commodity code</p></td>
+    </tr>
+    <tr>
+      <th>eval</th>
+      <td><p>if <code>TRUE</code>, <code>nomenclature</code> must be contained within
+<code>df_nomenclature</code> which is used as input validation for
+<code><a href='download_Comtrade.html'>download_Comtrade()</a></code>; set <code>FALSE</code> for <code><a href='convert_Comtrade.html'>convert_Comtrade()</a></code>.</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://wits.worldbank.org/product_concordance.html'>https://wits.worldbank.org/product_concordance.html</a></p>
+    <p><a href='amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>H3_GP</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5,052 x 4</span>
-#&gt;    `HS 2007 Product ~ `HS 2007 Product Desc~ `GTAP Product C~ `GTAP Product Des~
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             
-#&gt; <span style='color: #BCBCBC;'> 1</span> 100610             Rice in the husk (pad~ 01               PDR - Paddy rice  
-#&gt; <span style='color: #BCBCBC;'> 2</span> 100620             Husked (brown) rice    01               PDR - Paddy rice  
-#&gt; <span style='color: #BCBCBC;'> 3</span> 100110             Durum wheat            02               WHT - Wheat       
-#&gt; <span style='color: #BCBCBC;'> 4</span> 100190             Wheat other than duru~ 02               WHT - Wheat       
-#&gt; <span style='color: #BCBCBC;'> 5</span> 100200             Rye                    03               GRO - Cereal grai~
-#&gt; <span style='color: #BCBCBC;'> 6</span> 100300             Barley                 03               GRO - Cereal grai~
-#&gt; <span style='color: #BCBCBC;'> 7</span> 100400             Oats                   03               GRO - Cereal grai~
-#&gt; <span style='color: #BCBCBC;'> 8</span> 100510             Maize (corn), seed     03               GRO - Cereal grai~
-#&gt; <span style='color: #BCBCBC;'> 9</span> 100590             Maize (corn), other t~ 03               GRO - Cereal grai~
-#&gt; <span style='color: #BCBCBC;'>10</span> 100700             Grain sorghum          03               GRO - Cereal grai~
-#&gt; <span style='color: #949494;'># ... with 5,042 more rows</span></div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>convert_nomenclature</span><span class='op'>(</span>nomenclature <span class='op'>=</span> <span class='st'>'H3'</span>, return <span class='op'>=</span> <span class='st'>'Name'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "HS2007"</div><div class='input'><span class='fu'>convert_nomenclature</span><span class='op'>(</span>nomenclature <span class='op'>=</span> <span class='st'>'HS2007'</span>, return <span class='op'>=</span> <span class='st'>'Abbr'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "H3"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

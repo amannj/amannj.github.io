@@ -101,6 +101,9 @@
       <a href="../articles/articles/chaining-concordance-tables.html">Chaining concordance tables</a>
     </li>
     <li>
+      <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
+    </li>
+    <li>
       <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
@@ -140,7 +143,7 @@
   date <span class='op'>=</span> <span class='st'>"2019"</span>,
   dir <span class='op'>=</span> <span class='st'>"all"</span>,
   is.mirrorData <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  aggregation_level <span class='op'>=</span> <span class='st'>"AG6"</span>,
+  commodity <span class='op'>=</span> <span class='st'>"AG6"</span>,
   select.stats <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"trade_value_usd"</span>, <span class='st'>"qty_unit_code"</span>, <span class='st'>"qty_unit"</span>, <span class='st'>"alt_qty_unit_code"</span>,
     <span class='st'>"alt_qty_unit"</span>, <span class='st'>"qty"</span>, <span class='st'>"alt_qty"</span>, <span class='st'>"netweight_kg"</span>, <span class='st'>"gross_weight_kg"</span><span class='op'>)</span>,
   frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
@@ -168,7 +171,7 @@
       <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>
-      <th>aggregation_level</th>
+      <th>commodity</th>
       <td><p>Parameter passed on from <code><a href='download_Comtrade.html'>download_Comtrade()</a></code>.</p></td>
     </tr>
     <tr>

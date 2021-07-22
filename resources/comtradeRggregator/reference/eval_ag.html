@@ -41,7 +41,7 @@
 
 <meta property="og:title" content="Evaluate Trade Classification — eval_ag" />
 <meta property="og:description" content="Evaluates if a particular trade data set provided
-in argument tradecode is available for the provided level of
+in argument nomenclature is available for the provided level of
 aggregation in argument ag. Automatically switches to
 HS (combined) if argument frequency = 'monthly'.
 Returns classification abbreviation .px for further processing
@@ -106,6 +106,9 @@ of Comtrade download" />
       <a href="../articles/articles/chaining-concordance-tables.html">Chaining concordance tables</a>
     </li>
     <li>
+      <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
+    </li>
+    <li>
       <a href="../articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
@@ -138,14 +141,14 @@ of Comtrade download" />
 
     <div class="ref-description">
     <p>Evaluates if a particular trade data set provided
-in argument <code>tradecode</code> is available for the provided level of
+in argument <code>nomenclature</code> is available for the provided level of
 aggregation in argument <code>ag</code>. Automatically switches to
 <code>HS (combined)</code> if argument <code>frequency = 'monthly'</code>.
 Returns classification abbreviation <code>.px</code> for further processing
 of Comtrade download</p>
     </div>
 
-    <pre class="usage"><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='va'>ag</span>, tradecode <span class='op'>=</span> <span class='va'>tradecode</span>, frequency <span class='op'>=</span> <span class='st'>"annual"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='va'>ag</span>, nomenclature <span class='op'>=</span> <span class='va'>nomenclature</span>, frequency <span class='op'>=</span> <span class='st'>"annual"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -156,7 +159,7 @@ of Comtrade download</p>
 set.</p></td>
     </tr>
     <tr>
-      <th>tradecode</th>
+      <th>nomenclature</th>
       <td><p>Select trade database and classification to be
 extracted; default is <code>HS2007</code>;
 monthly trade data only available following <code>HS</code> classification;
@@ -178,8 +181,8 @@ package please see the list of all supported trade classifications (
 of Comtrade download</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='st'>"AG2"</span>, tradecode <span class='op'>=</span> <span class='st'>"HS2007"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "H3"</div><div class='input'><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='st'>"AG2"</span>, tradecode <span class='op'>=</span> <span class='st'>"HS"</span>, frequency <span class='op'>=</span> <span class='st'>"monthly"</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='st'>"AG2"</span>, nomenclature <span class='op'>=</span> <span class='st'>"HS2007"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "H3"</div><div class='input'><span class='fu'>eval_ag</span><span class='op'>(</span>ag <span class='op'>=</span> <span class='st'>"AG2"</span>, nomenclature <span class='op'>=</span> <span class='st'>"HS"</span>, frequency <span class='op'>=</span> <span class='st'>"monthly"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "HS"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

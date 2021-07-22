@@ -3,7 +3,8 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   articles/chaining-concordance-tables: chaining-concordance-tables.html
+  articles/extracting-aggregates: extracting-aggregates.html
   comtradeRggregator: comtradeRggregator.html
   handling-errors: handling-errors.html
-last_built: 2021-07-05T18:19Z
+last_built: 2021-07-22T06:51Z
 
