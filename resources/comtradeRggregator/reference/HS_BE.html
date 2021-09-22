@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -104,9 +104,12 @@
       <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../articles/handling-errors.html">Handling error messages</a>
+      <a href="../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -158,18 +161,18 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>HS_BE</span>
 </div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5,701 x 4</span>
-#&gt;    `HS Combined Prod~ `HS Combined Product D~ `BEC Product Co~ `BEC Product Des~
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            
-#&gt; <span style='color: #BCBCBC;'> 1</span> 711810             Coin (other than gold ~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 2</span> 871000             Tanks and other armour~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 3</span> 880400             Parachutes (including ~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 4</span> 880510             Aircraft launching gea~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 5</span> 880520             (-2001) Ground flying ~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 6</span> 880521             (2002-) Air combat sim~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 7</span> 880529             (2002-) Other           007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 8</span> 890600             (-2001) Other vessels,~ 007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'> 9</span> 890610             (2002-) Warships        007              Goods not elsewh~
-#&gt; <span style='color: #BCBCBC;'>10</span> 890690             (2002-) Other           007              Goods not elsewh~
+#&gt;    `HS Combined Product Code` `HS Combined Pr~ `BEC Product Co~ `BEC Product De~
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                      <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>           
+#&gt; <span style='color: #BCBCBC;'> 1</span> 711810                     Coin (other tha~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 2</span> 871000                     Tanks and other~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 3</span> 880400                     Parachutes (inc~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 4</span> 880510                     Aircraft launch~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 5</span> 880520                     (-2001) Ground ~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 6</span> 880521                     (2002-) Air com~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 7</span> 880529                     (2002-) Other    007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 8</span> 890600                     (-2001) Other v~ 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'> 9</span> 890610                     (2002-) Warships 007              Goods not elsew~
+#&gt; <span style='color: #BCBCBC;'>10</span> 890690                     (2002-) Other    007              Goods not elsew~
 #&gt; <span style='color: #949494;'># ... with 5,691 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

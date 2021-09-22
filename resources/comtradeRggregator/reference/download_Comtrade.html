@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Extract Comtrade Data — download_Comtrade" />
-<meta property="og:description" content="Main function to generate trade data querie that is processed
+<meta property="og:description" content="Main function to generate trade data query that is processed
 in download_Comtrade_core()  to interact with comtradr::ct_search()
 and Comtrade's API to
 extract Comtrade trade data." />
@@ -75,7 +75,7 @@ extract Comtrade trade data." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -107,9 +107,12 @@ extract Comtrade trade data." />
       <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../articles/handling-errors.html">Handling error messages</a>
+      <a href="../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -138,7 +141,7 @@ extract Comtrade trade data." />
     </div>
 
     <div class="ref-description">
-    <p>Main function to generate trade data querie that is processed
+    <p>Main function to generate trade data query that is processed
 in <code>download_Comtrade_core()</code>  to interact with <code><a href='https://docs.ropensci.org/comtradr/reference/ct_search.html'>comtradr::ct_search()</a></code>
 and <a href='https://comtrade.un.org/data/doc/api/'>Comtrade's API</a> to
 extract Comtrade trade data.</p>
@@ -180,7 +183,7 @@ either <code>annual</code> or <code>monthly</code>; default is <code>annual</cod
       <th>month</th>
       <td><p>Optional parameter for <code>monthly</code> extract; ignored for
 <code>annual</code> extracts; default is all 12 months if
-<code>frequency = 'monthly'</code> while argument <code>monty</code> remains unspecified.</p></td>
+<code>frequency = 'monthly'</code> while argument <code>monthy</code> remains unspecified.</p></td>
     </tr>
     <tr>
       <th>countries</th>
@@ -212,14 +215,14 @@ corresponding input arguments are
 provided in table Trade Classification (
 <a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>);
 argument accepts long classification names, e.g. <code>HS2007</code>, as well as
-abbreviation, e.g. <code>HS3</code>, as inputs.</p></td>
+abbreviations, e.g. <code>HS3</code>, as inputs.</p></td>
     </tr>
     <tr>
       <th>commodity</th>
       <td><p>Specify commodity code or trade data aggregate for download.
 Both vary by trade data set; see
-Trade Classification (
-<a href='https://github.com/amannj/comtradeRggregator#trade-classifications'>link</a>)
+Trade Classification
+(<a href='https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications'>link</a>)
 for more information.</p></td>
     </tr>
     <tr>
@@ -288,9 +291,6 @@ query is started; default is 5.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><a href='https://docs.ropensci.org/comtradr/index.html'>comtradr</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>

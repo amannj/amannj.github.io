@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -104,9 +104,12 @@
       <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../articles/handling-errors.html">Handling error messages</a>
+      <a href="../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -158,18 +161,18 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>H3_MT</span>
 </div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5,051 x 4</span>
-#&gt;    `HS 2007 Product~ `HS 2007 Product Desc~ `MTN Categories ~ `MTN Categories P~
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             
-#&gt; <span style='color: #BCBCBC;'> 1</span> 440110            Fuel wood, in logs/bi~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 2</span> 440121            Wood, in chips/partic~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 3</span> 440122            Wood, in chips/partic~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 4</span> 440130            Sawdust &amp; wood waste ~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 5</span> 440210            Wood charcoal of bamb~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 6</span> 440290            Wood charcoal (includ~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 7</span> 440310            Wood, in the rough, w~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 8</span> 440320            Wood, in the rough, w~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'> 9</span> 440341            Dark Red Meranti, Lig~ 0101              Wood, pulp, paper~
-#&gt; <span style='color: #BCBCBC;'>10</span> 440349            Topical wood spec. in~ 0101              Wood, pulp, paper~
+#&gt;    `HS 2007 Product Code` `HS 2007 Product D~ `MTN Categories~ `MTN Categories ~
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            
+#&gt; <span style='color: #BCBCBC;'> 1</span> 440110                 Fuel wood, in logs~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 2</span> 440121                 Wood, in chips/par~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 3</span> 440122                 Wood, in chips/par~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 4</span> 440130                 Sawdust &amp; wood was~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 5</span> 440210                 Wood charcoal of b~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 6</span> 440290                 Wood charcoal (inc~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 7</span> 440310                 Wood, in the rough~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 8</span> 440320                 Wood, in the rough~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'> 9</span> 440341                 Dark Red Meranti, ~ 0101             Wood, pulp, pape~
+#&gt; <span style='color: #BCBCBC;'>10</span> 440349                 Topical wood spec.~ 0101             Wood, pulp, pape~
 #&gt; <span style='color: #949494;'># ... with 5,041 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

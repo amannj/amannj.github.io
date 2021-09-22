@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -63,9 +63,12 @@
       <a href="../../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../../articles/handling-errors.html">Handling error messages</a>
+      <a href="../../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -85,7 +88,7 @@
 
       
 
-      </header><script src="chaining-concordance-tables_files/header-attrs-2.9/header-attrs.js"></script><script src="chaining-concordance-tables_files/kePrint-0.0.1/kePrint.js"></script><link href="chaining-concordance-tables_files/lightable-0.0.1/lightable.css" rel="stylesheet">
+      </header><script src="chaining-concordance-tables_files/header-attrs-2.11/header-attrs.js"></script><script src="chaining-concordance-tables_files/kePrint-0.0.1/kePrint.js"></script><link href="chaining-concordance-tables_files/lightable-0.0.1/lightable.css" rel="stylesheet">
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
@@ -99,7 +102,7 @@
 
     
     
-<p><code>comtradeRggregator</code> provides function for easy reclassification of trade data using official concordance tables from the <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">United Nations Statistical Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>; see <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table">Concordance Table</a> below. To access respective concordance tables in R, type <code>&lt;tradecode from&gt;_&lt;tradecode to&gt;</code>. For example, the concordance table for reclassifying <code>H3</code> trade data according to the <code>H0</code> nomenclature is stored as object <code>H3_H0</code> and its R help file can be accessed by typing <code><a href="../../reference/H3_H0.html">?H3_H0</a></code>.</p>
+<p><code>comtradeRggregator</code> provides an option for easy reclassification of trade data using official concordance tables from the <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">United Nations Statistical Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>; see <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table">Concordance Table</a> below. To access the respective concordance tables in R, type <code>&lt;tradecode from&gt;_&lt;tradecode to&gt;</code>. For example, the concordance table for reclassifying <code>H3</code> trade data according to the <code>H0</code> nomenclature is stored as object <code>H3_H0</code> and its R help file can be accessed by typing <code><a href="../../reference/H3_H0.html">?H3_H0</a></code>.</p>
 <p>However, in some cases no official concordance tables between two standards are available. For example, there is no direct concordance for reclassifying <code>H4</code> trade data to <code>MTN</code>.</p>
 <table class="table table">
 <caption style="font-size: initial !important;">
@@ -1157,7 +1160,7 @@ U
 <a href="#practical-examples" class="anchor"></a>Practical examples</h1>
 <p>It goes without saying that in an ideal world, one would prefer to download and convert trade data for which there exists an official concordance table as this will always give you identical or better results than when chaining concordance tables. There are, however, situations, where this might not be possible, and we need to resort to a chaining of concordance tables to get from a<br>
 particular desired classification to another one.</p>
-<p>The subsequent section should therefore be read as a set of (not comprehensive) examples of how to chain concordance tables using <code>comtradeRggrecator</code> without any guarantee that this will (always) produce sensible results.</p>
+<p>The subsequent section should therefore be read as a set of (not comprehensive) examples of how to chain concordance tables using <code>comtradeRggregator</code> without any guarantee that this will (always) produce sensible results.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/comtradeRggregator">comtradeRggregator</a></span><span class="op">)</span></code></pre></div>
 <hr>
@@ -1191,7 +1194,7 @@ particular desired classification to another one.</p>
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
   countries <span class="op">=</span> <span class="st">"Austria"</span>,
   partners <span class="op">=</span> <span class="st">"World"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"HS2012"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"HS2017"</span>,
   commodity <span class="op">=</span> <span class="st">"AG6"</span>,
   type <span class="op">=</span> <span class="st">"commodities"</span>,
   select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
@@ -1210,7 +1213,26 @@ particular desired classification to another one.</p>
   <span class="op">)</span>
 <span class="co">#&gt; Warning in convert_Comtrade(., classification.from = "H4", classification.to</span>
 <span class="co">#&gt; = "H3"): The following commodity codes of column 'commodity_code' could not be</span>
-<span class="co">#&gt; matched: 999999.</span></code></pre></div>
+<span class="co">#&gt; matched: 030249, 030291, 030391, 030447, 030456, 030488, 030496, 030554, 030631,</span>
+<span class="co">#&gt; 030632, 030633, 030634, 030635, 030636, 030639, 030692, 030693, 030694, 030695,</span>
+<span class="co">#&gt; 030699, 030712, 030722, 030732, 030742, 030743, 030752, 030772, 030792, 080521,</span>
+<span class="co">#&gt; 080522, 080529, 121150, 220291, 220299, 220422, 281217, 281219, 285310, 285390,</span>
+<span class="co">#&gt; 290383, 290431, 290499, 291050, 291462, 291479, 292024, 292029, 292030, 292215,</span>
+<span class="co">#&gt; 292216, 292217, 292218, 292330, 292340, 292640, 293080, 293131, 293132, 293139,</span>
+<span class="co">#&gt; 293214, 293392, 293510, 293550, 293590, 293971, 293979, 293980, 300212, 300213,</span>
+<span class="co">#&gt; 300215, 300219, 300342, 300349, 300360, 300441, 300449, 300460, 310311, 370500,</span>
+<span class="co">#&gt; 380852, 380859, 380861, 380862, 380869, 381231, 381239, 382484, 382485, 382486,</span>
+<span class="co">#&gt; 382487, 382488, 382491, 382499, 390140, 390761, 390769, 390931, 390939, 401170,</span>
+<span class="co">#&gt; 401180, 401190, 440111, 440112, 440140, 440311, 440312, 440321, 440322, 440323,</span>
+<span class="co">#&gt; 440324, 440325, 440326, 440393, 440395, 440396, 440397, 440612, 440692, 440711,</span>
+<span class="co">#&gt; 440712, 440719, 440796, 440797, 440922, 441233, 441234, 441873, 441874, 441875,</span>
+<span class="co">#&gt; 441891, 441899, 441911, 441912, 441919, 441990, 442191, 442199, 550290, 570420,</span>
+<span class="co">#&gt; 600535, 600536, 600537, 600538, 600539, 630420, 690721, 690722, 690723, 690730,</span>
+<span class="co">#&gt; 690740, 842441, 842449, 842482, 843231, 843239, 843241, 843242, 845612, 845640,</span>
+<span class="co">#&gt; 845650, 845941, 845949, 846012, 846022, 846023, 846024, 846520, 852842, 852852,</span>
+<span class="co">#&gt; 852862, 853950, 870191, 870192, 870193, 870194, 870195, 870220, 870240, 870340,</span>
+<span class="co">#&gt; 870360, 870370, 870380, 871160, 940152, 940153, 940382, 940383, 940610, 940690,</span>
+<span class="co">#&gt; 962000, 999999.</span></code></pre></div>
 <p>As you can see, <code><a href="../../reference/convert_Comtrade.html">convert_Comtrade()</a></code> informs you that commodity code <code>999999 - Commodities not specified according to kind</code> contained in <code>AT_World_H4</code> could not be matched to any <code>H3</code> classification. In the given example this seems fine as commodity code <code>999999 - Commodities not specified according to kind</code> seems to belong to a ‘catch-all’ category of otherwise unspecified commodities:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">AT_World_H4_H3</span> <span class="op">%&gt;%</span>
@@ -1237,30 +1259,48 @@ particular desired classification to another one.</p>
 <span class="co">#&gt; matched: 010121, 010129, 010221, 010229, 010649, 020741, 020742, 020743, 020744,</span>
 <span class="co">#&gt; 020745, 020751, 020752, 020753, 020754, 020755, 020760, 020910, 020990, 030111,</span>
 <span class="co">#&gt; 030213, 030214, 030224, 030241, 030242, 030243, 030244, 030245, 030246, 030247,</span>
-<span class="co">#&gt; 030251, 030252, 030254, 030259, 030271, 030272, 030273, 030274, 030279, 030281,</span>
-<span class="co">#&gt; 030284, 030285, 030289, 030290, 030312, 030313, 030314, 030323, 030324, 030325,</span>
-<span class="co">#&gt; 030334, 030353, 030354, 030356, 030363, 030367, 030381, 030384, 030389, 030390,</span>
-<span class="co">#&gt; 030431, 030432, 030433, 030439, 030441, 030442, 030443, 030444, 030445, 030449,</span>
-<span class="co">#&gt; 030451, 030459, 030461, 030462, 030463, 030469, 030471, 030473, 030474, 030475,</span>
-<span class="co">#&gt; 030479, 030481, 030482, 030483, 030486, 030487, 030489, 030493, 030495, 030531,</span>
-<span class="co">#&gt; 030532, 030539, 030543, 030544, 030572, 030579, 030615, 030616, 030617, 030625,</span>
-<span class="co">#&gt; 030626, 030627, 030711, 030719, 030771, 030779, 030781, 030821, 030890, 040140,</span>
-<span class="co">#&gt; 040150, 040711, 040721, 040729, 040790, 060315, 060420, 060490, 070991, 070992,</span>
-<span class="co">#&gt; 070993, 070999, 071334, 071430, 071440, 080112, 080241, 080242, 080251, 080252,</span>
-<span class="co">#&gt; 080261, 080262, 080270, 080310, 080390, 080830, 080840, 080921, 080929, 081030,</span>
-<span class="co">#&gt; 081070, 090421, 090422, 090510, 090520, 090710, 090720, 090811, 090812, 090821,</span>
-<span class="co">#&gt; 090822, 090831, 090832, 090921, 090922, 090931, 090932, 090961, 090962, 091011,</span>
-<span class="co">#&gt; 091012, 100111, 100119, 100191, 100199, 100210, 100290, 100310, 100390, 100410,</span>
-<span class="co">#&gt; 100490, 100710, 100790, 100821, 100829, 100850, 100860, 120110, 120190, 120230,</span>
-<span class="co">#&gt; 120241, 120242, 120760, 120770, 121221, 121229, 121292, 121294, 130219, 150110,</span>
-<span class="co">#&gt; 150120, 150190, 150210, 150290, 160417, 160431, 160432, 160521, 160529, 160551,</span>
-<span class="co">#&gt; 160552, 160553, 160554, 160555, 160556, 160558, 160559, 160561, 160569, 170113,</span>
-<span class="co">#&gt; 170114, 200893, 200897, 200981, 200989, 240311, 240319, 252800, 271012, 271020,</span>
-<span class="co">#&gt; 285210, 285290, 290377, 290379, 290382, 290389, 290391, 290392, 290399, 293110,</span>
-<span class="co">#&gt; 293190, 293220, 370296, 370297, 370298, 382600, 440131, 440139, 480840, 580127,</span>
-<span class="co">#&gt; 580137, 630690, 640690, 650500, 731940, 741810, 761510, 847979, 850750, 850760,</span>
-<span class="co">#&gt; 852341, 852349, 871410, 900710, 900850, 910910, 930110, 930520, 950450, 960830,</span>
-<span class="co">#&gt; 961900, 999999.</span></code></pre></div>
+<span class="co">#&gt; 030249, 030251, 030252, 030254, 030259, 030271, 030272, 030273, 030274, 030279,</span>
+<span class="co">#&gt; 030281, 030284, 030285, 030289, 030291, 030312, 030313, 030314, 030323, 030324,</span>
+<span class="co">#&gt; 030325, 030334, 030353, 030354, 030356, 030363, 030367, 030381, 030384, 030389,</span>
+<span class="co">#&gt; 030391, 030431, 030432, 030433, 030439, 030441, 030442, 030443, 030444, 030445,</span>
+<span class="co">#&gt; 030447, 030449, 030451, 030456, 030459, 030461, 030462, 030463, 030469, 030471,</span>
+<span class="co">#&gt; 030473, 030474, 030475, 030479, 030481, 030482, 030483, 030486, 030487, 030488,</span>
+<span class="co">#&gt; 030489, 030493, 030495, 030496, 030531, 030532, 030539, 030543, 030544, 030554,</span>
+<span class="co">#&gt; 030572, 030579, 030615, 030616, 030617, 030631, 030632, 030633, 030634, 030635,</span>
+<span class="co">#&gt; 030636, 030639, 030692, 030693, 030694, 030695, 030699, 030711, 030712, 030719,</span>
+<span class="co">#&gt; 030722, 030732, 030742, 030743, 030752, 030771, 030772, 030779, 030781, 030792,</span>
+<span class="co">#&gt; 030821, 030890, 040140, 040150, 040711, 040721, 040729, 040790, 060315, 060420,</span>
+<span class="co">#&gt; 060490, 070991, 070992, 070993, 070999, 071334, 071430, 071440, 080112, 080241,</span>
+<span class="co">#&gt; 080242, 080251, 080252, 080261, 080262, 080270, 080310, 080390, 080521, 080522,</span>
+<span class="co">#&gt; 080529, 080830, 080840, 080921, 080929, 081030, 081070, 090421, 090422, 090510,</span>
+<span class="co">#&gt; 090520, 090710, 090720, 090811, 090812, 090821, 090822, 090831, 090832, 090921,</span>
+<span class="co">#&gt; 090922, 090931, 090932, 090961, 090962, 091011, 091012, 100111, 100119, 100191,</span>
+<span class="co">#&gt; 100199, 100210, 100290, 100310, 100390, 100410, 100490, 100710, 100790, 100821,</span>
+<span class="co">#&gt; 100829, 100850, 100860, 120110, 120190, 120230, 120241, 120242, 120760, 120770,</span>
+<span class="co">#&gt; 121150, 121221, 121229, 121292, 121294, 130219, 150110, 150120, 150190, 150210,</span>
+<span class="co">#&gt; 150290, 160417, 160431, 160432, 160521, 160529, 160551, 160552, 160553, 160554,</span>
+<span class="co">#&gt; 160555, 160556, 160558, 160559, 160561, 160569, 170113, 170114, 200893, 200897,</span>
+<span class="co">#&gt; 200981, 200989, 220291, 220299, 220422, 240311, 240319, 252800, 271012, 271020,</span>
+<span class="co">#&gt; 281217, 281219, 285210, 285290, 285310, 285390, 290377, 290379, 290382, 290383,</span>
+<span class="co">#&gt; 290391, 290392, 290399, 290431, 290499, 291050, 291462, 291479, 292024, 292029,</span>
+<span class="co">#&gt; 292030, 292215, 292216, 292217, 292218, 292330, 292340, 292640, 293080, 293110,</span>
+<span class="co">#&gt; 293131, 293132, 293139, 293190, 293214, 293220, 293392, 293510, 293550, 293590,</span>
+<span class="co">#&gt; 293971, 293979, 293980, 300212, 300213, 300215, 300219, 300342, 300349, 300360,</span>
+<span class="co">#&gt; 300441, 300449, 300460, 310311, 370296, 370297, 370298, 370500, 380852, 380859,</span>
+<span class="co">#&gt; 380861, 380862, 380869, 381231, 381239, 382484, 382485, 382486, 382487, 382488,</span>
+<span class="co">#&gt; 382491, 382499, 382600, 390140, 390761, 390769, 390931, 390939, 401170, 401180,</span>
+<span class="co">#&gt; 401190, 440111, 440112, 440131, 440139, 440140, 440311, 440312, 440321, 440322,</span>
+<span class="co">#&gt; 440323, 440324, 440325, 440326, 440393, 440395, 440396, 440397, 440612, 440692,</span>
+<span class="co">#&gt; 440711, 440712, 440719, 440796, 440797, 440922, 441233, 441234, 441873, 441874,</span>
+<span class="co">#&gt; 441875, 441891, 441899, 441911, 441912, 441919, 441990, 442191, 442199, 480840,</span>
+<span class="co">#&gt; 550290, 570420, 580127, 580137, 600535, 600536, 600537, 600538, 600539, 630420,</span>
+<span class="co">#&gt; 630690, 640690, 650500, 690721, 690722, 690723, 690730, 690740, 731940, 741810,</span>
+<span class="co">#&gt; 761510, 842441, 842449, 842482, 843231, 843239, 843241, 843242, 845612, 845640,</span>
+<span class="co">#&gt; 845650, 845941, 845949, 846012, 846022, 846023, 846024, 846520, 847979, 850750,</span>
+<span class="co">#&gt; 850760, 852341, 852349, 852842, 852852, 852862, 853950, 870191, 870192, 870193,</span>
+<span class="co">#&gt; 870194, 870195, 870220, 870240, 870340, 870360, 870370, 870380, 871160, 871410,</span>
+<span class="co">#&gt; 900710, 900850, 910910, 930110, 930520, 940152, 940153, 940382, 940383, 940610,</span>
+<span class="co">#&gt; 940690, 950450, 960830, 961900, 962000, 999999.</span></code></pre></div>
 <p>Here you can see that in the last step <code><a href="../../reference/convert_Comtrade.html">convert_Comtrade()</a></code> has more difficulties matching the respective commodity codes to <code>MTN</code> aggregates.</p>
 <p>Is this problem the result of chaining concordance tables? This is explored in the next section.</p>
 </div>
@@ -1318,13 +1358,13 @@ Table 2: Comparison concordance results
 Trade value USD
 </td>
 <td style="text-align:left;">
-176991968253
+176991968194
 </td>
 <td style="text-align:left;">
-167613101053
+157962773893
 </td>
 <td style="text-align:left;">
-163376410965
+153758223103
 </td>
 <td style="text-align:left;">
 167601566255
@@ -1338,13 +1378,13 @@ Absolute difference to <code>AT_World_H4</code>
 0
 </td>
 <td style="text-align:left;">
-9378867200
+19029194301
 </td>
 <td style="text-align:left;">
-13615557288
+23233745091
 </td>
 <td style="text-align:left;">
-9390401998
+9390401939
 </td>
 </tr>
 <tr>
@@ -1355,10 +1395,10 @@ Share in <code>AT_World_H4</code> (in %)
 100
 </td>
 <td style="text-align:left;">
-95
+89
 </td>
 <td style="text-align:left;">
-92
+87
 </td>
 <td style="text-align:left;">
 95

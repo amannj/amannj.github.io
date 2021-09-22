@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -104,9 +104,12 @@
       <a href="../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../articles/handling-errors.html">Handling error messages</a>
+      <a href="../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -158,18 +161,18 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>H3_CP</span>
 </div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5,052 x 4</span>
-#&gt;    `HS 2007 Product~ `HS 2007 Product Descr~ `CPC Product Co~ `CPC Product Desc~
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             
-#&gt; <span style='color: #BCBCBC;'> 1</span> 010110            Live horses/asses/mule~ 02113            Horses, asses, mu~
-#&gt; <span style='color: #BCBCBC;'> 2</span> 010190            Live horses/asses/mule~ 02113            Horses, asses, mu~
-#&gt; <span style='color: #BCBCBC;'> 3</span> 010210            Live bovine animals: p~ 02111            Bovine cattle, li~
-#&gt; <span style='color: #BCBCBC;'> 4</span> 010290            Live bovine animals ot~ 02111            Bovine cattle, li~
-#&gt; <span style='color: #BCBCBC;'> 5</span> 010310            Live swine: pure-bred ~ 02121            Swine, live       
-#&gt; <span style='color: #BCBCBC;'> 6</span> 010391            Live swine other than ~ 02121            Swine, live       
-#&gt; <span style='color: #BCBCBC;'> 7</span> 010392            Live swine other than ~ 02121            Swine, live       
-#&gt; <span style='color: #BCBCBC;'> 8</span> 010410            Live sheep              02112            Sheep and goats, ~
-#&gt; <span style='color: #BCBCBC;'> 9</span> 010420            Live goats              02112            Sheep and goats, ~
-#&gt; <span style='color: #BCBCBC;'>10</span> 010511            Live fowls of species ~ 02122            Poultry, live     
+#&gt;    `HS 2007 Product Code` `HS 2007 Product D~ `CPC Product Co~ `CPC Product Des~
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            
+#&gt; <span style='color: #BCBCBC;'> 1</span> 010110                 Live horses/asses/~ 02113            Horses, asses, m~
+#&gt; <span style='color: #BCBCBC;'> 2</span> 010190                 Live horses/asses/~ 02113            Horses, asses, m~
+#&gt; <span style='color: #BCBCBC;'> 3</span> 010210                 Live bovine animal~ 02111            Bovine cattle, l~
+#&gt; <span style='color: #BCBCBC;'> 4</span> 010290                 Live bovine animal~ 02111            Bovine cattle, l~
+#&gt; <span style='color: #BCBCBC;'> 5</span> 010310                 Live swine: pure-b~ 02121            Swine, live      
+#&gt; <span style='color: #BCBCBC;'> 6</span> 010391                 Live swine other t~ 02121            Swine, live      
+#&gt; <span style='color: #BCBCBC;'> 7</span> 010392                 Live swine other t~ 02121            Swine, live      
+#&gt; <span style='color: #BCBCBC;'> 8</span> 010410                 Live sheep          02112            Sheep and goats,~
+#&gt; <span style='color: #BCBCBC;'> 9</span> 010420                 Live goats          02112            Sheep and goats,~
+#&gt; <span style='color: #BCBCBC;'>10</span> 010511                 Live fowls of spec~ 02122            Poultry, live    
 #&gt; <span style='color: #949494;'># ... with 5,042 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../../index.html">comtradeRggregator</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -63,9 +63,12 @@
       <a href="../../articles/articles/extracting-aggregates.html">Extracting aggregated trade data</a>
     </li>
     <li>
-      <a href="../../articles/handling-errors.html">Handling error messages</a>
+      <a href="../../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -85,7 +88,7 @@
 
       
 
-      </header><script src="extracting-aggregates_files/header-attrs-2.9/header-attrs.js"></script><div class="row">
+      </header><script src="extracting-aggregates_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Extracting aggregated trade data</h1>
@@ -98,7 +101,7 @@
 
     
     
-<p>Trade data is often reclassified following different standards; see <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table">Concordance Table</a> for all possible mappings that are possible using <code>comtradeRggregator</code>.</p>
+<p>Trade data is often reclassified following different standards; see <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table">Concordance Table</a> for all mappings that are possible using <code>comtradeRggregator</code>.</p>
 <p>However, in all those cases the internal logic of the conversion is that we use ‘all’ trade data, which is then mapped onto a different classification. What if, in turn, we want to extract only a set of traded commodities that belong to only a specific sub-group of the target classification?</p>
 <p>In the example below we assume we want to extract all <em>SITC Rev. 2</em> (<code>S2</code>) trade data that belongs to a very specific manufacturing sector, say, <em>ISIC Rev. 2</em> (<code>I2</code>) sector <code>3530 - Petroleum refineries</code>. We can accomplish this in a few simple steps:</p>
 <p>First, we load the <code>comtradeRggregator</code> package.</p>
