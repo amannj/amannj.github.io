@@ -114,9 +114,9 @@
 <div id="error-code-409" class="section level2">
 <h2 class="hasAnchor">
 <a href="#error-code-409" class="anchor"></a>Error code 409</h2>
-<p>One of the most common issues is that if you hit a usage limit a, <strong>409 (conflict) error</strong> is returned along with a message specifying why the request was blocked and when requests may resume.</p>
-<p>Whenever such an error occurs during one of its queries, <code>comtradeRggregator</code> pauses the data query and, after a specified cool-off of an hour, tries to resume the download. This means that you can conveniently max out the user limit for bulk downloads, and <code>comtradeRggregator</code> will make sure your query fails because of usage limits. The limits for unauthenticated requests, i.e. guests, are set to 100 requests per hour (per IP address or authenticated user). See <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API help page</a> for more information.</p>
-<p>However, this is <strong>not</strong> practice I would wish to encourage. Instead, it is advised that for large bulk downloads you obtain an authentication code (token) which you can then use when calling <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code>. This will allow you to</p>
+<p>One of the most common issues is that if you hit a usage limit a <strong>409 (conflict) error</strong> is returned along with a message specifying why the request was blocked and when requests may resume.</p>
+<p>Whenever such an error occurs during one of its queries, <code>comtradeRggregator</code> pauses the data query. Next, after a specified cool-off of an hour, it tries to resume the download. This means that you can conveniently max out the user limit for bulk downloads, and <code>comtradeRggregator</code> will ensure your query fails because of usage limits. The limits for unauthenticated requests, i.e. guests, are set to 100 requests per hour (per IP address or authenticated user). See <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API help page</a> for more information.</p>
+<p>However, this is <strong>not</strong> practice I would wish to encourage. Instead, you should acquire an authentication code (token) which you can then use when calling <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code>for large bulk downloads.</p>
 <ol style="list-style-type: decimal">
 <li><p>Follow the instruction on Comtrade’s API page to <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API help page</a> to get access to an authentication code (token).</p></li>
 <li><p>You can check the validity of your token <a href="https://comtrade.un.org/ws/CheckRights.aspx">here</a>.</p></li>
@@ -127,8 +127,8 @@
 <h2 class="hasAnchor">
 <a href="#error-code-500" class="anchor"></a>Error code 500</h2>
 <p>Unexplored/unspecified error. <code>comtradeRggregator</code> will pause the download for 60 seconds and re-send the last unsuccessful query again.</p>
-<p>This should typically eliminate the issue and your request should go through after at most a handful of attempts.</p>
-<p>In case you are running a very large request, consider increasing the interval between every single request by increasing the parameter value for <code>sleep</code> in <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code>.</p>
+<p>This should typically eliminate the issue, and your request should go through after at most a handful of attempts.</p>
+<p>In case you are running a big request, i.e., you try to download a big chunk of data, consider increasing the interval between every single request. You can do this by increasing the parameter value for <code>sleep</code> in <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code>.</p>
 </div>
 </div>
 <div id="other-error-messages" class="section level1">
@@ -138,11 +138,11 @@
 <h3 class="hasAnchor">
 <a href="#error-in-curlcurl_fetch_memory" class="anchor"></a>Error in <code>curl::curl_fetch_memory()</code>
 </h3>
-<p>Sometimes, especially when downloading large(r) chunks of data, you might run into the following error message.</p>
+<p>Sometimes, especially when downloading large(r) chunks of data, you might run into the following error message:</p>
 <pre><code>Error in curl::curl_fetch_memory(url, handle = handle) : 
   Operation was aborted by an application callback</code></pre>
-<p>From experience, and in the context of this package, the error message relates to file you are trying to download with <code>curl</code>. In other words, there are limits on the respective file sizes and download times per file, and one of your <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> queries might hit one of those <code>curl</code> limits.</p>
-<p>In such a case, try re-running your <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> query by reducing the value for <code>ext_cnt</code> which sets the number of countries extracted with each query (default and maximum is 5). The lower the number for <code>ext_cnt</code>, the fewer countries are downloaded simultaneously, hence the smaller the file size and the shorter the download time. Alternatively, the same error message also gets triggered when your device gets disconnected from the internet, so also double-check to make sure you are still online.</p>
+<p>From experience, and in the context of this package, the error message relates to the file you are trying to download with <code>curl</code>. In other words, there are limits on the respective file sizes and download times per file, and one of your <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> queries might hit one of those <code>curl</code> limits.</p>
+<p>In such a case, try re-running your <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> query by reducing the value for <code>ext_cnt</code>, which sets the number of countries extracted with each request (default and maximum is 5). The lower the number for <code>ext_cnt</code>, the fewer countries are downloaded simultaneously, hence the smaller the file size and the shorter the download time. Alternatively, the same error message also gets triggered when your device gets disconnected from the internet, so also double-check to make sure you are still online.</p>
 </div>
 </div>
   </div>
