@@ -6,15 +6,15 @@ date: 2021-07-09
 
 Let's say you want to use a Windows bat file to automatically run Git to add, commit and push to GitHub. 
 
-For the sake of simpilicity we will assume that we want to automatise the Python script for which we created a Windows Scheduler task in [this](https://amannj.github.io/blog/2020/12/16/windows-scheduler) blog post. Even though the content of this particular Python script does not merit such a configuration, in a more realistic scenario, it could, say, contain a web scrapper which you might want to run at regular intervals, and push the obtained data to GitHub automatically.
+For the sake of simplicity, we will assume that we want to automatise the Python script for which we created a Windows Scheduler task in [this](https://amannj.github.io/blog/2020/12/16/windows-scheduler) blog post. Even though the content of this particular Python script does not merit such a configuration, in a more realistic scenario, it could, say, contain a web scrapper which, you might want to run at regular intervals, and push the obtained data to GitHub automatically.
 
-For the purpose of this post we will assume that you have a fully functional set-up with Git installed on your computer, and you also have linked your local project to your GitHub account, e.g. by cloning it. Furthermore, we assume you have followed [this](https://amannj.github.io/blog/2020/12/16/windows-scheduler) blog post up until **Step 2**  and want the bat file you just created to automatically run Git to add, commit and push to Github. This can be done in a few lines of code as demonstrated below.
+In this post we will assume that you have a fully functional set-up with Git installed on your computer, and you also have linked your local project to your GitHub account, e.g., by cloning it. Furthermore, we assume you have followed [this](https://amannj.github.io/blog/2020/12/16/windows-scheduler) blog post up until **Step 2**  and want the bat file you just created to automatically run Git to add, commit and push to Github. This can be done in a few lines of code as demonstrated below.
 
 <br>
 
 ### Adding Git Commands to Your Bat File
 
-For this purpose we change the generic structure of the batch file to run our Python script in **Step 2** of the aforementioned blog post from this
+For this purpose, we change the generic structure of the batch file to run our Python script in **Step 2** of the aforementioned blog post from this
 
 ```
 "<Path to python.exe>" "<Path to my.py>"
