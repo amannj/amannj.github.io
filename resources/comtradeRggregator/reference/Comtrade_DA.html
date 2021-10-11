@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Comtrade Data Availability — Comtrade_DA • comtradeRggregator</title>
+<title>Check and return availability of comtrade — Comtrade_DA • comtradeRggregator</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="Comtrade Data Availability — Comtrade_DA" />
+<meta property="og:title" content="Check and return availability of comtrade — Comtrade_DA" />
 <meta property="og:description" content="Checks data availability of Comtrade data." />
 
 
@@ -106,6 +106,9 @@
     <li>
       <a href="../articles/articles/handling-errors.html">Handling error messages</a>
     </li>
+    <li>
+      <a href="../articles/articles/mirror-data.html">Working with mirror data</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -132,7 +135,7 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Comtrade Data Availability</h1>
+    <h1>Check and return availability of comtrade</h1>
     <small class="dont-index">Source: <a href='https://github.com/amannj/comtradeRggregator/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>Comtrade_DA.Rd</code></div>
     </div>
@@ -165,10 +168,22 @@
     <p><a href='https://comtrade.un.org/data/da'>https://comtrade.un.org/data/da</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'><a href='update_ComtradeDA.html'>update_ComtradeDA</a></span><span class='op'>(</span><span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='va'>Comtrade_DA</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 66,653 x 10</span>
+#&gt;    type        freq   px        r rDesc       ps TotalRecords isOriginal
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>010        <span style='text-decoration: underline;'>46</span>551          1
+#&gt; <span style='color: #BCBCBC;'> 2</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>011        <span style='text-decoration: underline;'>47</span>120          1
+#&gt; <span style='color: #BCBCBC;'> 3</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>012        <span style='text-decoration: underline;'>46</span>287          1
+#&gt; <span style='color: #BCBCBC;'> 4</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>013        <span style='text-decoration: underline;'>46</span>201          1
+#&gt; <span style='color: #BCBCBC;'> 5</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>014        <span style='text-decoration: underline;'>44</span>662          1
+#&gt; <span style='color: #BCBCBC;'> 6</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>015        <span style='text-decoration: underline;'>44</span>457          1
+#&gt; <span style='color: #BCBCBC;'> 7</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>016        <span style='text-decoration: underline;'>47</span>468          1
+#&gt; <span style='color: #BCBCBC;'> 8</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>017        <span style='text-decoration: underline;'>47</span>259          1
+#&gt; <span style='color: #BCBCBC;'> 9</span> COMMODITIES ANNUAL H3      328 Guyana    <span style='text-decoration: underline;'>2</span>018        <span style='text-decoration: underline;'>46</span>576          1
+#&gt; <span style='color: #BCBCBC;'>10</span> COMMODITIES ANNUAL H3      340 Honduras  <span style='text-decoration: underline;'>2</span>007        <span style='text-decoration: underline;'>69</span>883          1
+#&gt; <span style='color: #949494;'># ... with 66,643 more rows, and 2 more variables: publicationDate &lt;dttm&gt;,</span>
+#&gt; <span style='color: #949494;'>#   isPartnerDetail &lt;dbl&gt;</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

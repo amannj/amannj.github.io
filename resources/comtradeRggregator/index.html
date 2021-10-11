@@ -71,6 +71,9 @@
     <li>
       <a href="articles/articles/handling-errors.html">Handling error messages</a>
     </li>
+    <li>
+      <a href="articles/articles/mirror-data.html">Working with mirror data</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -175,7 +178,7 @@
 <ul>
 <li><p>Downloads and aggregates <a href="https://comtrade.un.org/data">Comtrade data</a> using <a href="https://comtrade.un.org/data/doc/api/">Comtrade’s API</a> building on the <a href="https://github.com/ropensci/comtradr">comtradr</a> package by offering more functionality for bulk and mirror data downloads.</p></li>
 <li><p>Supports extraction of trade data for individual countries (<em>‘from country A to country B’</em>) as well as bulk downloads of multiple countries (<em>‘from group of countries C to group of countries D’</em>) as well as aggregated global trade data (<em>‘from country (a group of countries) E to the World’</em>).</p></li>
-<li><p>Supports many key features of <a href="https://github.com/ropensci/comtradr">comtradr</a> such as the option to download trade data following different trade classifications offered by <a href="https://comtrade.un.org/data">Comtrade</a>; see <a href="https://comtrade.un.org/data/doc/api/#DataAvailabilityRequests">Comtrade API Data Availability Request</a> for more information. The full list of possible trade classifications and their corresponding input arguments used in the <code>comtradeRggregator</code> package are provided in the <a href="https://amannj.github.io/resources/comtradeRggregator/#trade-classifications">Trade Classifications</a> table:</p></li>
+<li><p>Supports many key features of <a href="https://github.com/ropensci/comtradr">comtradr</a> such as the option to download trade data following different trade classifications offered by <a href="https://comtrade.un.org/data">Comtrade</a>; see <a href="https://comtrade.un.org/data/doc/api/#DataAvailabilityRequests">Comtrade API Data Availability Request</a> for more information. The full list of possible trade classifications and their corresponding input arguments used in the <code>comtradeRggregator</code> package is provided in the <a href="https://amannj.github.io/resources/comtradeRggregator/#trade-classifications">Trade Classifications</a> table:</p></li>
 </ul>
 <div id="trade-classifications" class="section level3">
 <h3 class="hasAnchor">
@@ -317,7 +320,7 @@
 </table>
 <ul>
 <li><p>Supports extraction of <code>annual</code> as well as <code>monthly</code> <a href="https://comtrade.un.org">Comtrade</a> trade data.</p></li>
-<li><p>Provides function for easy reclassification of trade data using official concordance tables from the [United Nations Statistical Division (UNSD) - see <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">here</a> and <a href="https://unstats.un.org/unsd/trade/classifications/bec.asp">here</a>, and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>. For a complete summary of available <a href="https://amannj.github.io/resources/comtradeRggregator/#concordance-table">Concordance Tables</a>, please see below. To access any of the respective concordance tables in R, type <code>&lt;tradecode from&gt;_&lt;tradecode to&gt;</code>. For example, the concordance table for reclassifying <code>H3</code> trade data according to the <code>H0</code> nomenclature is stored as object <code>H3_H0</code> and its R help file can be accessed by typing <code><a href="reference/H3_H0.html">?H3_H0</a></code>. The R help files provide further information on the nature and individual features of the respective concordance matrices.</p></li>
+<li><p>Provides function for easy reclassification of trade data using official concordance tables from the [United Nations Statistical Division (UNSD) - see <a href="https://unstats.un.org/unsd/trade/classifications/correspondence-tables.asp">here</a> and <a href="https://unstats.un.org/unsd/trade/classifications/bec.asp">here</a>, and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>. For a complete summary of available <a href="https://amannj.github.io/resources/comtradeRggregator/#concordance-table">Concordance Tables</a>, please see below. To access any of the respective concordance tables in R, type <code>&lt;tradecode from&gt;_&lt;tradecode to&gt;</code>. For example, the concordance table for reclassifying <code>H3</code> trade data according to the <code>H0</code> nomenclature is stored as object <code>H3_H0</code>, and its R help file can be accessed by typing <code><a href="reference/H3_H0.html">?H3_H0</a></code>. The R help files provide further information on the nature and individual features of the respective concordance matrices.</p></li>
 </ul>
 </div>
 <div id="concordance-table" class="section level3">
@@ -1410,21 +1413,7 @@ U
   ref <span class="op">=</span> <span class="st">"master"</span>,
   auth_token <span class="op">=</span> <span class="va">auth_token</span>,
   force <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-<span class="co">#&gt; cpp11 (0.3.1 -&gt; 0.4.0) [CRAN]</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   There is a binary version available but the source version is later:</span>
-<span class="co">#&gt;       binary source needs_compilation</span>
-<span class="co">#&gt; cpp11  0.3.1  0.4.0             FALSE</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;          checking for file 'C:\Users\amann\AppData\Local\Temp\Rtmpg7oHoE\remotes2fe0cf87676\amannj-comtradeRggregator-93cd4ff7912232581c5c59bec30a97f7f9a2d51b/DESCRIPTION' ...  v  checking for file 'C:\Users\amann\AppData\Local\Temp\Rtmpg7oHoE\remotes2fe0cf87676\amannj-comtradeRggregator-93cd4ff7912232581c5c59bec30a97f7f9a2d51b/DESCRIPTION'</span>
-<span class="co">#&gt;       -  preparing 'comtradeRggregator': (1.8s)</span>
-<span class="co">#&gt;    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information</span>
-<span class="co">#&gt;       -  checking for LF line-endings in source and make files and shell scripts</span>
-<span class="co">#&gt;       -  checking for empty or unneeded directories</span>
-<span class="co">#&gt;       -  building 'comtradeRggregator_0.0.0.9000.tar.gz'</span>
-<span class="co">#&gt;      </span>
-<span class="co">#&gt; </span></code></pre></div>
+<span class="op">)</span></code></pre></div>
 <p>For more information as well as practical examples, please see the <a href="https://amannj.github.io/resources/comtradeRggregator/articles/comtradeRggregator.html">Get Started</a> section of the package web page.</p>
 <hr>
 </div>
