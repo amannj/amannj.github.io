@@ -104,16 +104,22 @@
 
     
     
+<div id="why-use-mirror-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-mirror-data" class="anchor"></a>Why use mirror data?</h2>
+<p>Sometimes trade data between countries do not “add up”: For example, in 2020 country A reported USD <span class="math inline">\(X\)</span> millions exports to country B while B was reporting USD <span class="math inline">\(Y\)</span> millions, where <span class="math inline">\(X \neq Y\)</span>; which data is more reliable? Alternatively, consider the case where country A does not report any trade data at all; we can use trade data from all trade partners of country A to reconstruct its ‘own’ trade data?</p>
+<p>In such cases, it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. The function <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option to accomplish this. While <a href="https://amannj.github.io/resources/comtradeRggregator/articles/comtradeRggregator.html#example-4">Example 4</a> in the <em>Get Started guide</em> provides a simple introduction, a more complex example is discussed in this article.</p>
+</div>
 <div id="a-more-complex-example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#a-more-complex-example" class="anchor"></a>A more complex example</h2>
-<p>Let’s say you want to download monthly mirror trade data starting in 2019 at the HS4 6-digit level for a handful of countries.</p>
-<p>While there are multiple areas where both comtrade and WITS offer similar functionality to the comtradeRggregator package, this is a scenario where both alternatives are tedious to work with:</p>
+<p>Let’s say you want to download monthly mirror trade data starting in 2019 at the HS 6-digit level for a handful of countries for which there is no trade data available on <a href="https://comtrade.un.org/">comtrade</a>.</p>
+<p>While there are multiple areas where both <a href="https://comtrade.un.org/">comtrade</a> and <a href="https://wits.worldbank.org/">WITS</a> offer similar functionality to the <code>comtradeRggregator</code> package, this is a scenario where both alternatives are tedious to work with:</p>
 <ul>
-<li><p>While WITS does offer a straight-forward integration of mirror data, there are (at the time of writing this documentation in 2021) no options available to query monthly data;</p></li>
-<li><p>While comtrade does over the most recent and granular trade data, the options to query mirror data are limited.</p></li>
+<li><p>While <a href="https://wits.worldbank.org/">WITS</a> does offer a straight-forward integration of mirror data, there are (at the time of writing this documentation in 2021) no options available to query monthly data;</p></li>
+<li><p>While <a href="https://comtrade.un.org/">comtrade</a> does over the most recent and granular trade data, the options to query mirror data are not there.</p></li>
 </ul>
-<p>As I will demonstrate below, this data can be obtained via comtradeRggregator with little to no additional effort.</p>
+<p>As I will demonstrate below, the same query can be run with little to no additional effort using <code>comtradeRggregator</code>.</p>
 </div>
 <div id="implementation" class="section level2">
 <h2 class="hasAnchor">
@@ -121,18 +127,25 @@
 <p>First, load the package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/comtradeRggregator">comtradeRggregator</a></span><span class="op">)</span></code></pre></div>
-<p>Define list of countries for extraction</p>
+<p>Define list of countries for extraction.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">country_list</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Afghanistan"</span>, <span class="st">"Angola"</span><span class="op">)</span></code></pre></div>
-<p>Let’s break up this query into two parts: a download for the years 2019 and 2020, and a separate query for 2021. In such somewhat more elaborate cases, it is advisable to keep any temporarily downloaded data by setting <code>rm.temporaryFiles = FALSE</code>. I also want to save the temporary files in a different location specified in variable <code>my_location</code>, so I also specify <code>location.temporaryFiles = my_location</code> in the query below. In an ideal world, you will have access to an authenticated account <a href="https://comtrade.un.org/data/doc/api/">(see here)</a>. I do, so I’m also providing my comtrade authentication token as part of the query. Finally, as we do not want to overwhelm the API, we reduce the number of extracted countries per sub-query to three, i.e. <code>ext_cnt  = 3</code>, instead of the default of five, and increase the cool-down period between the separate queries from five to ten seconds between rounds by setting <code>speed = 10</code>. These last two steps are optional and only serve illustrative purposes.</p>
-<p>Note that for the first query we are not specifying the parameter <code>month</code> which, by default, will return data for all 12 months.</p>
+<p>When setting up this more elaborate query, there are a few things we should keep in mind:</p>
+<ul>
+<li><p>It makes sense to break up this query into two parts: a download for the years 2019 and 2020, and a separate query for 2021. The reason for this is that at the time of writing this tutorial, trade data for all 12 months was available for 2019 and 2020, but not for 2021 as this would make <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> throw an error message.</p></li>
+<li><p>It is advisable to keep any temporarily downloaded data by setting <code>rm.temporaryFiles = FALSE</code>. I also want to save the temporary files in a different location specified in variable <code>my_location</code>, so I also specify <code>location.temporaryFiles = my_location</code> in the query below.</p></li>
+<li><p>In an ideal world, you will have access to an authenticated account <a href="https://comtrade.un.org/data/doc/api/">(see here)</a>. I do, so I’m also providing my <a href="https://comtrade.un.org/">comtrade</a> authentication token as part of the query.</p></li>
+<li><p>Note that for the first query we are not specifying the parameter <code>month</code> which, by default, will return data for all 12 months. Also, note that monthly <a href="https://comtrade.un.org/">comtrade</a> data is only available following the <em>HS combined nomenclature</em>.</p></li>
+<li><p>Finally, as we do not want to overwhelm the API, we reduce the number of extracted countries per sub-query to three, i.e. <code>ext_cnt  = 3</code>, instead of the default of five, and increase the cool-down period between the separate queries from five to ten seconds between rounds by setting <code>speed = 10</code>. These last two steps are optional and only serve illustrative purposes.</p></li>
+</ul>
+<p>With all of this out of the way, the final monthly mirror data query for 2019 and 2020 looks like this:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mirr_part1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2019"</span>, <span class="st">"2020"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"monthly"</span>,
   countries <span class="op">=</span> <span class="va">country_list</span>,
   partners <span class="op">=</span> <span class="st">"World"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"HS2012"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"HS"</span>,
   commodity <span class="op">=</span> <span class="st">"ag6"</span>,
   select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
   direction <span class="op">=</span> <span class="st">"all"</span>,
@@ -145,8 +158,8 @@
   ext_cnt  <span class="op">=</span> <span class="fl">3</span>,
   sleep <span class="op">=</span> <span class="fl">10</span>
 <span class="op">)</span></code></pre></div>
-<p>Finally, we want to find the last month of 2021 for which any comtrade data is available to download.</p>
-<p>You can either use the <code><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> function for this, or, alternatively, the data file <code>Comtrade_DA</code>, which provides comtrade’s data availability as a tibble. At the time of writing this tutorial, the most recent monthly trade data is July 2021.</p>
+<p>For the 2021 query, we first want to find the last month of 2021 for which trade data is available. This makes sense because we do not want to run a query for a month where no trade data is available as this would make <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> throw an error message.</p>
+<p>To check the data availability, you can either use the <code><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> function, or the data file <code>Comtrade_DA</code> which I am doing below. As you can see, at the time of writing this tutorial, the most recent monthly trade data is July 2021.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">Comtrade_DA</span> <span class="op">%&gt;%</span> 
   <span class="fu">mutate</span><span class="op">(</span>yr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">1</span>, <span class="fl">4</span><span class="op">)</span>, mnth <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
@@ -156,14 +169,15 @@
 <span class="co">#&gt;   x    </span>
 <span class="co">#&gt;   &lt;chr&gt;</span>
 <span class="co">#&gt; 1 07</span></code></pre></div>
+<p>The query for 2021 is identical to the first one with the exception of parameter <code>month = c(1:7)</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mirr_part2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2021"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"monthly"</span>,
-  month <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"01"</span><span class="op">:</span><span class="st">"07"</span><span class="op">)</span>,
+  month <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">)</span>,
   countries <span class="op">=</span> <span class="va">country_list</span>,
   partners <span class="op">=</span> <span class="st">"World"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"HS2012"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"HS"</span>,
   commodity <span class="op">=</span> <span class="st">"ag6"</span>,
   select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
   direction <span class="op">=</span> <span class="st">"all"</span>,
