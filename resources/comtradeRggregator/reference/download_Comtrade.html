@@ -257,7 +257,12 @@ run per hour.</p></td>
       <th>ext_cnt</th>
       <td><p>Number of countries extracted with each query; default is
 5 which is also the maximum in
-<a href='https://github.com/ropensci/comtradr'>comtradr</a>.</p></td>
+<a href='https://github.com/ropensci/comtradr'>comtradr</a>. In case your query exceeds
+the maximum resultset allowed by the comtrade API, reduce the number of
+countries you extract with every query using the ext_cnt parameter.
+For example, if a data extraction request fails with the default parameter
+value <code>ext_cnt = 5</code>, try reducing it to, say, <code>ext_cnt = 3</code>.
+This reduces the size of the resultset.</p></td>
     </tr>
     <tr>
       <th>is.mirrorData</th>
