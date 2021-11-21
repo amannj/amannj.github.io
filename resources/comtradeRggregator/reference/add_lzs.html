@@ -162,26 +162,28 @@ frame.</p>
     <tr>
       <th>variable.length</th>
       <td><p>The desired length of variable
-<code>variable</code>, i.e. <code><a href='https://rdrr.io/r/base/nchar.html'>nchar(length.variable)</a></code>.</p></td>
+<code>variable</code>, i.e. <code>nchar(length.variable)</code>.</p></td>
     </tr>
     </table>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>var <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1"</span>, <span class='st'>"11"</span>, <span class='st'>"111"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>add_lzs</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>df</span>, variable <span class='op'>=</span> <span class='st'>"var"</span>, variable.length <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 1</span>
-#&gt;   var  
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> 001  
-#&gt; <span style='color: #BCBCBC;'>2</span> 011  
-#&gt; <span style='color: #BCBCBC;'>3</span> 111  </div><div class='input'><span class='fu'>add_lzs</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>df</span>, variable <span class='op'>=</span> <span class='st'>"var"</span>, variable.length <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 1</span>
-#&gt;   var  
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> 0001 
-#&gt; <span style='color: #BCBCBC;'>2</span> 0011 
-#&gt; <span style='color: #BCBCBC;'>3</span> 0111 </div></pre>
+    <pre class="examples"><span class='r-in'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>var <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1"</span>, <span class='st'>"11"</span>, <span class='st'>"111"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>add_lzs</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>df</span>, variable <span class='op'>=</span> <span class='st'>"var"</span>, variable.length <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 3 x 1</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   var  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> 001  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> 011  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> 111  </span>
+<span class='r-in'><span class='fu'>add_lzs</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>df</span>, variable <span class='op'>=</span> <span class='st'>"var"</span>, variable.length <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 3 x 1</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   var  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> 0001 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> 0011 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> 0111 </span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

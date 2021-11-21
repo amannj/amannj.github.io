@@ -151,7 +151,7 @@
 <div id="example-2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-2" class="anchor"></a>Example 2</h3>
-<p>Sometimes you might want to extract very specific information on particular trade flows between two countries.</p>
+<p>Sometimes you might want to extract very specific information on particular trade flows between two countries. Use the paramters of <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to narrow down the search.</p>
 <p>For example, to extract <code>commodity</code> <code>re-exports</code> reported by <code>Austria</code> at <code>AG6</code> level following the <code>HS2007</code> nomenclature for trade with <code>Germany</code> in <code>2018</code>, run the command below. As you can see, this returns an empty data frame. This means that there is no trade data recorded on <a href="https://comtrade.un.org">Comtrade</a> that meets the specific criteria.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
@@ -170,7 +170,7 @@
 <div id="example-3" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-3" class="anchor"></a>Example 3</h3>
-<p>There might be cases where you want to download a specific group of traded commodities that may potentially also be part of a different level of aggregation. In the example below, we extract Austrian exports to Germany for the commodity groups <code>65 - Headgear and parts thereof</code> (<code>AG2</code>) as well as the corresponding sub-aggregates <code>6501</code> and <code>650100</code>, respectively.<sup><a href="#fn1">1</a></sup> Also see <a href="https://amannj.github.io/resources/comtradeRggregator/articles/extracting-aggregates.html">here</a> for a more detailed discussion and some best practice advice on how to use <code>comtradeRggregator</code> in such a scenario.</p>
+<p>There might be cases where you want to download a specific group of traded commodities that may potentially also be part of a different level of aggregation. In the example below, we extract Austrian exports to Germany for the commodity groups <code>65 - Headgear and parts thereof</code> (<code>AG2</code>) as well as the corresponding sub-aggregates <code>6501</code> and <code>650100</code>, respectively.<sup><a href="#fn1">1</a></sup> Also see <a href="https://amannj.github.io/resources/comtradeRggregator/articles/articles/extracting-aggregates.html">here</a> for a more detailed discussion and some best practice advice on how to use <code>comtradeRggregator</code> in such a scenario.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>year <span class="op">=</span> <span class="st">"2018"</span>,
                   frequency <span class="op">=</span> <span class="st">"annual"</span>,
@@ -193,9 +193,39 @@
 <div id="example-4" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-4" class="anchor"></a>Example 4</h3>
-<p>Sometimes trade data between countries do not “add up”: For example, in 2020 country A reported USD <span class="math inline">\(X\)</span> millions exports to country B while B was reporting USD <span class="math inline">\(Y\)</span> millions, where <span class="math inline">\(X \neq Y\)</span>. In such cases it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. The function <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option to accomplish this. The relation of the queries used for the extraction of trade data and mirrored trade data is illustrated in the example below:</p>
-<p>Reported imports by Germany from Austria and reported mirrored exports by Austria to Germany are identical by definition.<sup><a href="#fn2">2</a></sup> Note that in the query below we can use either <code>tradecode</code> names or abbreviations as input arguments for <code>tradecode</code> as provided in table <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications">Trade Classifications</a>.</p>
+<p>Consider the case where country A does not report any trade data at all. What do we do? In such cases it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. In a nutshell, using the mirrored data approach we can reconstruct trade data for country A by looking at all trade flows in which country A participated. The function <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option to accomplish this. The relation of the queries used for the extraction of trade data and mirrored trade data is illustrated in the example below.</p>
+<p>Please see <a href="https://amannj.github.io/resources/comtradeRggregator/articles/articles/mirror-data.html">this</a> article for a more detailed explanation on the concepts of working with mirrored data in <code>comtradeRggregator</code>.</p>
+<p>In the example below, we reconstructed Austria’s export to Germany by looking at Germany’s imports from Austria by setting <code>is.mirrorData = TRUE</code>. As you can see, variable <code>reporter</code> now is returned as <code>country name + "mirrored"</code>, indicating that the the data was derived from a mirrored data query.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mirrX_AT_DE</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
+  year <span class="op">=</span> <span class="st">"2018"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  countries <span class="op">=</span> <span class="st">"Austria"</span>,
+  partners <span class="op">=</span> <span class="st">"Germany"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
+  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
+  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
+  direction <span class="op">=</span> <span class="st">"exports"</span>,
+  type <span class="op">=</span> <span class="st">"commodities"</span>,
+  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>,
+<span class="op">)</span>
+<span class="va">mirrX_AT_DE</span>
+<span class="co">#&gt; # A tibble: 4,056 x 8</span>
+<span class="co">#&gt;    classification period trade_flow reporter  partner commodity_code commodity  </span>
+<span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 H3               2018 Export     Austria ~ Germany 010110         Live horse~</span>
+<span class="co">#&gt;  2 H3               2018 Export     Austria ~ Germany 010190         Live horse~</span>
+<span class="co">#&gt;  3 H3               2018 Export     Austria ~ Germany 010210         Live bovin~</span>
+<span class="co">#&gt;  4 H3               2018 Export     Austria ~ Germany 010290         Live bovin~</span>
+<span class="co">#&gt;  5 H3               2018 Export     Austria ~ Germany 010391         Live swine~</span>
+<span class="co">#&gt;  6 H3               2018 Export     Austria ~ Germany 010392         Live swine~</span>
+<span class="co">#&gt;  7 H3               2018 Export     Austria ~ Germany 010410         Live sheep </span>
+<span class="co">#&gt;  8 H3               2018 Export     Austria ~ Germany 010420         Live goats </span>
+<span class="co">#&gt;  9 H3               2018 Export     Austria ~ Germany 010511         Live fowls~</span>
+<span class="co">#&gt; 10 H3               2018 Export     Austria ~ Germany 010512         Live turke~</span>
+<span class="co">#&gt; # ... with 4,046 more rows, and 1 more variable: trade_value_usd &lt;dbl&gt;</span></code></pre></div>
+<p>Conceptually, reported imports by Germany from Austria and reported mirrored exports by Austria to Germany are identical by definition. Note that in the query below we can use either <code>tradecode</code> names or abbreviations as input arguments for <code>tradecode</code> as provided in table <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications">Trade Classifications</a>.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">IM_DE_AT</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="st">"2018"</span>,
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
@@ -208,90 +238,12 @@
   type <span class="op">=</span> <span class="st">"commodities"</span>,
   is.mirrorData <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span>
-<span class="va">mirrX_AT_DE</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
-  year <span class="op">=</span> <span class="st">"2018"</span>,
-  frequency <span class="op">=</span> <span class="st">"annual"</span>,
-  countries <span class="op">=</span> <span class="st">"Austria"</span>,
-  partners <span class="op">=</span> <span class="st">"Germany"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
-  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
-  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
-  direction <span class="op">=</span> <span class="st">"exports"</span>,
-  type <span class="op">=</span> <span class="st">"commodities"</span>,
-  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>,
-  rm.temporaryFiles <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-<span class="va">IM_DE_AT</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">pull</span><span class="op">(</span><span class="op">)</span> <span class="op">/</span> <span class="va">mirrX_AT_DE</span> <span class="op">%&gt;%</span>
-    <span class="fu">summarise</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-    <span class="fu">pull</span><span class="op">(</span><span class="op">)</span>
+<span class="va">IM_DE_AT</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span> <span class="op">/</span> <span class="va">mirrX_AT_DE</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; [1] 1</span></code></pre></div>
-</div>
-<div id="example-5" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example-5" class="anchor"></a>Example 5</h3>
-<p>Note that in <em>Example 4</em> above, we have instructed <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to keep the temporary download files (by invoking <code>rm.temporaryFiles = FALSE</code>) for query <code>mirrX_AT_DE</code> while also using this temporary data to build the completed Comtrade data from the query and load it into R. The second step happens automatically as the argument controlling this behaviour, <code>build.Comtrade</code> is set to <code>TRUE</code> by default. However, there might be cases where you only want <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to download the temporary trade data files from Comtrade, and build the trade data in R at a later stage using <code>build_comtrade()</code>; more on <code>build_comtrade()</code> <a href="#build_comtrade">below</a>.</p>
-<p>Below, we instruct <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to run the same query as for <code>mirrX_AT_DE</code> in <em>Example 4</em>; however, by setting <code>build.Comtrade = FALSE</code> and <code>rm.temporaryFiles = FALSE</code> we ensure that the trade data downloaded from Comtrade will only be stored locally but not built and loaded into R.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mirrX_AT_DE_v2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
-  year <span class="op">=</span> <span class="st">"2018"</span>,
-  frequency <span class="op">=</span> <span class="st">"annual"</span>,
-  countries <span class="op">=</span> <span class="st">"Austria"</span>,
-  partners <span class="op">=</span> <span class="st">"Germany"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
-  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
-  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
-  direction <span class="op">=</span> <span class="st">"exports"</span>,
-  type <span class="op">=</span> <span class="st">"commodities"</span>,
-  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>,
-  rm.temporaryFiles <span class="op">=</span> <span class="cn">FALSE</span>,
-  build.Comtrade <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-<span class="co">#&gt; Data download complete. Please see location specified in argument</span>
-<span class="co">#&gt; `location.temporaryFiles` for location of temporary files.</span></code></pre></div>
-<p>The object itself is a null object.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mirrX_AT_DE_v2</span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">#&gt; NULL</span></code></pre></div>
-</div>
-<div id="example-6" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example-6" class="anchor"></a>Example 6</h3>
-<p><code>comtradeRggregator</code> also offers simple options to download mirrored global trade data by downloading mirrored bilateral trade flows and aggregating it up to mirrored global trade data. In the simple example below, we download mirrored trade data for Austria. By setting <code>countries = "World"</code>, the package will create a mirrored data query for all global economies for the provided specification of year, trade flow, nomenclature, level of aggregation etc., and create a ready-to-use data frame.</p>
-<p>In other words, to get the first mirrored export commodity flow for commodity group <code>01 - Live animals; animal products</code> in the query below, data from all countries that <em>import</em> this commodity from Austria are queried and aggregated. Then, when aggregating the final data set, the ‘order’ of the trade flows is reversed, i.e. the previously downloaded <em>imports</em> are labelled as <em>mirrored exports</em>. This reversal is highlighted in column <code>reporter</code>.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">AT_mirr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
-  year <span class="op">=</span> <span class="st">"2018"</span>,
-  frequency <span class="op">=</span> <span class="st">"annual"</span>,
-  countries <span class="op">=</span> <span class="st">"Austria"</span>,
-  partners <span class="op">=</span> <span class="st">"World"</span>,
-  nomenclature <span class="op">=</span> <span class="st">"HS2007"</span>,
-  commodity <span class="op">=</span> <span class="st">"ag2"</span>,
-  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
-  direction <span class="op">=</span> <span class="st">"all"</span>,
-  type <span class="op">=</span> <span class="st">"commodities"</span>,
-  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>,
-  rm.temporaryFiles <span class="op">=</span> <span class="cn">FALSE</span>,
-  build.Comtrade <span class="op">=</span> <span class="cn">TRUE</span>,
-<span class="op">)</span>
-<span class="va">AT_mirr</span>
-<span class="co">#&gt; # A tibble: 363 x 8</span>
-<span class="co">#&gt;    classification period trade_flow reporter         partner commodity_code commodity    ~ trade_value_usd</span>
-<span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        ~           &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 H3               2018 Export     Austria mirrored World   01             Live animals;~       146122111</span>
-<span class="co">#&gt;  2 H3               2018 Export     Austria mirrored World   02             Meat and edib~      1279494900</span>
-<span class="co">#&gt;  3 H3               2018 Export     Austria mirrored World   03             Fish and crus~        10067362</span>
-<span class="co">#&gt;  4 H3               2018 Export     Austria mirrored World   04             Dairy produce~      1522685531</span>
-<span class="co">#&gt;  5 H3               2018 Export     Austria mirrored World   05             Products of a~        79271602</span>
-<span class="co">#&gt;  6 H3               2018 Export     Austria mirrored World   06             Live trees an~        26938801</span>
-<span class="co">#&gt;  7 H3               2018 Export     Austria mirrored World   07             Edible vegeta~       142130800</span>
-<span class="co">#&gt;  8 H3               2018 Export     Austria mirrored World   08             Edible fruit ~       209962703</span>
-<span class="co">#&gt;  9 H3               2018 Export     Austria mirrored World   09             Coffee, tea, ~       116804431</span>
-<span class="co">#&gt; 10 H3               2018 Export     Austria mirrored World   10             Cereals      ~       544971227</span>
-<span class="co">#&gt; # ... with 353 more rows</span></code></pre></div>
-<p>In elaborate cases such as the one above it is advisable to keep any temporarily downloaded data by setting <code>rm.temporaryFiles = FALSE</code>, and, ideally, to have access to an authenticated account; see <a href="https://comtrade.un.org/data/doc/api/">here</a> for more information. For a more practical application, please see <a href="https://amannj.github.io/resources/comtradeRggregator/articles/articles/mirror-data.html">this</a> article.</p>
 <hr>
 </div>
 </div>
@@ -299,12 +251,13 @@
 <h2 class="hasAnchor">
 <a href="#is-available_comtrade" class="anchor"></a><code>is.available_Comtrade()</code>
 </h2>
-<p>Sometimes you might want to check if data for a particular trade classification, frequency and/or country is available via <a href="https://comtrade.un.org">Comtrade</a> before running a query. For this you can use function <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>. Similar to <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> this function uses the <a href="https://comtrade.un.org/data/da">Comtrade Data Availability file</a> which it updates once a day.<sup><a href="#fn3">3</a></sup> For the full documentation, type <code><a href="../reference/is.available_Comtrade.html">?is.available_Comtrade</a></code> in R or visit the reference section of <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>.</p>
+<p>Sometimes you might want to check if data for a particular trade classification, frequency and/or country is available via <a href="https://comtrade.un.org">Comtrade</a> before running a query. For this you can use function <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>.<sup><a href="#fn2">2</a></sup></p>
+<p>Similar to <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> this function uses the <a href="https://comtrade.un.org/data/da">Comtrade Data Availability file</a> which it updates once a day.<sup><a href="#fn3">3</a></sup> For the full documentation, type <code><a href="../reference/is.available_Comtrade.html">?is.available_Comtrade</a></code> in R or visit the reference section of <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>.</p>
 <div id="example-1-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-1-1" class="anchor"></a>Example 1</h3>
 <p>To get a <a href="https://tibble.tidyverse.org/">tibble</a> listing all countries for which <code>annual</code>, <code>HS2007</code> trade data is available for the year <code>2008</code>, run:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
   nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
@@ -325,7 +278,7 @@
 <h3 class="hasAnchor">
 <a href="#example-2-1" class="anchor"></a>Example 2</h3>
 <p>Similarly, you might want to know if a particular country (set of countries) is available in a particular trade data set. To check if either <code>Austria</code> or <code>Germany</code> have <code>annual</code> trade data reported following the <code>HS2002</code> nomenclature for the year <code>2012</code>, run:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Austria"</span>, <span class="st">"Germany"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"annual"</span>,
@@ -339,7 +292,7 @@
 <span class="co">#&gt; 1 Germany  2012</span>
 <span class="co">#&gt; 2 Austria  2012</span></code></pre></div>
 <p>The same can also be done for monthly data. As seen below, only for <code>Germany</code>, <code>monthly</code> trade data for January 2020 following the <code>HS2007</code> is available.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">da3</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Austria"</span>, <span class="st">"Germany"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"monthly"</span>,
@@ -357,7 +310,7 @@
 <h3 class="hasAnchor">
 <a href="#example-3-1" class="anchor"></a>Example 3</h3>
 <p>If <code>is.fuzzy = TRUE</code>, function <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> supports fuzzy country name look-ups. As you can see below, there are two countries that contain a character sequence <code>ustr</code>, i.e. ‘Australia’ and ‘Austria’ for <code>annual</code> Comtrade data following the <code>H3</code>/<code>HS2017</code> nomenclature and the year <code>2019</code>. Monthly data is, however, only available for ‘Australia’.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="st">"ustr"</span>,
   is.fuzzy <span class="op">=</span> <span class="cn">TRUE</span>,
@@ -391,12 +344,13 @@
 <a href="#convert_comtrade" class="anchor"></a><code>convert_Comtrade()</code>
 </h2>
 <p>Sometimes you might want to reclassify trade data to a different nomenclature. Function <code><a href="../reference/convert_Comtrade.html">convert_Comtrade()</a></code> offers a simple way for such conversions by providing official concordance tables from <a href="https://unstats.un.org/unsd/classifications/Econ#corresp-hs">UN Statistics Division (UNSD)</a> and the <a href="https://wits.worldbank.org/product_concordance.html">World Integrated Trade Solution (WITS)</a>. For the full documentation, type <code><a href="../reference/convert_Comtrade.html">?convert_Comtrade</a></code> in R or visit the reference section of <code><a href="../reference/convert_Comtrade.html">convert_Comtrade()</a></code>.</p>
+<p>Reclassification of <a href="https://comtrade.un.org">Comtrade trade data</a> is possible using the information in the <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#concordance-table">Concordance Table</a> by employing the function <code><a href="../reference/convert_Comtrade.html">convert_Comtrade()</a></code>. This function requires trade data at the most granular levels for the <em>Harmonised System (HS)</em> nomenclature, i.e., <code>AG6</code>. For the <em>Standard International Trade Classification (SITC)</em> standard, <code>AG4</code> as well as <code>AG5</code> data is required.</p>
 <div id="example-1-2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-1-2" class="anchor"></a>Example 1</h3>
 <p>In case you want to convert the trade data you downloaded before using <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> from <code>H3</code> to the <em>Revision 3 standard</em> of the <em>International Standard Industrial Classification (ISIC)</em> nomenclature, i.e. <code>I3</code>, you can use the abbreviations and information from the <a href="#concordance-table">Concordance Table</a> to do so by running the command below. You can obtain more information on the concordance between <code>H3</code> and <code>I3</code> by running <code><a href="../reference/H3_I3.html">?H3_I3</a></code> in R. Furthermore, please note that for any non-matched category, a warning message is returned.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">I3</span> <span class="op">&lt;-</span> <span class="va">AT_World</span> <span class="op">%&gt;%</span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">I3</span> <span class="op">&lt;-</span> <span class="va">AT_World</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="../reference/convert_Comtrade.html">convert_Comtrade</a></span><span class="op">(</span>
     classification.from <span class="op">=</span> <span class="st">"HS2007"</span>,
     commodity.code <span class="op">=</span> <span class="st">"commodity_code"</span>,
@@ -405,8 +359,8 @@
 <span class="co">#&gt; Warning in convert_Comtrade(., classification.from = "HS2007", commodity.code</span>
 <span class="co">#&gt; = "commodity_code", : The following commodity codes of column 'commodity_code'</span>
 <span class="co">#&gt; could not be matched: 999999.</span>
-<span class="va">I3</span> <span class="op">%&gt;%</span>
-  <span class="fu">select</span><span class="op">(</span><span class="va">classification</span>, <span class="va">commodity_code</span>, <span class="va">`ISIC Revision 3 Product Code`</span><span class="op">)</span>
+<span class="va">I3</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">classification</span>, <span class="va">commodity_code</span>, <span class="va">`ISIC Revision 3 Product Code`</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 9,432 x 3</span>
 <span class="co">#&gt;    classification commodity_code `ISIC Revision 3 Product Code`</span>
 <span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;                         </span>
@@ -427,7 +381,7 @@
 <a href="#example-2-2" class="anchor"></a>Example 2</h3>
 <p>Note that the different building blocks of <code>comtradeRggregator</code> can be chained together very conveniently using the pipe, <code>%&gt;%</code>, operator. In the example below, we want to download <code>HS2017</code> trade data for the year 2018 and convert it to the ISIC Rev. 3, <code>I3</code>, standard. Such operations are typically rather cumbersome with either <a href="https://comtrade.un.org">Comtrade</a> or <a href="https://wits.worldbank.org/">WITS</a> but can be achieved in a couple of lines of code with <code>comtradeRggregator</code> as illustrated below.</p>
 <p>As before, we exploit the information provided in the <a href="#concordance-table">Concordance Table</a> to first download <code>HS2017</code> data, then convert it to <code>HS3</code>, and then again from <code>HS3</code> to <code>I3</code>. Note that the input arguments for <code>tradecode</code> and <code>classification.from</code> and <code>classification.to</code> accept both names and abbreviations for the respective <code>tradecode</code> standards as provided in table <a href="#trade-classifications">Trade Classification</a>.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Step 1: Extract data from Comtrade</span>
 <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="st">"2018"</span>,
@@ -439,20 +393,20 @@
   type <span class="op">=</span> <span class="st">"commodities"</span>,
   select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
   direction <span class="op">=</span> <span class="st">"exports"</span>
-<span class="op">)</span> <span class="op">%&gt;%</span>
+<span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="co"># Step 2: Convert from HS2012/H4 to HS2007/H3</span>
   <span class="fu"><a href="../reference/convert_Comtrade.html">convert_Comtrade</a></span><span class="op">(</span>
     classification.from <span class="op">=</span> <span class="st">"H5"</span>,
     commodity.code <span class="op">=</span> <span class="st">"commodity_code"</span>,
     classification.to <span class="op">=</span> <span class="st">"HS2007"</span>
-  <span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="co"># Step 3: Convert from HS2012/H4 to HS2007/H3</span>
   <span class="fu"><a href="../reference/convert_Comtrade.html">convert_Comtrade</a></span><span class="op">(</span>
     classification.from <span class="op">=</span> <span class="st">"H3"</span>,
     commodity.code <span class="op">=</span> <span class="st">"HS 2007 Product Code"</span>,
     classification.to <span class="op">=</span> <span class="st">"I3"</span>
-  <span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">select</span><span class="op">(</span>
+  <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>
     `Original Comtrade Query` <span class="op">=</span> <span class="va">classification</span>,
     `HS 2017 Product Code` <span class="op">=</span> <span class="va">commodity_code</span>,
     <span class="va">`HS 2007 Product Code`</span>, <span class="va">`ISIC Revision 3 Product Code`</span>
@@ -479,32 +433,62 @@
 <h2 class="hasAnchor">
 <a href="#build_comtrade" class="anchor"></a><code>build_Comtrade()</code>
 </h2>
-<p>Sometimes you might want to rebuild a data set using the temporary data files you downloaded from Comtrade. For example, you can use the function <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code> whenever you have a very large data query that you would like to run over multiple days (and turn off your computer in the meantime) before building the final Comtrade database. In such a case you would set <code>rm.temporaryFiles = FALSE</code> when running <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> and then, after you have run all your queries, you would then point <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code> to the location of all your temporary data files. A more practical example is provided in the next paragraph. For the full documentation, type <code><a href="../reference/build_Comtrade.html">?build_Comtrade</a></code> in R or visit the reference section of <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code>.</p>
+<p>So far we have instructed <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to not keep the temporary download files (this happens by default as <code>rm.temporaryFiles = TRUE</code>) for query <code>mirrX_AT_DE</code> while also using this temporary data to build the completed Comtrade data from the query and load it into R. The second step happens automatically as the argument controlling this behaviour, <code>build.Comtrade</code> is set to <code>TRUE</code> by default. However, there might be cases where you only want <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to download the temporary trade data files from Comtrade, and build the trade data in R at a later stage using <code>build_comtrade()</code>.</p>
+<p>For example, you can use the function <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code> whenever you have a very large data query that you would like to run over multiple days (and turn off your computer in the meantime) before building the final Comtrade database. In such a case you would set <code>rm.temporaryFiles = FALSE</code> when running <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> and then, after you have run all your queries, you would then point <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code> to the location of all your temporary data files. A more practical example is provided in the next paragraph. For the full documentation, type <code><a href="../reference/build_Comtrade.html">?build_Comtrade</a></code> in R or visit the reference section of <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code>.</p>
 <div id="example-1-3" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-1-3" class="anchor"></a>Example 1</h3>
-<p>Recall that when downloading the data frame <code>mirrX_AT_DE</code> we triggered the option <code>rm.temporaryFiles = FALSE</code> and R told us that the temporary file will be stored in:</p>
-<pre><code><a href="https://rdrr.io/r/base/system.file.html">system.file("data/tmp", package = "comtradeRggregator")
-</a></code></pre>
+<p>Below, we instruct <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> to run the same query as for <code>mirrX_AT_DE</code> in <em>Example 4</em>; however, by setting <code>build.Comtrade = FALSE</code> and <code>rm.temporaryFiles = FALSE</code> we ensure that the trade data downloaded from Comtrade will only be stored locally but not built and loaded into R.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">AT_DE_v2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
+  year <span class="op">=</span> <span class="st">"2018"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  countries <span class="op">=</span> <span class="st">"Austria"</span>,
+  partners <span class="op">=</span> <span class="st">"Germany"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
+  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
+  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
+  direction <span class="op">=</span> <span class="st">"exports"</span>,
+  type <span class="op">=</span> <span class="st">"commodities"</span>,
+  rm.temporaryFiles <span class="op">=</span> <span class="cn">FALSE</span>,
+  build.Comtrade <span class="op">=</span> <span class="cn">FALSE</span>
+<span class="op">)</span>
+<span class="co">#&gt; Data download complete. Please see location specified in argument</span>
+<span class="co">#&gt; `location.temporaryFiles` for location of temporary files.</span></code></pre></div>
+<p>Triggering <code>rm.temporaryFiles = FALSE</code> and not specifying a location where R should download the data to will make it us that the temporary file storage in:</p>
+<pre><code>system.file("data/tmp", package = "comtradeRggregator")
+</code></pre>
+<p>The object returned from the query itself is itself is a null object.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">AT_DE_v2</span>
+<span class="co">#&gt; NULL</span></code></pre></div>
 <p>We now use the function <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code> in such cases where argument <code>directory</code> takes the location of a specific, temporary data folder as an input argument. The remaining arguments correspond to the arguments in <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> and have to be adjusted accordingly in case you want to divert from the defaults. For example, in case you want to delete the temporary files when using <code><a href="../reference/build_Comtrade.html">build_Comtrade()</a></code>, set <code>rm.temporaryFiles = TRUE</code>.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Location of temporary data download</span>
 <span class="va">location_package</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"data/tmp"</span>, package <span class="op">=</span> <span class="st">"comtradeRggregator"</span><span class="op">)</span>
-<span class="co"># Locate most recent temprarily download data package (i.e., mirrX_AT_DE)</span>
+<span class="co"># Locate most recent temporarily download data package (i.e., mirrX_AT_DE)</span>
 <span class="va">location_files</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="va">location_package</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="va">location_package</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>
 
 <span class="co"># Rebuilt mirrored exports from Austria to Germany in 2018</span>
-<span class="va">mirrX_AT_DE_rebuilt</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/build_Comtrade.html">build_Comtrade</a></span><span class="op">(</span>
+<span class="va">df_rebuilt</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/build_Comtrade.html">build_Comtrade</a></span><span class="op">(</span>
   directory <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">location_package</span>, <span class="va">location_files</span>, sep <span class="op">=</span> <span class="st">"/"</span><span class="op">)</span>
 <span class="op">)</span>
 
-<span class="co"># Confirm that identical</span>
-<span class="va">mirrX_AT_DE</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">pull</span><span class="op">(</span><span class="op">)</span> <span class="op">/</span> <span class="va">mirrX_AT_DE_rebuilt</span> <span class="op">%&gt;%</span>
-    <span class="fu">summarise</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-    <span class="fu">pull</span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.9357323</span></code></pre></div>
+<span class="va">df_rebuilt</span>
+<span class="co">#&gt; # A tibble: 4,126 x 8</span>
+<span class="co">#&gt;    classification period trade_flow reporter partner commodity_code commodity   </span>
+<span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;       </span>
+<span class="co">#&gt;  1 H3               2018 Export     Austria  Germany 010210         Live bovine~</span>
+<span class="co">#&gt;  2 H3               2018 Export     Austria  Germany 010290         Live bovine~</span>
+<span class="co">#&gt;  3 H3               2018 Export     Austria  Germany 010391         Live swine ~</span>
+<span class="co">#&gt;  4 H3               2018 Export     Austria  Germany 010410         Live sheep  </span>
+<span class="co">#&gt;  5 H3               2018 Export     Austria  Germany 010420         Live goats  </span>
+<span class="co">#&gt;  6 H3               2018 Export     Austria  Germany 010511         Live fowls ~</span>
+<span class="co">#&gt;  7 H3               2018 Export     Austria  Germany 010512         Live turkey~</span>
+<span class="co">#&gt;  8 H3               2018 Export     Austria  Germany 010594         Live fowls ~</span>
+<span class="co">#&gt;  9 H3               2018 Export     Austria  Germany 010599         Live ducks/~</span>
+<span class="co">#&gt; 10 H3               2018 Export     Austria  Germany 020110         Carcasses/h~</span>
+<span class="co">#&gt; # ... with 4,116 more rows, and 1 more variable: trade_value_usd &lt;int&gt;</span></code></pre></div>
 <hr>
 </div>
 </div>
@@ -522,10 +506,10 @@
 <div id="example-1-4" class="section level3">
 <h3 class="hasAnchor">
 <a href="#example-1-4" class="anchor"></a>Example 1</h3>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"11"</span>, <span class="st">"111"</span><span class="op">)</span><span class="op">)</span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"11"</span>, <span class="st">"111"</span><span class="op">)</span><span class="op">)</span>
 
-<span class="va">df</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/add_lzs.html">add_lzs</a></span><span class="op">(</span>variable <span class="op">=</span> <span class="st">"var"</span>, variable.length <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
+<span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/add_lzs.html">add_lzs</a></span><span class="op">(</span>variable <span class="op">=</span> <span class="st">"var"</span>, variable.length <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 3 x 1</span>
 <span class="co">#&gt;   var  </span>
 <span class="co">#&gt;   &lt;chr&gt;</span>
@@ -548,20 +532,20 @@
 <ul>
 <li>no token (the default):</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/check_token.html">check_token</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># no token; default</span>
 <span class="co">## No Comtrade token specified; download restricted to 100 queries per hour.</span></code></pre></div>
 <ul>
 <li>a ‘bad’, i.e., unregistered token:</li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">bad_token</span> <span class="op">&lt;-</span>  <span class="st">"..."</span> <span class="co"># create a fake token</span>
 <span class="fu"><a href="../reference/check_token.html">check_token</a></span><span class="op">(</span>token <span class="op">=</span> <span class="va">bad_token</span><span class="op">)</span>
 <span class="co">## Comtrade token incorrect; download restricted to 100 queries per hour.</span></code></pre></div>
 <ul>
 <li>a ‘good’, i.e., registered token:</li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/check_token.html">check_token</a></span><span class="op">(</span>token <span class="op">=</span> <span class="va">good_token</span><span class="op">)</span>
 <span class="co">## Comtrade token added; download limit set to 10,000 queries per hour.</span></code></pre></div>
 <hr>
@@ -576,7 +560,7 @@
 <h3 class="hasAnchor">
 <a href="#example-1-6" class="anchor"></a>Example 1</h3>
 <p>If there exist temporary files to be deleted, function <code><a href="../reference/rm_temporaryFiles.html">rm_temporaryFiles()</a></code> returns:</p>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/rm_temporaryFiles.html">rm_temporaryFiles</a></span><span class="op">(</span>location.temporaryFiles <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 <span class="co">#&gt; Temporary files deleted.</span></code></pre></div>
 </div>
@@ -584,7 +568,7 @@
 <h3 class="hasAnchor">
 <a href="#example-2-3" class="anchor"></a>Example 2</h3>
 <p>If there are no temporary files to be deleted, function <code><a href="../reference/rm_temporaryFiles.html">rm_temporaryFiles()</a></code> returns:</p>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/rm_temporaryFiles.html">rm_temporaryFiles</a></span><span class="op">(</span>location.temporaryFiles <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span>
 <span class="co">#&gt; Temporary directory already empty. Nothing to delete.</span></code></pre></div>
 <hr>
@@ -595,7 +579,7 @@
 <h1 class="hasAnchor">
 <a href="#footnotes" class="anchor"></a>Footnotes</h1>
 <p><a name="fn1">1</a>: In case you are looking for a particular commodity, e.g., ‘sheep’, but do not know the corresponding commodity code, you can use <a href="https://github.com/ropensci/comtradr">comtradr</a>’s <a href="https://docs.ropensci.org/comtradr/reference/ct_commodity_lookup.html"><code>ct_commodity_lookup()</code></a> function.</p>
-<p><a name="fn2">2</a>: Note that we set <code>rm.temporaryFiles = FALSE</code> in the second query to demonstrate (i) how to <a href="https://github.com/amannj/comtradeRggregator#build_comtrade">rebuild a trade data set using temporary data files using <code>build_Comtrade()</code></a>, and (ii) the <a href="https://github.com/amannj/comtradeRggregator#rm_temporaryfiles">different return messages for <code>rm_temporaryFiles()</code></a>.</p>
+<p><a name="fn2">2</a>: Note that <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> only checks the data availability for countries that actively report trade data. In case that there is no trade data available for the country of your interest, you can still use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a> to reconstruct these trade flows. Do note that in this case, the reconstructed trade flows are build on the basis of trade data taken from the set of countries for which trade data is available, i.e., the list of countries that appear when you run <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code>.</p>
 <p><a name="fn3">3</a>: The same is true for <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code>. In other words, both <code><a href="../reference/download_Comtrade.html">download_Comtrade()</a></code> and <code><a href="../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> will check the timestamp of the internally stored Comtrade Data Availability file and update it once a day using the official <a href="https://comtrade.un.org/data/da">Comtrade Data Availability</a> file. For further reference, the locally stored Comtrade Data Availability file can be accessed by typing <code>Comtrade_DA</code>, and the help page can be accessed by typing <code><a href="../reference/Comtrade_DA.html">?Comtrade_DA</a></code>.</p>
 </div>
   </div>

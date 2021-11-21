@@ -191,39 +191,40 @@ corresponding to trade classification; default is <code>commodity_code</code>.</
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span><span class='st'>"H3 commodity code"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"010110"</span>, <span class='st'>"071040"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>convert_Comtrade</span><span class='op'>(</span><span class='va'>df</span>,
-  classification.from <span class='op'>=</span> <span class='st'>"H3"</span>,
-  commodity.code <span class='op'>=</span> <span class='st'>"H3 commodity code"</span>,
-  classification.to <span class='op'>=</span> <span class='st'>"I3"</span>
-<span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 4</span>
-#&gt;   `H3 commodity code` `HS 2007 Product De~ `ISIC Revision ~ `ISIC Revision 3 Pr~
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               
-#&gt; <span style='color: #BCBCBC;'>1</span> 010110              Live horses/asses/m~ 0121             Farming of cattle, ~
-#&gt; <span style='color: #BCBCBC;'>2</span> 071040              Sweet corn, uncooke~ 1513             Processing and pres~</div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='co'># Extract Comtrade trade data first</span>
-<span class='va'>AT_World</span> <span class='op'>&lt;-</span> <span class='fu'><a href='download_Comtrade.html'>download_Comtrade</a></span><span class='op'>(</span>
-  year <span class='op'>=</span> <span class='st'>"2018"</span>,
-  frequency <span class='op'>=</span> <span class='st'>"annual"</span>,
-  countries <span class='op'>=</span> <span class='st'>"Austria"</span>,
-  partners <span class='op'>=</span> <span class='st'>"World"</span>,
-  nomenclature <span class='op'>=</span> <span class='st'>"HS2007"</span>,
-  ag <span class='op'>=</span> <span class='st'>"AG6"</span>,
-  type <span class='op'>=</span> <span class='st'>"commodities"</span>,
-  select.stats <span class='op'>=</span> <span class='st'>"trade_value_usd"</span>,
-  direction <span class='op'>=</span> <span class='st'>"all"</span>
-<span class='op'>)</span>
-
-<span class='co'># Convert HS2007/H3 trade data to ISIC Rev. 3</span>
-<span class='va'>AT_World</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>convert_Comtrade</span><span class='op'>(</span>
-    classification.from <span class='op'>=</span> <span class='st'>"H3"</span>,
-    commodity.code <span class='op'>=</span> <span class='st'>"commodity_code"</span>,
-    classification.to <span class='op'>=</span> <span class='st'>"I3"</span>
-  <span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span><span class='st'>"H3 commodity code"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"010110"</span>, <span class='st'>"071040"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>convert_Comtrade</span><span class='op'>(</span><span class='va'>df</span>,</span>
+<span class='r-in'>  classification.from <span class='op'>=</span> <span class='st'>"H3"</span>,</span>
+<span class='r-in'>  commodity.code <span class='op'>=</span> <span class='st'>"H3 commodity code"</span>,</span>
+<span class='r-in'>  classification.to <span class='op'>=</span> <span class='st'>"I3"</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 2 x 4</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   `H3 commodity code` `HS 2007 Product De~ `ISIC Revision ~ `ISIC Revision 3 Pr~</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> 010110              Live horses/asses/m~ 0121             Farming of cattle, ~</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> 071040              Sweet corn, uncooke~ 1513             Processing and pres~</span>
+<span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='co'># Extract Comtrade trade data first</span></span>
+<span class='r-in'><span class='va'>AT_World</span> <span class='op'>&lt;-</span> <span class='fu'><a href='download_Comtrade.html'>download_Comtrade</a></span><span class='op'>(</span></span>
+<span class='r-in'>  year <span class='op'>=</span> <span class='st'>"2018"</span>,</span>
+<span class='r-in'>  frequency <span class='op'>=</span> <span class='st'>"annual"</span>,</span>
+<span class='r-in'>  countries <span class='op'>=</span> <span class='st'>"Austria"</span>,</span>
+<span class='r-in'>  partners <span class='op'>=</span> <span class='st'>"World"</span>,</span>
+<span class='r-in'>  nomenclature <span class='op'>=</span> <span class='st'>"HS2007"</span>,</span>
+<span class='r-in'>  ag <span class='op'>=</span> <span class='st'>"AG6"</span>,</span>
+<span class='r-in'>  type <span class='op'>=</span> <span class='st'>"commodities"</span>,</span>
+<span class='r-in'>  select.stats <span class='op'>=</span> <span class='st'>"trade_value_usd"</span>,</span>
+<span class='r-in'>  direction <span class='op'>=</span> <span class='st'>"all"</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Convert HS2007/H3 trade data to ISIC Rev. 3</span></span>
+<span class='r-in'><span class='va'>AT_World</span> <span class='op'>%&gt;%</span></span>
+<span class='r-in'>  <span class='fu'>convert_Comtrade</span><span class='op'>(</span></span>
+<span class='r-in'>    classification.from <span class='op'>=</span> <span class='st'>"H3"</span>,</span>
+<span class='r-in'>    commodity.code <span class='op'>=</span> <span class='st'>"commodity_code"</span>,</span>
+<span class='r-in'>    classification.to <span class='op'>=</span> <span class='st'>"I3"</span></span>
+<span class='r-in'>  <span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

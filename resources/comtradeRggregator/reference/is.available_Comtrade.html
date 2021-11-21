@@ -41,7 +41,8 @@
 
 <meta property="og:title" content="Check Data Availability for Comtrade Trade Data Query — is.available_Comtrade" />
 <meta property="og:description" content="Check if data of a particular trade data set, frequency or
-country is available.
+country is available. Only returns list of countries that actively report
+trade data for the specified classification.
 Data availability varies by country and classification, and new trade data is
 released/revised very frequently on Comtrade.
 comtradeRggregator uses trade information corresponding to
@@ -155,7 +156,8 @@ will use this information no later than 24 hours after its publication." />
 
     <div class="ref-description">
     <p>Check if data of a particular trade data set, frequency or
-country is available.
+country is available. Only returns list of countries that actively report
+trade data for the specified classification.
 Data availability varies by country and classification, and new trade data is
 released/revised very frequently on <a href='https://comtrade.un.org/'>Comtrade</a>.
 <code>comtradeRggregator</code> uses trade information corresponding to
@@ -239,18 +241,18 @@ provided in table Trade Classifications
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>is.available_Comtrade</span><span class='op'>(</span>frequency <span class='op'>=</span> <span class='st'>"annual"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H3"</span>, year <span class='op'>=</span> <span class='fl'>2008</span><span class='op'>)</span>
-<span class='fu'>is.available_Comtrade</span><span class='op'>(</span>
-  is.contained <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Austria"</span>, <span class='st'>"Germany"</span><span class='op'>)</span>,
-  frequency <span class='op'>=</span> <span class='st'>"annual"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H2"</span>, year <span class='op'>=</span> <span class='fl'>2012</span>
-<span class='op'>)</span>
-<span class='fu'>is.available_Comtrade</span><span class='op'>(</span>
-  is.contained <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Austria"</span>, <span class='st'>"Germany"</span><span class='op'>)</span>,
-  frequency <span class='op'>=</span> <span class='st'>"monthly"</span>, month <span class='op'>=</span> <span class='st'>"01"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H3"</span>, year <span class='op'>=</span> <span class='fl'>2020</span>
-<span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='fu'>is.available_Comtrade</span><span class='op'>(</span>frequency <span class='op'>=</span> <span class='st'>"annual"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H3"</span>, year <span class='op'>=</span> <span class='fl'>2008</span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>is.available_Comtrade</span><span class='op'>(</span></span>
+<span class='r-in'>  is.contained <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Austria"</span>, <span class='st'>"Germany"</span><span class='op'>)</span>,</span>
+<span class='r-in'>  frequency <span class='op'>=</span> <span class='st'>"annual"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H2"</span>, year <span class='op'>=</span> <span class='fl'>2012</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>is.available_Comtrade</span><span class='op'>(</span></span>
+<span class='r-in'>  is.contained <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Austria"</span>, <span class='st'>"Germany"</span><span class='op'>)</span>,</span>
+<span class='r-in'>  frequency <span class='op'>=</span> <span class='st'>"monthly"</span>, month <span class='op'>=</span> <span class='st'>"01"</span>, nomenclature <span class='op'>=</span> <span class='st'>"H3"</span>, year <span class='op'>=</span> <span class='fl'>2020</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

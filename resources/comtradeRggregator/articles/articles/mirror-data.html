@@ -104,31 +104,126 @@
 
     
     
-<div id="why-use-mirror-data" class="section level2">
+<div id="what-is-mirror-data-and-why-use-it" class="section level2">
 <h2 class="hasAnchor">
-<a href="#why-use-mirror-data" class="anchor"></a>Why use mirror data?</h2>
-<p>Sometimes trade data between countries do not “add up”: For example, in 2020 country A reported USD <span class="math inline">\(X\)</span> millions exports to country B while B was reporting USD <span class="math inline">\(Y\)</span> millions, where <span class="math inline">\(X \neq Y\)</span>; which data is more reliable? Alternatively, consider the case where country A does not report any trade data at all; we can use trade data from all trade partners of country A to reconstruct its ‘own’ trade data?</p>
-<p>In such cases, it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. The function <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option to accomplish this. While <a href="https://amannj.github.io/resources/comtradeRggregator/articles/comtradeRggregator.html#example-4">Example 4</a> in the <em>Get Started guide</em> provides a simple introduction, a more complex example is discussed in this article.</p>
+<a href="#what-is-mirror-data-and-why-use-it" class="anchor"></a>What is mirror data and why use it?</h2>
+<p>Consider the case where country A does not report any trade data at all. What do we do? In such cases it makes sense to use <a href="https://wits.worldbank.org/wits/wits/witshelp/Content/Data_Retrieval/T/Intro/B2.Imports_Exports_and_Mirror.htm">mirrored trade data</a>. In a nutshell, using the mirrored data approach we can reconstruct trade data for country A, even if the country itself does not report andy trade figures, by looking at all trade flows in which country A participated. For example, you can reconstruct country A’s exports to country B by looking at country B’s imports from country A.</p>
+<p>Do note, however, that this method is not free of limitations. Most importantly, the reliability of the mirrored trade data for country A depends on the data availability of trade data made available by A’s trading partners and may potentially be systematically biased. Secondly, as comtrade trade data undergoes constant revisions and updates, changes in the mirrored aggregate are more likely than with non-mirrored data.</p>
+<p>These words of caution aside, the function <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> offers an easy option perform mirror data extracts. Below, we first revisit <a href="https://amannj.github.io/resources/comtradeRggregator/articles/comtradeRggregator.html#example-4">Example 4</a> from the <em>Get Started guide</em> provides a simple introduction to this topic. Next, we turn to somewhat more involved user cases.</p>
 </div>
-<div id="a-more-complex-example" class="section level2">
+<div id="a-simple-example" class="section level2">
 <h2 class="hasAnchor">
-<a href="#a-more-complex-example" class="anchor"></a>A more complex example</h2>
-<p>Let’s say you want to download monthly mirror trade data starting in 2019 at the HS 6-digit level for a handful of countries for which there is no trade data available on <a href="https://comtrade.un.org/">comtrade</a>.</p>
-<p>While there are multiple areas where both <a href="https://comtrade.un.org/">comtrade</a> and <a href="https://wits.worldbank.org/">WITS</a> offer similar functionality to the <code>comtradeRggregator</code> package, this is a scenario where both alternatives are tedious to work with:</p>
-<ul>
-<li><p>While <a href="https://wits.worldbank.org/">WITS</a> does offer a straight-forward integration of mirror data, there are (at the time of writing this documentation in 2021) no options available to query monthly data;</p></li>
-<li><p>While <a href="https://comtrade.un.org/">comtrade</a> does over the most recent and granular trade data, the options to query mirror data are not there.</p></li>
-</ul>
-<p>As I will demonstrate below, the same query can be run with little to no additional effort using <code>comtradeRggregator</code>.</p>
-</div>
-<div id="implementation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#implementation" class="anchor"></a>Implementation</h2>
+<a href="#a-simple-example" class="anchor"></a>A simple example</h2>
 <p>First, load the package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/comtradeRggregator">comtradeRggregator</a></span><span class="op">)</span></code></pre></div>
-<p>Next, we want to define list of countries for extraction. The two examples we use here are <em>Afghanistan</em> and the <em>Democratic Republic of the Congo</em>. To double-check the correct spelling of the country names we use <code><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> with option <code>is.fuzzy = TRUE</code>. Below I run the check for the <em>Democratic Republic of the Congo</em> only. However, for large queries it is advisable to double-check that all country names are correct before setting up the actual data query. If you don’t do that, and are unlucky in the sense that a particular country name is spelled differently in <a href="https://comtrade.un.org/">comtrade</a>, your data query will return an error.</p>
+<p>In <a href="https://amannj.github.io/resources/comtradeRggregator/articles/comtradeRggregator.html#example-4">Example 4</a> we reconstructed Austria’s export to Germany by looking at Germany’s imports from Austria by setting <code>is.mirrorData = TRUE</code>. As you can see, variable <code>reporter</code> now is returned as <code>country name + "mirrored"</code>, indicating that the the data was derived from a mirrored data query.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mirrX_AT_DE</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
+  year <span class="op">=</span> <span class="st">"2018"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  countries <span class="op">=</span> <span class="st">"Austria"</span>,
+  partners <span class="op">=</span> <span class="st">"Germany"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"H3"</span>,
+  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
+  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
+  direction <span class="op">=</span> <span class="st">"exports"</span>,
+  type <span class="op">=</span> <span class="st">"commodities"</span>,
+  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>
+<span class="op">)</span>
+<span class="va">mirrX_AT_DE</span>
+<span class="co">#&gt; # A tibble: 4,056 x 8</span>
+<span class="co">#&gt;    classification period trade_flow reporter         partner commodity_code commodity          trade_value_usd</span>
+<span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;                        &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 H3               2018 Export     Austria mirrored Germany 010110         Live horses/asses~          578079</span>
+<span class="co">#&gt;  2 H3               2018 Export     Austria mirrored Germany 010190         Live horses/asses~           17717</span>
+<span class="co">#&gt;  3 H3               2018 Export     Austria mirrored Germany 010210         Live bovine anima~           75642</span>
+<span class="co">#&gt;  4 H3               2018 Export     Austria mirrored Germany 010290         Live bovine anima~         4329765</span>
+<span class="co">#&gt;  5 H3               2018 Export     Austria mirrored Germany 010391         Live swine other ~          916695</span>
+<span class="co">#&gt;  6 H3               2018 Export     Austria mirrored Germany 010392         Live swine other ~          219879</span>
+<span class="co">#&gt;  7 H3               2018 Export     Austria mirrored Germany 010410         Live sheep                  778978</span>
+<span class="co">#&gt;  8 H3               2018 Export     Austria mirrored Germany 010420         Live goats                   45964</span>
+<span class="co">#&gt;  9 H3               2018 Export     Austria mirrored Germany 010511         Live fowls of spe~         6716350</span>
+<span class="co">#&gt; 10 H3               2018 Export     Austria mirrored Germany 010512         Live turkeys, wei~            2194</span>
+<span class="co">#&gt; # ... with 4,046 more rows</span></code></pre></div>
+<p>Conceptually, reported imports by Germany from Austria and reported mirrored exports by Austria to Germany are identical by definition. Note that in the query below we can use either <code>tradecode</code> names or abbreviations as input arguments for <code>tradecode</code> as provided in table <a href="https://amannj.github.io/resources/comtradeRggregator/index.html#trade-classifications">Trade Classifications</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">IM_DE_AT</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
+  year <span class="op">=</span> <span class="st">"2018"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  countries <span class="op">=</span> <span class="st">"Germany"</span>,
+  partners <span class="op">=</span> <span class="st">"Austria"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"HS2007"</span>,
+  commodity <span class="op">=</span> <span class="st">"ag6"</span>,
+  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
+  direction <span class="op">=</span> <span class="st">"imports"</span>,
+  type <span class="op">=</span> <span class="st">"commodities"</span>,
+  is.mirrorData <span class="op">=</span> <span class="cn">FALSE</span>
+<span class="op">)</span>
+<span class="va">IM_DE_AT</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span> <span class="op">/</span> <span class="va">mirrX_AT_DE</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">trade_value_usd</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; [1] 1</span></code></pre></div>
+</div>
+<div id="generating-mirrored-world-trad-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#generating-mirrored-world-trad-data" class="anchor"></a>Generating mirrored World trad data</h2>
+<p><code>comtradeRggregator</code> also offers simple options to download mirrored global trade data by downloading mirrored bilateral trade flows and aggregating it up to mirrored global trade data. In the simple example below, we download mirrored trade data for Austria. By setting <code>countries = "World"</code>, the package will create a mirrored data query for all global economies for the provided specification of year, trade flow, nomenclature, level of aggregation etc., and create a ready-to-use data frame.</p>
+<p>In other words, to get the first mirrored export commodity flow for commodity group <code>01 - Live animals; animal products</code> in the query below, data from all countries that <em>import</em> this commodity from Austria are queried and aggregated. Then, when aggregating the final data set, the ‘order’ of the trade flows is reversed, i.e. the previously downloaded <em>imports</em> are labelled as <em>mirrored exports</em>. This reversal is highlighted in column <code>reporter</code>.</p>
+<p>In elaborate cases such as the one above it is advisable to keep any temporarily downloaded data by setting <code>rm.temporaryFiles = FALSE</code>, and, ideally, to have access to an authenticated account; see <a href="https://comtrade.un.org/data/doc/api/">here</a> for more information.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">AT_mirr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
+  year <span class="op">=</span> <span class="st">"2018"</span>,
+  frequency <span class="op">=</span> <span class="st">"annual"</span>,
+  countries <span class="op">=</span> <span class="st">"Austria"</span>,
+  partners <span class="op">=</span> <span class="st">"World"</span>,
+  nomenclature <span class="op">=</span> <span class="st">"HS2007"</span>,
+  commodity <span class="op">=</span> <span class="st">"ag2"</span>,
+  select.stats <span class="op">=</span> <span class="st">"trade_value_usd"</span>,
+  direction <span class="op">=</span> <span class="st">"all"</span>,
+  type <span class="op">=</span> <span class="st">"commodities"</span>,
+  is.mirrorData <span class="op">=</span> <span class="cn">TRUE</span>,
+  rm.temporaryFiles <span class="op">=</span> <span class="cn">FALSE</span>,
+  build.Comtrade <span class="op">=</span> <span class="cn">TRUE</span>,
+<span class="op">)</span>
+<span class="va">AT_mirr</span>
+<span class="co">#&gt; # A tibble: 363 x 8</span>
+<span class="co">#&gt;    classification period trade_flow reporter         partner commodity_code commodity    ~ trade_value_usd</span>
+<span class="co">#&gt;    &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;            &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        ~           &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 H3               2018 Export     Austria mirrored World   01             Live animals;~       146122111</span>
+<span class="co">#&gt;  2 H3               2018 Export     Austria mirrored World   02             Meat and edib~      1279494900</span>
+<span class="co">#&gt;  3 H3               2018 Export     Austria mirrored World   03             Fish and crus~        10067362</span>
+<span class="co">#&gt;  4 H3               2018 Export     Austria mirrored World   04             Dairy produce~      1522685531</span>
+<span class="co">#&gt;  5 H3               2018 Export     Austria mirrored World   05             Products of a~        79271602</span>
+<span class="co">#&gt;  6 H3               2018 Export     Austria mirrored World   06             Live trees an~        26938801</span>
+<span class="co">#&gt;  7 H3               2018 Export     Austria mirrored World   07             Edible vegeta~       142130800</span>
+<span class="co">#&gt;  8 H3               2018 Export     Austria mirrored World   08             Edible fruit ~       209962703</span>
+<span class="co">#&gt;  9 H3               2018 Export     Austria mirrored World   09             Coffee, tea, ~       116804431</span>
+<span class="co">#&gt; 10 H3               2018 Export     Austria mirrored World   10             Cereals      ~       544971227</span>
+<span class="co">#&gt; # ... with 353 more rows</span></code></pre></div>
+</div>
+<div id="a-more-complex-application" class="section level2">
+<h2 class="hasAnchor">
+<a href="#a-more-complex-application" class="anchor"></a>A more complex application</h2>
+<div id="the-problem" class="section level3">
+<h3 class="hasAnchor">
+<a href="#the-problem" class="anchor"></a>The problem</h3>
+<p>Let’s say you want to download monthly mirror trade data starting in 2019 at the HS 6-digit level for a handful of countries for which there is no trade data available on <a href="https://comtrade.un.org/">comtrade</a>.</p>
+<p>While there are multiple areas where both <a href="https://comtrade.un.org/">comtrade</a> and <a href="https://wits.worldbank.org/">WITS</a> offer similar functionality to the <code>comtradeRggregator</code> package, this is a scenario where both alternatives are tedious to work with:</p>
+<ul>
+<li><p><a href="https://wits.worldbank.org/">WITS</a> does offer a straight-forward integration of mirror data, but there are (at the time of writing this documentation in 2021) no options available to query monthly data;</p></li>
+<li><p><a href="https://comtrade.un.org/">Comtrade</a> does over the most recent and granular trade data, but there is no option to query mirror data.</p></li>
+</ul>
+<p>Using <code>comtradeRggregator</code>, the this query can be put together with a couple of line sof code.</p>
+</div>
+<div id="the-implementation-in-comtraderggregator" class="section level3">
+<h3 class="hasAnchor">
+<a href="#the-implementation-in-comtraderggregator" class="anchor"></a>The implementation in <code>comtradeRggregator</code>
+</h3>
+<p>First, we want to define list of countries for extraction. The two examples we use here are <em>Afghanistan</em> and the <em>Democratic Republic of the Congo</em>. To double-check the correct spelling of the country names we use <code><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> with option <code>is.fuzzy = TRUE</code>. Below I run the check for the <em>Democratic Republic of the Congo</em> only. However, for large queries it is advisable to double-check that all country names are correct before setting up the actual data query. If you don’t do that, and are unlucky in the sense that a particular country name is spelled differently in <a href="https://comtrade.un.org/">comtrade</a>, your data query will return an error.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade</a></span><span class="op">(</span>
   is.contained <span class="op">=</span> <span class="st">"Congo"</span>,
   is.fuzzy <span class="op">=</span> <span class="cn">TRUE</span>,
@@ -142,7 +237,7 @@
 <span class="co">#&gt; 1 Dem. Rep. of the Congo  2019</span>
 <span class="co">#&gt; 2 Congo                   2019</span></code></pre></div>
 <p>The final list of countries we want to query is:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">country_list</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Afghanistan"</span>, <span class="st">"Dem. Rep. of the Congo"</span><span class="op">)</span></code></pre></div>
 <p>When setting up this more elaborate query, there are a few things we should keep in mind:</p>
 <ul>
@@ -153,7 +248,7 @@
 <li><p>Finally, as we do not want to overwhelm the API, we reduce the number of extracted countries per sub-query to three, i.e. <code>ext_cnt  = 3</code>, instead of the default of five, and increase the cool-down period between the separate queries from five to ten seconds between rounds by setting <code>speed = 10</code>. These last two steps are optional and only serve illustrative purposes.</p></li>
 </ul>
 <p>With all of this out of the way, the final monthly mirror data query for 2019 and 2020 looks like this:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mirr_part1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2019"</span>, <span class="st">"2020"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"monthly"</span>,
@@ -174,17 +269,17 @@
 <span class="op">)</span></code></pre></div>
 <p>For the 2021 query, we first want to find the last month of 2021 for which trade data is available. This makes sense because we do not want to run a query for a month where no trade data is available as this would make <code><a href="../../reference/download_Comtrade.html">download_Comtrade()</a></code> throw an error message.</p>
 <p>To check the data availability, you can either use the <code><a href="../../reference/is.available_Comtrade.html">is.available_Comtrade()</a></code> function, or the data file <code>Comtrade_DA</code> which I am doing below. As you can see, at the time of writing this tutorial, the most recent monthly trade data is July 2021.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">Comtrade_DA</span> <span class="op">%&gt;%</span> 
-  <span class="fu">mutate</span><span class="op">(</span>yr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">1</span>, <span class="fl">4</span><span class="op">)</span>, mnth <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">freq</span> <span class="op">==</span> <span class="st">"MONTHLY"</span> <span class="op">&amp;</span> <span class="va">yr</span> <span class="op">==</span> <span class="st">'2021'</span> <span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">mnth</span><span class="op">)</span><span class="op">)</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">Comtrade_DA</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>yr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">1</span>, <span class="fl">4</span><span class="op">)</span>, mnth <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substr.html">substr</a></span><span class="op">(</span><span class="va">ps</span>, <span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">freq</span> <span class="op">==</span> <span class="st">"MONTHLY"</span> <span class="op">&amp;</span> <span class="va">yr</span> <span class="op">==</span> <span class="st">'2021'</span> <span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">mnth</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 1</span>
 <span class="co">#&gt;   x    </span>
 <span class="co">#&gt;   &lt;chr&gt;</span>
-<span class="co">#&gt; 1 07</span></code></pre></div>
+<span class="co">#&gt; 1 09</span></code></pre></div>
 <p>The query for 2021 is identical to the first one with the exception of parameter <code>month = c(1:7)</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mirr_part2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../../reference/download_Comtrade.html">download_Comtrade</a></span><span class="op">(</span>
   year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2021"</span><span class="op">)</span>,
   frequency <span class="op">=</span> <span class="st">"monthly"</span>,
@@ -204,6 +299,7 @@
   ext_cnt  <span class="op">=</span> <span class="fl">3</span>,
   sleep <span class="op">=</span> <span class="fl">10</span>
 <span class="op">)</span></code></pre></div>
+</div>
 </div>
   </div>
 
