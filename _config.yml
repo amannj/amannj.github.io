@@ -4,4 +4,4 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 
 # Google services
-google_analytics: UA-94003057-1
+google_analytics: G-FGC2D8NML5
