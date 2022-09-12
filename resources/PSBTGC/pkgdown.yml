@@ -1,0 +1,8 @@
+pandoc: '2.18'
+pkgdown: 2.0.3
+pkgdown_sha: ~
+articles:
+  PSBTGC: PSBTGC.html
+  puente-ajovin: puente-ajovin.html
+last_built: 2022-09-12T20:56Z
+
