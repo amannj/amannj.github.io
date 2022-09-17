@@ -91,14 +91,295 @@
 
     
     
-<p>First, load the package.</p>
+<p>First, load the package</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/comtradeRggregator" class="external-link">PSBTGC</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amannj/PSBTGC" class="external-link">PSBTGC</a></span><span class="op">)</span></code></pre></div>
+<p><code>PSBTGC</code> comes with the data set <code>Cecchetti</code>
+(Cecchetti et al., 2011) containing various debt measures; see the <a href="https://amannj.github.io/resources/PSBTGC/reference/index.html" class="external-link">reference
+section</a> for more information.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">Cecchetti</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">country</span>, <span class="va">gr</span>, <span class="va">gd</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'GB'</span>, <span class="st">'US'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>l1gr <span class="op">=</span> <span class="fu">lag.series</span><span class="op">(</span><span class="va">gr</span>, l <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,
+         l1gd <span class="op">=</span> <span class="fu">lag.series</span><span class="op">(</span><span class="va">gd</span>, l <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>   
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">ungroup</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">dat</span><span class="op">[</span>,<span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>
+<span class="co">#&gt;        gr               gd              l1gr             l1gd       </span>
+<span class="co">#&gt;  Min.   :-5.787   Min.   :0.4218   Min.   :-2.368   Min.   :0.4218  </span>
+<span class="co">#&gt;  1st Qu.: 0.898   1st Qu.:0.5376   1st Qu.: 1.447   1st Qu.:0.5372  </span>
+<span class="co">#&gt;  Median : 2.316   Median :0.5989   Median : 2.403   Median :0.5978  </span>
+<span class="co">#&gt;  Mean   : 1.732   Mean   :0.6080   Mean   : 1.980   Mean   :0.6001  </span>
+<span class="co">#&gt;  3rd Qu.: 3.046   3rd Qu.:0.6714   3rd Qu.: 3.046   3rd Qu.:0.6594  </span>
+<span class="co">#&gt;  Max.   : 6.421   Max.   :0.8816   Max.   : 6.421   Max.   :0.7927  </span>
+<span class="co">#&gt;                                    NA's   :2        NA's   :2</span></code></pre></div>
 <div class="section level2">
-<h2 id="main-functions">Main Functions<a class="anchor" aria-label="anchor" href="#main-functions"></a>
+<h2 id="simple-ols">Simple OLS<a class="anchor" aria-label="anchor" href="#simple-ols"></a>
 </h2>
-<p>The main functions of the <code>PSBTGC</code> package are described
-below.</p>
+<p>In its simplest form, <code>PGranger_SUR</code> with option
+<code>method = 'OLS'</code> is a simple function that runs OLS equation
+by equation for all cross-sectional units.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">SUR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PGranger_SUR.html">PGranger_SUR</a></span><span class="op">(</span><span class="va">dat</span>,
+                    dep.var <span class="op">=</span> <span class="st">'gr'</span>, 
+                    indep.var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'l1gr'</span>, <span class="st">'l1gd'</span><span class="op">)</span>, 
+                    id.var <span class="op">=</span> <span class="st">'country'</span>, 
+                    time.var <span class="op">=</span> <span class="st">'year'</span>, 
+                    method <span class="op">=</span><span class="st">'OLS'</span><span class="op">)</span>
+<span class="va">SUR</span><span class="op">$</span><span class="va">Coefficient.estimates</span><span class="op">[</span>,<span class="op">-</span><span class="fl">7</span><span class="op">]</span>
+<span class="co">#&gt;    i Variable Coefficient.Estimates Std..Error  t.statistic      p.value</span>
+<span class="co">#&gt; 1 GB       gr            -0.0229971  3.1390480 -0.007326138 0.9942105638</span>
+<span class="co">#&gt; 2 GB     l1gr             0.7977132  0.1967992  4.053437697 0.0004066411</span>
+<span class="co">#&gt; 3 GB     l1gd             0.5633346  5.8626171  0.096089277 0.9241864902</span>
+<span class="co">#&gt; 4 US       gr             2.2628053  2.9425766  0.768987722 0.4488302136</span>
+<span class="co">#&gt; 5 US     l1gr             0.4434497  0.2096402  2.115289036 0.0441445752</span>
+<span class="co">#&gt; 6 US     l1gd            -2.0555528  4.4827082 -0.458551553 0.6503663213</span>
+<span class="va">SUR</span><span class="op">$</span><span class="va">Estimation.statistics</span>
+<span class="co">#&gt;    i R.squared adj..R.squared     RMSE              AIC              BIC</span>
+<span class="co">#&gt; 1 GB 0.4061371     0.36045535 1.709536 444.653646467896 463.337025502555</span>
+<span class="co">#&gt; 2 US 0.1483247     0.08281127 2.152368</span></code></pre></div>
+<p>We can obtain the same results by running R’s standard OLS function
+<code>lm</code> for each country separately (shown only for the case of
+Great Britain to save space).</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lmGB</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span>, <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'GB'</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">lmGB</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = gr ~ l1gr + l1gd, data = subset(dat, dat$country == </span>
+<span class="co">#&gt;     "GB"))</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -5.6343 -0.4879  0.1146  1.0272  2.0801 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class="co">#&gt; (Intercept)  -0.0230     3.1391  -0.007 0.994211    </span>
+<span class="co">#&gt; l1gr          0.7977     0.1968   4.053 0.000407 ***</span>
+<span class="co">#&gt; l1gd          0.5633     5.8626   0.096 0.924186    </span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 1.71 on 26 degrees of freedom</span>
+<span class="co">#&gt;   (1 observation deleted due to missingness)</span>
+<span class="co">#&gt; Multiple R-squared:  0.4061, Adjusted R-squared:  0.3605 </span>
+<span class="co">#&gt; F-statistic: 8.891 on 2 and 26 DF,  p-value: 0.001143</span></code></pre></div>
+<p><code>PGranger_SUR</code> assumes cross-sectional equation
+homogeneity. This restriction is relaxed in <code>PGranger2_SUR</code>,
+which estimates SUR that allows for different estimation equations
+across countries. We compare the results from <code>PGranger2_SUR</code>
+with option <code>method = OLS</code> with R’s standard OLS function
+<code>lm</code> for each country separately. Please note that in this
+case, <code>PGranger2</code> requires an object called
+<code>Equations</code>, which contains the estimation equation for each
+country and is allowed to vary across countries. It is furthermore
+necessary to input an intercept term manually.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Define data set includinc intercept term</span>
+<span class="va">dat.PG2</span> <span class="op">&lt;-</span> <span class="va">dat</span>
+<span class="va">dat.PG2</span><span class="op">$</span><span class="va">Intercept</span> <span class="op">&lt;-</span> <span class="fl">1</span>
+<span class="va">Equations</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">'GB'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span><span class="op">)</span>,
+                  <span class="st">'US'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">SUR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PGranger2_SUR.html">PGranger2_SUR</a></span><span class="op">(</span><span class="va">dat.PG2</span>,
+                     Equations <span class="op">=</span> <span class="va">Equations</span>,
+                     id.var <span class="op">=</span> <span class="st">'country'</span>, 
+                     time.var <span class="op">=</span> <span class="st">'year'</span>, 
+                     method <span class="op">=</span><span class="st">'OLS'</span><span class="op">)</span>
+<span class="va">SUR</span><span class="op">$</span><span class="va">Coefficient.estimates</span>
+<span class="co">#&gt;   id Coefficient  Estimates Std..Error      t.value p.value Sig.</span>
+<span class="co">#&gt; 1 GB   Intercept -0.0229971  3.1390480 -0.007326138   0.994     </span>
+<span class="co">#&gt; 2 GB        l1gr  0.7977132  0.1967992  4.053437697   0.000  ***</span>
+<span class="co">#&gt; 3 GB        l1gd  0.5633346  5.8626171  0.096089277   0.924     </span>
+<span class="co">#&gt; 4 US   Intercept  0.9377812  0.5477324  1.712115521   0.098    *</span>
+<span class="co">#&gt; 5 US        l1gr  0.4330724  0.2053446  2.109003603   0.044   **</span></code></pre></div>
+<p>As before, the results are identical to running OLS on a subset of
+the data using individually specified regression equations.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span>, <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'GB'</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = gr ~ l1gr + l1gd, data = subset(dat, dat$country == </span>
+<span class="co">#&gt;     "GB"))</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -5.6343 -0.4879  0.1146  1.0272  2.0801 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class="co">#&gt; (Intercept)  -0.0230     3.1391  -0.007 0.994211    </span>
+<span class="co">#&gt; l1gr          0.7977     0.1968   4.053 0.000407 ***</span>
+<span class="co">#&gt; l1gd          0.5633     5.8626   0.096 0.924186    </span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 1.71 on 26 degrees of freedom</span>
+<span class="co">#&gt;   (1 observation deleted due to missingness)</span>
+<span class="co">#&gt; Multiple R-squared:  0.4061, Adjusted R-squared:  0.3605 </span>
+<span class="co">#&gt; F-statistic: 8.891 on 2 and 26 DF,  p-value: 0.001143</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">l1gr</span> , <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">dat</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'US'</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = gr ~ l1gr, data = subset(dat, dat$country == "US"))</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -5.7126 -0.7860  0.2143  1.1686  4.0609 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)  </span>
+<span class="co">#&gt; (Intercept)   0.9378     0.5477   1.712   0.0983 .</span>
+<span class="co">#&gt; l1gr          0.4331     0.2053   2.109   0.0444 *</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 2.121 on 27 degrees of freedom</span>
+<span class="co">#&gt;   (1 observation deleted due to missingness)</span>
+<span class="co">#&gt; Multiple R-squared:  0.1414, Adjusted R-squared:  0.1096 </span>
+<span class="co">#&gt; F-statistic: 4.448 on 1 and 27 DF,  p-value: 0.04436</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="two-step-fgls">Two-step FGLS<a class="anchor" aria-label="anchor" href="#two-step-fgls"></a>
+</h2>
+<p>One can obtain results of the SUR procedure in different ways. For
+one, <code>PGranger_SUR</code> with option <code>method = 'SUR'</code>
+corresponds to the procedure in <span class="citation">@Konya2006</span>
+and <span class="citation">@Puente2015</span>, which assumes identical
+lag lengths for all countries. This is demonstrated below for the sample
+data set and a simple VAR(1).</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">SUR1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PGranger_SUR.html">PGranger_SUR</a></span><span class="op">(</span><span class="va">dat</span>, 
+                     dep.var <span class="op">=</span> <span class="st">'gr'</span>, 
+                     indep.var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'l1gr'</span>, <span class="st">'l1gd'</span><span class="op">)</span>, 
+                     id.var <span class="op">=</span> <span class="st">'country'</span>, 
+                     time.var <span class="op">=</span> <span class="st">'year'</span>, 
+                     method <span class="op">=</span><span class="st">'SUR'</span><span class="op">)</span>
+<span class="va">SUR1</span><span class="op">$</span><span class="va">Coefficient.estimates</span><span class="op">[</span>,<span class="op">-</span><span class="fl">7</span><span class="op">]</span>
+<span class="co">#&gt;    i Variable Coefficient  Estimates Std.Error      t.stat Sig.</span>
+<span class="co">#&gt; 1 GB       gr   Intercept  0.8604758 2.6580823  0.32372051     </span>
+<span class="co">#&gt; 2 GB     l1gr        l1gr  0.6181728 0.1748799  3.53484263   **</span>
+<span class="co">#&gt; 3 GB     l1gd        l1gd -0.3619740 4.9422204 -0.07324117     </span>
+<span class="co">#&gt; 4 US       gr   Intercept  0.7758007 2.4976138  0.31061675     </span>
+<span class="co">#&gt; 5 US     l1gr        l1gr  0.3062617 0.1869983  1.63777854     </span>
+<span class="co">#&gt; 6 US     l1gd        l1gd  0.6071935 3.7800097  0.16063280</span></code></pre></div>
+<p>We can verify these results by comparing them with the output
+obtained by the R packages <a href="https://cran.r-project.org/web/packages/systemfit/systemfit.pdf" class="external-link">systemfit</a>,
+as shown below.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Using systemfit</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.systemfit.org" class="external-link">systemfit</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://cran.r-project.org/package=plm" class="external-link">plm</a></span><span class="op">)</span>
+<span class="va">X</span> <span class="op">&lt;-</span> <span class="va">dat</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'year'</span>, <span class="st">'country'</span>, <span class="st">'gr'</span>, <span class="st">'l1gr'</span>, <span class="st">'l1gd'</span><span class="op">)</span><span class="op">]</span>
+<span class="co"># systemfit is a bit picky with id names</span>
+<span class="va">X</span><span class="op">$</span><span class="va">country</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">X</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'GB'</span>, <span class="st">'G'</span>,
+                    <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">X</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'Canada'</span>, <span class="st">'C'</span>,
+                           <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">X</span><span class="op">$</span><span class="va">country</span> <span class="op">==</span> <span class="st">'US'</span>, <span class="st">'U'</span>,<span class="cn">NA</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> 
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'year'</span>,<span class="st">'country'</span>,<span class="st">'y'</span>,<span class="st">'a'</span>,<span class="st">'b'</span><span class="op">)</span>
+<span class="va">sf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/systemfit/man/systemfit.html" class="external-link">systemfit</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">a</span> <span class="op">+</span><span class="va">b</span>, method <span class="op">=</span> <span class="st">'SUR'</span>, data<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/plm/man/plm-deprecated.html" class="external-link">plm.data</a></span><span class="op">(</span><span class="va">X</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"country"</span>,<span class="st">"year"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">sf</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; systemfit results </span>
+<span class="co">#&gt; method: SUR </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;         N DF     SSR detRCov   OLS-R2 McElroy-R2</span>
+<span class="co">#&gt; system 58 52 202.609  8.5715 0.247865   0.187912</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;    N DF     SSR     MSE    RMSE       R2   Adj R2</span>
+<span class="co">#&gt; G 29 26  78.891 3.03427 1.74192 0.383428 0.336000</span>
+<span class="co">#&gt; U 29 26 123.718 4.75837 2.18137 0.125219 0.057928</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; The covariance matrix of the residuals used for estimation</span>
+<span class="co">#&gt;         G       U</span>
+<span class="co">#&gt; G 2.92251 2.03853</span>
+<span class="co">#&gt; U 2.03853 4.63269</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; The covariance matrix of the residuals</span>
+<span class="co">#&gt;         G       U</span>
+<span class="co">#&gt; G 3.03427 2.42212</span>
+<span class="co">#&gt; U 2.42212 4.75837</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; The correlations of the residuals</span>
+<span class="co">#&gt;          G        U</span>
+<span class="co">#&gt; G 1.000000 0.637441</span>
+<span class="co">#&gt; U 0.637441 1.000000</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; SUR estimates for 'G' (equation 1)</span>
+<span class="co">#&gt; Model Formula: G_y ~ G_a + G_b</span>
+<span class="co">#&gt; &lt;environment: 0x000001cac009d450&gt;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;              Estimate Std. Error  t value  Pr(&gt;|t|)   </span>
+<span class="co">#&gt; (Intercept)  0.860476   2.658082  0.32372 0.7487393   </span>
+<span class="co">#&gt; a            0.618173   0.174880  3.53484 0.0015524 **</span>
+<span class="co">#&gt; b           -0.361974   4.942220 -0.07324 0.9421748   </span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 1.741915 on 26 degrees of freedom</span>
+<span class="co">#&gt; Number of observations: 29 Degrees of Freedom: 26 </span>
+<span class="co">#&gt; SSR: 78.890998 MSE: 3.034269 Root MSE: 1.741915 </span>
+<span class="co">#&gt; Multiple R-Squared: 0.383428 Adjusted R-Squared: 0.336 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; SUR estimates for 'U' (equation 2)</span>
+<span class="co">#&gt; Model Formula: U_y ~ U_a + U_b</span>
+<span class="co">#&gt; &lt;environment: 0x000001cac009d450&gt;</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)</span>
+<span class="co">#&gt; (Intercept) 0.775801   2.497614 0.31062  0.75857</span>
+<span class="co">#&gt; a           0.306262   0.186998 1.63778  0.11352</span>
+<span class="co">#&gt; b           0.607194   3.780010 0.16063  0.87362</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 2.181369 on 26 degrees of freedom</span>
+<span class="co">#&gt; Number of observations: 29 Degrees of Freedom: 26 </span>
+<span class="co">#&gt; SSR: 123.717663 MSE: 4.758372 Root MSE: 2.181369 </span>
+<span class="co">#&gt; Multiple R-Squared: 0.125219 Adjusted R-Squared: 0.057928</span></code></pre></div>
+<p>The same results can be obtained using <code>PGranger2_SUR</code>
+with option <code>method = 'SUR'</code>. If the list of equations is
+identical for all countries, it generates the identical results as when
+using <code>PGranger_SUR</code> or <code>systemfit</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Setting up equations for SUR</span>
+<span class="va">Equations</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">'GB'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span><span class="op">)</span>, 
+                  <span class="st">'US'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">SUR2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PGranger2_SUR.html">PGranger2_SUR</a></span><span class="op">(</span><span class="va">dat.PG2</span>,
+                      Equations <span class="op">=</span> <span class="va">Equations</span>,
+                      id.var <span class="op">=</span> <span class="st">'country'</span>, 
+                      time.var <span class="op">=</span> <span class="st">'year'</span>, 
+                      method <span class="op">=</span><span class="st">'SUR'</span>, 
+                      for.BS <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="va">SUR2</span><span class="op">$</span><span class="va">Coefficient.estimates</span>
+<span class="co">#&gt;   id Coefficient  Estimates Std..Error     t.value p.value Sig.</span>
+<span class="co">#&gt; 1 GB   Intercept  0.8604758  2.6580823  0.32372051   0.751     </span>
+<span class="co">#&gt; 2 GB        l1gr  0.6181728  0.1748799  3.53484263   0.004   **</span>
+<span class="co">#&gt; 3 GB        l1gd -0.3619740  4.9422204 -0.07324117   0.943     </span>
+<span class="co">#&gt; 4 US   Intercept  0.7758007  2.4976138  0.31061675   0.761     </span>
+<span class="co">#&gt; 5 US        l1gr  0.3062617  0.1869983  1.63777854   0.125     </span>
+<span class="co">#&gt; 6 US        l1gd  0.6071935  3.7800097  0.16063280   0.875</span></code></pre></div>
+<p>Lastly, we <code>PGranger2_SUR</code> allows for varying estimation
+equations which can easily be specified in the <code>Equations</code>
+input argument.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Setting up equations for SUR</span>
+<span class="va">Equations</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">'GB'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span> <span class="op">+</span> <span class="va">l1gd</span><span class="op">)</span>, 
+                  <span class="st">'US'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">as.formula</a></span><span class="op">(</span><span class="va">gr</span> <span class="op">~</span> <span class="va">Intercept</span> <span class="op">+</span> <span class="va">l1gr</span> <span class="op">)</span><span class="op">)</span>
+
+<span class="va">SUR2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PGranger2_SUR.html">PGranger2_SUR</a></span><span class="op">(</span><span class="va">dat.PG2</span>,
+                      Equations <span class="op">=</span> <span class="va">Equations</span>,
+                      id.var <span class="op">=</span> <span class="st">'country'</span>, 
+                      time.var <span class="op">=</span> <span class="st">'year'</span>, 
+                      method <span class="op">=</span><span class="st">'SUR'</span>, for.BS <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="va">SUR2</span><span class="op">$</span><span class="va">Coefficient.estimates</span>
+<span class="co">#&gt;   id Coefficient  Estimates Std..Error     t.value p.value Sig.</span>
+<span class="co">#&gt; 1 GB   Intercept  0.8351611  2.5716186  0.32476085   0.751     </span>
+<span class="co">#&gt; 2 GB        l1gr  0.6081488  0.1707867  3.56086783   0.003   **</span>
+<span class="co">#&gt; 3 GB        l1gd -0.2769850  4.7720810 -0.05804281   0.955     </span>
+<span class="co">#&gt; 4 US   Intercept  1.1821788  0.5231771  2.25961500   0.041   **</span>
+<span class="co">#&gt; 5 US        l1gr  0.3012489  0.1834792  1.64186903   0.125</span></code></pre></div>
 </div>
   </div>
 
