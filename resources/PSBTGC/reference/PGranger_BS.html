@@ -66,47 +66,64 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">PGranger_BS</span><span class="op">(</span>
-  <span class="va">dat</span>,
-  <span class="va">dep.var</span>,
-  <span class="va">indep.var.full</span>,
-  <span class="va">indep.var.H0</span>,
-  <span class="va">id.var</span>,
-  <span class="va">time.var</span>,
-  method <span class="op">=</span> <span class="st">"SUR"</span>,
-  reps <span class="op">=</span> <span class="fl">1000</span>,
-  Tstar <span class="op">=</span> <span class="fl">3</span>,
-  <span class="va">p</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">PGranger_BS</span><span class="op">(</span></span>
+<span>  <span class="va">dat</span>,</span>
+<span>  <span class="va">dep.var</span>,</span>
+<span>  <span class="va">indep.var.full</span>,</span>
+<span>  <span class="va">indep.var.H0</span>,</span>
+<span>  <span class="va">id.var</span>,</span>
+<span>  <span class="va">time.var</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"SUR"</span>,</span>
+<span>  reps <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>  Tstar <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  <span class="va">p</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>dat</dt>
 <dd><p>A data frame.</p></dd>
+
+
 <dt>dep.var</dt>
 <dd><p>The fully specified SUR model with a separate estimation equation for each country (incl. intercepts).</p></dd>
+
+
 <dt>indep.var.full</dt>
 <dd><p>The set of estimation equations under the null hypothesis. All variables not contained in <code>Equations.H0</code> that are in <code>Equations.full</code> will be tested.</p></dd>
+
+
 <dt>indep.var.H0</dt>
 <dd><p>The set of estimation equations under the null hypothesis. All variables not contained in <code>Equations.H0</code> that are in <code>Equations.full</code> will be tested.</p></dd>
+
+
 <dt>id.var</dt>
 <dd><p>The cross-sectional identifier of the data set, e.g. the country code.</p></dd>
+
+
 <dt>time.var</dt>
 <dd><p>The time-series identifier of the data set, e.g. years or periods.</p></dd>
+
+
 <dt>method</dt>
 <dd><p>Currently only <code>SUR</code> supported.</p></dd>
+
+
 <dt>reps</dt>
 <dd><p>Number of bootstrap repetitions. Set to 1,000 by default.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>The routine performs either a equation-wise OLS or a two-step FGLS procedure respectively .</p>
+    
+
+<p>The routine performs either a equation-wise OLS or a two-step FGLS procedure respectively .</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">PGranger_BS</span><span class="op">(</span><span class="va">dat</span>, <span class="va">Equations.full</span>, <span class="va">Equations.H0</span>, <span class="va">id.var</span>, <span class="va">time.var</span>, method <span class="op">=</span> <span class="st">"SUR"</span>, reps <span class="op">=</span> <span class="fl">10000</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">PGranger_BS</span><span class="op">(</span><span class="va">dat</span>, <span class="va">Equations.full</span>, <span class="va">Equations.H0</span>, <span class="va">id.var</span>, <span class="va">time.var</span>, method <span class="op">=</span> <span class="st">"SUR"</span>, reps <span class="op">=</span> <span class="fl">10000</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in indep.var.H0 %in% indep.var.full:</span> object 'id.var' not found</span>
 </code></pre></div>
     </div>
@@ -122,7 +139,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
