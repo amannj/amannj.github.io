@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial | Juergen AMANN</title>
+    <link>https://amannj.github.io/category/tutorial/</link>
+      <atom:link href="https://amannj.github.io/category/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tutorial</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Tutorial</title>
+      <link>https://amannj.github.io/category/tutorial/</link>
+    </image>
+    
+    <item>
+      <title>How to fix &#39;No WiFi Adapter&#39; issue in Ubuntu 20.04</title>
+      <link>https://amannj.github.io/post/ubuntu-wifi-issue/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/ubuntu-wifi-issue/</guid>
+      <description>&lt;p&gt;In case you have, just like me, come across the issue that Ubuntu 20.04 greets you with a &lt;em&gt;&amp;rsquo;no wifi adapter&amp;rsquo;&lt;/em&gt; error message after running some updates, this here did the trick for me:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect your laptop to the internet (either ethernet, your phone etc.).&lt;/li&gt;
+&lt;li&gt;Run the following two commands in the terminal (hit &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;t&lt;/code&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get purge bcmwl-kernel-source&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reboot and everything should be running smoothly again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Schedule Python Scripts to Automate Tasks using Windows Scheduler on Windows 10 &amp; 11</title>
+      <link>https://amannj.github.io/post/windows-scheduler/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/windows-scheduler/</guid>
+      <description>&lt;p&gt;In this post, I will go over the steps necessary to schedule a Python script using &lt;em&gt;Windows Scheduler&lt;/em&gt;. This can be particularly useful if you want to re-run a particular programme at a prescribed time, for example, for a web scraper.&lt;/p&gt;
+&lt;p&gt;For the purpose of this post I will further assume that you have Python set up and running on your machine. For everything else, please follow the step-by-step guide below:&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;step-1-create-your-python-script&#34;&gt;Step 1: Create your Python script.&lt;/h3&gt;
+&lt;p&gt;This should be self-explanatory. Let&amp;rsquo;s assume we want to run the following script called &lt;code&gt;my.py&lt;/code&gt;, which does nothing but print today&amp;rsquo;s date:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;####################
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Content of my.py #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;####################
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import datetime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Get date and time
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;todaysDate = datetime.datetime.today();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Change display format (optional)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;todaysDate = todaysDate.strftime(&amp;#34;%Y-%m-%d %H:%M:%S&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Print
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print(todaysDate)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now save your script! In my case, I&amp;rsquo;ll simply save the Python script on my Desktop.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where &lt;code&gt;&amp;lt;Your Name&amp;gt;&lt;/code&gt; should be replaced with your Windows username.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;step-2-create-batch-file-to-run-the-python-script&#34;&gt;Step 2: Create Batch File to Run the Python Script&lt;/h3&gt;
+&lt;p&gt;First, open &lt;em&gt;Notepad&lt;/em&gt; and generate the following generic structure:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In our example, the batch file will read as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in &lt;a href=&#34;https://amannj.github.io/blog/2021/07/09/bat-git-push&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;p&gt;Next, save the file with the &amp;lsquo;bat&amp;rsquo; file extension; we&amp;rsquo;ll call our file &lt;code&gt;run_mypy.bat&lt;/code&gt; for now.&lt;/p&gt;
+&lt;p&gt;Finally, go ahead and check if the batch file triggers your Python script correctly. For this, you only have to double-click &lt;code&gt;run_mypy.bat&lt;/code&gt;. If everything has worked out, a command prompt should open now containing the following pieces of information (including the date and daytime, which in this case is 2020-12-16 12:12:12):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop&amp;gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2020-12-16 12:12:12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop&amp;gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Press any key to continue . . .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h3 id=&#34;step-3-schedule-python-script-using-windows-scheduler&#34;&gt;Step 3: Schedule Python Script using &lt;em&gt;Windows Scheduler&lt;/em&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;Control Panel&lt;/code&gt; and search for &lt;code&gt;Administrative Tools&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;code&gt;Task Scheduler&lt;/code&gt;. There, select option &lt;code&gt;Create Basic Task...&lt;/code&gt; in the right panel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Give your Task a name (in this case we&amp;rsquo;ll name the task &lt;em&gt;&amp;lsquo;Run mypy&amp;rsquo;&lt;/em&gt;), and now define how often and when you want the task to be triggered. This step is rather self-explanatory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once you have configured the trigger for your job to your satisfaction, click next and define the &lt;em&gt;Action&lt;/em&gt; which you want the scheduled task to perform. In our case we want to &lt;code&gt;Start a program&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;code&gt;Next&lt;/code&gt; and then on &lt;code&gt;Browse&lt;/code&gt;. Then navigate to where your batch file sits. In our case &lt;code&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\run_mypy.bat&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: If you are planning on saving/appending data that you obtain from running the Python script, make sure you also provide the location of your application folder in  &lt;code&gt;Start in (optional)&lt;/code&gt;. This allows the Scheduler to access all of the relevant elements (files, folders etc.) of your project. In our case, this would be &lt;code&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;code&gt;Next&lt;/code&gt; again and the final screen will provide a summary of the new task you have just created. You can always navigate back and change its configuration. Once you&amp;rsquo;re happy with your result click &lt;code&gt;Finish&lt;/code&gt; and you&amp;rsquo;re done!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To check if the task you created works, access the &lt;code&gt;Task Scheduler Library&lt;/code&gt; (left panel in &lt;em&gt;Task Scheduler&lt;/em&gt;), select the task from the list of created tasks (middle panel), right-click and then click on &lt;code&gt;Run&lt;/code&gt;. A terminal window should open and return the same result as when double-clicking &lt;code&gt;run_mypy.bat&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This last step completes this tutorial. If you want to learn more about &lt;em&gt;Windows Task Scheduler&lt;/em&gt;, check out the &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online documentation&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub</title>
+      <link>https://amannj.github.io/post/automatise-workflow/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/automatise-workflow/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s say you want to use a Windows bat file to automatically run Git to add, commit and push to GitHub.&lt;/p&gt;
+&lt;p&gt;For the sake of simplicity, we will assume that we want to automatise the Python script for which we created a Windows Scheduler task in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post. Even though the content of this particular Python script does not merit such a configuration, in a more realistic scenario, it could, say, contain a web scrapper which, you might want to run at regular intervals, and push the obtained data to GitHub automatically.&lt;/p&gt;
+&lt;p&gt;In this post we will assume that you have a fully functional set-up with Git installed on your computer, and you also have linked your local project to your GitHub account, e.g., by cloning it. Furthermore, we assume you have followed &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post up until &lt;strong&gt;Step 2&lt;/strong&gt;  and want the bat file you just created to automatically run Git to add, commit and push to Github. This can be done in a few lines of code as demonstrated below.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;adding-git-commands-to-your-bat-file&#34;&gt;Adding Git Commands to Your Bat File&lt;/h3&gt;
+&lt;p&gt;For this purpose, we change the generic structure of the batch file to run our Python script in &lt;strong&gt;Step 2&lt;/strong&gt; of the aforementioned blog post from this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#39;scheduled commit&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note, however, that the above will not work in some cases, for example, if there are no changes made to the repository. In such a case you can instead use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add --all&lt;/code&gt; will add all unstaged files of the entire working tree;&lt;/li&gt;
+&lt;li&gt;the next line will then make a commit (&lt;code&gt;git commit -m &amp;quot;scheduled commit&amp;quot;&lt;/code&gt;) only if Git observes a change, i.e. differences, vis-a-vis the HEAD version &lt;code&gt;git diff-index --quiet HEAD&lt;/code&gt;: In case &lt;code&gt;git diff&lt;/code&gt; has exit code zero, &lt;code&gt;git commit&lt;/code&gt; will be executed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A final word of caution: In case Git is not in your path, you will have to replace &lt;code&gt;git&lt;/code&gt; with &lt;code&gt;&amp;quot;C:\Program Files\Git\bin\git.exe&amp;quot;&lt;/code&gt; in the code chunks above.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;a-more-complete-example&#34;&gt;A more complete example&lt;/h3&gt;
+&lt;p&gt;In the case of the Windows Scheduler task discussed in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post where Git is not in our path, we would end up with the chunk below, where we also added &lt;code&gt;timeout /t 5&lt;/code&gt; to sleep in the batch file &lt;a href=&#34;https://stackoverflow.com/questions/1672338/how-to-sleep-for-five-seconds-in-a-batch-file-cmd/1672375#1672375&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anywhere between 4 and 5 seconds&lt;/a&gt; before commiting and pushing to GitHub:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
+&lt;p&gt;Now that you have updated your bat file according to your needs, you can continue with &lt;strong&gt;Step 2&lt;/strong&gt; from &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post to use Windows Scheduler to time its automatic execution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

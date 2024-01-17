@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Juergen AMANN</title>
+    <link>https://amannj.github.io/</link>
+      <atom:link href="https://amannj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Juergen AMANN</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Juergen AMANN</title>
+      <link>https://amannj.github.io/</link>
+    </image>
+    
+    <item>
+      <title>Price Adjustment in the Euro Area in the Low-Inflation Period: Evidence from Consumer and Producer Micro Price Data</title>
+      <link>https://amannj.github.io/working-papers/price-adjustment-euro-area/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/price-adjustment-euro-area/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This paper documents five stylised facts relating to price adjustment in the euro area, using various micro price datasets collected in a period with relatively low and stable inflation. First, price changes are infrequent in the core sectors. On average, 12% of consumer prices change each month, falling to 8.5% when sales prices are excluded. The frequency of producer price adjustment is greater (25%), reflecting that the prices of intermediate goods and energy are more flexible. For both consumer and producer prices, cross-sectoral heterogeneity is more pronounced than cross-country heterogeneity. Second, price changes tend to be large and heterogeneous. For consumer prices, the typical absolute price change is about 10%, and the distribution of price changes shows a broad dispersion. For producer prices, the typical absolute price change is smaller, but nevertheless larger than inflation. Third, price setting is mildly state-dependent: the probability of price adjustment rises with the size of price misalignment, mainly reflecting idiosyncratic shocks, but it does not increase very sharply. Fourth, for both consumer and producer prices, the repricing rate showed no trend in the period 2005-19 but was more volatile in the short run. Fifth, small cyclical variations in frequency did not contribute much to fluctuations in aggregate inflation, which instead mainly reflected shifts in the average size of price changes. Consistent with idiosyncratic shocks as the main driver of price changes, aggregate disturbances affected inflation by shifting the relative number of firms increasing or decreasing their prices, rather than the size of price increases and decreases.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Effects of Energy Prices on Firm Competitiveness: Evidence from Chile </title>
+      <link>https://amannj.github.io/working-papers/energy-chile/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/energy-chile/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This paper analyzes the impact of changes in energy prices on the competitiveness of manufacturing firms in Chile. Using the Chilean Annual National Industrial Survey data, the paper illustrates that, first, increases in energy prices generally do not hurt firm competitiveness. Second, the impact of energy prices depends on the fuel type—while electricity price increases are negatively correlated with firm outcomes, fossil fuel price increases have a positive association with investment and firm productivity, a result that is consistent with the strong version of the Porter hypothesis. Third, these effects are heterogeneous and vary by firm attributes such as size, ownership and location. Fourth, investigating non-linear patterns in firm outcomes based on the level of energy prices, the findings show that the positive correlation between fossil fuel price increases and capital upgrading is particularly pronounced when energy prices are at relatively low levels.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Assessing the socio-economic impact of the circular economy through input-output modelling - Evidence from developing countries</title>
+      <link>https://amannj.github.io/working-papers/nice/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/nice/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The concept of circular economy is gaining growing importance in the policy debate as the need to focus the international effort to accomplish the Sustainable Development Goal (SDG) 12, “Responsible production and consumption”, has become increasingly paramount. Many international organisations are now fully involved in implementing technical cooperation projects to reduce the use of materials for industrial output. However, while there is a wide consensus that the prevailing production paradigm cannot sustain the current industrial practices indefinitely, the policy space for the promotion of the Circular Economy is hampered by the lack of a complete understanding of winners and losers in international or  omestic value chains and the overall net benefits of the undertaken measures. This paper develops the NICE (National Impacts of Circular Economy) tool, which is based on the Eora input-output data to analyse how technical cooperation projects, which are aimed at more sustainable use of materials, affect economic and social indicators. Whereas the long-term transition towards a circular economy and a more efficient economic system is less controversial, the results of this study help deepen the understanding of the possible short-term impacts, especially for countries struggling to climb the ladder of development. Strategic implications for a reconciliation of economic, social and environmental targets for inclusive and sustainable industrial development and a full accomplishment of the SDG 9 are presented.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Expanded Real Value-added Data for Manufacturing: A New Approach to Measuring Sub-Sectoral Manufacturing Development</title>
+      <link>https://amannj.github.io/working-papers/real-value-added/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/real-value-added/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Price selection on the two sides of the Atlantic</title>
+      <link>https://amannj.github.io/post/price-setting-atlantic/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/price-setting-atlantic/</guid>
+      <description>&lt;p&gt;The effectiveness of monetary policy depends crucially on the degree of price flexibility. This flexibility depends on the frequency of price adjustments, as well as the adjustment magnitude of the prices which do change (known as price selection). This column uses granular data from the euro area and the US to quantify the degree of price selection. Accounting for price selection increases price flexibility estimates by around one-third in both regions, with a higher flexibility in the US. The findings are consistent with the differences in food inflation during the Covid-pandemic across the US and euro area.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://cepr.org/voxeu/columns/price-selection-two-sides-atlantic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;More information on the corresponding publication &lt;em&gt;Price setting on the two sides of the Atlantic - Evidence from supermarket scanner data&lt;/em&gt; (Journal of Monetary Economics, 140) is available &lt;a href=&#34;https://amannj.github.io/publication/price-setting-atlantic&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Price setting on the two sides of the Atlantic - Evidence from supermarket scanner data</title>
+      <link>https://amannj.github.io/publication/price-setting-atlantic/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/price-setting-atlantic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firm-level Effects of Energy Price Increases: a Literature Review</title>
+      <link>https://amannj.github.io/working-papers/firm-level-energy-price/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/firm-level-energy-price/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Energy subsidy reforms can raise important challenges for firms. A large academic literature has evolved to study these effects. This paper provides a summary of that literature and recommendations for future evaluations of policy impacts&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Growth and Volatility; Why Duration Matters for Long Run Macroeconomic Outcomes</title>
+      <link>https://amannj.github.io/working-papers/growth-volatility/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/growth-volatility/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this paper we revisit the busy debate over the relationship between volatility and growth, to separate out the effects on growth that come from short run and long run episodes of uncertainty. Employing this time series perspective, we reconcile the theoretical ambiguities and explain the conflicting differences in empirical studies of this important linkage. We suggest that the relationship depends on the type of volatility responsible for driving economic fluctuations; volatility that reflects longer run positive characteristics is positively associated with economic growth, with shorter spells of uncertainty associated with poorer macroeconomic outcomes. Stabilisation policy needs to discriminate between good volatility and bad volatility.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Monetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds</title>
+      <link>https://amannj.github.io/working-papers/green-etfs/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/green-etfs/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this paper we revisit the busy debate over the relationship between volatility and growth, to separate out the effects on growth that come from short run and long run episodes of uncertainty. Employing this time series perspective, we reconcile the theoretical ambiguities and explain the conflicting differences in empirical studies of this important linkage. We suggest that the relationship depends on the type of volatility responsible for driving economic fluctuations; volatility that reflects longer run positive characteristics is positively associated with economic growth, with shorter spells of uncertainty associated with poorer macroeconomic outcomes. Stabilisation policy needs to discriminate between good volatility and bad volatility.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Testing the debt threshold hypothesis: A structural break threshold Granger causality test under cross-sectional dependence</title>
+      <link>https://amannj.github.io/working-papers/granger-causality/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/granger-causality/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this paper we revisit the busy debate over the relationship between volatility and growth, to separate out the effects on growth that come from short run and long run episodes of uncertainty. Employing this time series perspective, we reconcile the theoretical ambiguities and explain the conflicting differences in empirical studies of this important linkage. We suggest that the relationship depends on the type of volatility responsible for driving economic fluctuations; volatility that reflects longer run positive characteristics is positively associated with economic growth, with shorter spells of uncertainty associated with poorer macroeconomic outcomes. Stabilisation policy needs to discriminate between good volatility and bad volatility.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The socioeconomic impact of circularity in developing countries</title>
+      <link>https://amannj.github.io/post/impact-circularity/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/impact-circularity/</guid>
+      <description>&lt;p&gt;In the blog post &lt;a href=&#34;https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;The socioeconomic impact of circularity in developing countries&lt;/em&gt;&lt;/a&gt;, we introduce a novel tool, built on granular firm-level data and Input-Output modelling, to assess the economic, social and environmental impact of Circular Economy (CE):&lt;/p&gt;
+&lt;p&gt;The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. In a &lt;a href=&#34;https://www.eea.europa.eu/publications/sustainability-transition-in-europe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent report&lt;/a&gt;, the European Environmental Agency discusses that the transition to the green and circular economy (CE) is driven by multiple environmental, demographic, technological, fiscal and financial transitions occurring in different sectors and geographies. CE may play a pivotal role in this transition because of its potential “triple positive impact” on economic growth as well as environmental and societal outcomes.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;More information on the corresponding working paper &lt;em&gt;Assessing the socio-economic impact of the circular economy through input-output modelling - Evidence from developing countries&lt;/em&gt; is available &lt;a href=&#34;https://amannj.github.io/working-papers/nice&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An analysis of ICT hardware manufacturing in industrialized economies: Growth patterns, productivity performance, and driving Forces</title>
+      <link>https://amannj.github.io/publication/ict-hardware/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/ict-hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A firm-level perspective on industrial resilience in a crisis</title>
+      <link>https://amannj.github.io/post/industrial-resiliance/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/industrial-resiliance/</guid>
+      <description>&lt;p&gt;In the blog post &lt;a href=&#34;https://iap.unido.org/articles/firm-level-perspective-industrial-resilience-crisis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;A firm-level perspective on industrial resilience in a crisis&lt;/em&gt;&lt;/a&gt;, investigate the significance of industrial capabilities for robust growth during Covid-19:&lt;/p&gt;
+&lt;p&gt;History has shown that health and economic shocks are recurrent events; robustness to one such shock must be followed by preparedness for the next one. Accordingly, “the new normal” is a phrase that has been used throughout the COVID-19 pandemic to signal the need for fundamental change to follow the crisis. &lt;a href=&#34;https://iap.unido.org/articles/building-socio-economic-resilience-through-industrial-capabilities&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Resilience at both the government and sector levels&lt;/a&gt; can create conditions for countries to better withstand and recover from shocks. Our research based on World Bank data shows that manufacturing firms in countries with stronger industrial capabilities—proxied by higher Competitive Industrial Performance (&lt;a href=&#34;https://stat.unido.org/cip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CIP&lt;/a&gt;) scores—were more likely to remain in operation and experienced higher growth rates (or lower losses) in employment&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://iap.unido.org/articles/firm-level-perspective-industrial-resilience-crisis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;This piece is part of the IAP IDR2022 series, based on UNIDO&amp;rsquo;s flagship &lt;a href=&#34;https://www.unido.org/idr2022&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Industrial Development Report (IDR) 2022&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Switching it up: The effect of energy price reforms in Oman</title>
+      <link>https://amannj.github.io/publication/switching-it-up/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/switching-it-up/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deindustrialization in developed countries amid accelerated globalization: Patterns, influencers, and policy insights</title>
+      <link>https://amannj.github.io/publication/accelerated-globalization/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/accelerated-globalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manufacturing firms shouldn’t fear the true cost of fuel – here’s why</title>
+      <link>https://amannj.github.io/post/true-cost-fuel/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/true-cost-fuel/</guid>
+      <description>&lt;p&gt;In the blog post &lt;a href=&#34;https://www.unido.org/stories/manufacturing-firms-shouldnt-fear-true-cost-fuel-heres-why&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Manufacturing firms shouldn’t fear the true cost of fuel – here’s why&lt;/em&gt;&lt;/a&gt;, we analyse the effect of energy price increases on firm-level productivity in Oman:&lt;/p&gt;
+&lt;p&gt;UNIDO-led research in collaboration with the World Bank provides concrete evidence that removing fossil fuel subsidies would not only make environmental sense but would also improve firms’ economic performance. New firm-level data from Oman show that higher fuel prices are not a drag on competitiveness. In fact, reducing subsidies and allowing fuel prices to rise could ultimately aid the post-COVID-19 recovery. This is because, according to the data studied, higher fuel prices drive business upgrading, leading to a boost in productivity. They could also encourage manufacturing companies to switch to the kind of long-term sustainable efficiency practices needed to stop climate change.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://www.unido.org/stories/manufacturing-firms-shouldnt-fear-true-cost-fuel-heres-why&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;More information on the corresponding publication &lt;em&gt;Switching it up: The effect of energy price reforms in Oman&lt;/em&gt; (World Development, 142) is available &lt;a href=&#34;https://amannj.github.io/publication/switching-it-up&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The effects of energy prices on firm competitiveness in Chile</title>
+      <link>https://amannj.github.io/post/energy-chile/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/energy-chile/</guid>
+      <description>&lt;p&gt;In the blog post &lt;a href=&#34;https://blogs.worldbank.org/developmenttalk/effects-energy-prices-firm-competitiveness-chile&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;The effects of energy prices on firm competitiveness in Chile&lt;/em&gt;&lt;/a&gt;, we analyse the effect of energy price increases on firm-level productivity in Chile:&lt;/p&gt;
+&lt;p&gt;Firms are key to addressing Chile’s sustainability challenges and realizing its ambition of carbon neutrality by 2050. Switching to more sustainable production is essential to reducing vulnerability to environmental shocks and developing new areas of comparative advantage. In a &lt;a href=&#34;http://hdl.handle.net/10986/39808&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent working paper&lt;/a&gt;, we illustrate minimal trade-offs between productivity and energy prices, and a positive relationship between productivity and investments with fossil fuel prices.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://blogs.worldbank.org/developmenttalk/effects-energy-prices-firm-competitiveness-chile&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;La versión en español está disponible &lt;a href=&#34;https://blogs.worldbank.org/es/latinamerica/efectos-del-precio-de-la-energia-en-la-competitividad-empresarial-en-chile&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More information on the corresponding working paper &lt;em&gt;The Effects of Energy Prices on Firm Competitiveness: Evidence from Chile&lt;/em&gt; is available &lt;a href=&#34;https://amannj.github.io/working-papers/energy-chile&#34;&gt;here&lt;/a&gt; and at the &lt;a href=&#34;http://hdl.handle.net/10986/39808&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;World Bank Policy Research Working Papers&lt;/a&gt; portal.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sectoral Dynamics</title>
+      <link>https://amannj.github.io/publication/sectoral-dynamics/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/sectoral-dynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to fix &#39;No WiFi Adapter&#39; issue in Ubuntu 20.04</title>
+      <link>https://amannj.github.io/post/ubuntu-wifi-issue/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/ubuntu-wifi-issue/</guid>
+      <description>&lt;p&gt;In case you have, just like me, come across the issue that Ubuntu 20.04 greets you with a &lt;em&gt;&amp;rsquo;no wifi adapter&amp;rsquo;&lt;/em&gt; error message after running some updates, this here did the trick for me:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect your laptop to the internet (either ethernet, your phone etc.).&lt;/li&gt;
+&lt;li&gt;Run the following two commands in the terminal (hit &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;t&lt;/code&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get purge bcmwl-kernel-source&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reboot and everything should be running smoothly again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The importance of manufacturing development and structural change for pro-poor growth</title>
+      <link>https://amannj.github.io/publication/pro-poor-growth/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/pro-poor-growth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How To Schedule Python Scripts to Automate Tasks using Windows Scheduler on Windows 10 &amp; 11</title>
+      <link>https://amannj.github.io/post/windows-scheduler/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/windows-scheduler/</guid>
+      <description>&lt;p&gt;In this post, I will go over the steps necessary to schedule a Python script using &lt;em&gt;Windows Scheduler&lt;/em&gt;. This can be particularly useful if you want to re-run a particular programme at a prescribed time, for example, for a web scraper.&lt;/p&gt;
+&lt;p&gt;For the purpose of this post I will further assume that you have Python set up and running on your machine. For everything else, please follow the step-by-step guide below:&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;step-1-create-your-python-script&#34;&gt;Step 1: Create your Python script.&lt;/h3&gt;
+&lt;p&gt;This should be self-explanatory. Let&amp;rsquo;s assume we want to run the following script called &lt;code&gt;my.py&lt;/code&gt;, which does nothing but print today&amp;rsquo;s date:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;####################
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Content of my.py #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;####################
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import datetime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Get date and time
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;todaysDate = datetime.datetime.today();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Change display format (optional)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;todaysDate = todaysDate.strftime(&amp;#34;%Y-%m-%d %H:%M:%S&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Print
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print(todaysDate)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now save your script! In my case, I&amp;rsquo;ll simply save the Python script on my Desktop.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where &lt;code&gt;&amp;lt;Your Name&amp;gt;&lt;/code&gt; should be replaced with your Windows username.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;step-2-create-batch-file-to-run-the-python-script&#34;&gt;Step 2: Create Batch File to Run the Python Script&lt;/h3&gt;
+&lt;p&gt;First, open &lt;em&gt;Notepad&lt;/em&gt; and generate the following generic structure:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In our example, the batch file will read as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; In case you want your batch file to run Git to automatically add, commit and push to GitHub, you will need a couple of extra lines of code which I discuss in &lt;a href=&#34;https://amannj.github.io/blog/2021/07/09/bat-git-push&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;p&gt;Next, save the file with the &amp;lsquo;bat&amp;rsquo; file extension; we&amp;rsquo;ll call our file &lt;code&gt;run_mypy.bat&lt;/code&gt; for now.&lt;/p&gt;
+&lt;p&gt;Finally, go ahead and check if the batch file triggers your Python script correctly. For this, you only have to double-click &lt;code&gt;run_mypy.bat&lt;/code&gt;. If everything has worked out, a command prompt should open now containing the following pieces of information (including the date and daytime, which in this case is 2020-12-16 12:12:12):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop&amp;gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2020-12-16 12:12:12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop&amp;gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Press any key to continue . . .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h3 id=&#34;step-3-schedule-python-script-using-windows-scheduler&#34;&gt;Step 3: Schedule Python Script using &lt;em&gt;Windows Scheduler&lt;/em&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;Control Panel&lt;/code&gt; and search for &lt;code&gt;Administrative Tools&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;code&gt;Task Scheduler&lt;/code&gt;. There, select option &lt;code&gt;Create Basic Task...&lt;/code&gt; in the right panel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Give your Task a name (in this case we&amp;rsquo;ll name the task &lt;em&gt;&amp;lsquo;Run mypy&amp;rsquo;&lt;/em&gt;), and now define how often and when you want the task to be triggered. This step is rather self-explanatory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once you have configured the trigger for your job to your satisfaction, click next and define the &lt;em&gt;Action&lt;/em&gt; which you want the scheduled task to perform. In our case we want to &lt;code&gt;Start a program&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;code&gt;Next&lt;/code&gt; and then on &lt;code&gt;Browse&lt;/code&gt;. Then navigate to where your batch file sits. In our case &lt;code&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\run_mypy.bat&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: If you are planning on saving/appending data that you obtain from running the Python script, make sure you also provide the location of your application folder in  &lt;code&gt;Start in (optional)&lt;/code&gt;. This allows the Scheduler to access all of the relevant elements (files, folders etc.) of your project. In our case, this would be &lt;code&gt;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;code&gt;Next&lt;/code&gt; again and the final screen will provide a summary of the new task you have just created. You can always navigate back and change its configuration. Once you&amp;rsquo;re happy with your result click &lt;code&gt;Finish&lt;/code&gt; and you&amp;rsquo;re done!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To check if the task you created works, access the &lt;code&gt;Task Scheduler Library&lt;/code&gt; (left panel in &lt;em&gt;Task Scheduler&lt;/em&gt;), select the task from the list of created tasks (middle panel), right-click and then click on &lt;code&gt;Run&lt;/code&gt;. A terminal window should open and return the same result as when double-clicking &lt;code&gt;run_mypy.bat&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This last step completes this tutorial. If you want to learn more about &lt;em&gt;Windows Task Scheduler&lt;/em&gt;, check out the &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online documentation&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub</title>
+      <link>https://amannj.github.io/post/automatise-workflow/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/automatise-workflow/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s say you want to use a Windows bat file to automatically run Git to add, commit and push to GitHub.&lt;/p&gt;
+&lt;p&gt;For the sake of simplicity, we will assume that we want to automatise the Python script for which we created a Windows Scheduler task in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post. Even though the content of this particular Python script does not merit such a configuration, in a more realistic scenario, it could, say, contain a web scrapper which, you might want to run at regular intervals, and push the obtained data to GitHub automatically.&lt;/p&gt;
+&lt;p&gt;In this post we will assume that you have a fully functional set-up with Git installed on your computer, and you also have linked your local project to your GitHub account, e.g., by cloning it. Furthermore, we assume you have followed &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post up until &lt;strong&gt;Step 2&lt;/strong&gt;  and want the bat file you just created to automatically run Git to add, commit and push to Github. This can be done in a few lines of code as demonstrated below.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;adding-git-commands-to-your-bat-file&#34;&gt;Adding Git Commands to Your Bat File&lt;/h3&gt;
+&lt;p&gt;For this purpose, we change the generic structure of the batch file to run our Python script in &lt;strong&gt;Step 2&lt;/strong&gt; of the aforementioned blog post from this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#39;scheduled commit&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note, however, that the above will not work in some cases, for example, if there are no changes made to the repository. In such a case you can instead use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add --all&lt;/code&gt; will add all unstaged files of the entire working tree;&lt;/li&gt;
+&lt;li&gt;the next line will then make a commit (&lt;code&gt;git commit -m &amp;quot;scheduled commit&amp;quot;&lt;/code&gt;) only if Git observes a change, i.e. differences, vis-a-vis the HEAD version &lt;code&gt;git diff-index --quiet HEAD&lt;/code&gt;: In case &lt;code&gt;git diff&lt;/code&gt; has exit code zero, &lt;code&gt;git commit&lt;/code&gt; will be executed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A final word of caution: In case Git is not in your path, you will have to replace &lt;code&gt;git&lt;/code&gt; with &lt;code&gt;&amp;quot;C:\Program Files\Git\bin\git.exe&amp;quot;&lt;/code&gt; in the code chunks above.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;a-more-complete-example&#34;&gt;A more complete example&lt;/h3&gt;
+&lt;p&gt;In the case of the Windows Scheduler task discussed in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post where Git is not in our path, we would end up with the chunk below, where we also added &lt;code&gt;timeout /t 5&lt;/code&gt; to sleep in the batch file &lt;a href=&#34;https://stackoverflow.com/questions/1672338/how-to-sleep-for-five-seconds-in-a-batch-file-cmd/1672375#1672375&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anywhere between 4 and 5 seconds&lt;/a&gt; before commiting and pushing to GitHub:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
+&lt;p&gt;Now that you have updated your bat file according to your needs, you can continue with &lt;strong&gt;Step 2&lt;/strong&gt; from &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post to use Windows Scheduler to time its automatic execution.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Achieving sustainable development: New empirical evidence on the impact of industrialization on social and environmental</title>
+      <link>https://amannj.github.io/publication/achieving-sustainable-development/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/achieving-sustainable-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revisiting Reinhart and Rogoff after the crisis: a time series perspective</title>
+      <link>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Growth in a time of austerity: evidence from the UK</title>
+      <link>https://amannj.github.io/publication/growth-austerity/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/growth-austerity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

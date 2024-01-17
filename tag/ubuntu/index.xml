@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/ubuntu/</link>
+      <atom:link href="https://amannj.github.io/tag/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ubuntu</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Ubuntu</title>
+      <link>https://amannj.github.io/tag/ubuntu/</link>
+    </image>
+    
+    <item>
+      <title>How to fix &#39;No WiFi Adapter&#39; issue in Ubuntu 20.04</title>
+      <link>https://amannj.github.io/post/ubuntu-wifi-issue/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/ubuntu-wifi-issue/</guid>
+      <description>&lt;p&gt;In case you have, just like me, come across the issue that Ubuntu 20.04 greets you with a &lt;em&gt;&amp;rsquo;no wifi adapter&amp;rsquo;&lt;/em&gt; error message after running some updates, this here did the trick for me:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect your laptop to the internet (either ethernet, your phone etc.).&lt;/li&gt;
+&lt;li&gt;Run the following two commands in the terminal (hit &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;t&lt;/code&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get purge bcmwl-kernel-source&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reboot and everything should be running smoothly again!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

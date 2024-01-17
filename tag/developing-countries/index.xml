@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developing countries | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/developing-countries/</link>
+      <atom:link href="https://amannj.github.io/tag/developing-countries/index.xml" rel="self" type="application/rss+xml" />
+    <description>Developing countries</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Developing countries</title>
+      <link>https://amannj.github.io/tag/developing-countries/</link>
+    </image>
+    
+    <item>
+      <title>Assessing the socio-economic impact of the circular economy through input-output modelling - Evidence from developing countries</title>
+      <link>https://amannj.github.io/working-papers/nice/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/nice/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The concept of circular economy is gaining growing importance in the policy debate as the need to focus the international effort to accomplish the Sustainable Development Goal (SDG) 12, “Responsible production and consumption”, has become increasingly paramount. Many international organisations are now fully involved in implementing technical cooperation projects to reduce the use of materials for industrial output. However, while there is a wide consensus that the prevailing production paradigm cannot sustain the current industrial practices indefinitely, the policy space for the promotion of the Circular Economy is hampered by the lack of a complete understanding of winners and losers in international or  omestic value chains and the overall net benefits of the undertaken measures. This paper develops the NICE (National Impacts of Circular Economy) tool, which is based on the Eora input-output data to analyse how technical cooperation projects, which are aimed at more sustainable use of materials, affect economic and social indicators. Whereas the long-term transition towards a circular economy and a more efficient economic system is less controversial, the results of this study help deepen the understanding of the possible short-term impacts, especially for countries struggling to climb the ladder of development. Strategic implications for a reconciliation of economic, social and environmental targets for inclusive and sustainable industrial development and a full accomplishment of the SDG 9 are presented.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Expanded Real Value-added Data for Manufacturing: A New Approach to Measuring Sub-Sectoral Manufacturing Development</title>
+      <link>https://amannj.github.io/working-papers/real-value-added/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/real-value-added/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The socioeconomic impact of circularity in developing countries</title>
+      <link>https://amannj.github.io/post/impact-circularity/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/impact-circularity/</guid>
+      <description>&lt;p&gt;In the blog post &lt;a href=&#34;https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;The socioeconomic impact of circularity in developing countries&lt;/em&gt;&lt;/a&gt;, we introduce a novel tool, built on granular firm-level data and Input-Output modelling, to assess the economic, social and environmental impact of Circular Economy (CE):&lt;/p&gt;
+&lt;p&gt;The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. In a &lt;a href=&#34;https://www.eea.europa.eu/publications/sustainability-transition-in-europe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent report&lt;/a&gt;, the European Environmental Agency discusses that the transition to the green and circular economy (CE) is driven by multiple environmental, demographic, technological, fiscal and financial transitions occurring in different sectors and geographies. CE may play a pivotal role in this transition because of its potential “triple positive impact” on economic growth as well as environmental and societal outcomes.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;More information on the corresponding working paper &lt;em&gt;Assessing the socio-economic impact of the circular economy through input-output modelling - Evidence from developing countries&lt;/em&gt; is available &lt;a href=&#34;https://amannj.github.io/working-papers/nice&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

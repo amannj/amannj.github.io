@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Duration hazard function | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/duration-hazard-function/</link>
+      <atom:link href="https://amannj.github.io/tag/duration-hazard-function/index.xml" rel="self" type="application/rss+xml" />
+    <description>Duration hazard function</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Duration hazard function</title>
+      <link>https://amannj.github.io/tag/duration-hazard-function/</link>
+    </image>
+    
+    <item>
+      <title>Price selection on the two sides of the Atlantic</title>
+      <link>https://amannj.github.io/post/price-setting-atlantic/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/price-setting-atlantic/</guid>
+      <description>&lt;p&gt;The effectiveness of monetary policy depends crucially on the degree of price flexibility. This flexibility depends on the frequency of price adjustments, as well as the adjustment magnitude of the prices which do change (known as price selection). This column uses granular data from the euro area and the US to quantify the degree of price selection. Accounting for price selection increases price flexibility estimates by around one-third in both regions, with a higher flexibility in the US. The findings are consistent with the differences in food inflation during the Covid-pandemic across the US and euro area.&lt;/p&gt;
+&lt;p&gt;Please click &lt;a href=&#34;https://cepr.org/voxeu/columns/price-selection-two-sides-atlantic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to read the complete article.&lt;/p&gt;
+&lt;p&gt;More information on the corresponding publication &lt;em&gt;Price setting on the two sides of the Atlantic - Evidence from supermarket scanner data&lt;/em&gt; (Journal of Monetary Economics, 140) is available &lt;a href=&#34;https://amannj.github.io/publication/price-setting-atlantic&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Price setting on the two sides of the Atlantic - Evidence from supermarket scanner data</title>
+      <link>https://amannj.github.io/publication/price-setting-atlantic/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/price-setting-atlantic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

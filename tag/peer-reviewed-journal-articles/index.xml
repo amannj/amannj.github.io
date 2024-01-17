@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peer-reviewed journal articles | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/peer-reviewed-journal-articles/</link>
+      <atom:link href="https://amannj.github.io/tag/peer-reviewed-journal-articles/index.xml" rel="self" type="application/rss+xml" />
+    <description>Peer-reviewed journal articles</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 03 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Peer-reviewed journal articles</title>
+      <link>https://amannj.github.io/tag/peer-reviewed-journal-articles/</link>
+    </image>
+    
+    <item>
+      <title>Price setting on the two sides of the Atlantic - Evidence from supermarket scanner data</title>
+      <link>https://amannj.github.io/publication/price-setting-atlantic/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/price-setting-atlantic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An analysis of ICT hardware manufacturing in industrialized economies: Growth patterns, productivity performance, and driving Forces</title>
+      <link>https://amannj.github.io/publication/ict-hardware/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/ict-hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Switching it up: The effect of energy price reforms in Oman</title>
+      <link>https://amannj.github.io/publication/switching-it-up/</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/switching-it-up/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deindustrialization in developed countries amid accelerated globalization: Patterns, influencers, and policy insights</title>
+      <link>https://amannj.github.io/publication/accelerated-globalization/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/accelerated-globalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revisiting Reinhart and Rogoff after the crisis: a time series perspective</title>
+      <link>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Growth in a time of austerity: evidence from the UK</title>
+      <link>https://amannj.github.io/publication/growth-austerity/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/growth-austerity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

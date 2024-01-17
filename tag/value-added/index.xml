@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Value added | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/value-added/</link>
+      <atom:link href="https://amannj.github.io/tag/value-added/index.xml" rel="self" type="application/rss+xml" />
+    <description>Value added</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Value added</title>
+      <link>https://amannj.github.io/tag/value-added/</link>
+    </image>
+    
+    <item>
+      <title>Expanded Real Value-added Data for Manufacturing: A New Approach to Measuring Sub-Sectoral Manufacturing Development</title>
+      <link>https://amannj.github.io/working-papers/real-value-added/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/real-value-added/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

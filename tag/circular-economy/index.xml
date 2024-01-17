@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circular economy | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/circular-economy/</link>
+      <atom:link href="https://amannj.github.io/tag/circular-economy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Circular economy</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Circular economy</title>
+      <link>https://amannj.github.io/tag/circular-economy/</link>
+    </image>
+    
+    <item>
+      <title>Assessing the socio-economic impact of the circular economy through input-output modelling - Evidence from developing countries</title>
+      <link>https://amannj.github.io/working-papers/nice/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/nice/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The concept of circular economy is gaining growing importance in the policy debate as the need to focus the international effort to accomplish the Sustainable Development Goal (SDG) 12, “Responsible production and consumption”, has become increasingly paramount. Many international organisations are now fully involved in implementing technical cooperation projects to reduce the use of materials for industrial output. However, while there is a wide consensus that the prevailing production paradigm cannot sustain the current industrial practices indefinitely, the policy space for the promotion of the Circular Economy is hampered by the lack of a complete understanding of winners and losers in international or  omestic value chains and the overall net benefits of the undertaken measures. This paper develops the NICE (National Impacts of Circular Economy) tool, which is based on the Eora input-output data to analyse how technical cooperation projects, which are aimed at more sustainable use of materials, affect economic and social indicators. Whereas the long-term transition towards a circular economy and a more efficient economic system is less controversial, the results of this study help deepen the understanding of the possible short-term impacts, especially for countries struggling to climb the ladder of development. Strategic implications for a reconciliation of economic, social and environmental targets for inclusive and sustainable industrial development and a full accomplishment of the SDG 9 are presented.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

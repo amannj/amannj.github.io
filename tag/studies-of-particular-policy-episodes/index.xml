@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studies of particular policy episodes | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/studies-of-particular-policy-episodes/</link>
+      <atom:link href="https://amannj.github.io/tag/studies-of-particular-policy-episodes/index.xml" rel="self" type="application/rss+xml" />
+    <description>Studies of particular policy episodes</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Studies of particular policy episodes</title>
+      <link>https://amannj.github.io/tag/studies-of-particular-policy-episodes/</link>
+    </image>
+    
+    <item>
+      <title>Revisiting Reinhart and Rogoff after the crisis: a time series perspective</title>
+      <link>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

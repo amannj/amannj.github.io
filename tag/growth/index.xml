@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Growth | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/growth/</link>
+      <atom:link href="https://amannj.github.io/tag/growth/index.xml" rel="self" type="application/rss+xml" />
+    <description>Growth</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Growth</title>
+      <link>https://amannj.github.io/tag/growth/</link>
+    </image>
+    
+    <item>
+      <title>Growth and Volatility; Why Duration Matters for Long Run Macroeconomic Outcomes</title>
+      <link>https://amannj.github.io/working-papers/growth-volatility/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/growth-volatility/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this paper we revisit the busy debate over the relationship between volatility and growth, to separate out the effects on growth that come from short run and long run episodes of uncertainty. Employing this time series perspective, we reconcile the theoretical ambiguities and explain the conflicting differences in empirical studies of this important linkage. We suggest that the relationship depends on the type of volatility responsible for driving economic fluctuations; volatility that reflects longer run positive characteristics is positively associated with economic growth, with shorter spells of uncertainty associated with poorer macroeconomic outcomes. Stabilisation policy needs to discriminate between good volatility and bad volatility.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Testing the debt threshold hypothesis: A structural break threshold Granger causality test under cross-sectional dependence</title>
+      <link>https://amannj.github.io/working-papers/granger-causality/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/granger-causality/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In this paper we revisit the busy debate over the relationship between volatility and growth, to separate out the effects on growth that come from short run and long run episodes of uncertainty. Employing this time series perspective, we reconcile the theoretical ambiguities and explain the conflicting differences in empirical studies of this important linkage. We suggest that the relationship depends on the type of volatility responsible for driving economic fluctuations; volatility that reflects longer run positive characteristics is positively associated with economic growth, with shorter spells of uncertainty associated with poorer macroeconomic outcomes. Stabilisation policy needs to discriminate between good volatility and bad volatility.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Revisiting Reinhart and Rogoff after the crisis: a time series perspective</title>
+      <link>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</link>
+      <pubDate>Sat, 27 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/revisiting-reinhart-rogoff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Growth in a time of austerity: evidence from the UK</title>
+      <link>https://amannj.github.io/publication/growth-austerity/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/growth-austerity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

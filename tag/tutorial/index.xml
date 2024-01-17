@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/tutorial/</link>
+      <atom:link href="https://amannj.github.io/tag/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tutorial</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Tutorial</title>
+      <link>https://amannj.github.io/tag/tutorial/</link>
+    </image>
+    
+    <item>
+      <title>How to fix &#39;No WiFi Adapter&#39; issue in Ubuntu 20.04</title>
+      <link>https://amannj.github.io/post/ubuntu-wifi-issue/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/ubuntu-wifi-issue/</guid>
+      <description>&lt;p&gt;In case you have, just like me, come across the issue that Ubuntu 20.04 greets you with a &lt;em&gt;&amp;rsquo;no wifi adapter&amp;rsquo;&lt;/em&gt; error message after running some updates, this here did the trick for me:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect your laptop to the internet (either ethernet, your phone etc.).&lt;/li&gt;
+&lt;li&gt;Run the following two commands in the terminal (hit &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;t&lt;/code&gt;):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get purge bcmwl-kernel-source&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reboot and everything should be running smoothly again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub</title>
+      <link>https://amannj.github.io/post/automatise-workflow/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/post/automatise-workflow/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s say you want to use a Windows bat file to automatically run Git to add, commit and push to GitHub.&lt;/p&gt;
+&lt;p&gt;For the sake of simplicity, we will assume that we want to automatise the Python script for which we created a Windows Scheduler task in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post. Even though the content of this particular Python script does not merit such a configuration, in a more realistic scenario, it could, say, contain a web scrapper which, you might want to run at regular intervals, and push the obtained data to GitHub automatically.&lt;/p&gt;
+&lt;p&gt;In this post we will assume that you have a fully functional set-up with Git installed on your computer, and you also have linked your local project to your GitHub account, e.g., by cloning it. Furthermore, we assume you have followed &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post up until &lt;strong&gt;Step 2&lt;/strong&gt;  and want the bat file you just created to automatically run Git to add, commit and push to Github. This can be done in a few lines of code as demonstrated below.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;adding-git-commands-to-your-bat-file&#34;&gt;Adding Git Commands to Your Bat File&lt;/h3&gt;
+&lt;p&gt;For this purpose, we change the generic structure of the batch file to run our Python script in &lt;strong&gt;Step 2&lt;/strong&gt; of the aforementioned blog post from this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#39;scheduled commit&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note, however, that the above will not work in some cases, for example, if there are no changes made to the repository. In such a case you can instead use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;&amp;lt;Path to python.exe&amp;gt;&amp;#34; &amp;#34;&amp;lt;Path to my.py&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add --all&lt;/code&gt; will add all unstaged files of the entire working tree;&lt;/li&gt;
+&lt;li&gt;the next line will then make a commit (&lt;code&gt;git commit -m &amp;quot;scheduled commit&amp;quot;&lt;/code&gt;) only if Git observes a change, i.e. differences, vis-a-vis the HEAD version &lt;code&gt;git diff-index --quiet HEAD&lt;/code&gt;: In case &lt;code&gt;git diff&lt;/code&gt; has exit code zero, &lt;code&gt;git commit&lt;/code&gt; will be executed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A final word of caution: In case Git is not in your path, you will have to replace &lt;code&gt;git&lt;/code&gt; with &lt;code&gt;&amp;quot;C:\Program Files\Git\bin\git.exe&amp;quot;&lt;/code&gt; in the code chunks above.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;a-more-complete-example&#34;&gt;A more complete example&lt;/h3&gt;
+&lt;p&gt;In the case of the Windows Scheduler task discussed in &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post where Git is not in our path, we would end up with the chunk below, where we also added &lt;code&gt;timeout /t 5&lt;/code&gt; to sleep in the batch file &lt;a href=&#34;https://stackoverflow.com/questions/1672338/how-to-sleep-for-five-seconds-in-a-batch-file-cmd/1672375#1672375&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anywhere between 4 and 5 seconds&lt;/a&gt; before commiting and pushing to GitHub:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\AppData\Local\Programs\Python\Python38\python.exe&amp;#34; &amp;#34;C:\Users\&amp;lt;Your Name&amp;gt;\Desktop\my.py&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timeout /t 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; add --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; diff-index --quiet HEAD || git commit -m &amp;#34;scheduled commit&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Git\bin\git.exe&amp;#34; push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
+&lt;p&gt;Now that you have updated your bat file according to your needs, you can continue with &lt;strong&gt;Step 2&lt;/strong&gt; from &lt;a href=&#34;https://amannj.github.io/blog/2020/12/16/windows-scheduler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; blog post to use Windows Scheduler to time its automatic execution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

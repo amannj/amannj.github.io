@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structural change | Juergen AMANN</title>
+    <link>https://amannj.github.io/tag/structural-change/</link>
+      <atom:link href="https://amannj.github.io/tag/structural-change/index.xml" rel="self" type="application/rss+xml" />
+    <description>Structural change</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://amannj.github.io/media/icon_huba55e4d0e29128b607415a99236d03d8_2095_512x512_fill_lanczos_center_3.png</url>
+      <title>Structural change</title>
+      <link>https://amannj.github.io/tag/structural-change/</link>
+    </image>
+    
+    <item>
+      <title>Expanded Real Value-added Data for Manufacturing: A New Approach to Measuring Sub-Sectoral Manufacturing Development</title>
+      <link>https://amannj.github.io/working-papers/real-value-added/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/working-papers/real-value-added/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deindustrialization in developed countries amid accelerated globalization: Patterns, influencers, and policy insights</title>
+      <link>https://amannj.github.io/publication/accelerated-globalization/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/accelerated-globalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sectoral Dynamics</title>
+      <link>https://amannj.github.io/publication/sectoral-dynamics/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/sectoral-dynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The importance of manufacturing development and structural change for pro-poor growth</title>
+      <link>https://amannj.github.io/publication/pro-poor-growth/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/pro-poor-growth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Achieving sustainable development: New empirical evidence on the impact of industrialization on social and environmental</title>
+      <link>https://amannj.github.io/publication/achieving-sustainable-development/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://amannj.github.io/publication/achieving-sustainable-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
