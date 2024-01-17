@@ -1,7 +1,0 @@
-name: Juergen Amann, personal academic website
-markdown: kramdown
-
-permalink: /blog/:year/:month/:day/:title
-
-# Google services
-google_analytics: G-FGC2D8NML5
