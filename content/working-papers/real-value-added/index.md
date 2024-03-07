@@ -18,10 +18,10 @@ publication_types: ["working-paper"]
 publication: ""
 publication_short: ""
 
-abstract: We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.
+abstract: We propose a new single deflation method to expand real value added data coverage for UNIDO's Industrial Statistics Database ([INDSTAT](https://stat.unido.org/)). Our deflator is consistent with current national accounting practices and self-contained, i.e., it only requires data available via INDSTAT. Furthermore, we discuss various deflator extensions to further real value added coverage, enabling us to derive an extensive data set with notably higher data coverage compared to other cross-country data sets, particularly for low(er) income economies. This allows us to measure the manufacturing sector's performance in unprecedented detail. 
 
 # Summary. An optional shortened abstract.
-summary: We propose a new single deflation method to expand the availability of subsectoral real value-added data for INDSTAT. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.
+summary: We propose a new single deflation method to expand real value added data coverage for INDSTAT. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.
 
 tags:
 - Working papers
@@ -67,4 +67,4 @@ slides: ""
 ---
 
 ## **Abstract**
-We propose a new single deflation method to expand the availability of subsectoral real value-added data using UNIDO’s Industrial Statistics Database INDSTAT (2021). We derive a single deflator consistent with current national accounting practices and is self-contained, i.e., only requires data available via INDSTAT. We also discuss various extensions to further improve data coverage. Our approach enables us to derive an extensive data set with notably higher data coverage vis-a-vis other large cross-country data sets, particularly for low(er) income economies. This allows us to measure the performance of the manufacturing sector in unprecedented detail and accuracy.
+We propose a new single deflation method to expand real value added data coverage for UNIDO's Industrial Statistics Database ([INDSTAT](https://stat.unido.org/)). Our deflator is consistent with current national accounting practices and self-contained, i.e., it only requires data available via INDSTAT. Furthermore, we discuss various deflator extensions to further real value added coverage, enabling us to derive an extensive data set with notably higher data coverage compared to other cross-country data sets, particularly for low(er) income economies. This allows us to measure the manufacturing sector's performance in unprecedented detail. 
