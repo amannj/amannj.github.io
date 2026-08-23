@@ -1,0 +1,16 @@
+---
+title: "News"
+subtitle: "Updates on publications, code, and other things — filter by type below"
+description-meta: "News and updates from Juergen Amann"
+title-block-banner: false
+page-navigation: true
+listing:
+  contents: news
+  type: default
+  categories: true
+  sort: "date desc"
+  date-format: "YYYY-MM-DD"
+  fields: [date, title, description, categories]
+  feed: true
+include-after-body: files/includes/_news-filter.html
+---

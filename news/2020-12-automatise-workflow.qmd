@@ -1,0 +1,58 @@
+---
+title: "How to Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub"
+date: 2020-12-16
+categories: [Blog]
+description: "Making your life easier by automatising your workflow."
+---
+
+Say you want a Windows batch file to automatically run Git to add, commit, and push to GitHub — for example, if the script it runs is a web scraper that you want to run at regular intervals, pushing the data it collects to GitHub automatically.
+
+This assumes a working Git installation, a local project already linked to your GitHub account, and that you've followed [this post](/news/2020-12-windows-scheduler.html) up to Step 2, so you already have a batch file scheduled to run a Python script.
+
+### Adding Git commands to your batch file
+
+Change the batch file from this:
+
+```
+"<Path to python.exe>" "<Path to my.py>"
+```
+
+to this:
+
+```
+"<Path to python.exe>" "<Path to my.py>"
+
+git add .
+git commit -m 'scheduled commit'
+git push
+```
+
+This won't work if there are no changes to commit, so a more robust version is:
+
+```
+"<Path to python.exe>" "<Path to my.py>"
+
+git add --all
+git diff-index --quiet HEAD || git commit -m "scheduled commit"
+git push
+```
+
+Here, `git add --all` stages the entire working tree, and the following line commits only if Git detects a change (`git diff-index --quiet HEAD` exits non-zero when there's a difference against HEAD).
+
+If Git isn't on your `PATH`, replace `git` with the full path, e.g. `"C:\Program Files\Git\bin\git.exe"`.
+
+### A more complete example
+
+Putting it together, with a `timeout` to give the file system a moment before committing:
+
+```
+"C:\Users\<Your Name>\AppData\Local\Programs\Python\Python38\python.exe" "C:\Users\<Your Name>\Desktop\my.py"
+
+timeout /t 5
+
+"C:\Program Files\Git\bin\git.exe" add --all
+"C:\Program Files\Git\bin\git.exe" diff-index --quiet HEAD || git commit -m "scheduled commit"
+"C:\Program Files\Git\bin\git.exe" push
+```
+
+Now the scheduled task from [the Windows Scheduler post](/news/2020-12-windows-scheduler.html) will also keep a Git repository in sync automatically.

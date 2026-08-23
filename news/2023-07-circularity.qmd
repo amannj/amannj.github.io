@@ -1,0 +1,12 @@
+---
+title: "The Socioeconomic Impact of Circularity in Developing Countries"
+date: 2023-07-16
+categories: [Working Paper]
+description: "A novel tool using firm-level data to assess the economic, social, and environmental impact of circularity."
+---
+
+Nilgün Tas, Nicola Cantore, Manuel Albaladejo, **Juergen Amann** & Massimiliano Mazzanti
+
+The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. The transition to a green and circular economy is driven by multiple environmental, demographic, technological, fiscal, and financial transitions occurring in different sectors and geographies — with the circular economy playing a pivotal role because of its potential "triple positive impact" on economic growth as well as environmental and societal outcomes. This post introduces NICE, a novel tool built on granular firm-level data and input-output modelling, to assess the economic, social, and environmental impact of the circular economy.
+
+[Read the full article on UNIDO ↗](https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries) · [Read the paper on Research ↗](/research.qmd#working-papers)

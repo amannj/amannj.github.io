@@ -1,0 +1,10 @@
+---
+title: "An Analysis of ICT Hardware Manufacturing in Industrialized Economies"
+date: 2024-02-01
+categories: [Academic]
+description: "Growth patterns, productivity performance, and driving forces in ICT manufacturing across 13 industrialised economies."
+---
+
+New in *Telecommunications Policy*: using EU KLEMS growth accounting for 13 industrialised economies between 2000 and 2015, we find total factor productivity, labour quality, software investment, and R&D drive growth in ICT hardware manufacturing — with the US showing markedly stronger resilience through the 2008–09 crisis than the EU.
+
+[Read the paper on Research ↗](/research.qmd#academic-publications)

@@ -1,0 +1,18 @@
+---
+title: "How to Fix 'No WiFi Adapter' Issue in Ubuntu 20.04"
+date: 2021-01-10
+categories: [Blog]
+description: "In case you are using a (now) outdated version of Ubuntu and run into some weird WiFi issue."
+---
+
+If Ubuntu 20.04 greets you with a "no WiFi adapter" error after running updates, this fixed it for me:
+
+1. Connect the laptop to the internet (ethernet, phone tethering, etc.).
+2. Run the following two commands in the terminal (`Ctrl` + `T`):
+
+```
+sudo apt-get purge bcmwl-kernel-source
+sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common
+```
+
+Reboot and everything should be running smoothly again.

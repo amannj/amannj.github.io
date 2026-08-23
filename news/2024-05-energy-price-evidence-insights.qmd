@@ -1,0 +1,10 @@
+---
+title: "Firm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research"
+date: 2024-05-01
+categories: [Policy]
+description: "A synthesis of recent evidence on how energy-subsidy reform affects firms, for the World Bank."
+---
+
+A new World Bank synthesis pulling together recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts — following on from the earlier Chile and Oman firm-level work.
+
+[Read the paper on Research ↗](/research.qmd#policy)

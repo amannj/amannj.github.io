@@ -1,11 +1,11 @@
-# IDEs
-.idea/
+/.quarto/
 
-# Hugo
-resources/
-public/
-jsconfig.json
-node_modules/
-go.sum
-.hugo_build.lock
-.Rproj.user
+/docs/
+
+**/*.quarto_ipynb
+
+/.luarc.json
+
+/.Rproj.user/
+
+/.claude/

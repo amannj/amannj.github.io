@@ -1,0 +1,52 @@
+---
+title: "Code & Packages"
+description-meta: "R packages and tools by Juergen Amann"
+title-block-banner: false
+page-navigation: true
+---
+
+Open-source packages and tools built for my own research and for work at the OECD.
+
+::: {.pkg-grid}
+
+::: {.pkg-card}
+<img src="https://raw.githubusercontent.com/amannj/OECDsppps/master/man/figures/logo.png" class="pkg-logo" alt="">
+
+### OECDsppps
+[Code]{.tag-pill .tag-code} · [{{< fa brands r-project >}} R]{.pkg-lang}
+
+Calculates subnational Purchasing Power Parities (sPPPs) across OECD regions.
+
+[[GitHub ↗](https://github.com/amannj/OECDsppps) [Vignettes ↗](https://amannj.github.io/OECDsppps/articles/index.html)]{.pkg-links}
+:::
+
+::: {.pkg-card}
+### OECDscaleup
+[Code]{.tag-pill .tag-code} · [{{< fa brands r-project >}} R]{.pkg-lang}
+
+Constructs OECD indicators for scale-ups and high-growth firms.
+
+[[GitHub ↗](https://github.com/amannj/OECDscaleup) [Vignette ↗](https://amannj.github.io/OECDscaleup/articles/OECDscaleup.html)]{.pkg-links}
+:::
+
+::: {.pkg-card}
+<img src="https://raw.githubusercontent.com/amannj/comtradeRggregator/master/man/figures/logo1.png" class="pkg-logo" alt="">
+
+### comtradeRggregator
+[Code]{.tag-pill .tag-code} · [{{< fa brands r-project >}} R]{.pkg-lang}
+
+Downloads and reclassifies large volumes of UN Comtrade trade data.
+
+[[GitHub ↗](https://github.com/amannj/comtradeRggregator)]{.pkg-links}
+:::
+
+::: {.pkg-card}
+### Scrapeo
+[Code]{.tag-pill .tag-code} · [{{< fa brands python >}} Python]{.pkg-lang}
+
+Scrapes weather-forecast data from meteo.ch.
+
+[[GitHub ↗](https://github.com/amannj/Scrapeo)]{.pkg-links}
+:::
+
+:::

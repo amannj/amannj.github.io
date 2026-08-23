@@ -1,0 +1,270 @@
+/*-- scss:defaults --*/
+
+// Field Notes theme — institutional-report palette for an economist's site.
+$navy:   #0B3558; // masthead / primary accent
+$ink:    #1A2233; // body text
+$muted:  #5C6472; // secondary text
+$paper:  #F8F9FB; // page background
+$border: #E2E5EA;
+
+$teal:      #0F6D6A; // Academic Publications
+$teal-mid:  #3E8E89; // Working Papers — same family, muted and lighter (not just brightened)
+$brick:     #C0472C; // Policy + small chrome accents
+$slate:     #4B5566; // Code
+$blog:      #6B7280; // News: personal / not tied to a specific output
+
+$body-bg: $paper;
+$body-color: $ink;
+$link-color: $navy;
+$link-hover-color: $brick;
+
+$font-family-sans-serif: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$headings-font-family: "Archivo", -apple-system, sans-serif;
+$headings-font-weight: 700;
+$headings-color: $ink;
+$font-family-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+$h1-font-size: 2.1rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.15rem;
+
+/*-- scss:rules --*/
+
+body { letter-spacing: 0.01em; }
+h1, h2, h3 { text-wrap: balance; }
+
+h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $border;
+}
+
+// Navbar: keep the brand mark quiet, give the active link a neutral
+// underline against the navy masthead so it reads as chrome, not a tag.
+.navbar {
+  .navbar-brand { font-weight: 700; }
+  .nav-link.active, .nav-link[aria-current="page"] {
+    box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.55);
+  }
+}
+
+.page-footer { color: $muted; font-size: 0.85rem; }
+
+// Interests / Education lists on the homepage now carry an icon per line —
+// the default bullet marker is redundant clutter on top of that.
+#hero-heading ul {
+  list-style: none;
+  padding-left: 0;
+}
+#hero-heading ul li {
+  margin-bottom: 0.4rem;
+}
+#hero-heading ul li .fa-solid, #hero-heading ul li svg {
+  width: 1.1rem;
+  margin-right: 0.4rem;
+  color: $navy;
+}
+
+// Avatar: the source photo has its own white studio backdrop, which read as
+// a stray white box once the page background moved off pure white. Framing
+// it as a deliberate circular badge (white fill + padding) makes that white
+// read as intentional instead of accidental.
+.about-image {
+  border-radius: 50% !important;
+  padding: 8px;
+  background: #fff;
+}
+
+// ---- Filter bar (Research) ----
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.25rem 0 1.75rem;
+}
+.filter-btn {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid $border;
+  background: #fff;
+  color: $muted;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.filter-btn:hover { border-color: $navy; color: $navy; }
+.filter-btn.active {
+  background: $navy;
+  border-color: $navy;
+  color: #fff;
+}
+.research-section[hidden] { display: none; }
+
+// ---- Content-type tags: Academic / Working Paper / Policy / Code / Blog
+// Academic Publications and Working Papers share the teal family (both are
+// academic output, just different maturity); Policy gets the distinct brick
+// so it reads as genuinely different in kind, not just another sibling.
+$tag-colors: (
+  academic: $teal,
+  working-paper: $teal-mid,
+  policy: $brick,
+  code: $slate,
+  blog: $blog
+);
+
+.tag-pill {
+  display: inline-block;
+  font-family: $font-family-monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+@each $name, $color in $tag-colors {
+  .tag-pill.tag-#{$name} { background: rgba($color, 0.12); color: $color; }
+  .quarto-listing-category .category.tag-#{$name} { border-color: rgba($color, 0.45); color: $color; }
+  .quarto-listing-category .category.tag-#{$name}.active { background: $color; border-color: $color; color: #fff; }
+  .listing-category.tag-#{$name} { background: rgba($color, 0.12); color: $color; border: none; }
+}
+
+// ---- Publication / working-paper entries (research.qmd) ----
+.pub-entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid $border;
+}
+.pub-entry:last-child { border-bottom: none; }
+.pub-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0 0 0.3rem;
+}
+.pub-meta {
+  display: block;
+  font-family: $font-family-serif;
+  font-size: 0.92rem;
+  color: $muted;
+  margin: 0 0 0.5rem;
+}
+.pub-summary {
+  display: block;
+  font-size: 0.92rem;
+  color: $ink;
+  max-width: 72ch;
+  margin: 0 0 0.5rem;
+}
+.pub-links {
+  display: block;
+}
+.pub-links a {
+  font-size: 0.82rem;
+  margin-right: 0.9rem;
+  white-space: nowrap;
+}
+
+// ---- Code & package cards (code.qmd) ----
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+.pkg-card {
+  position: relative;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  background: #fff;
+}
+.pkg-card h3 {
+  font-size: 1rem;
+  margin: 0.1rem 3rem 0.4rem 0;
+}
+.pkg-card p {
+  font-size: 0.88rem;
+  color: $muted;
+  margin: 0 0 0.6rem;
+}
+.pkg-lang {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  color: $muted;
+}
+.pkg-lang .fa-brands { margin-right: 0.15rem; }
+.pkg-logo {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.pkg-links {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+}
+
+// ---- News listing (news.qmd) — Quarto's native category-filtered listing.
+// Quarto renders category pills generically; JS in news.qmd decodes each
+// pill's label and adds one of the .tag-* classes above so the same palette
+// used on Research/Code carries through here.
+.quarto-listing-category-title {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $muted;
+}
+.quarto-listing-category .category {
+  display: inline-block;
+  font-family: $font-family-monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  margin: 0 0.35rem 0.35rem 0;
+  border-radius: 20px;
+  border: 1px solid $border;
+  cursor: pointer;
+  background: #fff;
+  color: $muted;
+}
+.quarto-listing-category .category .quarto-category-count { opacity: 0.7; }
+
+// Quarto's default listing gives the date column a full third of the row
+// (div.quarto-post .metadata { flex-basis: 33% }) — a plain YYYY-MM-DD needs
+// far less, so narrow it and let title/description take the rest. Matches
+// the built-in rule's specificity (element + 2 classes) so it actually wins.
+div.quarto-post .metadata {
+  flex: 0 0 100px;
+}
+div.quarto-post .body {
+  flex: 1 1 auto;
+}
+
+.back-to-news {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border;
+  font-size: 0.85rem;
+}
+
+.listing-category {
+  font-family: $font-family-monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}

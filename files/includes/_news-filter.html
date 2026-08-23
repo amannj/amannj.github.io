@@ -1,0 +1,37 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function tagClass(label) {
+    switch ((label || '').trim().toLowerCase()) {
+      case 'academic': return 'tag-academic';
+      case 'working paper': return 'tag-working-paper';
+      case 'policy': return 'tag-policy';
+      case 'code': return 'tag-code';
+      case 'blog': return 'tag-blog';
+      default: return '';
+    }
+  }
+
+  function applyTagClasses() {
+    document.querySelectorAll('.quarto-listing-category .category').forEach(function (el) {
+      var raw = el.getAttribute('data-category');
+      var label = raw ? decodeURIComponent(atob(raw)) : '';
+      var cls = tagClass(label);
+      if (cls && !el.classList.contains(cls)) el.classList.add(cls);
+    });
+    document.querySelectorAll('.listing-category').forEach(function (el) {
+      var cls = tagClass(el.textContent);
+      if (cls && !el.classList.contains(cls)) el.classList.add(cls);
+    });
+  }
+
+  applyTagClasses();
+
+  // Quarto's listing script sorts/rebuilds the category sidebar after this
+  // script runs, which can replace nodes and drop the classes just added —
+  // an observer re-applies them whenever that happens.
+  var sidebar = document.querySelector('.quarto-listing-category');
+  if (sidebar) {
+    new MutationObserver(applyTagClasses).observe(sidebar, { childList: true, subtree: true });
+  }
+});
+</script>

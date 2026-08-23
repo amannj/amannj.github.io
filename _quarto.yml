@@ -1,0 +1,75 @@
+project:
+  type: website
+  output-dir: docs
+
+# Meta
+description-meta: "Academic website of Juergen Amann"
+author-meta: "Juergen Amann"
+
+website:
+  title: "Juergen Amann"
+  image: "files/images/avatar.jpg"
+  description: "Economist at the OECD — applied econometrics, industrial development, and price setting."
+
+  navbar:
+    background: "#0B3558"
+
+    left:
+      - text: Home
+        href: index.qmd
+      - text: News
+        href: news.qmd
+      - text: Research
+        href: research.qmd
+      - text: Code
+        href: code.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/amannj
+        target: _blank
+      - text: "{{< ai google-scholar >}}"
+        href: https://scholar.google.com/citations?user=C28lZmUAAAAJ&hl=en
+        target: _blank
+      - icon: linkedin
+        href: https://fr.linkedin.com/in/juergen-a-4798511b
+        target: _blank
+
+  page-navigation: true
+
+  page-footer:
+    left: "© <script>document.write(new Date().getFullYear())</script> Juergen Amann"
+    center: ""
+
+  search:
+    location: navbar
+    type: textbox
+
+  draft-mode: unlinked
+
+  repo-url: https://github.com/amannj/amannj.github.io
+
+  open-graph: true
+  twitter-card: true
+
+  site-url: "https://amannj.github.io"
+
+  google-analytics:
+    tracking-id: "G-FGC2D8NML5"
+    anonymize-ip: true
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: theme.scss
+    toc: true
+    footnotes-hover: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    fig-align: center
+    link-external-icon: false
+    link-external-newwindow: true
+    email-obfuscation: javascript
+    include-in-header: "files/includes/_academic.qmd"

@@ -1,0 +1,61 @@
+---
+title: "How to Schedule Python Scripts to Automate Tasks Using Windows Scheduler on Windows 10 & 11"
+date: 2020-12-16
+categories: [Blog]
+description: "Working with Windows Scheduler on Windows 10 & 11."
+---
+
+In this post, I go over the steps necessary to schedule a Python script using Windows Scheduler. This can be particularly useful if you want to re-run a particular programme at a prescribed time — for example, a web scraper.
+
+This assumes you already have Python set up and running on your machine.
+
+### Step 1: Create your Python script
+
+Let's assume we want to run the following script called `my.py`, which does nothing but print today's date:
+
+```python
+####################
+# Content of my.py #
+####################
+
+import datetime
+
+# Get date and time
+todaysDate = datetime.datetime.today();
+# Change display format (optional)
+todaysDate = todaysDate.strftime("%Y-%m-%d %H:%M:%S")
+# Print
+print(todaysDate)
+```
+
+Save the script — in this case, on the Desktop (`C:\Users\<Your Name>\Desktop`).
+
+### Step 2: Create a batch file to run the Python script
+
+Open Notepad and use the following generic structure:
+
+```
+"<Path to python.exe>" "<Path to my.py>"
+pause
+```
+
+In our example, the batch file reads:
+
+```
+"C:\Users\<Your Name>\AppData\Local\Programs\Python\Python38\python.exe" "C:\Users\<Your Name>\Desktop\my.py"
+pause
+```
+
+> If you also want the batch file to run Git to automatically add, commit, and push to GitHub, see [this follow-up post](/news/2020-12-automatise-workflow.html).
+
+Save the file with a `.bat` extension — here, `run_mypy.bat`. Double-click it to check that it triggers the Python script correctly; a command prompt should open showing the date and time.
+
+### Step 3: Schedule the script using Windows Scheduler
+
+- Open **Control Panel** and search for **Administrative Tools**, then select **Task Scheduler**. Choose **Create Basic Task…** in the right panel.
+- Give the task a name (e.g. *Run mypy*) and define how often and when it should trigger.
+- Define the *Action*: **Start a program**.
+- Click **Next**, then **Browse**, and navigate to the batch file (`C:\Users\<Your Name>\Desktop\run_mypy.bat`).
+- **Important**: if the script saves or appends data, also set **Start in (optional)** to the project folder (e.g. `C:\Users\<Your Name>\Desktop\`) so the Scheduler can access all the relevant files.
+- Click **Next**, review the summary, and click **Finish**.
+- To test it, open the **Task Scheduler Library**, select the task, right-click, and choose **Run** — it should behave exactly like double-clicking the batch file.

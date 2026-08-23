@@ -1,0 +1,12 @@
+---
+title: "Page Not Found"
+title-block-banner: false
+page-navigation: false
+toc: false
+---
+
+The page you're looking for doesn't exist, or has moved.
+
+- [Go to the homepage ↗](/index.qmd)
+- [Browse Research ↗](/research.qmd)
+- [Browse News ↗](/news.qmd)

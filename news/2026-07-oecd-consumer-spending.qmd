@@ -1,0 +1,10 @@
+---
+title: "The Impact of the Pandemic and Energy-Food Shocks on European Consumers' Spending"
+date: 2026-07-01
+categories: [Working Paper]
+description: "A new OECD dataset of monthly card spending for 12 countries traces how everyday spending shifted through the pandemic and the energy/food price shocks."
+---
+
+New OECD Economics Department Working Paper, with Sebastian Barnes, Luis Monteiro, Sidharth Goel, and David Haugh: a new monthly card-spending dataset spanning 12 countries and 9 categories, used to trace how the pandemic and the energy/food price shocks reshaped everyday household spending across Europe.
+
+[Read the paper on OECD iLibrary ↗](https://www.oecd.org/en/publications/what-was-the-impact-of-the-pandemic-and-energy-food-shocks-on-european-consumers-everyday-spending_608804a8-en.html) · [Read more on Research ↗](/research.qmd#working-papers)
