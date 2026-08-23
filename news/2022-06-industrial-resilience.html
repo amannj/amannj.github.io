@@ -48,7 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-c7e68cbf4fd09285039b7e9a23f813c3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-db9da03f526c9ffed013a54bd77ff641.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4eb2c3b2692bf55a1e1de7fbacdfb1a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -211,15 +213,46 @@ Load Academicons v1: https://jpswalsh.github.io/academicons/
 </header>
 
 
-<p>Nicola Cantore, Karmen Naidoo, Fiona Tregenna &amp; <strong>Juergen Amann</strong></p>
 <p>History has shown that health and economic shocks are recurrent events; robustness to one such shock must be followed by preparedness for the next one. “The new normal” is a phrase that has been used throughout the COVID-19 pandemic to signal the need for fundamental change to follow the crisis. Resilience at both the government and sector levels can create conditions for countries to better withstand and recover from shocks. Research based on World Bank data shows that manufacturing firms in countries with stronger industrial capabilities — proxied by higher Competitive Industrial Performance (CIP) scores — were more likely to remain in operation and experienced higher growth rates (or lower losses) in employment.</p>
 <p>This piece is part of the IAP IDR2022 series, based on UNIDO’s flagship <a href="https://www.unido.org/idr2022">Industrial Development Report (IDR) 2022</a>.</p>
-<p><a href="https://iap.unido.org/articles/firm-level-perspective-industrial-resilience-crisis">Read the full article on UNIDO ↗</a></p>
+<p><span class="news-links"><a href="https://iap.unido.org/articles/firm-level-perspective-industrial-resilience-crisis"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Read the full article on UNIDO ↗</a></span></p>
 
 
 
 </main> <!-- /main -->
 <p class="back-to-news"><a href="../news.html">← Back to News</a></p>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function tagClass(label) {
+    switch ((label || '').trim().toLowerCase()) {
+      case 'academic': return 'tag-academic';
+      case 'working paper': return 'tag-working-paper';
+      case 'policy': return 'tag-policy';
+      case 'code': return 'tag-code';
+      case 'blog': return 'tag-blog';
+      default: return '';
+    }
+  }
+
+  document.querySelectorAll('.quarto-category').forEach(function (el) {
+    var cls = tagClass(el.textContent);
+    if (cls) el.classList.add(cls);
+  });
+
+  // Quarto only ever appends include-after-body content at the very end
+  // of the page, so the back-link starts down there — move it up next
+  // to the category tag, which is what actually reads as "context for
+  // this post" (what it is, where it goes back to) at a glance.
+  var backLink = document.querySelector('.back-to-news');
+  var categories = document.querySelector('.quarto-categories');
+  var titleH1 = document.querySelector('.quarto-title h1.title');
+  if (backLink && categories) {
+    categories.insertBefore(backLink, categories.firstChild);
+  } else if (backLink && titleH1) {
+    titleH1.insertAdjacentElement('afterend', backLink);
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
