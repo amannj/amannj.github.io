@@ -17,7 +17,7 @@ Open-source packages and tools built for my own research and for work at the OEC
 
 Calculates subnational Purchasing Power Parities (sPPPs) across OECD regions.
 
-[[GitHub ↗](https://github.com/amannj/OECDsppps) [Vignettes ↗](https://amannj.github.io/OECDsppps/articles/index.html)]{.pkg-links}
+[[{{< fa brands github >}} GitHub ↗](https://github.com/amannj/OECDsppps) [{{< fa book >}} Vignettes ↗](https://amannj.github.io/OECDsppps/index.html)]{.pkg-links}
 :::
 
 ::: {.pkg-card}
@@ -26,7 +26,7 @@ Calculates subnational Purchasing Power Parities (sPPPs) across OECD regions.
 
 Constructs OECD indicators for scale-ups and high-growth firms.
 
-[[GitHub ↗](https://github.com/amannj/OECDscaleup) [Vignette ↗](https://amannj.github.io/OECDscaleup/articles/OECDscaleup.html)]{.pkg-links}
+[[{{< fa brands github >}} GitHub ↗](https://github.com/amannj/OECDscaleup) [{{< fa book >}} Vignettes ↗](https://amannj.github.io/OECDscaleup/index.html)]{.pkg-links}
 :::
 
 ::: {.pkg-card}
@@ -37,7 +37,7 @@ Constructs OECD indicators for scale-ups and high-growth firms.
 
 Downloads and reclassifies large volumes of UN Comtrade trade data.
 
-[[GitHub ↗](https://github.com/amannj/comtradeRggregator)]{.pkg-links}
+[[{{< fa brands github >}} GitHub ↗](https://github.com/amannj/comtradeRggregator)]{.pkg-links}
 :::
 
 ::: {.pkg-card}
@@ -46,7 +46,7 @@ Downloads and reclassifies large volumes of UN Comtrade trade data.
 
 Scrapes weather-forecast data from meteo.ch.
 
-[[GitHub ↗](https://github.com/amannj/Scrapeo)]{.pkg-links}
+[[{{< fa brands github >}} GitHub ↗](https://github.com/amannj/Scrapeo)]{.pkg-links}
 :::
 
 :::

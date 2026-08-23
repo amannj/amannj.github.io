@@ -1,10 +1,10 @@
 ---
 title: "Energy Prices and Competitiveness in the Manufacturing Sector"
-date: 2025-06-01
-categories: [Working Paper]
+date: 2025-12-30
+categories: [Working paper]
 description: "Extending firm-level evidence on energy prices and competitiveness to a broader cross-country manufacturing setting."
 ---
 
 New working paper with Nicola Cantore, extending the earlier Chile and Oman firm-level findings on energy prices and competitiveness to a broader, cross-country manufacturing setting.
 
-[Read the paper on MPRA ↗](https://mpra.ub.uni-muenchen.de/127199/1/MPRA_paper_127199.pdf) · [Read more on Research ↗](/research.qmd#working-papers)
+[[{{< fa newspaper >}} Paper ↗](https://mpra.ub.uni-muenchen.de/127199/1/MPRA_paper_127199.pdf) · [{{< fa book >}} Read more on Research ↗](/research.qmd#working-papers)]{.news-links}

@@ -1,12 +1,10 @@
 ---
 title: "The Effects of Energy Prices on Firm Competitiveness in Chile"
 date: 2021-04-08
-categories: [Working Paper]
+categories: [Working paper]
 description: "Switching Chilean firms to more sustainable production is critical to realising the country's ambition of carbon neutrality by 2050."
 ---
 
-Arti Grover & **Juergen Amann**
-
 Firms are key to addressing Chile's sustainability challenges and realising its ambition of carbon neutrality by 2050. Switching to more sustainable production is essential to reducing vulnerability to environmental shocks and developing new areas of comparative advantage. In this working paper, we illustrate minimal trade-offs between productivity and energy prices, and a positive relationship between productivity and investments with fossil fuel prices.
 
-[Read the World Bank blog post ↗](https://blogs.worldbank.org/developmenttalk/effects-energy-prices-firm-competitiveness-chile) · [Versión en español ↗](https://blogs.worldbank.org/es/latinamerica/efectos-del-precio-de-la-energia-en-la-competitividad-empresarial-en-chile) · [Read the paper on Research ↗](/research.qmd#working-papers)
+[[{{< fa newspaper >}} World Bank blog post ↗](https://blogs.worldbank.org/developmenttalk/effects-energy-prices-firm-competitiveness-chile) · [{{< fa newspaper >}} Versión en español ↗](https://blogs.worldbank.org/es/latinamerica/efectos-del-precio-de-la-energia-en-la-competitividad-empresarial-en-chile) · [{{< fa newspaper >}} Paper ↗](https://openknowledge.worldbank.org/entities/publication/f593de6e-fe11-4f2e-898e-044864c945c8) · [{{< fa book >}} Read the paper on Research ↗](/research.qmd#working-papers)]{.news-links}

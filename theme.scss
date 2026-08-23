@@ -7,11 +7,16 @@ $muted:  #5C6472; // secondary text
 $paper:  #F8F9FB; // page background
 $border: #E2E5EA;
 
-$teal:      #0F6D6A; // Academic Publications
-$teal-mid:  #3E8E89; // Working Papers — same family, muted and lighter (not just brightened)
-$brick:     #C0472C; // Policy + small chrome accents
-$slate:     #4B5566; // Code
-$blog:      #6B7280; // News: personal / not tied to a specific output
+$teal:       #0F6D6A; // Academic Publications
+$teal-mid:   #32716D; // Working Papers — same family, muted and lighter (not just brightened)
+$teal-faint: #496E6C; // Work in Progress — same family again, desaturated rather than
+                       // lightened further (the colour is also the text colour, so it
+                       // has to stay legible; fading toward grey reads as "less formed"
+                       // anyway). Both darkened from their original values to clear
+                       // 4.5:1 against white (WCAG AA) — the lighter versions tested at 3.86:1.
+$brick:      #C0472C; // Policy + small chrome accents
+$slate:      #4B5566; // Code
+$blog:       #6B7280; // News: personal / not tied to a specific output
 
 $body-bg: $paper;
 $body-color: $ink;
@@ -33,6 +38,12 @@ $h3-font-size: 1.15rem;
 
 body { letter-spacing: 0.01em; }
 h1, h2, h3 { text-wrap: balance; }
+
+main p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 
 h2 {
   margin-top: 2.2rem;
@@ -58,6 +69,19 @@ h2 {
 div.quarto-about-trestles .about-entity {
   flex: 0 0 300px;
   max-width: 300px;
+}
+
+// On mobile the trestles layout stacks avatar-then-bio in a column, but
+// the container's default align-items (normal → stretch/start) leaves the
+// fixed-width avatar column flush against the left edge instead of
+// centred — confirmed via computed styles (0px left gap, 24px right gap
+// at 375px). Centring only in the mobile breakpoint, since align-items
+// also affects desktop's row layout (vertical alignment between the two
+// columns) and that's working fine as-is.
+@media (max-width: 767.98px) {
+  div.quarto-about-trestles {
+    align-items: center;
+  }
 }
 
 // Interests / Education lists on the homepage now carry an icon per line —
@@ -93,11 +117,9 @@ div.quarto-about-trestles .about-entity {
   margin: 0.25rem 0 1.75rem;
 }
 .filter-btn {
-  font-family: $font-family-monospace;
-  font-size: 0.72rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   padding: 0.35rem 0.8rem;
   border-radius: 20px;
   border: 1px solid $border;
@@ -107,6 +129,10 @@ div.quarto-about-trestles .about-entity {
   transition: all 0.15s ease;
 }
 .filter-btn:hover { border-color: $navy; color: $navy; }
+.filter-btn:focus-visible {
+  outline: 2px solid $navy;
+  outline-offset: 2px;
+}
 .filter-btn.active {
   background: $navy;
   border-color: $navy;
@@ -121,6 +147,7 @@ div.quarto-about-trestles .about-entity {
 $tag-colors: (
   academic: $teal,
   working-paper: $teal-mid,
+  wip: $teal-faint,
   policy: $brick,
   code: $slate,
   blog: $blog
@@ -128,11 +155,9 @@ $tag-colors: (
 
 .tag-pill {
   display: inline-block;
-  font-family: $font-family-monospace;
-  font-size: 0.68rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   padding: 0.18rem 0.55rem;
   border-radius: 4px;
   margin-bottom: 0.5rem;
@@ -174,10 +199,23 @@ $tag-colors: (
 .pub-links {
   display: block;
 }
-.pub-links a {
+.pub-links a, .news-links a {
   font-size: 0.82rem;
   margin-right: 0.9rem;
   white-space: nowrap;
+}
+// Link-type icons (Research page, News link rows): a small icon prefix
+// signals what kind of destination a link is — internal Research entry,
+// original external write-up, or DOI — without needing to read the label.
+.pub-links a .fa-solid, .news-links a .fa-solid, .pkg-links a .fa-solid, .pkg-links a .fa-brands {
+  margin-right: 0.25rem;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.news-links {
+  display: block;
+  font-size: 0.82rem;
 }
 
 // ---- Code & package cards (code.qmd) ----
@@ -245,18 +283,63 @@ $tag-colors: (
   }
 }
 
-.quarto-listing-category-title {
-  font-family: $font-family-monospace;
-  font-size: 0.72rem;
+// Research's "On this page" TOC: plain stacked text links. Tried
+// matching News's chip/pill treatment here, but the labels are longer
+// ("Academic Publications", "Work in Progress") and #TOC's Bootstrap
+// nav-link markup doesn't wrap chips onto shared rows the way News's
+// tag-cloud markup does — every chip ended up one-per-row anyway in the
+// narrow margin column, so the border/background just wasted space
+// without the payoff. Plain links are also just the more expected shape
+// for a table of contents. #toc-title is an <h2>, so it needs its own
+// override to escape the global h2 rule (border-bottom + large top
+// margin) that's meant for content headings.
+#toc-title {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: $ink;
+  margin-top: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#TOC ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+#TOC ul li {
+  margin: 0 0 0.5rem;
+}
+#TOC ul li a.nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: $muted;
+  text-decoration: none;
+}
+#TOC ul li a.nav-link:hover {
+  color: $navy;
+  text-decoration: underline;
+}
+#TOC ul li a.nav-link.active {
+  color: $navy;
+  font-weight: 600;
+}
+#TOC ul li a.nav-link:focus-visible {
+  outline: 2px solid $navy;
+  outline-offset: 2px;
+}
+
+.quarto-listing-category-title {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $ink;
 }
 .quarto-listing-category .category {
   display: inline-block;
-  font-family: $font-family-monospace;
-  font-size: 0.76rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 0.25rem 0.7rem;
   margin: 0 0.35rem 0.35rem 0;
@@ -265,6 +348,10 @@ $tag-colors: (
   cursor: pointer;
   background: #fff;
   color: $muted;
+}
+.quarto-listing-category .category:focus-visible {
+  outline: 2px solid $navy;
+  outline-offset: 2px;
 }
 .quarto-listing-category .category .quarto-category-count { opacity: 0.7; }
 
@@ -279,19 +366,66 @@ div.quarto-post .body {
   flex: 1 1 auto;
 }
 
-.back-to-news {
-  margin-top: 2.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid $border;
-  font-size: 0.85rem;
+// Moved next to the category tag (see _news-post-footer.html) — styled
+// as a quiet inline link sharing the tag's flex row, not the bottom-of-
+// page footer divider this used to be.
+.quarto-categories .back-to-news {
+  margin: 0 0.75rem 0 0;
+  font-size: 0.8rem;
+}
+.quarto-categories .back-to-news a {
+  color: $muted;
+  text-decoration: none;
+}
+.quarto-categories .back-to-news a:hover {
+  color: $navy;
+  text-decoration: underline;
+}
+.quarto-categories .back-to-news a:focus-visible {
+  outline: 2px solid $navy;
+  outline-offset: 2px;
+}
+
+// Quarto's built-in per-post category badge (.quarto-category, shown in
+// the title block) fades itself via opacity rather than a set colour,
+// and forces uppercase — same specificity fight as .listing-category
+// above, so match it here too. Opacity in particular would silently
+// wash out the AA-fixed tag colours (an "0.6 opacity" teal blends
+// toward white and drops back below 4.5:1), so it has to go, not just
+// the colour.
+.quarto-title .quarto-categories .quarto-category {
+  text-transform: none;
+  opacity: 1;
+}
+@each $name, $color in $tag-colors {
+  .quarto-title .quarto-categories .quarto-category.tag-#{$name} {
+    color: $color;
+    border-color: $color;
+    background: rgba($color, 0.12);
+  }
 }
 
 .listing-category {
-  font-family: $font-family-monospace;
-  font-size: 0.68rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
+}
+// Quarto's own built-in rule (div.quarto-post .listing-categories
+// .listing-category) also sets text-transform: uppercase, at higher
+// specificity than a plain .listing-category selector — match it here
+// to actually win.
+div.quarto-post .listing-categories .listing-category {
+  text-transform: none;
+}
+// The same built-in rule also sets a grey Bootstrap color and a 1px
+// border, at higher specificity than the per-tag colour rules above —
+// so every News category badge was rendering in flat grey with an
+// unwanted border box instead of its category colour. Match it here too.
+@each $name, $color in $tag-colors {
+  div.quarto-post .listing-categories .listing-category.tag-#{$name} {
+    color: $color;
+    border: none;
+  }
 }

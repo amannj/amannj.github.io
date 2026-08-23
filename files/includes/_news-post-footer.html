@@ -1,1 +1,33 @@
 <p class="back-to-news"><a href="/news.html">← Back to News</a></p>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function tagClass(label) {
+    switch ((label || '').trim().toLowerCase()) {
+      case 'academic': return 'tag-academic';
+      case 'working paper': return 'tag-working-paper';
+      case 'policy': return 'tag-policy';
+      case 'code': return 'tag-code';
+      case 'blog': return 'tag-blog';
+      default: return '';
+    }
+  }
+
+  document.querySelectorAll('.quarto-category').forEach(function (el) {
+    var cls = tagClass(el.textContent);
+    if (cls) el.classList.add(cls);
+  });
+
+  // Quarto only ever appends include-after-body content at the very end
+  // of the page, so the back-link starts down there — move it up next
+  // to the category tag, which is what actually reads as "context for
+  // this post" (what it is, where it goes back to) at a glance.
+  var backLink = document.querySelector('.back-to-news');
+  var categories = document.querySelector('.quarto-categories');
+  var titleH1 = document.querySelector('.quarto-title h1.title');
+  if (backLink && categories) {
+    categories.insertBefore(backLink, categories.firstChild);
+  } else if (backLink && titleH1) {
+    titleH1.insertAdjacentElement('afterend', backLink);
+  }
+});
+</script>

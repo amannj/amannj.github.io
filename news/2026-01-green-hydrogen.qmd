@@ -1,10 +1,10 @@
 ---
 title: "Green Hydrogen Technology in Asia"
-date: 2026-03-01
+date: 2026-01-02
 categories: [Academic]
 description: "A new book chapter on the economic preconditions for green hydrogen technology's future development across Asia."
 ---
 
 New book chapter, with Nicola Cantore, Upalat Korwatanasakul, and Jaime Moll de Alba, analysing the economic preconditions shaping the future development of green hydrogen technology across Asia — part of *Future of Economy in Asia: Geopolitical Diplomacy, Technological Revolutions and Sustainable Pathways* (Springer Nature).
 
-[Read the chapter on Springer ↗](https://link.springer.com/chapter/10.1007/978-3-031-95500-6_13) · [Read more on Research ↗](/research.qmd#academic-publications)
+[[{{< fa newspaper >}} Chapter on Springer ↗](https://link.springer.com/chapter/10.1007/978-3-031-95500-6_13) · [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1007/978-3-031-95500-6_13) · [{{< fa book >}} Read more on Research ↗](/research.qmd#academic-publications)]{.news-links}

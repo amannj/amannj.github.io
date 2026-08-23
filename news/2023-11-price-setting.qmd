@@ -5,8 +5,6 @@ categories: [Academic]
 description: "The effectiveness of monetary policy depends crucially on the degree of price flexibility."
 ---
 
-Peter Karadi, **Juergen Amann**, Javier Sánchez Bachiller, Pascal Seiler & Jesse Wursten
-
 The effectiveness of monetary policy depends crucially on the degree of price flexibility. This flexibility depends on the frequency of price adjustments, as well as the adjustment magnitude of the prices which do change (known as price selection). This column uses granular data from the euro area and the US to quantify the degree of price selection. Accounting for price selection increases price flexibility estimates by around one-third in both regions, with a higher flexibility in the US. The findings are consistent with the differences in food inflation during the Covid pandemic across the US and euro area.
 
-[Read the full column on VoxEU ↗](https://cepr.org/voxeu/columns/price-selection-two-sides-atlantic) · [Read the paper on Research ↗](/research.qmd#academic-publications)
+[[{{< fa newspaper >}} Read the full column on VoxEU ↗](https://cepr.org/voxeu/columns/price-selection-two-sides-atlantic) · [{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0304393223000582) · [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.jmoneco.2023.05.009) · [{{< fa book >}} Read the paper on Research ↗](/research.qmd#academic-publications)]{.news-links}

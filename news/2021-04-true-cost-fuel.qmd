@@ -5,8 +5,6 @@ categories: [Academic]
 description: "Analysing the effect of energy price increases on firm-level productivity in Oman."
 ---
 
-Nicola Cantore, Massimiliano Calì, Jenny Larsen, **Juergen Amann**, Valentin Todorov & Charles Fang Chin Cheng
-
 UNIDO-led research in collaboration with the World Bank provides concrete evidence that removing fossil fuel subsidies would not only make environmental sense but would also improve firms' economic performance. New firm-level data from Oman show that higher fuel prices are not a drag on competitiveness. In fact, reducing subsidies and allowing fuel prices to rise could ultimately aid the post-COVID-19 recovery, since higher fuel prices drive business upgrading and a boost in productivity — and could encourage manufacturing companies to switch to the kind of long-term sustainable efficiency practices needed to stop climate change.
 
-[Read the full article on UNIDO ↗](https://www.unido.org/stories/manufacturing-firms-shouldnt-fear-true-cost-fuel-heres-why) · [Read the paper on Research ↗](/research.qmd#academic-publications)
+[[{{< fa newspaper >}} Read the full article on UNIDO ↗](https://www.unido.org/stories/manufacturing-firms-shouldnt-fear-true-cost-fuel-heres-why) · [{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0305750X2030379X) · [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.worlddev.2020.105252) · [{{< fa book >}} Read the paper on Research ↗](/research.qmd#academic-publications)]{.news-links}

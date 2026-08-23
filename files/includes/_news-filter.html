@@ -24,14 +24,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Quarto renders each category filter as a plain <div onclick="...">,
+  // with no tabindex or role — invisible to keyboard navigation entirely,
+  // not just missing a focus style. Make them real, operable controls.
+  function makeKeyboardOperable() {
+    document.querySelectorAll('.quarto-listing-category .category').forEach(function (el) {
+      if (el.hasAttribute('data-kb-enhanced')) return;
+      el.setAttribute('data-kb-enhanced', 'true');
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'button');
+      el.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          el.click();
+        }
+      });
+    });
+  }
+
   applyTagClasses();
+  makeKeyboardOperable();
 
   // Quarto's listing script sorts/rebuilds the category sidebar after this
-  // script runs, which can replace nodes and drop the classes just added —
-  // an observer re-applies them whenever that happens.
+  // script runs, which can replace nodes and drop the classes/attributes
+  // just added — an observer re-applies both whenever that happens.
   var categoryBlock = document.querySelector('.quarto-listing-category');
   if (categoryBlock) {
-    new MutationObserver(applyTagClasses).observe(categoryBlock, { childList: true, subtree: true });
+    new MutationObserver(function () {
+      applyTagClasses();
+      makeKeyboardOperable();
+    }).observe(categoryBlock, { childList: true, subtree: true });
   }
 
   // #quarto-margin-sidebar is a CSS Grid item positioned via named grid

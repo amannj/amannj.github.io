@@ -10,11 +10,12 @@ page-navigation: true
 <button type="button" class="filter-btn" data-filter="academic">Academic</button>
 <button type="button" class="filter-btn" data-filter="working-paper">Working Papers</button>
 <button type="button" class="filter-btn" data-filter="policy">Policy</button>
+<button type="button" class="filter-btn" data-filter="wip">Work in Progress</button>
 </div>
 
 ::: {.research-section data-tag="academic"}
 
-## Academic Publications {#academic-publications}
+## Academic {#academic-publications}
 
 Peer-reviewed journal articles and book chapters.
 
@@ -23,11 +24,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Green Hydrogen Technology: Analysis of the Economic Preconditions in the Future Development of Asia** — book chapter]{.pub-title}
 
-[**Amann, J.**, Cantore, N., Korwatanasakul, U. & Moll de Alba, J. · in *Future of Economy in Asia: Geopolitical Diplomacy, Technological Revolutions and Sustainable Pathways* (Springer Nature) · pp. 251–282 · 2026]{.pub-meta}
+[Amann, J., Cantore, N., Korwatanasakul, U. & Moll de Alba, J. · in *Future of Economy in Asia: Geopolitical Diplomacy, Technological Revolutions and Sustainable Pathways* (Springer Nature) · pp. 251–282 · 2026]{.pub-meta}
 
 [An analysis of the economic preconditions shaping the future development of green hydrogen technology across Asia.]{.pub-summary}
 
-[[Chapter ↗](https://link.springer.com/chapter/10.1007/978-3-031-95500-6_13) [DOI ↗](https://doi.org/10.1007/978-3-031-95500-6_13)]{.pub-links}
+[[{{< fa newspaper >}} Chapter ↗](https://link.springer.com/chapter/10.1007/978-3-031-95500-6_13) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1007/978-3-031-95500-6_13)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -35,11 +36,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**An Analysis of ICT Hardware Manufacturing in Industrialized Economies: Growth Patterns, Productivity Performance, and Driving Forces**]{.pub-title}
 
-[Vu, K. & **Amann, J.** · *Telecommunications Policy*, 48(1), Art. 102675 · 2024]{.pub-meta}
+[Vu, K. & Amann, J. · *Telecommunications Policy*, 48(1), Art. 102675 · 2024]{.pub-meta}
 
 [Using EU KLEMS growth accounting for 13 industrialised economies (2000–2015), we find total factor productivity, labour quality, software investment, and R&D drive ICT-manufacturing growth — with the US showing markedly stronger resilience through the 2008–09 crisis than the EU.]{.pub-summary}
 
-[[Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0308596123001866) [DOI ↗](https://doi.org/10.1016/j.telpol.2023.102675)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0308596123001866) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.telpol.2023.102675)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -47,11 +48,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Price Setting on the Two Sides of the Atlantic — Evidence from Supermarket Scanner Data**]{.pub-title}
 
-[Karadi, P., **Amann, J.**, Sánchez Bachiller, J., Seiler, P. & Wursten, J. · *Journal of Monetary Economics*, 140, pp. S1–S17 · 2023]{.pub-meta}
+[Karadi, P., Amann, J., Sánchez Bachiller, J., Seiler, P. & Wursten, J. · *Journal of Monetary Economics*, 140, pp. S1–S17 · 2023]{.pub-meta}
 
 [We compare supermarket price setting in the US and the euro area and its impact on food inflation. Higher frequency and stronger state-dependence of price changes make US supermarket inflation more flexible than in the euro area — driven mainly by larger cross-sectional volatility in the US.]{.pub-summary}
 
-[[Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0304393223000582) [DOI ↗](https://doi.org/10.1016/j.jmoneco.2023.05.009)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0304393223000582) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.jmoneco.2023.05.009)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -59,11 +60,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Deindustrialization in Developed Countries amid Accelerated Globalization: Patterns, Influencers, and Policy Insights**]{.pub-title}
 
-[Vu, K., Haraguchi, N. & **Amann, J.** · *Structural Change and Economic Dynamics*, 59, pp. 454–469 · 2021]{.pub-meta}
+[Vu, K., Haraguchi, N. & Amann, J. · *Structural Change and Economic Dynamics*, 59, pp. 454–469 · 2021]{.pub-meta}
 
 [Across 12 developed economies (1970–2015), deindustrialisation is a persistent pattern that shifted structurally after 1990 as North–South trade accelerated; higher-productivity and low-tech industries respond differently, and the effect is stronger in larger, deficit-prone economies.]{.pub-summary}
 
-[[Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0954349X21001272) [DOI ↗](https://doi.org/10.1016/j.strueco.2021.09.013)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0954349X21001272) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.strueco.2021.09.013)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -71,11 +72,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Switching It Up: The Effect of Energy Price Reforms in Oman**]{.pub-title}
 
-[**Amann, J.**, Cantore, N., Calì, M., Todorov, V. & Fang Chin Cheng, C. · *World Development*, 142 · 2021]{.pub-meta}
+[Amann, J., Cantore, N., Calì, M., Todorov, V. & Fang Chin Cheng, C. · *World Development*, 142 · 2021]{.pub-meta}
 
 [Using firm-level micro-data on Omani manufacturers, we show fossil-fuel price increases raise productivity, efficiency, and business upgrading — evidence that subsidy reform can drive modernisation alongside environmental goals.]{.pub-summary}
 
-[[Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0305750X2030379X) [DOI ↗](https://doi.org/10.1016/j.worlddev.2020.105252)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://www.sciencedirect.com/science/article/abs/pii/S0305750X2030379X) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1016/j.worlddev.2020.105252)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -83,11 +84,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Sectoral Dynamics** — book chapter]{.pub-title}
 
-[Haraguchi, N. & **Amann, J.** · in *New Perspectives on Structural Change* (Oxford University Press) · pp. 240–269 · 2021]{.pub-meta}
+[Haraguchi, N. & Amann, J. · in *New Perspectives on Structural Change* (Oxford University Press) · pp. 240–269 · 2021]{.pub-meta}
 
 [Revisiting Chenery's structural-change tradition with modern data: manufacturing broadly follows the classic U-curve, but high-tech sub-sectors buck the trend and keep expanding employment even at higher income levels.]{.pub-summary}
 
-[[Chapter ↗](https://academic.oup.com/book/39572/chapter-abstract/339465830) [DOI ↗](https://doi.org/10.1093/oso/9780198850113.003.0012)]{.pub-links}
+[[{{< fa newspaper >}} Chapter ↗](https://academic.oup.com/book/39572/chapter-abstract/339465830) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1093/oso/9780198850113.003.0012)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -95,11 +96,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**The Importance of Manufacturing Development and Structural Change for Pro-Poor Growth** — book chapter]{.pub-title}
 
-[Haraguchi, N. & **Amann, J.** · in *Designing Integrated Industrial Policies*, Vol. II (Routledge) · pp. 95–131 · 2020]{.pub-meta}
+[Haraguchi, N. & Amann, J. · in *Designing Integrated Industrial Policies*, Vol. II (Routledge) · pp. 95–131 · 2020]{.pub-meta}
 
 [Disaggregating structural-change patterns within manufacturing to map a path of inclusive industrial development for pro-poor growth, and the role of industrial policy design in getting there.]{.pub-summary}
 
-[[Chapter ↗](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003020233-4/importance-manufacturing-development-structural-change-pro-poor-growth-nobuya-haraguchi-juergen-amann)]{.pub-links}
+[[{{< fa newspaper >}} Chapter ↗](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003020233-4/importance-manufacturing-development-structural-change-pro-poor-growth-nobuya-haraguchi-juergen-amann)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -107,11 +108,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Revisiting Reinhart and Rogoff after the Crisis: A Time Series Perspective**]{.pub-title}
 
-[**Amann, J.** & Middleditch, P. · *Cambridge Journal of Economics*, 44(2), pp. 343–370 · 2020]{.pub-meta}
+[Amann, J. & Middleditch, P. · *Cambridge Journal of Economics*, 44(2), pp. 343–370 · 2020]{.pub-meta}
 
 [A time-series re-examination of the debt–growth debate finds little support for high debt causing lower growth — if anything, economic slumps appear to cause debt build-ups rather than the reverse.]{.pub-summary}
 
-[[Article ↗](https://academic.oup.com/cje/article-abstract/44/2/343/5539680) [DOI ↗](https://doi.org/10.1093/cje/bez009)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://academic.oup.com/cje/article-abstract/44/2/343/5539680) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1093/cje/bez009)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -119,11 +120,11 @@ Peer-reviewed journal articles and book chapters.
 
 [**Growth in a Time of Austerity: Evidence from the UK**]{.pub-title}
 
-[**Amann, J.** & Middleditch, P. · *Scottish Journal of Political Economy*, 64(4), pp. 349–375 · 2017]{.pub-meta}
+[Amann, J. & Middleditch, P. · *Scottish Journal of Political Economy*, 64(4), pp. 349–375 · 2017]{.pub-meta}
 
 [Granger-causality and cointegration tests robust to structural breaks find no evidence of a causal link between public debt and UK growth around the financial crisis.]{.pub-summary}
 
-[[Article ↗](https://onlinelibrary.wiley.com/doi/abs/10.1111/sjpe.12132) [DOI ↗](https://doi.org/10.1111/sjpe.12132)]{.pub-links}
+[[{{< fa newspaper >}} Article ↗](https://onlinelibrary.wiley.com/doi/abs/10.1111/sjpe.12132) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1111/sjpe.12132)]{.pub-links}
 :::
 
 :::
@@ -132,108 +133,78 @@ Peer-reviewed journal articles and book chapters.
 
 ## Working Papers {#working-papers}
 
-Papers circulated as working or occasional papers, ahead of or outside formal peer review.
+Papers circulated as working or occasional papers, not yet through peer review.
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**What Was the Impact of the Pandemic and Energy-Food Shocks on European Consumers' "Everyday Spending"? Insights from a New Dataset of Monthly Card Spending for 12 Countries and 9 Spending Categories**]{.pub-title}
 
-[**Amann, J.**, Barnes, S., Monteiro, L., Goel, S. & Haugh, D. · OECD Economics Department Working Papers · 2026]{.pub-meta}
+[Amann, J., Barnes, S., Monteiro, L., Goel, S. & Haugh, D. · OECD Economics Department Working Papers · 2026]{.pub-meta}
 
 [A new monthly card-spending dataset spanning 12 countries and 9 categories, used to trace how the pandemic and the energy/food price shocks reshaped everyday household spending across Europe.]{.pub-summary}
 
-[[Paper ↗](https://www.oecd.org/en/publications/what-was-the-impact-of-the-pandemic-and-energy-food-shocks-on-european-consumers-everyday-spending_608804a8-en.html) [DOI ↗](https://doi.org/10.1787/608804a8-en)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://www.oecd.org/en/publications/what-was-the-impact-of-the-pandemic-and-energy-food-shocks-on-european-consumers-everyday-spending_608804a8-en.html) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/608804a8-en)]{.pub-links}
 :::
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**Energy Prices and Competitiveness in the Manufacturing Sector**]{.pub-title}
 
-[**Amann, J.** & Cantore, N. · Working Paper · 2025]{.pub-meta}
+[Amann, J. & Cantore, N. · Working Paper · 2025]{.pub-meta}
 
 [Extends earlier firm-level evidence on energy prices and competitiveness to a broader cross-country manufacturing setting.]{.pub-summary}
 
-[[Paper ↗](https://mpra.ub.uni-muenchen.de/127199/1/MPRA_paper_127199.pdf)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://mpra.ub.uni-muenchen.de/127199/1/MPRA_paper_127199.pdf)]{.pub-links}
 :::
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries**]{.pub-title}
 
-[Albaladejo, M., **Amann, J.**, Cantore, N., Flammini, A., Marin, G. & Mazzanti, M. · SSRN Working Paper No. 5131165 · 2024]{.pub-meta}
+[Albaladejo, M., Amann, J., Cantore, N., Flammini, A., Marin, G. & Mazzanti, M. · SSRN Working Paper No. 5131165 · 2024]{.pub-meta}
 
 [Introduces NICE (National Impacts of Circular Economy), an Eora input-output based method for assessing how circular-economy interventions affect economic and social indicators in developing countries.]{.pub-summary}
 
-[[Paper ↗](https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf)]{.pub-links}
 :::
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**Price Adjustment in the Euro Area in the Low-Inflation Period: Evidence from Consumer and Producer Micro Price Data**]{.pub-title}
 
-[Gautier, E., Karadi, P., **Amann, J.**, Conflitti, C., Faber, R.P., Fabo, B., Fadejeva, L., Fuss, C., Kosma, T. & Jouvanceau, V. · ECB Occasional Paper No. 2023/319 · 2023]{.pub-meta}
+[Gautier, E., Karadi, P., Amann, J., Conflitti, C., Faber, R.P., Fabo, B., Fadejeva, L., Fuss, C., Kosma, T. & Jouvanceau, V. · ECB Occasional Paper No. 2023/319 · 2023]{.pub-meta}
 
 [Five stylised facts on euro-area price adjustment from micro price data: infrequent but large price changes, mild state-dependence, and idiosyncratic shocks as the main driver of inflation dynamics.]{.pub-summary}
 
-[[Paper ↗](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4514759) [DOI ↗](https://doi.org/10.2139/ssrn.4514759)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4514759) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.2139/ssrn.4514759)]{.pub-links}
 :::
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**The Effects of Energy Prices on Firm Competitiveness: Evidence from Chile**]{.pub-title}
 
-[**Amann, J.** & Grover, A. · World Bank Policy Research Working Paper No. 10436 · 2023]{.pub-meta}
+[Amann, J. & Grover, A. · World Bank Policy Research Working Paper No. 10436 · 2023]{.pub-meta}
 
 [Using Chile's Annual National Industrial Survey, energy-price increases generally don't hurt competitiveness — the effect depends on fuel type, with fossil-fuel price rises linked to higher investment and productivity, consistent with a strong Porter-hypothesis result.]{.pub-summary}
 
-[[Paper ↗](https://openknowledge.worldbank.org/entities/publication/f593de6e-fe11-4f2e-898e-044864c945c8)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://openknowledge.worldbank.org/entities/publication/f593de6e-fe11-4f2e-898e-044864c945c8)]{.pub-links}
 :::
 
 ::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
+[Working paper]{.tag-pill .tag-working-paper}
 
 [**Expanded Real Value-Added Data for Manufacturing: A New Approach to Measuring Sub-Sectoral Manufacturing Development**]{.pub-title}
 
-[Haraguchi, N. & **Amann, J.** · UNIDO Inclusive and Sustainable Industrial Development Working Paper Series, No. 2 · 2023]{.pub-meta}
+[Haraguchi, N. & Amann, J. · UNIDO Inclusive and Sustainable Industrial Development Working Paper Series, No. 2 · 2023]{.pub-meta}
 
 [A new single-deflation method expands real value-added coverage in UNIDO's INDSTAT database, especially for lower-income economies — enabling far more detailed measurement of manufacturing performance.]{.pub-summary}
 
-[[Paper ↗](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4357399) [DOI ↗](https://doi.org/10.2139/ssrn.4357399)]{.pub-links}
-:::
-
-::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
-
-[**Monetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds**]{.pub-title}
-
-[**Amann, J.** & Middleditch, P. · Working Paper · 2023]{.pub-meta}
-
-[Using synthetic difference-in-differences on ETF data, monetary tightening hits green-investment returns harder than the wider market — a case for shielding green investment from financial-stress spillovers.]{.pub-summary}
-:::
-
-::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
-
-[**Growth and Volatility: Why Duration Matters for Long-Run Macroeconomic Outcomes**]{.pub-title}
-
-[**Amann, J.** & Middleditch, P. · Working Paper · 2023]{.pub-meta}
-
-[Separating short- from long-run volatility, long-run swings are positively associated with growth while short spells of uncertainty hurt macroeconomic outcomes — stabilisation policy should tell the two apart.]{.pub-summary}
-:::
-
-::: {.pub-entry}
-[Working Paper]{.tag-pill .tag-working-paper}
-
-[**Testing the Debt Threshold Hypothesis: A Structural Break Threshold Granger Causality Test under Cross-Sectional Dependence**]{.pub-title}
-
-[**Amann, J.** · Working Paper · 2023]{.pub-meta}
-
-[Proposes a new bootstrap-based test for regime-dependent Granger causality in cross-sectionally dependent panels, with Monte Carlo evidence that it outperforms conventional approaches.]{.pub-summary}
+[[{{< fa newspaper >}} Paper ↗](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4357399) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.2139/ssrn.4357399)]{.pub-links}
 :::
 
 :::
@@ -249,11 +220,11 @@ Institutional publications written directly for policymakers and practitioners, 
 
 [**Firm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research**]{.pub-title}
 
-[**Amann, J.**, Gencer, D. & Heine, D. · World Bank, Washington DC · 2024]{.pub-meta}
+[Amann, J., Gencer, D. & Heine, D. · World Bank, Washington DC · 2024]{.pub-meta}
 
 [A synthesis of recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts.]{.pub-summary}
 
-[[Paper ↗](https://doi.org/10.1596/41914) [DOI ↗](https://doi.org/10.1596/41914)]{.pub-links}
+[[{{< fa newspaper >}} Paper ↗](https://doi.org/10.1596/41914) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1596/41914)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -261,11 +232,49 @@ Institutional publications written directly for policymakers and practitioners, 
 
 [**Achieving Sustainable Development: New Empirical Evidence on the Impact of Industrialization on Social and Environmental Outcomes** — book chapter]{.pub-title}
 
-[**Amann, J.** & Stöllinger, R. · in *Industrialization as the Driver of Sustained Prosperity* (UNIDO) · pp. 1–34 · 2020]{.pub-meta}
+[Amann, J. & Stöllinger, R. · in *Industrialization as the Driver of Sustained Prosperity* (UNIDO) · pp. 1–34 · 2020]{.pub-meta}
 
 [New empirical evidence on how industrialisation interacts with social and environmental Sustainable Development Goals — a highly complex process meeting an equally complex set of targets.]{.pub-summary}
 
-[[Chapter ↗](https://www.unido.org/sites/default/files/files/2020-04/UNIDO_Industrialization_Book_web4.pdf)]{.pub-links}
+[[{{< fa newspaper >}} Chapter ↗](https://www.unido.org/sites/default/files/files/2020-04/UNIDO_Industrialization_Book_web4.pdf)]{.pub-links}
+:::
+
+:::
+
+::: {.research-section data-tag="wip"}
+
+## Work in Progress {#work-in-progress}
+
+Academic work still under way, with no public draft yet.
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**Monetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds**]{.pub-title}
+
+[Amann, J. & Middleditch, P. · 2023]{.pub-meta}
+
+[Using synthetic difference-in-differences on ETF data, monetary tightening hits green-investment returns harder than the wider market — a case for shielding green investment from financial-stress spillovers.]{.pub-summary}
+:::
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**Growth and Volatility: Why Duration Matters for Long-Run Macroeconomic Outcomes**]{.pub-title}
+
+[Amann, J. & Middleditch, P. · 2023]{.pub-meta}
+
+[Separating short- from long-run volatility, long-run swings are positively associated with growth while short spells of uncertainty hurt macroeconomic outcomes — stabilisation policy should tell the two apart.]{.pub-summary}
+:::
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**Testing the Debt Threshold Hypothesis: A Structural Break Threshold Granger Causality Test under Cross-Sectional Dependence**]{.pub-title}
+
+[Amann, J. · 2023]{.pub-meta}
+
+[Proposes a new bootstrap-based test for regime-dependent Granger causality in cross-sectionally dependent panels, with Monte Carlo evidence that it outperforms conventional approaches.]{.pub-summary}
 :::
 
 :::
