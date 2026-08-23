@@ -25,11 +25,14 @@ website:
         href: code.qmd
 
     right:
-      - icon: github
-        href: https://github.com/amannj
-        target: _blank
       - text: "{{< ai google-scholar >}}"
         href: https://scholar.google.com/citations?user=C28lZmUAAAAJ&hl=en
+        target: _blank
+      - text: "{{< ai orcid >}}"
+        href: https://orcid.org/0000-0002-4946-1911
+        target: _blank
+      - icon: github
+        href: https://github.com/amannj
         target: _blank
       - icon: linkedin
         href: https://fr.linkedin.com/in/juergen-a-4798511b
@@ -39,7 +42,7 @@ website:
 
   page-footer:
     left: "© <script>document.write(new Date().getFullYear())</script> Juergen Amann"
-    center: ""
+    center: "Views expressed here are my own and do not represent the OECD or its member countries."
 
   search:
     location: navbar
