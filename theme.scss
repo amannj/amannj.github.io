@@ -51,6 +51,15 @@ h2 {
 
 .page-footer { color: $muted; font-size: 0.85rem; }
 
+// Homepage avatar column: the trestles about-template sizes this column to
+// its content (image at 70% of the column, plus the link buttons below),
+// which left it wider than it needed to be. Pinning a fixed width shrinks
+// both and hands the freed space to the bio column (flex-grow: 1 already).
+div.quarto-about-trestles .about-entity {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
 // Interests / Education lists on the homepage now carry an icon per line —
 // the default bullet marker is redundant clutter on top of that.
 #hero-heading ul {
@@ -218,6 +227,24 @@ $tag-colors: (
 // Quarto renders category pills generically; JS in news.qmd decodes each
 // pill's label and adds one of the .tag-* classes above so the same palette
 // used on Research/Code carries through here.
+
+// Quarto hides #quarto-margin-sidebar below 768px on the assumption it only
+// ever holds a table of contents, which is fine to collapse on mobile. Ours
+// holds the category filter instead, which needs to stay usable — so on
+// News specifically, un-hide it and lay it out as a plain block above the
+// listing rather than the desktop margin-column position.
+@media (max-width: 767.98px) {
+  // JS (in _news-filter.html) moves this element into the normal content
+  // flow at narrow widths, so it just needs to look right as a block once
+  // it's there — no grid placement to fight anymore.
+  #quarto-margin-sidebar {
+    display: block !important;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .quarto-listing-category-title {
   font-family: $font-family-monospace;
   font-size: 0.72rem;

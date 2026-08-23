@@ -11,13 +11,6 @@ about:
   template: trestles
   image-width: 70%
   links:
-    - icon: envelope
-      text: E-mail
-      href: mailto:amannj.work@gmail.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://fr.linkedin.com/in/juergen-a-4798511b?trk=people-guest_people_search-card
-      target: _blank
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=C28lZmUAAAAJ&hl=en
       target: _blank
@@ -25,6 +18,13 @@ about:
       text: GitHub
       href: https://github.com/amannj
       target: _blank
+    - icon: linkedin
+      text: LinkedIn
+      href: https://fr.linkedin.com/in/juergen-a-4798511b?trk=people-guest_people_search-card
+      target: _blank
+    - icon: envelope
+      text: E-mail
+      href: mailto:amannj.work@gmail.com
 ---
 
 ::::::: {#hero-heading}

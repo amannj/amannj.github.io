@@ -29,9 +29,32 @@ document.addEventListener('DOMContentLoaded', function () {
   // Quarto's listing script sorts/rebuilds the category sidebar after this
   // script runs, which can replace nodes and drop the classes just added —
   // an observer re-applies them whenever that happens.
-  var sidebar = document.querySelector('.quarto-listing-category');
-  if (sidebar) {
-    new MutationObserver(applyTagClasses).observe(sidebar, { childList: true, subtree: true });
+  var categoryBlock = document.querySelector('.quarto-listing-category');
+  if (categoryBlock) {
+    new MutationObserver(applyTagClasses).observe(categoryBlock, { childList: true, subtree: true });
   }
+
+  // #quarto-margin-sidebar is a CSS Grid item positioned via named grid
+  // lines for the desktop margin-note layout. Below Quarto's own 768px
+  // breakpoint it hides the sidebar outright (built for TOC content that's
+  // fine to drop on mobile) — but ours holds the category filter, which
+  // needs to stay usable. Forcing it visible while it's still a grid item
+  // just pushes it into a leftover row after all the content (the middle
+  // content column is occupied in row one, so a full-width item can't fit
+  // there). Moving the node itself into the normal content flow sidesteps
+  // that entirely, and is safe on desktop too since grid-area placement
+  // there doesn't depend on DOM order.
+  function placeMarginSidebar() {
+    var sidebar = document.querySelector('#quarto-margin-sidebar');
+    var content = document.querySelector('#quarto-document-content');
+    if (!sidebar || !content) return;
+    if (window.innerWidth <= 767.98 && sidebar.parentElement !== content) {
+      content.insertBefore(sidebar, content.firstChild);
+    } else if (window.innerWidth > 767.98 && sidebar.parentElement === content) {
+      content.parentElement.insertBefore(sidebar, content);
+    }
+  }
+  placeMarginSidebar();
+  window.addEventListener('resize', placeMarginSidebar);
 });
 </script>
