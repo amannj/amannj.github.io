@@ -31,11 +31,9 @@ about:
 ---
 
 ::::::: {#hero-heading}
-Juergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE). His research focuses on applied econometrics, environmental economics, industrial development, input-output analysis, price setting, and structural change.
+Juergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE), where he works on subnational Purchasing Power Parities and on subnational Global Value Chains and Input-Output analysis.
 
-He holds a PhD in Economics from the University of Nottingham and studied at Duke University as a Fulbright Scholar, the University of Manchester, and the Vienna University of Economics and Business (WU). He also holds graduate degrees in economics and econometrics.
-
-Juergen has collaborated with the European Central Bank, the World Bank, and the United Nations Industrial Development Organization (UNIDO) on research and policy projects. His work has been published in leading journals, including the Journal of Monetary Economics, World Development, and the Cambridge Journal of Economics.
+Juergen has collaborated with the European Central Bank, the World Bank, and the United Nations Industrial Development Organization (UNIDO) on research and policy projects. His work has been published in leading journals, including the Journal of Monetary Economics, World Development, Ecological Economics, and the Cambridge Journal of Economics.
 
 :::::: columns
 ::: {.column width="45%"}
