@@ -1,0 +1,12 @@
+---
+title: "What Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers' Everyday Spending?"
+date: 2026-09-03
+categories: [Blog]
+description: "A new OECD Ecoscope blog post explains how energy and food price shocks have weighed on European households' everyday spending since 2018."
+---
+
+New post on the OECD's Ecoscope blog, with Sebastian Barnes and David Haugh ([OECD Economics Department](https://www.oecd.org/en/about/directorates/economics-department.html)) and Luis Monteiro and Sidharth Goel ([Mastercard Economics Institute](https://www.mastercard.com/global/en/news-and-trends/insights-report/mastercard-economic-institute.html)), based on [Working Paper No. 1864](https://www.oecd.org/en/publications/what-was-the-impact-of-the-pandemic-and-energy-food-shocks-on-european-consumers-everyday-spending_608804a8-en.html):
+
+Energy and food shocks have weighed on European household spending since 2018, and a new dataset of aggregated, anonymised monthly card spending for 12 European countries traces how they slowed growth in "everyday spending", with shifts across spending categories and marked differences across regions.
+
+[[{{< fa newspaper >}} Read the blog on OECD Ecoscope ↗](https://oecdecoscope.blog/2026/09/03/what-do-card-data-reveal-about-the-impact-of-energy-and-food-shocks-on-european-consumers-everyday-spending/) · [{{< fa book >}} Full Working Paper post ↗](/news/2026-05-oecd-consumer-spending.qmd)]{.news-links}
