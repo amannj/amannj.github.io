@@ -142,7 +142,7 @@ Papers circulated as working or occasional papers, not yet through peer review.
 
 [Amann, J., Barnes, S., Monteiro, L., Goel, S. & Haugh, D. · OECD Economics Department Working Papers · 2026]{.pub-meta}
 
-[A new monthly card-spending dataset spanning 12 countries and 9 categories, used to trace how the pandemic and the energy/food price shocks reshaped everyday household spending across Europe.]{.pub-summary}
+[A new monthly card-spending dataset spanning 12 countries and 9 categories, used to trace how the pandemic and the energy/food price shocks reshaped "everyday spending" across Europe.]{.pub-summary}
 
 [[{{< fa newspaper >}} Paper ↗](https://www.oecd.org/en/publications/what-was-the-impact-of-the-pandemic-and-energy-food-shocks-on-european-consumers-everyday-spending_608804a8-en.html) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/608804a8-en)]{.pub-links}
 :::
