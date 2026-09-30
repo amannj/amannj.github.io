@@ -17,6 +17,8 @@ $teal-faint: #496E6C; // Work in Progress — same family again, desaturated rat
 $brick:      #C0472C; // Policy + small chrome accents
 $slate:      #4B5566; // Code
 $blog:       #6B7280; // News: personal / not tied to a specific output
+$review:     #6B4280; // Under Review — a distinct hue, since it sits between the
+                       // teal Academic/Working Paper family without belonging to it
 
 $body-bg: $paper;
 $body-color: $ink;
@@ -150,7 +152,8 @@ $tag-colors: (
   wip: $teal-faint,
   policy: $brick,
   code: $slate,
-  blog: $blog
+  blog: $blog,
+  under-review: $review
 );
 
 .tag-pill {

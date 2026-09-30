@@ -8,6 +8,7 @@ page-navigation: true
 <div class="filter-bar" role="group" aria-label="Filter by type">
 <button type="button" class="filter-btn active" data-filter="all">All</button>
 <button type="button" class="filter-btn" data-filter="academic">Academic</button>
+<button type="button" class="filter-btn" data-filter="under-review">Under Review</button>
 <button type="button" class="filter-btn" data-filter="working-paper">Working Papers</button>
 <button type="button" class="filter-btn" data-filter="policy">Policy</button>
 <button type="button" class="filter-btn" data-filter="wip">Work in Progress</button>
@@ -18,6 +19,18 @@ page-navigation: true
 ## Academic {#academic-publications}
 
 Peer-reviewed journal articles and book chapters.
+
+::: {.pub-entry}
+[Academic]{.tag-pill .tag-academic}
+
+[**Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries**]{.pub-title}
+
+[Albaladejo, M., Amann, J., Cantore, N., Flammini, A., Marin, G. & Mazzanti, M. · *Ecological Economics* · Forthcoming · 2026]{.pub-meta}
+
+[Introduces NICE (National Impacts of Circular Economy), an Eora input-output based method for assessing how circular-economy interventions affect economic and social indicators in developing countries.]{.pub-summary}
+
+[[{{< fa newspaper >}} Paper ↗](https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf)]{.pub-links}
+:::
 
 ::: {.pub-entry}
 [Academic]{.tag-pill .tag-academic}
@@ -100,7 +113,7 @@ Peer-reviewed journal articles and book chapters.
 
 [Disaggregating structural-change patterns within manufacturing to map a path of inclusive industrial development for pro-poor growth, and the role of industrial policy design in getting there.]{.pub-summary}
 
-[[{{< fa newspaper >}} Chapter ↗](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003020233-4/importance-manufacturing-development-structural-change-pro-poor-growth-nobuya-haraguchi-juergen-amann)]{.pub-links}
+[[{{< fa newspaper >}} Chapter ↗](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003020233-4/importance-manufacturing-development-structural-change-pro-poor-growth-nobuya-haraguchi-juergen-amann) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.4324/9781003020233-4)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -125,6 +138,24 @@ Peer-reviewed journal articles and book chapters.
 [Granger-causality and cointegration tests robust to structural breaks find no evidence of a causal link between public debt and UK growth around the financial crisis.]{.pub-summary}
 
 [[{{< fa newspaper >}} Article ↗](https://onlinelibrary.wiley.com/doi/abs/10.1111/sjpe.12132) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1111/sjpe.12132)]{.pub-links}
+:::
+
+:::
+
+::: {.research-section data-tag="under-review"}
+
+## Under Review {#under-review}
+
+Manuscripts under peer review at a journal.
+
+::: {.pub-entry}
+[Under review]{.tag-pill .tag-under-review}
+
+[**Firm-Level Effects of Energy Price Increases: Review of Key Principles, Approaches and Insights from Recent Literature**]{.pub-title}
+
+[Amann, J., Gencer, D. & Heine, D. · *Journal of Economic Surveys* · Revise and resubmit · 2026]{.pub-meta}
+
+[Reviews the key principles, empirical approaches and recent evidence on how energy-price increases affect firm performance.]{.pub-summary}
 :::
 
 :::
@@ -157,18 +188,6 @@ Papers circulated as working or occasional papers, not yet through peer review.
 [Extends earlier firm-level evidence on energy prices and competitiveness to a broader cross-country manufacturing setting.]{.pub-summary}
 
 [[{{< fa newspaper >}} Paper ↗](https://mpra.ub.uni-muenchen.de/127199/1/MPRA_paper_127199.pdf)]{.pub-links}
-:::
-
-::: {.pub-entry}
-[Working paper]{.tag-pill .tag-working-paper}
-
-[**Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries**]{.pub-title}
-
-[Albaladejo, M., Amann, J., Cantore, N., Flammini, A., Marin, G. & Mazzanti, M. · SSRN Working Paper No. 5131165 · 2024]{.pub-meta}
-
-[Introduces NICE (National Impacts of Circular Economy), an Eora input-output based method for assessing how circular-economy interventions affect economic and social indicators in developing countries.]{.pub-summary}
-
-[[{{< fa newspaper >}} Paper ↗](https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf)]{.pub-links}
 :::
 
 ::: {.pub-entry}
@@ -245,14 +264,48 @@ Institutional publications written directly for policymakers and practitioners, 
 
 ## Work in Progress {#work-in-progress}
 
-Academic work still under way, with no public draft yet.
+Work under way or about to be released.
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**Measuring Global Value Chain Participation in UK Regions: A Technical Background Note**]{.pub-title}
+
+[OECD · OECD Regional Development Papers]{.pub-meta}
+
+[Builds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD's Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.]{.pub-summary}
+
+[[{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/5600c944-en)]{.pub-links}
+:::
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**UK Regions in the Global Economy**]{.pub-title}
+
+[Amann, J., Horvat, P., Tsotros, N., West, D. & Lembcke, A. · OECD Regional Development Papers]{.pub-meta}
+
+[Using the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.]{.pub-summary}
+
+[[{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/f36125c4-en)]{.pub-links}
+:::
+
+::: {.pub-entry}
+[Work in progress]{.tag-pill .tag-wip}
+
+[**Measuring and Understanding Global Value Chains and Foreign Direct Investment in Regions**]{.pub-title}
+
+[OECD · OECD report]{.pub-meta}
+
+[A forthcoming OECD report on how regions take part in global value chains and attract foreign direct investment.]{.pub-summary}
+:::
 
 ::: {.pub-entry}
 [Work in progress]{.tag-pill .tag-wip}
 
 [**Monetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds**]{.pub-title}
 
-[Amann, J. & Middleditch, P. · 2023]{.pub-meta}
+[Amann, J. & Middleditch, P.]{.pub-meta}
 
 [Using synthetic difference-in-differences on ETF data, monetary tightening hits green-investment returns harder than the wider market — a case for shielding green investment from financial-stress spillovers.]{.pub-summary}
 :::
@@ -260,19 +313,9 @@ Academic work still under way, with no public draft yet.
 ::: {.pub-entry}
 [Work in progress]{.tag-pill .tag-wip}
 
-[**Growth and Volatility: Why Duration Matters for Long-Run Macroeconomic Outcomes**]{.pub-title}
-
-[Amann, J. & Middleditch, P. · 2023]{.pub-meta}
-
-[Separating short- from long-run volatility, long-run swings are positively associated with growth while short spells of uncertainty hurt macroeconomic outcomes — stabilisation policy should tell the two apart.]{.pub-summary}
-:::
-
-::: {.pub-entry}
-[Work in progress]{.tag-pill .tag-wip}
-
 [**Testing the Debt Threshold Hypothesis: A Structural Break Threshold Granger Causality Test under Cross-Sectional Dependence**]{.pub-title}
 
-[Amann, J. · 2023]{.pub-meta}
+[Amann, J.]{.pub-meta}
 
 [Proposes a new bootstrap-based test for regime-dependent Granger causality in cross-sectionally dependent panels, with Monte Carlo evidence that it outperforms conventional approaches.]{.pub-summary}
 :::
