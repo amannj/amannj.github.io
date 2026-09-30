@@ -164,7 +164,7 @@ Manuscripts under peer review at a journal.
 
 ## Working Papers {#working-papers}
 
-Papers circulated as working or occasional papers, not yet through peer review.
+Papers circulated as working or occasional papers.
 
 ::: {.pub-entry}
 [Working paper]{.tag-pill .tag-working-paper}
@@ -271,7 +271,7 @@ Work under way or about to be released.
 
 [**Measuring Global Value Chain Participation in UK Regions: A Technical Background Note**]{.pub-title}
 
-[OECD · OECD Regional Development Papers]{.pub-meta}
+[OECD Regional Development Papers]{.pub-meta}
 
 [Builds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD's Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.]{.pub-summary}
 
@@ -283,7 +283,7 @@ Work under way or about to be released.
 
 [**UK Regions in the Global Economy**]{.pub-title}
 
-[Amann, J., Horvat, P., Tsotros, N., West, D. & Lembcke, A. · OECD Regional Development Papers]{.pub-meta}
+[OECD Regional Development Papers]{.pub-meta}
 
 [Using the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.]{.pub-summary}
 
@@ -295,7 +295,7 @@ Work under way or about to be released.
 
 [**Measuring and Understanding Global Value Chains and Foreign Direct Investment in Regions**]{.pub-title}
 
-[OECD · OECD report]{.pub-meta}
+[OECD report]{.pub-meta}
 
 [A forthcoming OECD report on how regions take part in global value chains and attract foreign direct investment.]{.pub-summary}
 :::
