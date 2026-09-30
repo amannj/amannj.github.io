@@ -15,7 +15,26 @@
 <link>https://amannj.github.io/news.html</link>
 </image>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 03 Sep 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 30 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Accepted in Ecological Economics: Assessing the Socio-Economic Impact of the Circular Economy</title>
+  <link>https://amannj.github.io/news/2026-09-nice-ecological-economics.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Accepted in <em>Ecological Economics</em> and forthcoming in 2026, with Manuel Albaladejo, Nicola Cantore, Alessandro Flammini, Giovanni Marin and Massimiliano Mazzanti:</p>
+<p>“Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries” introduces NICE (National Impacts of Circular Economy), an input-output based method for assessing how circular-economy interventions affect economic and social outcomes in developing countries. The paper was first circulated as a UNIDO working paper.</p>
+<p><span class="news-links"><a href="https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Working paper version ↗</a> · <a href="../news/2023-07-circularity.html"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Earlier post on the working paper ↗</a> · <a href="../research.html#academic-publications"><i class="fa-solid fa-book" aria-label="book"></i> Read more on Research ↗</a></span></p>
+
+
+
+ ]]></description>
+  <category>Academic</category>
+  <guid>https://amannj.github.io/news/2026-09-nice-ecological-economics.html</guid>
+  <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>What Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers’ “Everyday Spending”?</title>
   <link>https://amannj.github.io/news/2026-09-ecoscope-consumer-spending-blog.html</link>
@@ -153,7 +172,7 @@
 
 
 <p>The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. The transition to a green and circular economy is driven by multiple environmental, demographic, technological, fiscal, and financial transitions occurring in different sectors and geographies — with the circular economy playing a pivotal role because of its potential “triple positive impact” on economic growth as well as environmental and societal outcomes. This post introduces NICE, a novel tool built on granular firm-level data and input-output modelling, to assess the economic, social, and environmental impact of the circular economy.</p>
-<p><span class="news-links"><a href="https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Read the full article on UNIDO ↗</a> · <a href="https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Paper ↗</a> · <a href="../research.html#working-papers"><i class="fa-solid fa-book" aria-label="book"></i> Read the paper on Research ↗</a></span></p>
+<p><span class="news-links"><a href="https://iap.unido.org/articles/socioeconomic-impact-circularity-developing-countries"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Read the full article on UNIDO ↗</a> · <a href="https://downloads.unido.org/ot/29/15/29151440/WP_01_2023.pdf"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Paper ↗</a> · <a href="../research.html#academic-publications"><i class="fa-solid fa-book" aria-label="book"></i> Read the paper on Research ↗</a></span></p>
 
 
 
@@ -242,55 +261,6 @@ sudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common</
   <pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>How to Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub</title>
-  <link>https://amannj.github.io/news/2020-12-automatise-workflow.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Say you want a Windows batch file to automatically run Git to add, commit, and push to GitHub — for example, if the script it runs is a web scraper that you want to run at regular intervals, pushing the data it collects to GitHub automatically.</p>
-<p>This assumes a working Git installation, a local project already linked to your GitHub account, and that you’ve followed <a href="../news/2020-12-windows-scheduler.html">this post</a> up to Step 2, so you already have a batch file scheduled to run a Python script.</p>
-<section id="adding-git-commands-to-your-batch-file" class="level3">
-<h3 class="anchored" data-anchor-id="adding-git-commands-to-your-batch-file">Adding Git commands to your batch file</h3>
-<p>Change the batch file from this:</p>
-<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"</code></pre>
-<p>to this:</p>
-<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"
-
-git add .
-git commit -m 'scheduled commit'
-git push</code></pre>
-<p>This won’t work if there are no changes to commit, so a more robust version is:</p>
-<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"
-
-git add --all
-git diff-index --quiet HEAD || git commit -m "scheduled commit"
-git push</code></pre>
-<p>Here, <code>git add --all</code> stages the entire working tree, and the following line commits only if Git detects a change (<code>git diff-index --quiet HEAD</code> exits non-zero when there’s a difference against HEAD).</p>
-<p>If Git isn’t on your <code>PATH</code>, replace <code>git</code> with the full path, e.g.&nbsp;<code>"C:\Program Files\Git\bin\git.exe"</code>.</p>
-</section>
-<section id="a-more-complete-example" class="level3">
-<h3 class="anchored" data-anchor-id="a-more-complete-example">A more complete example</h3>
-<p>Putting it together, with a <code>timeout</code> to give the file system a moment before committing:</p>
-<pre><code>"C:\Users\&lt;Your Name&gt;\AppData\Local\Programs\Python\Python38\python.exe" "C:\Users\&lt;Your Name&gt;\Desktop\my.py"
-
-timeout /t 5
-
-"C:\Program Files\Git\bin\git.exe" add --all
-"C:\Program Files\Git\bin\git.exe" diff-index --quiet HEAD || git commit -m "scheduled commit"
-"C:\Program Files\Git\bin\git.exe" push</code></pre>
-<p>Now the scheduled task from <a href="../news/2020-12-windows-scheduler.html">the Windows Scheduler post</a> will also keep a Git repository in sync automatically.</p>
-
-
-</section>
-
- ]]></description>
-  <category>Blog</category>
-  <guid>https://amannj.github.io/news/2020-12-automatise-workflow.html</guid>
-  <pubDate>Wed, 16 Dec 2020 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>How to Schedule Python Scripts to Automate Tasks Using Windows Scheduler on Windows 10 &amp; 11</title>
   <link>https://amannj.github.io/news/2020-12-windows-scheduler.html</link>
   <description><![CDATA[ 
@@ -376,6 +346,55 @@ pause</code></pre>
  ]]></description>
   <category>Blog</category>
   <guid>https://amannj.github.io/news/2020-12-windows-scheduler.html</guid>
+  <pubDate>Wed, 16 Dec 2020 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>How to Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub</title>
+  <link>https://amannj.github.io/news/2020-12-automatise-workflow.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Say you want a Windows batch file to automatically run Git to add, commit, and push to GitHub — for example, if the script it runs is a web scraper that you want to run at regular intervals, pushing the data it collects to GitHub automatically.</p>
+<p>This assumes a working Git installation, a local project already linked to your GitHub account, and that you’ve followed <a href="../news/2020-12-windows-scheduler.html">this post</a> up to Step 2, so you already have a batch file scheduled to run a Python script.</p>
+<section id="adding-git-commands-to-your-batch-file" class="level3">
+<h3 class="anchored" data-anchor-id="adding-git-commands-to-your-batch-file">Adding Git commands to your batch file</h3>
+<p>Change the batch file from this:</p>
+<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"</code></pre>
+<p>to this:</p>
+<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"
+
+git add .
+git commit -m 'scheduled commit'
+git push</code></pre>
+<p>This won’t work if there are no changes to commit, so a more robust version is:</p>
+<pre><code>"&lt;Path to python.exe&gt;" "&lt;Path to my.py&gt;"
+
+git add --all
+git diff-index --quiet HEAD || git commit -m "scheduled commit"
+git push</code></pre>
+<p>Here, <code>git add --all</code> stages the entire working tree, and the following line commits only if Git detects a change (<code>git diff-index --quiet HEAD</code> exits non-zero when there’s a difference against HEAD).</p>
+<p>If Git isn’t on your <code>PATH</code>, replace <code>git</code> with the full path, e.g.&nbsp;<code>"C:\Program Files\Git\bin\git.exe"</code>.</p>
+</section>
+<section id="a-more-complete-example" class="level3">
+<h3 class="anchored" data-anchor-id="a-more-complete-example">A more complete example</h3>
+<p>Putting it together, with a <code>timeout</code> to give the file system a moment before committing:</p>
+<pre><code>"C:\Users\&lt;Your Name&gt;\AppData\Local\Programs\Python\Python38\python.exe" "C:\Users\&lt;Your Name&gt;\Desktop\my.py"
+
+timeout /t 5
+
+"C:\Program Files\Git\bin\git.exe" add --all
+"C:\Program Files\Git\bin\git.exe" diff-index --quiet HEAD || git commit -m "scheduled commit"
+"C:\Program Files\Git\bin\git.exe" push</code></pre>
+<p>Now the scheduled task from <a href="../news/2020-12-windows-scheduler.html">the Windows Scheduler post</a> will also keep a Git repository in sync automatically.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Blog</category>
+  <guid>https://amannj.github.io/news/2020-12-automatise-workflow.html</guid>
   <pubDate>Wed, 16 Dec 2020 00:00:00 GMT</pubDate>
 </item>
 </channel>
