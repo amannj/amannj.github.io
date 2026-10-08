@@ -14,46 +14,81 @@
     "text": "The effectiveness of monetary policy depends crucially on the degree of price flexibility. This flexibility depends on the frequency of price adjustments, as well as the adjustment magnitude of the prices which do change (known as price selection). This column uses granular data from the euro area and the US to quantify the degree of price selection. Accounting for price selection increases price flexibility estimates by around one-third in both regions, with a higher flexibility in the US. The findings are consistent with the differences in food inflation during the Covid pandemic across the US and euro area.\n Read the full column on VoxEU ↗ ·  Article ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "news/2024-02-ict-hardware.html",
-    "href": "news/2024-02-ict-hardware.html",
-    "title": "An Analysis of ICT Hardware Manufacturing in Industrialized Economies",
+    "objectID": "news/2023-07-circularity.html",
+    "href": "news/2023-07-circularity.html",
+    "title": "The Socioeconomic Impact of Circularity in Developing Countries",
     "section": "",
-    "text": "New in Telecommunications Policy: using EU KLEMS growth accounting for 13 industrialised economies between 2000 and 2015, we find total factor productivity, labour quality, software investment, and R&D drive growth in ICT hardware manufacturing — with the US showing markedly stronger resilience through the 2008–09 crisis than the EU.\n Article ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
+    "text": "The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. The transition to a green and circular economy is driven by multiple environmental, demographic, technological, fiscal, and financial transitions occurring in different sectors and geographies — with the circular economy playing a pivotal role because of its potential “triple positive impact” on economic growth as well as environmental and societal outcomes. This post introduces NICE, a novel tool built on granular firm-level data and input-output modelling, to assess the economic, social, and environmental impact of the circular economy.\n Read the full article on UNIDO ↗ ·  Paper ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "news/2021-01-ubuntu-wifi-issue.html",
-    "href": "news/2021-01-ubuntu-wifi-issue.html",
-    "title": "How to Fix ‘No WiFi Adapter’ Issue in Ubuntu 20.04",
+    "objectID": "news/2025-12-energy-competitiveness-manufacturing.html",
+    "href": "news/2025-12-energy-competitiveness-manufacturing.html",
+    "title": "Energy Prices and Competitiveness in the Manufacturing Sector",
     "section": "",
-    "text": "If Ubuntu 20.04 greets you with a “no WiFi adapter” error after running updates, this fixed it for me:\n\nConnect the laptop to the internet (ethernet, phone tethering, etc.).\nRun the following two commands in the terminal (Ctrl + T):\n\nsudo apt-get purge bcmwl-kernel-source\nsudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common\nReboot and everything should be running smoothly again."
+    "text": "New working paper with Nicola Cantore, extending the earlier Chile and Oman firm-level findings on energy prices and competitiveness to a broader, cross-country manufacturing setting.\n Paper ↗ ·  Read more on Research ↗"
   },
   {
-    "objectID": "news/2026-09-ecoscope-consumer-spending-blog.html",
-    "href": "news/2026-09-ecoscope-consumer-spending-blog.html",
-    "title": "What Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers’ “Everyday Spending”?",
+    "objectID": "news/2026-01-green-hydrogen.html",
+    "href": "news/2026-01-green-hydrogen.html",
+    "title": "Green Hydrogen Technology in Asia",
     "section": "",
-    "text": "New post on the OECD’s Ecoscope blog, with Sebastian Barnes and David Haugh (OECD Economics Department) and Luis Monteiro and Sidharth Goel (Mastercard Economics Institute), based on Working Paper No. 1864:\nEnergy and food shocks have weighed on European household spending since 2018, and a new dataset of aggregated, anonymised monthly card spending for 12 European countries traces how they slowed growth in “everyday spending”, with shifts across spending categories and marked differences across regions.\n Read the blog on OECD Ecoscope ↗ ·  Full Working Paper post ↗"
+    "text": "New book chapter, with Nicola Cantore, Upalat Korwatanasakul, and Jaime Moll de Alba, analysing the economic preconditions shaping the future development of green hydrogen technology across Asia — part of Future of Economy in Asia: Geopolitical Diplomacy, Technological Revolutions and Sustainable Pathways (Springer Nature).\n Chapter on Springer ↗ ·  DOI ↗ ·  Read more on Research ↗"
   },
   {
-    "objectID": "news/2024-07-energy-price-evidence-insights.html",
-    "href": "news/2024-07-energy-price-evidence-insights.html",
-    "title": "Firm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research",
+    "objectID": "news/2026-05-oecd-consumer-spending.html",
+    "href": "news/2026-05-oecd-consumer-spending.html",
+    "title": "The Impact of the Pandemic and Energy-Food Shocks on European Consumers’ “Everyday Spending”",
     "section": "",
-    "text": "A new World Bank synthesis pulling together recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts — following on from the earlier Chile and Oman firm-level work.\n Paper ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
+    "text": "New OECD Working Paper, with Sebastian Barnes and David Haugh (OECD Economics Department) and Luis Monteiro and Sidharth Goel (Mastercard Economics Institute):\nBuilt from a new high-frequency dataset of aggregated, anonymised Mastercard transaction data — monthly spending across 12 European countries and 9 categories from 2018 to 2024 — the paper tracks “everyday spending,” the part of consumption closest to households’ day-to-day lives. It finds a strong post-pandemic recovery followed by a marked slowdown since 2022, with poorer regions hit hardest by the squeeze on essentials like food and energy.\n Paper on OECD iLibrary ↗ ·  DOI ↗ ·  Read more on Research ↗ ·  Read the Ecoscope blog ↗"
   },
   {
-    "objectID": "news/2022-06-industrial-resilience.html",
-    "href": "news/2022-06-industrial-resilience.html",
-    "title": "A Firm-Level Perspective on Industrial Resilience in a Crisis",
+    "objectID": "news/2021-04-energy-chile.html",
+    "href": "news/2021-04-energy-chile.html",
+    "title": "The Effects of Energy Prices on Firm Competitiveness in Chile",
     "section": "",
-    "text": "History has shown that health and economic shocks are recurrent events; robustness to one such shock must be followed by preparedness for the next one. “The new normal” is a phrase that has been used throughout the COVID-19 pandemic to signal the need for fundamental change to follow the crisis. Resilience at both the government and sector levels can create conditions for countries to better withstand and recover from shocks. Research based on World Bank data shows that manufacturing firms in countries with stronger industrial capabilities — proxied by higher Competitive Industrial Performance (CIP) scores — were more likely to remain in operation and experienced higher growth rates (or lower losses) in employment.\nThis piece is part of the IAP IDR2022 series, based on UNIDO’s flagship Industrial Development Report (IDR) 2022.\n Read the full article on UNIDO ↗"
+    "text": "Firms are key to addressing Chile’s sustainability challenges and realising its ambition of carbon neutrality by 2050. Switching to more sustainable production is essential to reducing vulnerability to environmental shocks and developing new areas of comparative advantage. In this working paper, we illustrate minimal trade-offs between productivity and energy prices, and a positive relationship between productivity and investments with fossil fuel prices.\n World Bank blog post ↗ ·  Versión en español ↗ ·  Paper ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "news/2021-04-true-cost-fuel.html",
-    "href": "news/2021-04-true-cost-fuel.html",
-    "title": "Manufacturing Firms Shouldn’t Fear the True Cost of Fuel — Here’s Why",
+    "objectID": "news/2026-09-nice-ecological-economics.html",
+    "href": "news/2026-09-nice-ecological-economics.html",
+    "title": "Accepted in Ecological Economics: Assessing the Socio-Economic Impact of the Circular Economy",
     "section": "",
-    "text": "UNIDO-led research in collaboration with the World Bank provides concrete evidence that removing fossil fuel subsidies would not only make environmental sense but would also improve firms’ economic performance. New firm-level data from Oman show that higher fuel prices are not a drag on competitiveness. In fact, reducing subsidies and allowing fuel prices to rise could ultimately aid the post-COVID-19 recovery, since higher fuel prices drive business upgrading and a boost in productivity — and could encourage manufacturing companies to switch to the kind of long-term sustainable efficiency practices needed to stop climate change.\n Read the full article on UNIDO ↗ ·  Article ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
+    "text": "Accepted in Ecological Economics and forthcoming in 2026, with Manuel Albaladejo, Nicola Cantore, Alessandro Flammini, Giovanni Marin and Massimiliano Mazzanti:\n“Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries” introduces NICE (National Impacts of Circular Economy), an input-output based method for assessing how circular-economy interventions affect economic and social outcomes in developing countries. The paper was first circulated as a UNIDO working paper.\n Working paper version ↗ ·  Earlier post on the working paper ↗ ·  Read more on Research ↗"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code & Packages",
+    "section": "",
+    "text": "Open-source packages and tools built for my own research and for work at the OECD.\n\n\n\n\nOECDsppps\nCode ·  R\nCalculates subnational Purchasing Power Parities (sPPPs) across OECD regions.\n GitHub ↗  Vignettes ↗\n\n\n\nOECDscaleup\nCode ·  R\nConstructs OECD indicators for scale-ups and high-growth firms.\n GitHub ↗  Vignettes ↗\n\n\n\n\ncomtradeRggregator\nCode ·  R\nDownloads and reclassifies large volumes of UN Comtrade trade data.\n GitHub ↗\n\n\n\nScrapeo\nCode ·  Python\nScrapes weather-forecast data from meteo.ch.\n GitHub ↗"
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "UK Regions in the Global Economy: First Subnational Trade in Value Added Indicators for the UK\n\n\n\nPolicy\n\n\n\nTwo new OECD Regional Development Papers build the first subnational Trade in Value Added (TiVA) indicators for the 12 UK regions.\n\n\n\n\n\n2026-10-08\n\n\n\n\n\n\n\nAccepted in Ecological Economics: Assessing the Socio-Economic Impact of the Circular Economy\n\n\n\nAcademic\n\n\n\nThe NICE circular-economy paper, first circulated as a UNIDO working paper, has been accepted in Ecological Economics and is forthcoming in 2026.\n\n\n\n\n\n2026-09-30\n\n\n\n\n\n\n\nWhat Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers’ “Everyday Spending”?\n\n\n\nBlog\n\n\n\nA new OECD Ecoscope blog post explains how energy and food price shocks have weighed on European households’ “everyday spending” since 2018.\n\n\n\n\n\n2026-09-03\n\n\n\n\n\n\n\nThe Impact of the Pandemic and Energy-Food Shocks on European Consumers’ “Everyday Spending”\n\n\n\nWorking paper\n\n\n\nA new OECD dataset of monthly card spending for 12 countries traces how “everyday spending” shifted through the pandemic and the energy/food price shocks.\n\n\n\n\n\n2026-05-18\n\n\n\n\n\n\n\nGreen Hydrogen Technology in Asia\n\n\n\nAcademic\n\n\n\nA new book chapter on the economic preconditions for green hydrogen technology’s future development across Asia.\n\n\n\n\n\n2026-01-02\n\n\n\n\n\n\n\nEnergy Prices and Competitiveness in the Manufacturing Sector\n\n\n\nWorking paper\n\n\n\nExtending firm-level evidence on energy prices and competitiveness to a broader cross-country manufacturing setting.\n\n\n\n\n\n2025-12-30\n\n\n\n\n\n\n\nFirm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research\n\n\n\nPolicy\n\n\n\nA synthesis of recent evidence on how energy-subsidy reform affects firms, for the World Bank.\n\n\n\n\n\n2024-07-19\n\n\n\n\n\n\n\nAn Analysis of ICT Hardware Manufacturing in Industrialized Economies\n\n\n\nAcademic\n\n\n\nGrowth patterns, productivity performance, and driving forces in ICT manufacturing across 13 industrialised economies.\n\n\n\n\n\n2024-02-01\n\n\n\n\n\n\n\nPrice Selection on the Two Sides of the Atlantic\n\n\n\nAcademic\n\n\n\nThe effectiveness of monetary policy depends crucially on the degree of price flexibility.\n\n\n\n\n\n2023-11-01\n\n\n\n\n\n\n\nThe Socioeconomic Impact of Circularity in Developing Countries\n\n\n\nWorking paper\n\n\n\nA novel tool using firm-level data to assess the economic, social, and environmental impact of circularity.\n\n\n\n\n\n2023-07-16\n\n\n\n\n\n\n\nA Firm-Level Perspective on Industrial Resilience in a Crisis\n\n\n\nBlog\n\n\n\nThe significance of industrial capabilities for robustness to the pandemic crisis.\n\n\n\n\n\n2022-06-01\n\n\n\n\n\n\n\nManufacturing Firms Shouldn’t Fear the True Cost of Fuel — Here’s Why\n\n\n\nAcademic\n\n\n\nAnalysing the effect of energy price increases on firm-level productivity in Oman.\n\n\n\n\n\n2021-04-08\n\n\n\n\n\n\n\nThe Effects of Energy Prices on Firm Competitiveness in Chile\n\n\n\nWorking paper\n\n\n\nSwitching Chilean firms to more sustainable production is critical to realising the country’s ambition of carbon neutrality by 2050.\n\n\n\n\n\n2021-04-08\n\n\n\n\n\n\n\nHow to Fix ‘No WiFi Adapter’ Issue in Ubuntu 20.04\n\n\n\nBlog\n\n\n\nIn case you are using a (now) outdated version of Ubuntu and run into some weird WiFi issue.\n\n\n\n\n\n2021-01-10\n\n\n\n\n\n\n\nHow to Schedule Python Scripts to Automate Tasks Using Windows Scheduler on Windows 10 & 11\n\n\n\nBlog\n\n\n\nWorking with Windows Scheduler on Windows 10 & 11.\n\n\n\n\n\n2020-12-16\n\n\n\n\n\n\n\nHow to Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub\n\n\n\nBlog\n\n\n\nMaking your life easier by automatising your workflow.\n\n\n\n\n\n2020-12-16\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Juergen Amann",
+    "section": "",
+    "text": "Google Scholar\n  \n  \n      ORCID\n  \n  \n    \n     GitHub\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     E-mail\n  \n\n  \n  \nJuergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE), where he works on subnational Purchasing Power Parities and on subnational Global Value Chains and Input-Output analysis.\nJuergen has collaborated with the European Central Bank, the World Bank, and the United Nations Industrial Development Organization (UNIDO) on research and policy projects. His work has been published in leading journals, including the Journal of Monetary Economics, World Development, Ecological Economics, and the Cambridge Journal of Economics.\n\n\n\n\n\n Applied Econometrics\n Environmental Economics\n Industrial Development\n Input-Output Analysis\n Price Setting\n Structural Change\n\n\n\n\n\n\n\n\n PhD in Economics - University of Nottingham, UK\n MA in Economics - Duke University, US\n MSc in Econometrics - University of Manchester, UK\n BSc & MSc in Economics - University of Economics and Business (WU Wien), AT"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Juergen Amann",
+    "section": "",
+    "text": "Applied Econometrics\n Environmental Economics\n Industrial Development\n Input-Output Analysis\n Price Setting\n Structural Change"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Juergen Amann",
+    "section": "",
+    "text": "PhD in Economics - University of Nottingham, UK\n MA in Economics - Duke University, US\n MSc in Econometrics - University of Manchester, UK\n BSc & MSc in Economics - University of Economics and Business (WU Wien), AT"
   },
   {
     "objectID": "research.html",
@@ -88,91 +123,63 @@
     "href": "research.html#policy",
     "title": "Research",
     "section": "Policy",
-    "text": "Policy\nInstitutional publications written directly for policymakers and practitioners, rather than aimed at a journal.\n\nPolicy\nFirm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research\nAmann, J., Gencer, D. & Heine, D. · World Bank, Washington DC · 2024\nA synthesis of recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts.\n Paper ↗  DOI ↗\n\n\nPolicy\nAchieving Sustainable Development: New Empirical Evidence on the Impact of Industrialization on Social and Environmental Outcomes — book chapter\nAmann, J. & Stöllinger, R. · in Industrialization as the Driver of Sustained Prosperity (UNIDO) · pp. 1–34 · 2020\nNew empirical evidence on how industrialisation interacts with social and environmental Sustainable Development Goals — a highly complex process meeting an equally complex set of targets.\n Chapter ↗"
+    "text": "Policy\nInstitutional publications written directly for policymakers and practitioners, rather than aimed at a journal.\n\nPolicy\nMeasuring Global Value Chain Participation in UK Regions: A Technical Background Note\nOECD Regional Development Papers · 2026\nBuilds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD’s Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.\n Paper ↗  DOI ↗\n\n\nPolicy\nUK Regions in the Global Economy\nOECD Regional Development Papers · 2026\nUsing the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.\n Paper ↗  DOI ↗\n\n\nPolicy\nFirm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research\nAmann, J., Gencer, D. & Heine, D. · World Bank, Washington DC · 2024\nA synthesis of recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts.\n Paper ↗  DOI ↗\n\n\nPolicy\nAchieving Sustainable Development: New Empirical Evidence on the Impact of Industrialization on Social and Environmental Outcomes — book chapter\nAmann, J. & Stöllinger, R. · in Industrialization as the Driver of Sustained Prosperity (UNIDO) · pp. 1–34 · 2020\nNew empirical evidence on how industrialisation interacts with social and environmental Sustainable Development Goals — a highly complex process meeting an equally complex set of targets.\n Chapter ↗"
   },
   {
     "objectID": "research.html#work-in-progress",
     "href": "research.html#work-in-progress",
     "title": "Research",
     "section": "Work in Progress",
-    "text": "Work in Progress\nWork under way or about to be released.\n\nWork in progress\nMeasuring Global Value Chain Participation in UK Regions: A Technical Background Note\nOECD Regional Development Papers\nBuilds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD’s Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.\n DOI ↗\n\n\nWork in progress\nUK Regions in the Global Economy\nOECD Regional Development Papers\nUsing the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.\n DOI ↗\n\n\nWork in progress\nMeasuring and Understanding Global Value Chains and Foreign Direct Investment in Regions\nOECD report\nA forthcoming OECD report on how regions take part in global value chains and attract foreign direct investment.\n\n\nWork in progress\nMonetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds\nAmann, J. & Middleditch, P.\nUsing synthetic difference-in-differences on ETF data, monetary tightening hits green-investment returns harder than the wider market — a case for shielding green investment from financial-stress spillovers.\n\n\nWork in progress\nTesting the Debt Threshold Hypothesis: A Structural Break Threshold Granger Causality Test under Cross-Sectional Dependence\nAmann, J.\nProposes a new bootstrap-based test for regime-dependent Granger causality in cross-sectionally dependent panels, with Monte Carlo evidence that it outperforms conventional approaches."
+    "text": "Work in Progress\nWork under way or about to be released.\n\nWork in progress\nMeasuring and Understanding Global Value Chains and Foreign Direct Investment in Regions\nOECD report\nA forthcoming OECD report on how regions take part in global value chains and attract foreign direct investment.\n\n\nWork in progress\nMonetary Policy and Green Investment Impacts: Evidence from Exchange-Traded Funds\nAmann, J. & Middleditch, P.\nUsing synthetic difference-in-differences on ETF data, monetary tightening hits green-investment returns harder than the wider market — a case for shielding green investment from financial-stress spillovers.\n\n\nWork in progress\nTesting the Debt Threshold Hypothesis: A Structural Break Threshold Granger Causality Test under Cross-Sectional Dependence\nAmann, J.\nProposes a new bootstrap-based test for regime-dependent Granger causality in cross-sectionally dependent panels, with Monte Carlo evidence that it outperforms conventional approaches."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Juergen Amann",
+    "objectID": "news/2021-04-true-cost-fuel.html",
+    "href": "news/2021-04-true-cost-fuel.html",
+    "title": "Manufacturing Firms Shouldn’t Fear the True Cost of Fuel — Here’s Why",
     "section": "",
-    "text": "Google Scholar\n  \n  \n      ORCID\n  \n  \n    \n     GitHub\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     E-mail\n  \n\n  \n  \nJuergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE), where he works on subnational Purchasing Power Parities and on subnational Global Value Chains and Input-Output analysis.\nJuergen has collaborated with the European Central Bank, the World Bank, and the United Nations Industrial Development Organization (UNIDO) on research and policy projects. His work has been published in leading journals, including the Journal of Monetary Economics, World Development, Ecological Economics, and the Cambridge Journal of Economics.\n\n\n\n\n\n Applied Econometrics\n Environmental Economics\n Industrial Development\n Input-Output Analysis\n Price Setting\n Structural Change\n\n\n\n\n\n\n\n\n PhD in Economics - University of Nottingham, UK\n MA in Economics - Duke University, US\n MSc in Econometrics - University of Manchester, UK\n BSc & MSc in Economics - University of Economics and Business (WU Wien), AT"
+    "text": "UNIDO-led research in collaboration with the World Bank provides concrete evidence that removing fossil fuel subsidies would not only make environmental sense but would also improve firms’ economic performance. New firm-level data from Oman show that higher fuel prices are not a drag on competitiveness. In fact, reducing subsidies and allowing fuel prices to rise could ultimately aid the post-COVID-19 recovery, since higher fuel prices drive business upgrading and a boost in productivity — and could encourage manufacturing companies to switch to the kind of long-term sustainable efficiency practices needed to stop climate change.\n Read the full article on UNIDO ↗ ·  Article ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "Juergen Amann",
+    "objectID": "news/2022-06-industrial-resilience.html",
+    "href": "news/2022-06-industrial-resilience.html",
+    "title": "A Firm-Level Perspective on Industrial Resilience in a Crisis",
     "section": "",
-    "text": "Applied Econometrics\n Environmental Economics\n Industrial Development\n Input-Output Analysis\n Price Setting\n Structural Change"
+    "text": "History has shown that health and economic shocks are recurrent events; robustness to one such shock must be followed by preparedness for the next one. “The new normal” is a phrase that has been used throughout the COVID-19 pandemic to signal the need for fundamental change to follow the crisis. Resilience at both the government and sector levels can create conditions for countries to better withstand and recover from shocks. Research based on World Bank data shows that manufacturing firms in countries with stronger industrial capabilities — proxied by higher Competitive Industrial Performance (CIP) scores — were more likely to remain in operation and experienced higher growth rates (or lower losses) in employment.\nThis piece is part of the IAP IDR2022 series, based on UNIDO’s flagship Industrial Development Report (IDR) 2022.\n Read the full article on UNIDO ↗"
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Juergen Amann",
+    "objectID": "news/2024-07-energy-price-evidence-insights.html",
+    "href": "news/2024-07-energy-price-evidence-insights.html",
+    "title": "Firm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research",
     "section": "",
-    "text": "PhD in Economics - University of Nottingham, UK\n MA in Economics - Duke University, US\n MSc in Econometrics - University of Manchester, UK\n BSc & MSc in Economics - University of Economics and Business (WU Wien), AT"
+    "text": "A new World Bank synthesis pulling together recent evidence on how energy-subsidy reform affects firms, with recommendations for evaluating future policy impacts — following on from the earlier Chile and Oman firm-level work.\n Paper ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
+    "objectID": "news/2026-09-ecoscope-consumer-spending-blog.html",
+    "href": "news/2026-09-ecoscope-consumer-spending-blog.html",
+    "title": "What Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers’ “Everyday Spending”?",
     "section": "",
-    "text": "Accepted in Ecological Economics: Assessing the Socio-Economic Impact of the Circular Economy\n\n\n\nAcademic\n\n\n\nThe NICE circular-economy paper, first circulated as a UNIDO working paper, has been accepted in Ecological Economics and is forthcoming in 2026.\n\n\n\n\n\n2026-09-30\n\n\n\n\n\n\n\nWhat Do Card Data Reveal About the Impact of Energy and Food Shocks on European Consumers’ “Everyday Spending”?\n\n\n\nBlog\n\n\n\nA new OECD Ecoscope blog post explains how energy and food price shocks have weighed on European households’ “everyday spending” since 2018.\n\n\n\n\n\n2026-09-03\n\n\n\n\n\n\n\nThe Impact of the Pandemic and Energy-Food Shocks on European Consumers’ “Everyday Spending”\n\n\n\nWorking paper\n\n\n\nA new OECD dataset of monthly card spending for 12 countries traces how “everyday spending” shifted through the pandemic and the energy/food price shocks.\n\n\n\n\n\n2026-05-18\n\n\n\n\n\n\n\nGreen Hydrogen Technology in Asia\n\n\n\nAcademic\n\n\n\nA new book chapter on the economic preconditions for green hydrogen technology’s future development across Asia.\n\n\n\n\n\n2026-01-02\n\n\n\n\n\n\n\nEnergy Prices and Competitiveness in the Manufacturing Sector\n\n\n\nWorking paper\n\n\n\nExtending firm-level evidence on energy prices and competitiveness to a broader cross-country manufacturing setting.\n\n\n\n\n\n2025-12-30\n\n\n\n\n\n\n\nFirm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research\n\n\n\nPolicy\n\n\n\nA synthesis of recent evidence on how energy-subsidy reform affects firms, for the World Bank.\n\n\n\n\n\n2024-07-19\n\n\n\n\n\n\n\nAn Analysis of ICT Hardware Manufacturing in Industrialized Economies\n\n\n\nAcademic\n\n\n\nGrowth patterns, productivity performance, and driving forces in ICT manufacturing across 13 industrialised economies.\n\n\n\n\n\n2024-02-01\n\n\n\n\n\n\n\nPrice Selection on the Two Sides of the Atlantic\n\n\n\nAcademic\n\n\n\nThe effectiveness of monetary policy depends crucially on the degree of price flexibility.\n\n\n\n\n\n2023-11-01\n\n\n\n\n\n\n\nThe Socioeconomic Impact of Circularity in Developing Countries\n\n\n\nWorking paper\n\n\n\nA novel tool using firm-level data to assess the economic, social, and environmental impact of circularity.\n\n\n\n\n\n2023-07-16\n\n\n\n\n\n\n\nA Firm-Level Perspective on Industrial Resilience in a Crisis\n\n\n\nBlog\n\n\n\nThe significance of industrial capabilities for robustness to the pandemic crisis.\n\n\n\n\n\n2022-06-01\n\n\n\n\n\n\n\nManufacturing Firms Shouldn’t Fear the True Cost of Fuel — Here’s Why\n\n\n\nAcademic\n\n\n\nAnalysing the effect of energy price increases on firm-level productivity in Oman.\n\n\n\n\n\n2021-04-08\n\n\n\n\n\n\n\nThe Effects of Energy Prices on Firm Competitiveness in Chile\n\n\n\nWorking paper\n\n\n\nSwitching Chilean firms to more sustainable production is critical to realising the country’s ambition of carbon neutrality by 2050.\n\n\n\n\n\n2021-04-08\n\n\n\n\n\n\n\nHow to Fix ‘No WiFi Adapter’ Issue in Ubuntu 20.04\n\n\n\nBlog\n\n\n\nIn case you are using a (now) outdated version of Ubuntu and run into some weird WiFi issue.\n\n\n\n\n\n2021-01-10\n\n\n\n\n\n\n\nHow to Schedule Python Scripts to Automate Tasks Using Windows Scheduler on Windows 10 & 11\n\n\n\nBlog\n\n\n\nWorking with Windows Scheduler on Windows 10 & 11.\n\n\n\n\n\n2020-12-16\n\n\n\n\n\n\n\nHow to Use a Windows Bat File to Schedule, Git Add, Commit and Push to GitHub\n\n\n\nBlog\n\n\n\nMaking your life easier by automatising your workflow.\n\n\n\n\n\n2020-12-16\n\n\n\n\n\nNo matching items"
+    "text": "New post on the OECD’s Ecoscope blog, with Sebastian Barnes and David Haugh (OECD Economics Department) and Luis Monteiro and Sidharth Goel (Mastercard Economics Institute), based on Working Paper No. 1864:\nEnergy and food shocks have weighed on European household spending since 2018, and a new dataset of aggregated, anonymised monthly card spending for 12 European countries traces how they slowed growth in “everyday spending”, with shifts across spending categories and marked differences across regions.\n Read the blog on OECD Ecoscope ↗ ·  Full Working Paper post ↗"
   },
   {
-    "objectID": "code.html",
-    "href": "code.html",
-    "title": "Code & Packages",
+    "objectID": "news/2021-01-ubuntu-wifi-issue.html",
+    "href": "news/2021-01-ubuntu-wifi-issue.html",
+    "title": "How to Fix ‘No WiFi Adapter’ Issue in Ubuntu 20.04",
     "section": "",
-    "text": "Open-source packages and tools built for my own research and for work at the OECD.\n\n\n\n\nOECDsppps\nCode ·  R\nCalculates subnational Purchasing Power Parities (sPPPs) across OECD regions.\n GitHub ↗  Vignettes ↗\n\n\n\nOECDscaleup\nCode ·  R\nConstructs OECD indicators for scale-ups and high-growth firms.\n GitHub ↗  Vignettes ↗\n\n\n\n\ncomtradeRggregator\nCode ·  R\nDownloads and reclassifies large volumes of UN Comtrade trade data.\n GitHub ↗\n\n\n\nScrapeo\nCode ·  Python\nScrapes weather-forecast data from meteo.ch.\n GitHub ↗"
+    "text": "If Ubuntu 20.04 greets you with a “no WiFi adapter” error after running updates, this fixed it for me:\n\nConnect the laptop to the internet (ethernet, phone tethering, etc.).\nRun the following two commands in the terminal (Ctrl + T):\n\nsudo apt-get purge bcmwl-kernel-source\nsudo apt-get install broadcom-sta-source broadcom-sta-dkms broadcom-sta-common\nReboot and everything should be running smoothly again."
   },
   {
-    "objectID": "news/2026-09-nice-ecological-economics.html",
-    "href": "news/2026-09-nice-ecological-economics.html",
-    "title": "Accepted in Ecological Economics: Assessing the Socio-Economic Impact of the Circular Economy",
+    "objectID": "news/2024-02-ict-hardware.html",
+    "href": "news/2024-02-ict-hardware.html",
+    "title": "An Analysis of ICT Hardware Manufacturing in Industrialized Economies",
     "section": "",
-    "text": "Accepted in Ecological Economics and forthcoming in 2026, with Manuel Albaladejo, Nicola Cantore, Alessandro Flammini, Giovanni Marin and Massimiliano Mazzanti:\n“Assessing the Socio-Economic Impact of the Circular Economy through Input-Output Modelling: Evidence from Developing Countries” introduces NICE (National Impacts of Circular Economy), an input-output based method for assessing how circular-economy interventions affect economic and social outcomes in developing countries. The paper was first circulated as a UNIDO working paper.\n Working paper version ↗ ·  Earlier post on the working paper ↗ ·  Read more on Research ↗"
+    "text": "New in Telecommunications Policy: using EU KLEMS growth accounting for 13 industrialised economies between 2000 and 2015, we find total factor productivity, labour quality, software investment, and R&D drive growth in ICT hardware manufacturing — with the US showing markedly stronger resilience through the 2008–09 crisis than the EU.\n Article ↗ ·  DOI ↗ ·  Read the paper on Research ↗"
   },
   {
-    "objectID": "news/2021-04-energy-chile.html",
-    "href": "news/2021-04-energy-chile.html",
-    "title": "The Effects of Energy Prices on Firm Competitiveness in Chile",
+    "objectID": "news/2026-10-uk-regions-global-economy.html",
+    "href": "news/2026-10-uk-regions-global-economy.html",
+    "title": "UK Regions in the Global Economy: First Subnational Trade in Value Added Indicators for the UK",
     "section": "",
-    "text": "Firms are key to addressing Chile’s sustainability challenges and realising its ambition of carbon neutrality by 2050. Switching to more sustainable production is essential to reducing vulnerability to environmental shocks and developing new areas of comparative advantage. In this working paper, we illustrate minimal trade-offs between productivity and energy prices, and a positive relationship between productivity and investments with fossil fuel prices.\n World Bank blog post ↗ ·  Versión en español ↗ ·  Paper ↗ ·  Read the paper on Research ↗"
-  },
-  {
-    "objectID": "news/2026-05-oecd-consumer-spending.html",
-    "href": "news/2026-05-oecd-consumer-spending.html",
-    "title": "The Impact of the Pandemic and Energy-Food Shocks on European Consumers’ “Everyday Spending”",
-    "section": "",
-    "text": "New OECD Working Paper, with Sebastian Barnes and David Haugh (OECD Economics Department) and Luis Monteiro and Sidharth Goel (Mastercard Economics Institute):\nBuilt from a new high-frequency dataset of aggregated, anonymised Mastercard transaction data — monthly spending across 12 European countries and 9 categories from 2018 to 2024 — the paper tracks “everyday spending,” the part of consumption closest to households’ day-to-day lives. It finds a strong post-pandemic recovery followed by a marked slowdown since 2022, with poorer regions hit hardest by the squeeze on essentials like food and energy.\n Paper on OECD iLibrary ↗ ·  DOI ↗ ·  Read more on Research ↗ ·  Read the Ecoscope blog ↗"
-  },
-  {
-    "objectID": "news/2026-01-green-hydrogen.html",
-    "href": "news/2026-01-green-hydrogen.html",
-    "title": "Green Hydrogen Technology in Asia",
-    "section": "",
-    "text": "New book chapter, with Nicola Cantore, Upalat Korwatanasakul, and Jaime Moll de Alba, analysing the economic preconditions shaping the future development of green hydrogen technology across Asia — part of Future of Economy in Asia: Geopolitical Diplomacy, Technological Revolutions and Sustainable Pathways (Springer Nature).\n Chapter on Springer ↗ ·  DOI ↗ ·  Read more on Research ↗"
-  },
-  {
-    "objectID": "news/2025-12-energy-competitiveness-manufacturing.html",
-    "href": "news/2025-12-energy-competitiveness-manufacturing.html",
-    "title": "Energy Prices and Competitiveness in the Manufacturing Sector",
-    "section": "",
-    "text": "New working paper with Nicola Cantore, extending the earlier Chile and Oman firm-level findings on energy prices and competitiveness to a broader, cross-country manufacturing setting.\n Paper ↗ ·  Read more on Research ↗"
-  },
-  {
-    "objectID": "news/2023-07-circularity.html",
-    "href": "news/2023-07-circularity.html",
-    "title": "The Socioeconomic Impact of Circularity in Developing Countries",
-    "section": "",
-    "text": "The circular economy is critical to ensuring green and just socioeconomic outcomes through decoupling economic growth from increased resource use. The transition to a green and circular economy is driven by multiple environmental, demographic, technological, fiscal, and financial transitions occurring in different sectors and geographies — with the circular economy playing a pivotal role because of its potential “triple positive impact” on economic growth as well as environmental and societal outcomes. This post introduces NICE, a novel tool built on granular firm-level data and input-output modelling, to assess the economic, social, and environmental impact of the circular economy.\n Read the full article on UNIDO ↗ ·  Paper ↗ ·  Read the paper on Research ↗"
+    "text": "Two new OECD Regional Development Papers, published as part of the OECD project Integration of Regions in Global Value Chains:\nTogether they provide the first subnational Trade in Value Added (TiVA) indicators for the 12 UK regions, developed with support from the UK Office for National Statistics (ONS) and the Department for Business and Trade (DBT). Measuring Global Value Chain Participation in UK Regions sets out how the underlying regional Supply-Use and Input-Output tables were built from official microdata, and UK Regions in the Global Economy uses them to show how deeply UK regions are embedded in domestic and global value chains: in 2019, only 58% of the value added in regional exports was generated locally.\n Technical background note ↗ ·  UK Regions in the Global Economy ↗ ·  Read more on Research ↗"
   },
   {
     "objectID": "news/2020-12-windows-scheduler.html",
