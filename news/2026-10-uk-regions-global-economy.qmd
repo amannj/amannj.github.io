@@ -1,0 +1,12 @@
+---
+title: "UK Regions in the Global Economy: First Subnational Trade in Value Added Indicators for the UK"
+date: 2026-10-08
+categories: [Policy]
+description: "Two new OECD Regional Development Papers build the first subnational Trade in Value Added (TiVA) indicators for the 12 UK regions."
+---
+
+Two new OECD Regional Development Papers, published as part of the OECD project [Integration of Regions in Global Value Chains](https://www.oecd.org/en/about/projects/integration-of-regions-in-global-value-chains.html):
+
+Together they provide the first subnational Trade in Value Added (TiVA) indicators for the 12 UK regions, developed with support from the UK Office for National Statistics (ONS) and the Department for Business and Trade (DBT). [*Measuring Global Value Chain Participation in UK Regions*](https://doi.org/10.1787/5600c944-en) sets out how the underlying regional Supply-Use and Input-Output tables were built from official microdata, and [*UK Regions in the Global Economy*](https://doi.org/10.1787/f36125c4-en) uses them to show how deeply UK regions are embedded in domestic and global value chains: in 2019, only 58% of the value added in regional exports was generated locally.
+
+[[{{< fa newspaper >}} Technical background note ↗](https://www.oecd.org/en/publications/measuring-global-value-chain-participation-in-uk-regions_5600c944-en.html) · [{{< fa newspaper >}} UK Regions in the Global Economy ↗](https://www.oecd.org/en/publications/uk-regions-in-the-global-economy_f36125c4-en.html) · [{{< fa book >}} Read more on Research ↗](/research.qmd#policy)]{.news-links}

@@ -237,6 +237,30 @@ Institutional publications written directly for policymakers and practitioners, 
 ::: {.pub-entry}
 [Policy]{.tag-pill .tag-policy}
 
+[**Measuring Global Value Chain Participation in UK Regions: A Technical Background Note**]{.pub-title}
+
+[OECD Regional Development Papers · 2026]{.pub-meta}
+
+[Builds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD's Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.]{.pub-summary}
+
+[[{{< fa newspaper >}} Paper ↗](https://www.oecd.org/en/publications/measuring-global-value-chain-participation-in-uk-regions_5600c944-en.html) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/5600c944-en)]{.pub-links}
+:::
+
+::: {.pub-entry}
+[Policy]{.tag-pill .tag-policy}
+
+[**UK Regions in the Global Economy**]{.pub-title}
+
+[OECD Regional Development Papers · 2026]{.pub-meta}
+
+[Using the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.]{.pub-summary}
+
+[[{{< fa newspaper >}} Paper ↗](https://www.oecd.org/en/publications/uk-regions-in-the-global-economy_f36125c4-en.html) [{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/f36125c4-en)]{.pub-links}
+:::
+
+::: {.pub-entry}
+[Policy]{.tag-pill .tag-policy}
+
 [**Firm-Level Effects of Energy Price Increases: Evidence and Insights from Recent Research**]{.pub-title}
 
 [Amann, J., Gencer, D. & Heine, D. · World Bank, Washington DC · 2024]{.pub-meta}
@@ -265,30 +289,6 @@ Institutional publications written directly for policymakers and practitioners, 
 ## Work in Progress {#work-in-progress}
 
 Work under way or about to be released.
-
-::: {.pub-entry}
-[Work in progress]{.tag-pill .tag-wip}
-
-[**Measuring Global Value Chain Participation in UK Regions: A Technical Background Note**]{.pub-title}
-
-[OECD Regional Development Papers]{.pub-meta}
-
-[Builds the first subnational Supply-Use and Input-Output tables for the 12 UK regions — 50 industries, 2017–21, combining official microdata with national and regional statistics — and links them into the OECD's Inter-Country Input-Output framework, enabling the first subnational Trade in Value Added (TiVA) indicators for the UK.]{.pub-summary}
-
-[[{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/5600c944-en)]{.pub-links}
-:::
-
-::: {.pub-entry}
-[Work in progress]{.tag-pill .tag-wip}
-
-[**UK Regions in the Global Economy**]{.pub-title}
-
-[OECD Regional Development Papers]{.pub-meta}
-
-[Using the first subnational TiVA estimates for the UK, shows that UK regions are deeply embedded in domestic and global value chains: in 2019 only 58% of the value added in regional exports was generated locally, with 22% coming from other UK regions and 20% from abroad.]{.pub-summary}
-
-[[{{< fa file-lines >}} DOI ↗](https://doi.org/10.1787/f36125c4-en)]{.pub-links}
-:::
 
 ::: {.pub-entry}
 [Work in progress]{.tag-pill .tag-wip}
