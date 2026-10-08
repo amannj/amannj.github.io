@@ -100,6 +100,28 @@ div.quarto-about-trestles .about-entity {
   margin-right: 0.4rem;
   color: $navy;
 }
+// Short context line under each "Current OECD work" item, indented by the
+// icon's width + gap + the space after it, so it lines up with the item text.
+#hero-heading ul li .ws-desc,
+#hero-heading ul li .ws-links {
+  display: block;
+  padding-left: 1.75rem;
+  font-size: 0.85rem;
+  color: $muted;
+}
+#hero-heading ul li .ws-links {
+  font-size: 0.78rem;
+}
+// The list-item icon rule above sizes every icon in the item like the main
+// one; the link-line icons should be the small, dimmed kind used in the
+// Research/News link rows instead.
+#hero-heading ul li .ws-links .fa-solid,
+#hero-heading ul li .ws-links .fa-brands {
+  width: auto;
+  margin-right: 0.25rem;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
 
 // Avatar: the source photo has its own white studio backdrop, which read as
 // a stray white box once the page background moved off pure white. Framing

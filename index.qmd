@@ -31,9 +31,21 @@ about:
 ---
 
 ::::::: {#hero-heading}
-Juergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE), where he works on subnational Purchasing Power Parities and on [subnational Global Value Chains and Input-Output analysis](https://www.oecd.org/en/about/projects/integration-of-regions-in-global-value-chains.html).
+Juergen Amann is an Economist at the OECD Centre for Entrepreneurship, SMEs, Regions and Cities (CFE).
 
 Juergen has collaborated with the European Central Bank, the World Bank, and the United Nations Industrial Development Organization (UNIDO) on research and policy projects. His work has been published in leading journals, including the Journal of Monetary Economics, World Development, Ecological Economics, and the Cambridge Journal of Economics.
+
+## Current OECD work
+
+- {{< fa globe >}} [Subnational Global Value Chains ↗](https://www.oecd.org/en/about/projects/integration-of-regions-in-global-value-chains.html)
+  [New indicators and analysis of how regions plug into global value chains.]{.ws-desc}
+  [[{{< fa book >}} Papers on Research ↗](/research.qmd#policy)]{.ws-links}
+- {{< fa scale-balanced >}} [Subnational Purchasing Power Parities ↗](https://www.oecd.org/en/about/projects/towards-a-better-measuring-of-subnational-consumer-prices-and-purchasing-parity.html)
+  [Proxies of regional purchasing power parities, capturing cost-of-living gaps.]{.ws-desc}
+  [[{{< fa brands r-project >}} OECDsppps package ↗](https://amannj.github.io/OECDsppps/index.html)]{.ws-links}
+- {{< fa arrow-trend-up >}} [SME Scale-Ups ↗](https://www.oecd.org/en/about/programmes/helping-smes-scale-up.html)
+  [What sets fast-growing SMEs apart, and what holds others back.]{.ws-desc}
+  [[{{< fa brands r-project >}} OECDscaleup package ↗](https://amannj.github.io/OECDscaleup/index.html)]{.ws-links}
 
 :::::: columns
 ::: {.column width="45%"}
